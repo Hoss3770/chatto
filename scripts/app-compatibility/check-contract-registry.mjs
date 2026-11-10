@@ -233,6 +233,20 @@ async function main() {
     'an expected SDK configuration surface was not found'
   );
 
+  const coverageItems = [
+    ...methods.methods,
+    ...events.events,
+    ...scopes.scopes,
+    ...blocks.blocks,
+    ...elements.elements,
+    ...composition.composition_objects,
+    ...manifest.manifest_keys,
+    ...surfaces.surfaces.map((surface) => ({ compatibility: surface }))
+  ];
+  const coverageCounts = { implemented: 0, partial: 0, unsupported: 0 };
+  for (const item of coverageItems) coverageCounts[item.compatibility.status] += 1;
+  assert.deepEqual(summary.coverage, coverageCounts);
+
   const allContracts = [
     ...methods.methods.map((item) => item.name),
     ...events.events.map((item) => item.name),

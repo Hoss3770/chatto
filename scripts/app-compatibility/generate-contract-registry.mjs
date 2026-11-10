@@ -1254,6 +1254,19 @@ async function main() {
     left.path.localeCompare(right.path)
   );
 
+  const coverageItems = [
+    ...methods,
+    ...events,
+    ...scopes,
+    ...blocks,
+    ...elements,
+    ...compositionObjects,
+    ...manifestKeys,
+    ...surfacePolicies.map((surface) => ({ compatibility: surface }))
+  ];
+  const coverage = { implemented: 0, partial: 0, unsupported: 0 };
+  for (const item of coverageItems) coverage[item.compatibility.status] += 1;
+
   const source = {
     documentation: {
       sitemap_url: documentationIndex.sitemap.url,
@@ -1276,19 +1289,7 @@ async function main() {
       composition_objects: compositionObjects.length,
       manifest_keys: manifestKeys.length
     },
-    coverage: {
-      implemented: 0,
-      partial: surfacePolicies.filter((surface) => surface.status === 'partial').length,
-      unsupported:
-        methods.length +
-        events.length +
-        scopes.length +
-        blocks.length +
-        elements.length +
-        compositionObjects.length +
-        manifestKeys.length +
-        surfacePolicies.filter((surface) => surface.status === 'unsupported').length
-    }
+    coverage
   };
 
   await rm(outputDir, { recursive: true, force: true });
