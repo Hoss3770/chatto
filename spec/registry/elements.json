@@ -146,15 +146,7 @@
           "type": "Object",
           "required": false,
           "requirement": "Optional",
-          "allowed_literals": [
-            "bold",
-            "client_highlight",
-            "highlight",
-            "italic",
-            "strike",
-            "underline",
-            "unlink"
-          ],
+          "allowed_literals": [],
           "constraints": {},
           "description_sha256": "4ef5fca36739d40de95c8cb46267b1547c07e09225ace25f80327baf15796c55"
         }
@@ -194,7 +186,7 @@
           "type": "String",
           "required": true,
           "requirement": "Required",
-          "allowed_literals": ["channel", "everyone", "here"],
+          "allowed_literals": [],
           "constraints": {},
           "description_sha256": "e7ea0d9ba9f52b4125a6cba6f8566e47b4d91d9fd1f367650ba6f2c1fd41a390"
         },
@@ -203,15 +195,7 @@
           "type": "Object",
           "required": false,
           "requirement": "Optional",
-          "allowed_literals": [
-            "bold",
-            "client_highlight",
-            "highlight",
-            "italic",
-            "strike",
-            "underline",
-            "unlink"
-          ],
+          "allowed_literals": [],
           "constraints": {},
           "description_sha256": "4ef5fca36739d40de95c8cb46267b1547c07e09225ace25f80327baf15796c55"
         }
@@ -251,7 +235,7 @@
           "type": "Object",
           "required": true,
           "requirement": "Required",
-          "allowed_literals": ["type: plain_text"],
+          "allowed_literals": [],
           "constraints": {},
           "description_sha256": "79750cc7c9bc771731f2c11e910526d56000df25ab35fe9c934f53a7d3c16855"
         },
@@ -287,7 +271,7 @@
           "type": "String",
           "required": false,
           "requirement": "Optional",
-          "allowed_literals": ["danger", "primary"],
+          "allowed_literals": [],
           "constraints": {},
           "description_sha256": "6127981ab8b0087e92eacfd88f95ed0b8b814a1d56a25f23cf669a2c9deb2f45"
         },
@@ -305,7 +289,7 @@
           "type": "String",
           "required": false,
           "requirement": "Optional",
-          "allowed_literals": ["text"],
+          "allowed_literals": [],
           "constraints": { "max_length": 75 },
           "description_sha256": "8d0b0c11ba678aaabbdff37a27d409690c09e1b587ff685142166d64a81327f0"
         },
@@ -323,7 +307,7 @@
           "type": "String",
           "required": false,
           "requirement": "Optional",
-          "allowed_literals": ["agent_prompt", "text"],
+          "allowed_literals": [],
           "constraints": {},
           "description_sha256": "cbc377ed28b2eabd07269820522616baa07c9571c5f20d212d78119f9bc86f92"
         },
@@ -408,15 +392,7 @@
           "type": "Object",
           "required": false,
           "requirement": "Optional",
-          "allowed_literals": [
-            "bold",
-            "client_highlight",
-            "highlight",
-            "italic",
-            "strike",
-            "underline",
-            "unlink"
-          ],
+          "allowed_literals": [],
           "constraints": {},
           "description_sha256": "4ef5fca36739d40de95c8cb46267b1547c07e09225ace25f80327baf15796c55"
         },
@@ -501,14 +477,7 @@
           "type": "Object",
           "required": false,
           "requirement": "Optional",
-          "allowed_literals": [
-            "bold",
-            "client_highlight",
-            "highlight",
-            "italic",
-            "strike",
-            "underline"
-          ],
+          "allowed_literals": [],
           "constraints": {},
           "description_sha256": "752aa36b0c205436fbbcdc72b793e81d566cdcfa1f9b435274881d72c55a44f6"
         }
@@ -566,15 +535,7 @@
           "type": "Object",
           "required": false,
           "requirement": "Optional",
-          "allowed_literals": [
-            "bold",
-            "client_highlight",
-            "highlight",
-            "italic",
-            "strike",
-            "underline",
-            "unlink"
-          ],
+          "allowed_literals": [],
           "constraints": {},
           "description_sha256": "4ef5fca36739d40de95c8cb46267b1547c07e09225ace25f80327baf15796c55"
         }
@@ -632,15 +593,7 @@
           "type": "Object",
           "required": false,
           "requirement": "Optional",
-          "allowed_literals": [
-            "bold",
-            "client_highlight",
-            "highlight",
-            "italic",
-            "strike",
-            "underline",
-            "unlink"
-          ],
+          "allowed_literals": [],
           "constraints": {},
           "description_sha256": "4ef5fca36739d40de95c8cb46267b1547c07e09225ace25f80327baf15796c55"
         },
@@ -724,7 +677,7 @@
           "type": "Object\\[\\]",
           "required": false,
           "requirement": "Optional",
-          "allowed_literals": ["options"],
+          "allowed_literals": [],
           "constraints": {},
           "description_sha256": "ef060a7d946b7738181bcde3eff971958d6b77e918a075068373fcdd8d63e66d"
         },
@@ -742,7 +695,7 @@
           "type": "Boolean",
           "required": false,
           "requirement": "Optional",
-          "allowed_literals": ["false", "true", "view object"],
+          "allowed_literals": ["true"],
           "constraints": {},
           "description_sha256": "8c6026305ae638575efe8cf346467cf6ecdc17d8164ce70ffd7eb2492e50d7ae"
         },
@@ -818,7 +771,7 @@
           "type": "Object",
           "required": true,
           "requirement": "Required",
-          "allowed_literals": ["external", "file", "memory", "message", "web"],
+          "allowed_literals": [],
           "constraints": {},
           "description_sha256": "2f86cf1c51c4ca442d6e422342279ffb8bfbc8c165abab81b79e6f2d87795a0e"
         },
@@ -885,14 +838,7 @@
           "type": "Object",
           "required": false,
           "requirement": "Optional",
-          "allowed_literals": [
-            "bold",
-            "client_highlight",
-            "highlight",
-            "italic",
-            "strike",
-            "underline"
-          ],
+          "allowed_literals": [],
           "constraints": {},
           "description_sha256": "752aa36b0c205436fbbcdc72b793e81d566cdcfa1f9b435274881d72c55a44f6"
         }
@@ -958,7 +904,7 @@
           "type": "String",
           "required": true,
           "requirement": "Required",
-          "allowed_literals": ["timestamp"],
+          "allowed_literals": [],
           "constraints": {},
           "description_sha256": "5ea74b6de8c81c77324551e256e63cdccdd875d6dd83d462b0c3ff408769d27a"
         },
@@ -976,7 +922,7 @@
           "type": "String",
           "required": false,
           "requirement": "Optional",
-          "allowed_literals": ["format"],
+          "allowed_literals": [],
           "constraints": {},
           "description_sha256": "d4cb47fe95f38b6c4762de47dc02e986deeceb70044fa06661549fa98c225201"
         },
@@ -994,14 +940,7 @@
           "type": "Object",
           "required": false,
           "requirement": "Optional",
-          "allowed_literals": [
-            "bold",
-            "client_highlight",
-            "highlight",
-            "italic",
-            "strike",
-            "underline"
-          ],
+          "allowed_literals": [],
           "constraints": {},
           "description_sha256": "752aa36b0c205436fbbcdc72b793e81d566cdcfa1f9b435274881d72c55a44f6"
         }
@@ -1050,7 +989,7 @@
           "type": "String",
           "required": false,
           "requirement": "Optional",
-          "allowed_literals": ["YYYY-MM-DD"],
+          "allowed_literals": [],
           "constraints": {},
           "description_sha256": "70047780e2ad65035085a16a6412aa65010e8dc8a1d1290cf04b4caf11f477f5"
         },
@@ -1068,7 +1007,7 @@
           "type": "Boolean",
           "required": false,
           "requirement": "Optional",
-          "allowed_literals": ["false", "true", "view object"],
+          "allowed_literals": ["true"],
           "constraints": {},
           "description_sha256": "8c6026305ae638575efe8cf346467cf6ecdc17d8164ce70ffd7eb2492e50d7ae"
         },
@@ -1077,7 +1016,7 @@
           "type": "Object",
           "required": false,
           "requirement": "Optional",
-          "allowed_literals": ["plain_text", "text"],
+          "allowed_literals": [],
           "constraints": {},
           "description_sha256": "6e4055293daeb96d054489c40f43ff34e4a01f5b4c1935a7740d800d0225e7b0"
         }
@@ -1117,7 +1056,7 @@
           "type": "String",
           "required": false,
           "requirement": "Optional",
-          "allowed_literals": ["view_submission"],
+          "allowed_literals": [],
           "constraints": { "max_length": 255 },
           "description_sha256": "6c634832337e4ddeb224b71435d342706fc7ffe5774c6c6f769d17022240336e"
         },
@@ -1126,7 +1065,7 @@
           "type": "Integer",
           "required": false,
           "requirement": "Optional",
-          "allowed_literals": ["1628633820"],
+          "allowed_literals": [],
           "constraints": {},
           "description_sha256": "f9f51bf7dd37a99c5c6aec76bbf90e18019a3af749e61f5e1951477f72f259b2"
         },
@@ -1144,7 +1083,7 @@
           "type": "Boolean",
           "required": false,
           "requirement": "Optional",
-          "allowed_literals": ["false", "true", "view object"],
+          "allowed_literals": ["true"],
           "constraints": {},
           "description_sha256": "8c6026305ae638575efe8cf346467cf6ecdc17d8164ce70ffd7eb2492e50d7ae"
         }
@@ -1184,7 +1123,7 @@
           "type": "String",
           "required": false,
           "requirement": "Optional",
-          "allowed_literals": ["view_submission"],
+          "allowed_literals": [],
           "constraints": { "max_length": 255 },
           "description_sha256": "6c634832337e4ddeb224b71435d342706fc7ffe5774c6c6f769d17022240336e"
         },
@@ -1202,7 +1141,7 @@
           "type": "Object",
           "required": false,
           "requirement": "Optional",
-          "allowed_literals": ["block_actions"],
+          "allowed_literals": [],
           "constraints": {},
           "description_sha256": "dc6f22b5fb928cdf41e1787e3a6cad101bf0f9db20ff5abc2392b49de152ba38"
         },
@@ -1211,7 +1150,7 @@
           "type": "Boolean",
           "required": false,
           "requirement": "Optional",
-          "allowed_literals": ["false", "true", "view object"],
+          "allowed_literals": ["true"],
           "constraints": {},
           "description_sha256": "8c6026305ae638575efe8cf346467cf6ecdc17d8164ce70ffd7eb2492e50d7ae"
         },
@@ -1220,7 +1159,7 @@
           "type": "Object",
           "required": false,
           "requirement": "Optional",
-          "allowed_literals": ["plain_text", "text"],
+          "allowed_literals": [],
           "constraints": {},
           "description_sha256": "0da6516bd51edd6dee840aa804db3ac53ed786cd9d4e704ff848da8a82bfb589"
         }
@@ -1353,7 +1292,7 @@
           "type": "Object",
           "required": true,
           "requirement": "Required",
-          "allowed_literals": ["type: plain_text"],
+          "allowed_literals": [],
           "constraints": {},
           "description_sha256": "eec8b4b20cd92135b52a7469eb7e38be2675b454a478994c89f82f3d598bda61"
         },
@@ -1371,7 +1310,7 @@
           "type": "String",
           "required": false,
           "requirement": "Optional",
-          "allowed_literals": ["text"],
+          "allowed_literals": [],
           "constraints": { "max_length": 75 },
           "description_sha256": "9c970f150ad0d75df931f29c5f1e5ba76e0d8b9d26a8f5d9931fa71cd8c0723e"
         }
@@ -1420,14 +1359,7 @@
           "type": "Object",
           "required": false,
           "requirement": "Optional",
-          "allowed_literals": [
-            "bold",
-            "client_highlight",
-            "highlight",
-            "italic",
-            "strike",
-            "underline"
-          ],
+          "allowed_literals": [],
           "constraints": {},
           "description_sha256": "752aa36b0c205436fbbcdc72b793e81d566cdcfa1f9b435274881d72c55a44f6"
         },
@@ -1494,7 +1426,7 @@
           "type": "String",
           "required": false,
           "requirement": "Optional",
-          "allowed_literals": ["view_submission"],
+          "allowed_literals": [],
           "constraints": { "max_length": 255 },
           "description_sha256": "6c634832337e4ddeb224b71435d342706fc7ffe5774c6c6f769d17022240336e"
         },
@@ -1512,7 +1444,7 @@
           "type": "Integer",
           "required": false,
           "requirement": "Optional",
-          "allowed_literals": ["file_input"],
+          "allowed_literals": [],
           "constraints": {},
           "description_sha256": "b5f5515b277c06392efc7ebf6eed7bfde207da2c5327ccf01488b3c1aefab016"
         }
@@ -1552,7 +1484,7 @@
           "type": "String",
           "required": true,
           "requirement": "Required",
-          "allowed_literals": ["trash"],
+          "allowed_literals": [],
           "constraints": {},
           "description_sha256": "9c01a76ba2c30251ffd6bc5e6e653f69f26f9d0fb2cc99b617d831e57a7627cc"
         },
@@ -1561,7 +1493,7 @@
           "type": "Object",
           "required": true,
           "requirement": "Required",
-          "allowed_literals": ["type: plain_text"],
+          "allowed_literals": [],
           "constraints": {},
           "description_sha256": "4844d38490ee192437662a91fbd7173f8188559ce7c22e824c8f4d2fff5235b7"
         },
@@ -1597,7 +1529,7 @@
           "type": "String",
           "required": false,
           "requirement": "Optional",
-          "allowed_literals": ["text"],
+          "allowed_literals": [],
           "constraints": { "max_length": 75 },
           "description_sha256": "9c970f150ad0d75df931f29c5f1e5ba76e0d8b9d26a8f5d9931fa71cd8c0723e"
         },
@@ -1655,7 +1587,7 @@
           "type": "String",
           "required": false,
           "requirement": "Optional",
-          "allowed_literals": ["slack_file"],
+          "allowed_literals": [],
           "constraints": {},
           "description_sha256": "de46d6d9d6b4b03054df43a5093f912ed1657e468abbd0eedd8e3b22f9f79655"
         },
@@ -1758,15 +1690,7 @@
           "type": "Object",
           "required": false,
           "requirement": "Optional",
-          "allowed_literals": [
-            "bold",
-            "client_highlight",
-            "highlight",
-            "italic",
-            "strike",
-            "underline",
-            "unlink"
-          ],
+          "allowed_literals": [],
           "constraints": {},
           "description_sha256": "4ef5fca36739d40de95c8cb46267b1547c07e09225ace25f80327baf15796c55"
         }
@@ -1833,15 +1757,7 @@
           "type": "Object",
           "required": false,
           "requirement": "Optional",
-          "allowed_literals": [
-            "bold",
-            "client_highlight",
-            "highlight",
-            "italic",
-            "strike",
-            "underline",
-            "unlink"
-          ],
+          "allowed_literals": [],
           "constraints": {},
           "description_sha256": "4ef5fca36739d40de95c8cb46267b1547c07e09225ace25f80327baf15796c55"
         },
@@ -1935,15 +1851,7 @@
           "type": "Object",
           "required": false,
           "requirement": "Optional",
-          "allowed_literals": [
-            "bold",
-            "client_highlight",
-            "highlight",
-            "italic",
-            "strike",
-            "underline",
-            "unlink"
-          ],
+          "allowed_literals": [],
           "constraints": {},
           "description_sha256": "4ef5fca36739d40de95c8cb46267b1547c07e09225ace25f80327baf15796c55"
         },
@@ -2061,7 +1969,7 @@
           "type": "Object\\[\\]",
           "required": true,
           "requirement": "Required",
-          "allowed_literals": ["option_groups"],
+          "allowed_literals": [],
           "constraints": { "max_items": 100 },
           "description_sha256": "124b5c866bfcea3de533e727e82b8615fffe0a596869cdc6d30a71437ef079da"
         },
@@ -2070,7 +1978,7 @@
           "type": "Object\\[\\]",
           "required": false,
           "requirement": "Optional",
-          "allowed_literals": ["options"],
+          "allowed_literals": [],
           "constraints": {},
           "description_sha256": "f7e18f975f0be4be9350c8f734ca9f0076263bbf48e420db8327c4eeab194670"
         },
@@ -2079,7 +1987,7 @@
           "type": "Object\\[\\]",
           "required": false,
           "requirement": "Optional",
-          "allowed_literals": ["option_groups", "options"],
+          "allowed_literals": [],
           "constraints": {},
           "description_sha256": "bcaa4615e8c72e9ece2eb09b3d7da095e0b77185643e21342b2dee98a1c33ead"
         },
@@ -2106,7 +2014,7 @@
           "type": "Boolean",
           "required": false,
           "requirement": "Optional",
-          "allowed_literals": ["false", "true", "view object"],
+          "allowed_literals": ["true"],
           "constraints": {},
           "description_sha256": "8c6026305ae638575efe8cf346467cf6ecdc17d8164ce70ffd7eb2492e50d7ae"
         },
@@ -2115,7 +2023,7 @@
           "type": "Object",
           "required": false,
           "requirement": "Optional",
-          "allowed_literals": ["plain_text", "text"],
+          "allowed_literals": [],
           "constraints": {},
           "description_sha256": "19326e0b8cc06c2136aacdba6c226e93c3d85e9d39183b1f1d88235fbebbde43"
         }
@@ -2172,7 +2080,7 @@
           "type": "Boolean",
           "required": true,
           "requirement": "Required",
-          "allowed_literals": ["false", "true"],
+          "allowed_literals": [],
           "constraints": {},
           "description_sha256": "f19598a0d33c4b66dda9a03e659aa0711b7f3e8da9b6e24c272131f5c71990b0"
         },
@@ -2181,7 +2089,7 @@
           "type": "String",
           "required": false,
           "requirement": "Optional",
-          "allowed_literals": ["view_submission"],
+          "allowed_literals": [],
           "constraints": { "max_length": 255 },
           "description_sha256": "6c634832337e4ddeb224b71435d342706fc7ffe5774c6c6f769d17022240336e"
         },
@@ -2199,7 +2107,7 @@
           "type": "String",
           "required": false,
           "requirement": "Optional",
-          "allowed_literals": ["max_value"],
+          "allowed_literals": [],
           "constraints": {},
           "description_sha256": "fe92fd9b70e129ab64eec035ad2010fdd54094e48b9e458b45c1c7471e101610"
         },
@@ -2208,7 +2116,7 @@
           "type": "String",
           "required": false,
           "requirement": "Optional",
-          "allowed_literals": ["min_value"],
+          "allowed_literals": [],
           "constraints": {},
           "description_sha256": "c7267f9ecd1b69547fd6922f08216dd8a058480aba67f04883971456a9921bd5"
         },
@@ -2217,7 +2125,7 @@
           "type": "Object",
           "required": false,
           "requirement": "Optional",
-          "allowed_literals": ["block_actions"],
+          "allowed_literals": [],
           "constraints": {},
           "description_sha256": "dc6f22b5fb928cdf41e1787e3a6cad101bf0f9db20ff5abc2392b49de152ba38"
         },
@@ -2226,7 +2134,7 @@
           "type": "Boolean",
           "required": false,
           "requirement": "Optional",
-          "allowed_literals": ["false", "true", "view object"],
+          "allowed_literals": ["true"],
           "constraints": {},
           "description_sha256": "8c6026305ae638575efe8cf346467cf6ecdc17d8164ce70ffd7eb2492e50d7ae"
         },
@@ -2235,7 +2143,7 @@
           "type": "Object",
           "required": false,
           "requirement": "Optional",
-          "allowed_literals": ["plain_text", "text"],
+          "allowed_literals": [],
           "constraints": {},
           "description_sha256": "8268a27984eb27560ba573dfa66fadd29ce4aec59a2063701f10091f90e7ba76"
         }
@@ -2333,7 +2241,7 @@
           "type": "String",
           "required": false,
           "requirement": "Optional",
-          "allowed_literals": ["view_submission"],
+          "allowed_literals": [],
           "constraints": { "max_length": 255 },
           "description_sha256": "6c634832337e4ddeb224b71435d342706fc7ffe5774c6c6f769d17022240336e"
         },
@@ -2351,7 +2259,7 @@
           "type": "Boolean",
           "required": false,
           "requirement": "Optional",
-          "allowed_literals": ["false", "true"],
+          "allowed_literals": [],
           "constraints": {},
           "description_sha256": "717c1b94d5ae0b3e68b58b5af3e4f6289ba8765abac4f4b1020ceeef0b12ea77"
         },
@@ -2378,7 +2286,7 @@
           "type": "Object",
           "required": false,
           "requirement": "Optional",
-          "allowed_literals": ["block_actions"],
+          "allowed_literals": [],
           "constraints": {},
           "description_sha256": "dc6f22b5fb928cdf41e1787e3a6cad101bf0f9db20ff5abc2392b49de152ba38"
         },
@@ -2387,7 +2295,7 @@
           "type": "Boolean",
           "required": false,
           "requirement": "Optional",
-          "allowed_literals": ["false", "true", "view object"],
+          "allowed_literals": ["true"],
           "constraints": {},
           "description_sha256": "8c6026305ae638575efe8cf346467cf6ecdc17d8164ce70ffd7eb2492e50d7ae"
         },
@@ -2396,7 +2304,7 @@
           "type": "Object",
           "required": false,
           "requirement": "Optional",
-          "allowed_literals": ["plain_text", "text"],
+          "allowed_literals": [],
           "constraints": {},
           "description_sha256": "0751768bb582c08278a09525fd6bbc4470504241c5aa0c23f7bebcef6c627348"
         }
@@ -2454,7 +2362,7 @@
           "type": "Object",
           "required": false,
           "requirement": "Optional",
-          "allowed_literals": ["options"],
+          "allowed_literals": [],
           "constraints": {},
           "description_sha256": "5865bcf04af0cb84e3aabc9b8324cab9aa6d1e4e0b6dfd42e32369eed4da859f"
         },
@@ -2472,7 +2380,7 @@
           "type": "Boolean",
           "required": false,
           "requirement": "Optional",
-          "allowed_literals": ["false", "true", "view object"],
+          "allowed_literals": ["true"],
           "constraints": {},
           "description_sha256": "8c6026305ae638575efe8cf346467cf6ecdc17d8164ce70ffd7eb2492e50d7ae"
         }
@@ -2512,7 +2420,7 @@
           "type": "String",
           "required": true,
           "requirement": "Required",
-          "allowed_literals": ["view_submission"],
+          "allowed_literals": [],
           "constraints": { "max_length": 255 },
           "description_sha256": "37135d62e51d45102c731b5259f528f7eb96910265129509a6d02f59a390fbbe"
         },
@@ -2530,7 +2438,7 @@
           "type": "Object",
           "required": false,
           "requirement": "Optional",
-          "allowed_literals": ["block_actions"],
+          "allowed_literals": [],
           "constraints": {},
           "description_sha256": "3a2b5bb86c6ec7fe7fb0b2694cac7fa360c69f42d676fc1ea974a7273786bac4"
         },
@@ -2539,7 +2447,7 @@
           "type": "Boolean",
           "required": false,
           "requirement": "Optional",
-          "allowed_literals": ["false", "true", "view object"],
+          "allowed_literals": ["true"],
           "constraints": {},
           "description_sha256": "8c6026305ae638575efe8cf346467cf6ecdc17d8164ce70ffd7eb2492e50d7ae"
         },
@@ -2548,7 +2456,7 @@
           "type": "Object",
           "required": false,
           "requirement": "Optional",
-          "allowed_literals": ["plain_text", "text"],
+          "allowed_literals": [],
           "constraints": {},
           "description_sha256": "2aee6c0b39df2fb8d27f538ab2ba5d73814ed64dec20c32af97da2e1a57317cb"
         },
@@ -2597,7 +2505,7 @@
           "type": "String",
           "required": true,
           "requirement": "Required",
-          "allowed_literals": ["rich_text_list"],
+          "allowed_literals": [],
           "constraints": {},
           "description_sha256": "80cc609305086b56424b9a226e98c730a5364677ce8fa1350622b43225f89544"
         },
@@ -2606,7 +2514,7 @@
           "type": "String",
           "required": true,
           "requirement": "Required",
-          "allowed_literals": ["bullet", "ordered"],
+          "allowed_literals": [],
           "constraints": {},
           "description_sha256": "a4dbe62e5145854c95379c2b0e4219b7b9bd86ea8ac8424a73806aaaa37e3961"
         },
@@ -2615,32 +2523,7 @@
           "type": "Object \\[\\]",
           "required": true,
           "requirement": "Required",
-          "allowed_literals": [
-            "attachment_mention",
-            "broadcast",
-            "canvas",
-            "canvas_message_unfurl",
-            "canvas_user_mention",
-            "channel",
-            "citation",
-            "color",
-            "date",
-            "emoji",
-            "file",
-            "link",
-            "list_record",
-            "message_mention",
-            "rich_text_section",
-            "salesforce_data_field",
-            "tag",
-            "team",
-            "text",
-            "type",
-            "user",
-            "usergroup",
-            "work_object_mention",
-            "workflow_mention"
-          ],
+          "allowed_literals": [],
           "constraints": {},
           "description_sha256": "3e4bf1aed14246e3ea80c4f24b63758a34d15d97d0a7c7b04242654c197d0b81"
         },
@@ -2658,7 +2541,7 @@
           "type": "Number",
           "required": false,
           "requirement": "Optional",
-          "allowed_literals": ["offset = 4"],
+          "allowed_literals": [],
           "constraints": {},
           "description_sha256": "2b60836885a0b6e0f5ba87b0b3dd057ed7912d8439602ca07703b7d27213e98e"
         },
@@ -2698,7 +2581,7 @@
           "type": "String",
           "required": true,
           "requirement": "Required",
-          "allowed_literals": ["rich_text_preformatted"],
+          "allowed_literals": [],
           "constraints": {},
           "description_sha256": "7fef68fbec9e22433be0b281256623b865706ba09c0791e6371f2f55f1163e54"
         },
@@ -2725,7 +2608,7 @@
           "type": "String",
           "required": false,
           "requirement": "Optional",
-          "allowed_literals": ["\"javascript\"", "\"json\"", "\"python\""],
+          "allowed_literals": [],
           "constraints": {},
           "description_sha256": "27a3020fc5297983a4d5351969e31669f365360342a9cbcea54e8fb27563a543"
         }
@@ -2756,7 +2639,7 @@
           "type": "String",
           "required": true,
           "requirement": "Required",
-          "allowed_literals": ["rich_text_quote"],
+          "allowed_literals": [],
           "constraints": {},
           "description_sha256": "586ba553404dfcfde2fb1a42b7809100390bd8aae58b6590fbadf943f296ee8f"
         },
@@ -2765,30 +2648,7 @@
           "type": "Object \\[\\]",
           "required": true,
           "requirement": "Required",
-          "allowed_literals": [
-            "attachment_mention",
-            "broadcast",
-            "canvas",
-            "canvas_message_unfurl",
-            "canvas_user_mention",
-            "channel",
-            "citation",
-            "color",
-            "date",
-            "emoji",
-            "file",
-            "link",
-            "list_record",
-            "message_mention",
-            "salesforce_data_field",
-            "tag",
-            "team",
-            "text",
-            "user",
-            "usergroup",
-            "work_object_mention",
-            "workflow_mention"
-          ],
+          "allowed_literals": [],
           "constraints": {},
           "description_sha256": "76e716626fba9341946d00178aa6ac515d48284886ab82b2f79f606fd9505cc8"
         },
@@ -2828,7 +2688,7 @@
           "type": "String",
           "required": true,
           "requirement": "Required",
-          "allowed_literals": ["rich_text_section"],
+          "allowed_literals": [],
           "constraints": {},
           "description_sha256": "c550e8bc41cf920ec8266d3edb3060ffd839d50dae9785e4dfff10c8ab7465d5"
         },
@@ -2837,30 +2697,7 @@
           "type": "Object \\[\\]",
           "required": true,
           "requirement": "Required",
-          "allowed_literals": [
-            "attachment_mention",
-            "broadcast",
-            "canvas",
-            "canvas_message_unfurl",
-            "canvas_user_mention",
-            "channel",
-            "citation",
-            "color",
-            "date",
-            "emoji",
-            "file",
-            "link",
-            "list_record",
-            "message_mention",
-            "salesforce_data_field",
-            "tag",
-            "team",
-            "text",
-            "user",
-            "usergroup",
-            "work_object_mention",
-            "workflow_mention"
-          ],
+          "allowed_literals": [],
           "constraints": {},
           "description_sha256": "76e716626fba9341946d00178aa6ac515d48284886ab82b2f79f606fd9505cc8"
         }
@@ -2936,15 +2773,7 @@
           "type": "Object",
           "required": false,
           "requirement": "Optional",
-          "allowed_literals": [
-            "bold",
-            "client_highlight",
-            "highlight",
-            "italic",
-            "strike",
-            "underline",
-            "unlink"
-          ],
+          "allowed_literals": [],
           "constraints": {},
           "description_sha256": "4ef5fca36739d40de95c8cb46267b1547c07e09225ace25f80327baf15796c55"
         }
@@ -2993,7 +2822,7 @@
           "type": "Object\\[\\]",
           "required": true,
           "requirement": "Required",
-          "allowed_literals": ["option_groups"],
+          "allowed_literals": [],
           "constraints": { "max_items": 100 },
           "description_sha256": "8aed95bdc95dc8f819b8c23bdf094cbdcba97a900a723518af938eb2f5e52a85"
         },
@@ -3002,7 +2831,7 @@
           "type": "Object\\[\\]",
           "required": false,
           "requirement": "Optional",
-          "allowed_literals": ["options"],
+          "allowed_literals": [],
           "constraints": {},
           "description_sha256": "f7e18f975f0be4be9350c8f734ca9f0076263bbf48e420db8327c4eeab194670"
         },
@@ -3011,7 +2840,7 @@
           "type": "Object",
           "required": false,
           "requirement": "Optional",
-          "allowed_literals": ["option_groups", "options"],
+          "allowed_literals": [],
           "constraints": {},
           "description_sha256": "0a42d45a56e90c8ae2237938da4485690e2428c1299bf9da4e0cd451d561aea4"
         },
@@ -3029,7 +2858,7 @@
           "type": "Boolean",
           "required": false,
           "requirement": "Optional",
-          "allowed_literals": ["false", "true", "view object"],
+          "allowed_literals": ["true"],
           "constraints": {},
           "description_sha256": "8c6026305ae638575efe8cf346467cf6ecdc17d8164ce70ffd7eb2492e50d7ae"
         },
@@ -3038,7 +2867,7 @@
           "type": "Object",
           "required": false,
           "requirement": "Optional",
-          "allowed_literals": ["plain_text", "text"],
+          "allowed_literals": [],
           "constraints": {},
           "description_sha256": "8f299b463ad7060097c83e3b1f36e71219bd8d3b0fd0741a885a1ae8452e6b1d"
         }
@@ -3096,15 +2925,7 @@
           "type": "Object",
           "required": false,
           "requirement": "Optional",
-          "allowed_literals": [
-            "bold",
-            "client_highlight",
-            "highlight",
-            "italic",
-            "strike",
-            "underline",
-            "unlink"
-          ],
+          "allowed_literals": [],
           "constraints": {},
           "description_sha256": "4ef5fca36739d40de95c8cb46267b1547c07e09225ace25f80327baf15796c55"
         }
@@ -3153,15 +2974,7 @@
           "type": "Object",
           "required": false,
           "requirement": "Optional",
-          "allowed_literals": [
-            "bold",
-            "client_highlight",
-            "highlight",
-            "italic",
-            "strike",
-            "underline",
-            "unlink"
-          ],
+          "allowed_literals": [],
           "constraints": {},
           "description_sha256": "4ef5fca36739d40de95c8cb46267b1547c07e09225ace25f80327baf15796c55"
         }
@@ -3210,16 +3023,7 @@
           "type": "Object",
           "required": false,
           "requirement": "Optional",
-          "allowed_literals": [
-            "bold",
-            "client_highlight",
-            "code",
-            "highlight",
-            "italic",
-            "strike",
-            "underline",
-            "unlink"
-          ],
+          "allowed_literals": [],
           "constraints": {},
           "description_sha256": "e536663a604d5a5a200ea8ff68249992f5474ae9a1b152eed8cb28dc27117ddb"
         }
@@ -3268,7 +3072,7 @@
           "type": "String",
           "required": false,
           "requirement": "Optional",
-          "allowed_literals": ["22:25", "HH", "HH:mm", "mm"],
+          "allowed_literals": [],
           "constraints": {},
           "description_sha256": "94d1d3b884b11cb07015c6cdc0949e3717040e18ca0842cdf7773b67daf3624b"
         },
@@ -3286,7 +3090,7 @@
           "type": "Boolean",
           "required": false,
           "requirement": "Optional",
-          "allowed_literals": ["false", "true", "view object"],
+          "allowed_literals": ["true"],
           "constraints": {},
           "description_sha256": "8c6026305ae638575efe8cf346467cf6ecdc17d8164ce70ffd7eb2492e50d7ae"
         },
@@ -3295,7 +3099,7 @@
           "type": "Object",
           "required": false,
           "requirement": "Optional",
-          "allowed_literals": ["plain_text", "text"],
+          "allowed_literals": [],
           "constraints": {},
           "description_sha256": "21a9e1578bb00dd6e48e772be97de70a66f77170f714c98c3fbac1713c95ee19"
         },
@@ -3304,7 +3108,7 @@
           "type": "String",
           "required": false,
           "requirement": "Optional",
-          "allowed_literals": ["view_submission"],
+          "allowed_literals": [],
           "constraints": {},
           "description_sha256": "a98c99031f1c13d10de49c3b4f1684c1f2296baba1ce1f0efca6f4ebe735e28b"
         }
@@ -3393,7 +3197,7 @@
           "type": "String",
           "required": false,
           "requirement": "Optional",
-          "allowed_literals": ["view_submission"],
+          "allowed_literals": [],
           "constraints": { "max_length": 255 },
           "description_sha256": "6c634832337e4ddeb224b71435d342706fc7ffe5774c6c6f769d17022240336e"
         },
@@ -3411,7 +3215,7 @@
           "type": "Object",
           "required": false,
           "requirement": "Optional",
-          "allowed_literals": ["block_actions"],
+          "allowed_literals": [],
           "constraints": {},
           "description_sha256": "dc6f22b5fb928cdf41e1787e3a6cad101bf0f9db20ff5abc2392b49de152ba38"
         },
@@ -3420,7 +3224,7 @@
           "type": "Boolean",
           "required": false,
           "requirement": "Optional",
-          "allowed_literals": ["false", "true", "view object"],
+          "allowed_literals": ["true"],
           "constraints": {},
           "description_sha256": "8c6026305ae638575efe8cf346467cf6ecdc17d8164ce70ffd7eb2492e50d7ae"
         },
@@ -3429,7 +3233,7 @@
           "type": "Object",
           "required": false,
           "requirement": "Optional",
-          "allowed_literals": ["plain_text", "text"],
+          "allowed_literals": [],
           "constraints": {},
           "description_sha256": "dc6122f623ec5345662d2ea8d2ef1dc9772ec66b38c41c386a76aa58775818b3"
         }
@@ -3478,15 +3282,7 @@
           "type": "Object",
           "required": false,
           "requirement": "Optional",
-          "allowed_literals": [
-            "bold",
-            "client_highlight",
-            "highlight",
-            "italic",
-            "strike",
-            "underline",
-            "unlink"
-          ],
+          "allowed_literals": [],
           "constraints": {},
           "description_sha256": "4ef5fca36739d40de95c8cb46267b1547c07e09225ace25f80327baf15796c55"
         },
@@ -3544,15 +3340,7 @@
           "type": "Object",
           "required": false,
           "requirement": "Optional",
-          "allowed_literals": [
-            "bold",
-            "client_highlight",
-            "highlight",
-            "italic",
-            "strike",
-            "underline",
-            "unlink"
-          ],
+          "allowed_literals": [],
           "constraints": {},
           "description_sha256": "40a235211ab4ad004d1d20647405d2fd7c25b85a7137e9f3f200bc7e219c6dd1"
         }
@@ -3672,15 +3460,7 @@
           "type": "Object",
           "required": false,
           "requirement": "Optional",
-          "allowed_literals": [
-            "bold",
-            "client_highlight",
-            "highlight",
-            "italic",
-            "strike",
-            "underline",
-            "unlink"
-          ],
+          "allowed_literals": [],
           "constraints": {},
           "description_sha256": "40a235211ab4ad004d1d20647405d2fd7c25b85a7137e9f3f200bc7e219c6dd1"
         }
@@ -3720,7 +3500,7 @@
           "type": "Object",
           "required": true,
           "requirement": "Required",
-          "allowed_literals": ["type: plain_text"],
+          "allowed_literals": [],
           "constraints": {},
           "description_sha256": "79750cc7c9bc771731f2c11e910526d56000df25ab35fe9c934f53a7d3c16855"
         },
@@ -3747,7 +3527,7 @@
           "type": "String",
           "required": false,
           "requirement": "Optional",
-          "allowed_literals": ["danger", "primary"],
+          "allowed_literals": [],
           "constraints": {},
           "description_sha256": "6127981ab8b0087e92eacfd88f95ed0b8b814a1d56a25f23cf669a2c9deb2f45"
         },
@@ -3756,7 +3536,7 @@
           "type": "String",
           "required": false,
           "requirement": "Optional",
-          "allowed_literals": ["text"],
+          "allowed_literals": [],
           "constraints": { "max_length": 75 },
           "description_sha256": "7d9707cd524d94656bddb7bc7eac3d159375d6e17e6771ff741e486cb85b1593"
         }
@@ -3850,15 +3630,7 @@
           "type": "Object",
           "required": false,
           "requirement": "Optional",
-          "allowed_literals": [
-            "bold",
-            "client_highlight",
-            "highlight",
-            "italic",
-            "strike",
-            "underline",
-            "unlink"
-          ],
+          "allowed_literals": [],
           "constraints": {},
           "description_sha256": "40a235211ab4ad004d1d20647405d2fd7c25b85a7137e9f3f200bc7e219c6dd1"
         }

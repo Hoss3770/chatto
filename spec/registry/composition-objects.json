@@ -38,7 +38,7 @@
           "type": "Object",
           "required": true,
           "requirement": "Required",
-          "allowed_literals": ["plain_text"],
+          "allowed_literals": [],
           "constraints": {},
           "description_sha256": "a3c759dd76dd27dce826383ac8c43f1e8095c62a4c967f3e5ea4bc3647f0c682"
         },
@@ -47,7 +47,7 @@
           "type": "Object",
           "required": true,
           "requirement": "Required",
-          "allowed_literals": ["plain_text"],
+          "allowed_literals": [],
           "constraints": {},
           "description_sha256": "3a3db41d85b191e6e515512bb7087cff0047527d51ec0e6cf765db3df87e9ba8"
         },
@@ -56,7 +56,7 @@
           "type": "Object",
           "required": true,
           "requirement": "Required",
-          "allowed_literals": ["plain_text", "text"],
+          "allowed_literals": [],
           "constraints": {},
           "description_sha256": "82bc70d0c7933d49ffc953158e879773888f2909440b0bad99413be86ad06b6a"
         },
@@ -65,7 +65,7 @@
           "type": "Object",
           "required": true,
           "requirement": "Required",
-          "allowed_literals": ["plain_text", "text"],
+          "allowed_literals": [],
           "constraints": {},
           "description_sha256": "f67b9f17340e85aef5bca50a151b0f7e44178e856cda02b11f5db93fa57aaf36"
         },
@@ -74,7 +74,7 @@
           "type": "String",
           "required": false,
           "requirement": "Optional",
-          "allowed_literals": ["confirm", "danger", "primary"],
+          "allowed_literals": [],
           "constraints": {},
           "description_sha256": "efe3262c96984db8383b4b621410c6778742fee2686042243ea54fe7d4ce5df9"
         }
@@ -105,7 +105,7 @@
           "type": "String\\[\\]",
           "required": false,
           "requirement": "Optional",
-          "allowed_literals": ["im", "mpim", "private", "public"],
+          "allowed_literals": [],
           "constraints": {},
           "description_sha256": "0a9ceb952f8856da1ca859309d799fa65e1a2f069d21620396c6ba1c2bebe757"
         },
@@ -114,7 +114,7 @@
           "type": "Boolean",
           "required": false,
           "requirement": "Optional",
-          "allowed_literals": ["false"],
+          "allowed_literals": [],
           "constraints": {},
           "description_sha256": "e88de3a9fdbb1ea782f8a458024694310e8a22006e5f1a516555d0fac23d50c9"
         },
@@ -123,7 +123,7 @@
           "type": "Boolean",
           "required": false,
           "requirement": "Optional",
-          "allowed_literals": ["false"],
+          "allowed_literals": [],
           "constraints": {},
           "description_sha256": "872e324622d3babe5ec2500279a505e8d3982a9152faafcf338d4d53afbfa2a4"
         }
@@ -154,7 +154,7 @@
           "type": "String\\[\\]",
           "required": false,
           "requirement": "Optional",
-          "allowed_literals": ["block_actions", "on_character_entered", "on_enter_pressed"],
+          "allowed_literals": [],
           "constraints": {},
           "description_sha256": "ace55155150fa89bba0cf33edf2019ae51c11b50287f759e7c0b3a61fa2d4e20"
         }
@@ -185,7 +185,7 @@
           "type": "Object",
           "required": true,
           "requirement": "Required",
-          "allowed_literals": ["mrkdwn", "plain_text"],
+          "allowed_literals": [],
           "constraints": {},
           "description_sha256": "f0bc99729c8e5cc3e76345077804e2ad93f54df6e8f6960f180179056d52fc93"
         },
@@ -203,7 +203,7 @@
           "type": "Object",
           "required": false,
           "requirement": "Optional",
-          "allowed_literals": ["mrkdwn", "plain_text", "text"],
+          "allowed_literals": [],
           "constraints": {},
           "description_sha256": "2d7d71756d1c955debc4faf595033b5ef9bdd4350e9adfe387c2fb10b2438b14"
         },
@@ -243,7 +243,7 @@
           "type": "Object",
           "required": true,
           "requirement": "Required",
-          "allowed_literals": ["plain_text", "text"],
+          "allowed_literals": [],
           "constraints": {},
           "description_sha256": "4bdba274885d280d988dc5181f75269758cf0a2ee7cab0eb93b6b81cdae80427"
         },
@@ -283,7 +283,7 @@
           "type": "string",
           "required": false,
           "requirement": "Optional",
-          "allowed_literals": ["permalink", "url_private"],
+          "allowed_literals": [],
           "constraints": {},
           "description_sha256": "2ef5bd0cf042654c379f76e7ec13a219910040bbe4e8b03ce6bc4cb5611d9dc2"
         },
@@ -323,7 +323,7 @@
           "type": "string",
           "required": true,
           "requirement": "Required",
-          "allowed_literals": ["icon"],
+          "allowed_literals": [],
           "constraints": {},
           "description_sha256": "ef0a949937841ddf19ae143a7fd54a93b185cb41449084f20b7d4d0cd09ccd93"
         },
@@ -427,7 +427,7 @@
           "type": "String",
           "required": true,
           "requirement": "Required",
-          "allowed_literals": ["mrkdwn", "type"],
+          "allowed_literals": [],
           "constraints": { "min_length": 1, "max_length": 3000 },
           "description_sha256": "02aea5875312b10cf9cf095c72409fea8d49138bd890403aee674b2c3b673196"
         },
@@ -436,7 +436,7 @@
           "type": "Boolean",
           "required": false,
           "requirement": "Optional",
-          "allowed_literals": ["plain_text", "type"],
+          "allowed_literals": [],
           "constraints": {},
           "description_sha256": "71bf9f4ca70279aeb4da3c579cb3d696b3d23bc411d7bc9c0a9c7ce7ab00834a"
         },
@@ -445,7 +445,7 @@
           "type": "Boolean",
           "required": false,
           "requirement": "unspecified",
-          "allowed_literals": ["false", "mrkdwn", "true", "type"],
+          "allowed_literals": ["false"],
           "constraints": {},
           "description_sha256": "493ac7dd1b03bef8e3d7219947eb02d5496db2a48028989cd4bfac75f590899a"
         }
@@ -485,7 +485,7 @@
           "type": "Object\\[\\]",
           "required": false,
           "requirement": "Optional",
-          "allowed_literals": ["customizable: true"],
+          "allowed_literals": [],
           "constraints": {},
           "description_sha256": "78d6f2d29c80979aa6c91e84c287b391e95a0784dc90dd955f09785b02ae686b"
         }

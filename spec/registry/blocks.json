@@ -108,7 +108,7 @@
           "type": "Object",
           "required": true,
           "requirement": "Required",
-          "allowed_literals": ["mrkdwn", "plain_text"],
+          "allowed_literals": [],
           "constraints": {},
           "description_sha256": "4196a9ababff97b1577af1421911d6ec01aba6fbc849b5ec952e3fb9d4150322"
         },
@@ -209,7 +209,7 @@
           "type": "[Image element](https://docs.slack.dev/reference/block-kit/block-elements/image-element.md)",
           "required": false,
           "requirement": "Optional",
-          "allowed_literals": ["alt_text"],
+          "allowed_literals": [],
           "constraints": { "max_length": 2000 },
           "description_sha256": "ed356591f2f89bf30aeef7709e18ea23fd19c1c2b8ba4d2e1f527dd9025b5154"
         },
@@ -218,7 +218,7 @@
           "type": "[Image element](https://docs.slack.dev/reference/block-kit/block-elements/image-element.md)",
           "required": false,
           "requirement": "Optional",
-          "allowed_literals": ["alt_text"],
+          "allowed_literals": [],
           "constraints": { "max_length": 2000 },
           "description_sha256": "16a6c43d265824f49d580a5d082638b12698a6df26e1bd3311a15d848d8ccee6"
         },
@@ -227,7 +227,7 @@
           "type": "String",
           "required": false,
           "requirement": "Optional",
-          "allowed_literals": ["mrkdwn", "plain_text"],
+          "allowed_literals": [],
           "constraints": {},
           "description_sha256": "b5e218f04db108c4475baa9457a0405ab36718f96d00efb48263b0db0d477e85"
         },
@@ -236,7 +236,7 @@
           "type": "String",
           "required": false,
           "requirement": "Optional",
-          "allowed_literals": ["mrkdwn", "plain_text"],
+          "allowed_literals": [],
           "constraints": {},
           "description_sha256": "a61d18c3f2a916902a7f73d014fb73377c6cdb25cfbedf8397a57a2c7cac4fc4"
         },
@@ -245,7 +245,7 @@
           "type": "String",
           "required": false,
           "requirement": "Optional",
-          "allowed_literals": ["mrkdwn", "plain_text"],
+          "allowed_literals": [],
           "constraints": {},
           "description_sha256": "14649d72950f9363571c5defe99a7eca73f80235e0e501711bc0018ac99578ad"
         },
@@ -254,7 +254,7 @@
           "type": "[Actions block](https://docs.slack.dev/reference/block-kit/blocks/actions-block.md)",
           "required": false,
           "requirement": "Optional",
-          "allowed_literals": ["danger", "primary"],
+          "allowed_literals": [],
           "constraints": {},
           "description_sha256": "9a306a282d17da34d28e589cd171edae276c4c2c3e5bc212d2c8a72f91234564"
         },
@@ -263,7 +263,7 @@
           "type": "[Slack icon composition object](https://docs.slack.dev/reference/block-kit/composition-objects/slack-icon-object.md)",
           "required": false,
           "requirement": "Optional",
-          "allowed_literals": ["icon"],
+          "allowed_literals": [],
           "constraints": {},
           "description_sha256": "629d648178c76fabeecbf3cd0b2c082a85f4aeebb71489029e0affed6ad3712c"
         },
@@ -272,7 +272,7 @@
           "type": "String",
           "required": false,
           "requirement": "Optional",
-          "allowed_literals": ["mrkdwn", "plain_text"],
+          "allowed_literals": [],
           "constraints": {},
           "description_sha256": "741467666c2b5b1046d6ca5b710b0d557f4c168fcf16da3da3289fef9bdf763a"
         }
@@ -361,7 +361,7 @@
           "type": "[Plain text object](https://docs.slack.dev/reference/block-kit/composition-objects/text-object.md)",
           "required": false,
           "requirement": "unspecified",
-          "allowed_literals": ["plain_text", "rich_text_title"],
+          "allowed_literals": [],
           "constraints": {},
           "description_sha256": "84e4fd35bcc205fc456ff006bc0351763490082fd851a5fd50b17a6e57b3a168"
         },
@@ -370,7 +370,7 @@
           "type": "[Rich text block](https://docs.slack.dev/reference/block-kit/blocks/rich-text-block.md)",
           "required": false,
           "requirement": "unspecified",
-          "allowed_literals": ["rich_text", "title"],
+          "allowed_literals": [],
           "constraints": {},
           "description_sha256": "b39c8b5c028089b4375d317c9441ce69a94c11242cb97e1aa4793f0ffdd46d14"
         },
@@ -379,7 +379,7 @@
           "type": "[Text object](https://docs.slack.dev/reference/block-kit/composition-objects/text-object.md)",
           "required": false,
           "requirement": "Optional",
-          "allowed_literals": ["mrkdwn", "plain_text"],
+          "allowed_literals": [],
           "constraints": {},
           "description_sha256": "0f1efd17039ccbadcf873c28bf4e249160baf907fd7fd4692c90b337a503cc73"
         },
@@ -406,7 +406,7 @@
           "type": "String",
           "required": false,
           "requirement": "Optional",
-          "allowed_literals": ["full", "narrow", "standard", "wide"],
+          "allowed_literals": [],
           "constraints": {},
           "description_sha256": "d0a9a17e9050a014135f9079460e4d9b777eb5279aa14af80336b66e2dd0359d"
         },
@@ -415,7 +415,7 @@
           "type": "[Image element](https://docs.slack.dev/reference/block-kit/block-elements/image-element.md)",
           "required": false,
           "requirement": "Optional",
-          "allowed_literals": ["alt_text"],
+          "allowed_literals": [],
           "constraints": { "max_length": 2000 },
           "description_sha256": "1cc0b79742511294f50e51e4cb448ac5c1664214e147003a3484cc1ca5c37158"
         },
@@ -424,7 +424,7 @@
           "type": "Boolean",
           "required": false,
           "requirement": "Optional",
-          "allowed_literals": ["false", "true"],
+          "allowed_literals": [],
           "constraints": {},
           "description_sha256": "d71cea98bbd53b3585d7fad8c822f32fa9623ec56e694e2f14fb1392bc2048ef"
         },
@@ -433,7 +433,7 @@
           "type": "Boolean",
           "required": false,
           "requirement": "Optional",
-          "allowed_literals": ["false", "is_collapsible", "true"],
+          "allowed_literals": [],
           "constraints": {},
           "description_sha256": "e4c0da10d60d98bda094a2030e7a9e2dd927d9264021b4c2eaeaa79695ced692"
         },
@@ -442,7 +442,7 @@
           "type": "Boolean",
           "required": false,
           "requirement": "Optional",
-          "allowed_literals": ["false"],
+          "allowed_literals": [],
           "constraints": {},
           "description_sha256": "2f2c9628c0e0730276f87f759613038141054e95d6be344ffa51e4ee66650646"
         }
@@ -598,7 +598,7 @@
           "type": "Integer",
           "required": false,
           "requirement": "Optional",
-          "allowed_literals": ["1", "100", "5"],
+          "allowed_literals": [],
           "constraints": {},
           "description_sha256": "3164b7523e85189a68f09f75e1cf8a4d6961bda42e192fa596e3fd364a0aa41e"
         },
@@ -665,7 +665,7 @@
           "type": "Object",
           "required": true,
           "requirement": "Required",
-          "allowed_literals": ["area", "bar", "line", "pie"],
+          "allowed_literals": [],
           "constraints": {},
           "description_sha256": "5d088a754d2a81b1c334d9f32f262e2509ba4d85241ba4006e032ede59d8e00f"
         },
@@ -812,7 +812,7 @@
           "type": "Object",
           "required": true,
           "requirement": "Required",
-          "allowed_literals": ["plain_text"],
+          "allowed_literals": [],
           "constraints": {},
           "description_sha256": "f08dda67a0f190a7a4c6dc9672973fa9b82a432ca15561a3d5bb1c630d276554"
         },
@@ -830,7 +830,7 @@
           "type": "Integer",
           "required": false,
           "requirement": "Optional",
-          "allowed_literals": ["1", "4"],
+          "allowed_literals": [],
           "constraints": {},
           "description_sha256": "fefeff6ac758789b84c3e520e0495e241f0716787c05b455fdb0f55d4e662713"
         }
@@ -879,7 +879,7 @@
           "type": "String",
           "required": false,
           "requirement": "Optional",
-          "allowed_literals": ["slack_file"],
+          "allowed_literals": [],
           "constraints": {},
           "description_sha256": "de46d6d9d6b4b03054df43a5093f912ed1657e468abbd0eedd8e3b22f9f79655"
         },
@@ -897,7 +897,7 @@
           "type": "Object",
           "required": false,
           "requirement": "Optional",
-          "allowed_literals": ["text", "type: plain_text"],
+          "allowed_literals": [],
           "constraints": {},
           "description_sha256": "690af0879536bd93af1b8209090f3b29f75e61efb342eb0d7ffed0d28ab885df"
         },
@@ -960,7 +960,7 @@
           "type": "Object",
           "required": true,
           "requirement": "Required",
-          "allowed_literals": ["plain_text", "text", "type"],
+          "allowed_literals": [],
           "constraints": {},
           "description_sha256": "de4af32713628f0a88799e7eb83fd62f07795359bab81b9e294461157bf9582d"
         },
@@ -978,7 +978,7 @@
           "type": "Boolean",
           "required": false,
           "requirement": "Optional",
-          "allowed_literals": ["block_actions", "false", "file_input", "true"],
+          "allowed_literals": ["true"],
           "constraints": {},
           "description_sha256": "da1726fce87e306ef3fb69b189925c416b84b95f34e5aba976df9be4dc6cd84c"
         },
@@ -996,7 +996,7 @@
           "type": "Object",
           "required": false,
           "requirement": "Optional",
-          "allowed_literals": ["plain_text", "text", "type"],
+          "allowed_literals": [],
           "constraints": {},
           "description_sha256": "f1009ec39a50fbc621ab022d88541f02d5c0f59cb9dba7554d96980f13a05f9a"
         },
@@ -1005,7 +1005,7 @@
           "type": "Boolean",
           "required": false,
           "requirement": "Optional",
-          "allowed_literals": ["false"],
+          "allowed_literals": [],
           "constraints": {},
           "description_sha256": "cba8b22397f642f4534df25c00c60f931141a2ce60e0bd40bbdf6e040e6859ed"
         }
@@ -1045,7 +1045,7 @@
           "type": "String",
           "required": true,
           "requirement": "Required",
-          "allowed_literals": ["is_label_visible", "true"],
+          "allowed_literals": [],
           "constraints": {},
           "description_sha256": "a9f2e10b7dd8d9f9e9089f793448e00a2655f487a243d06a5f45c456b93ac5de"
         },
@@ -1063,7 +1063,7 @@
           "type": "Boolean",
           "required": false,
           "requirement": "Optional",
-          "allowed_literals": ["false", "label", "true"],
+          "allowed_literals": ["true"],
           "constraints": {},
           "description_sha256": "c425ee13d9c3fc1b2255a4b0400ee62420f835e34a3147537663f728ed6e737b"
         },
@@ -1166,7 +1166,7 @@
           "type": "String",
           "required": true,
           "requirement": "Required",
-          "allowed_literals": ["markdown"],
+          "allowed_literals": [],
           "constraints": {},
           "description_sha256": "5050a741d588962cc60253d5e9a0f10677a1548c0c14996463f27e45d6cbaf26"
         },
@@ -1224,7 +1224,7 @@
           "type": "Array",
           "required": true,
           "requirement": "Required",
-          "allowed_literals": ["task_id"],
+          "allowed_literals": [],
           "constraints": {},
           "description_sha256": "2e57e7263c689a18f7cfd4c5d22fa5471d5b85e67ca950c2310256ec7170d2d1"
         },
@@ -1273,12 +1273,7 @@
           "type": "Object\\[\\]",
           "required": true,
           "requirement": "Required",
-          "allowed_literals": [
-            "rich_text_list",
-            "rich_text_preformatted",
-            "rich_text_quote",
-            "rich_text_section"
-          ],
+          "allowed_literals": [],
           "constraints": {},
           "description_sha256": "ba4b2c8d00f5adffd817fd2fcb00cc3cb5c5fdfd8152dadbd54f17e54cfac287"
         },
@@ -1338,7 +1333,7 @@
           "type": "Object",
           "required": false,
           "requirement": "unspecified",
-          "allowed_literals": ["fields"],
+          "allowed_literals": [],
           "constraints": { "max_length": 3000 },
           "description_sha256": "c261112c3cdca024a24aee132b52cf17a6db245c9d503d0917234b0600922023"
         },
@@ -1356,7 +1351,7 @@
           "type": "Object\\[\\]",
           "required": false,
           "requirement": "unspecified",
-          "allowed_literals": ["text"],
+          "allowed_literals": [],
           "constraints": { "max_items": 10 },
           "description_sha256": "0739ccf98d48f04e69d65459bd241c41851ce0d760d3ac4c7015bce9575db70f"
         },
@@ -1365,7 +1360,7 @@
           "type": "Object",
           "required": false,
           "requirement": "Optional",
-          "allowed_literals": ["section"],
+          "allowed_literals": [],
           "constraints": {},
           "description_sha256": "91d1976be3fdc108445bd78f96b19d62154ab9a43c9453a1bf59280357aee85f"
         },
@@ -1423,7 +1418,7 @@
           "type": "array",
           "required": true,
           "requirement": "Required",
-          "allowed_literals": ["raw_number", "raw_text", "rich_text"],
+          "allowed_literals": [],
           "constraints": {},
           "description_sha256": "d57ed54ab77d0ddfdcd282c1122950f64cc837b4ab38b9e6463db70d4e4b8082"
         },
@@ -1441,7 +1436,7 @@
           "type": "string",
           "required": false,
           "requirement": "Optional",
-          "allowed_literals": ["center", "left", "right"],
+          "allowed_literals": [],
           "constraints": {},
           "description_sha256": "6d5373213937ff05bc811d01db2df626089b447904872292fbaa0b3c4accd24f"
         },
@@ -1450,7 +1445,7 @@
           "type": "boolean",
           "required": false,
           "requirement": "Optional",
-          "allowed_literals": ["false"],
+          "allowed_literals": [],
           "constraints": {},
           "description_sha256": "8c20c393cfa8ab066435458ac2f680509e1b87a83f376a7b481ce494649523ac"
         }
@@ -1508,7 +1503,7 @@
           "type": "String",
           "required": true,
           "requirement": "Required",
-          "allowed_literals": ["\"complete\"", "\"error\"", "\"in_progress\""],
+          "allowed_literals": [],
           "constraints": {},
           "description_sha256": "33db8e27f9fb55439753a3bcf466cd6ca146257459e796761093b3808c8dfbed"
         },
@@ -1517,7 +1512,7 @@
           "type": "Object",
           "required": false,
           "requirement": "Optional",
-          "allowed_literals": ["rich_text"],
+          "allowed_literals": [],
           "constraints": {},
           "description_sha256": "28944929eb0502012de20ceec80fa295b5ffae1ea235eadc854de810a5b298e3"
         },
@@ -1526,7 +1521,7 @@
           "type": "Object",
           "required": false,
           "requirement": "Optional",
-          "allowed_literals": ["rich_text"],
+          "allowed_literals": [],
           "constraints": {},
           "description_sha256": "21dc620dc1b255d849eb4710c30a1022133e7e09e1887c3e9149fd6f2429feb5"
         },
@@ -1562,7 +1557,7 @@
           "type": "Boolean",
           "required": false,
           "requirement": "Optional",
-          "allowed_literals": ["details", "title"],
+          "allowed_literals": [],
           "constraints": {},
           "description_sha256": "1a31119062587da9c94f68ade12e7644c6c7625e5ee4282e7d565dcca9f8a7da"
         }
@@ -1629,7 +1624,7 @@
           "type": "Object",
           "required": false,
           "requirement": "Preferred",
-          "allowed_literals": ["plain_text", "text", "type"],
+          "allowed_literals": [],
           "constraints": {},
           "description_sha256": "f6555c5cbaa4a3582825dce97964dc13440447fc4c9102fc247c3c76b60e9e8c"
         },
@@ -1656,7 +1651,7 @@
           "type": "Object",
           "required": true,
           "requirement": "Required",
-          "allowed_literals": ["plain_text", "text", "type"],
+          "allowed_literals": [],
           "constraints": {},
           "description_sha256": "51d5aa580e1ba9531fa7d53c21fb309ad8ee7b738e0ababf3cdd6cf38d58df43"
         },

@@ -178,6 +178,17 @@ async function main() {
     markdown.fields.map((field) => field.name),
     ['type', 'text', 'block_id']
   );
+  const section = blocks.blocks.find((block) => block.wire_type === 'section');
+  assert.deepEqual(section.fields.find((field) => field.name === 'type').allowed_literals, [
+    'section'
+  ]);
+  assert.deepEqual(section.fields.find((field) => field.name === 'text').allowed_literals, []);
+  const emailInput = elements.elements.find((element) => element.wire_type === 'email_text_input');
+  assert.deepEqual(emailInput.fields.find((field) => field.name === 'type').allowed_literals, [
+    'email_text_input'
+  ]);
+  const card = blocks.blocks.find((block) => block.wire_type === 'card');
+  assert.deepEqual(card.fields.find((field) => field.name === 'slack_icon').allowed_literals, []);
 
   const manifestPaths = new Set(manifest.manifest_keys.map((key) => key.path));
   assert.ok(manifestPaths.has('display_information.name'));

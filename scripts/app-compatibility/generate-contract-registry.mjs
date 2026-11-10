@@ -454,16 +454,26 @@ function parseFieldTable(markdown) {
       /maximum (?:number of )?(?:items|elements|options)(?: is| of)?\s*(\d+)/i
     )?.[1];
     if (maximumItems) constraints.max_items = Number(maximumItems);
+    const fixedLiteral = description.match(
+      /(?:always be|is always|must be|set to|value is)\s+`([^`]+)`/i
+    )?.[1];
+    const literalSection = description.match(
+      /(?:can be either|one of(?: the following)?|allowed values are):?\s*([^.]*)/i
+    )?.[1];
+    const scalarType = /\b(?:string|boolean|number|integer)\b/i.test(type);
+    const allowedLiterals = !scalarType
+      ? []
+      : fixedLiteral
+        ? [fixedLiteral]
+        : literalSection
+          ? [...literalSection.matchAll(/`([^`]+)`/g)].map((match) => match[1])
+          : [];
     fields.push({
       name: field,
       type,
       required: requirement === 'Required',
       requirement: requirement || 'unspecified',
-      allowed_literals: uniqueSorted(
-        [...description.matchAll(/`([^`]+)`/g)]
-          .map((match) => match[1])
-          .filter((literal) => literal !== field)
-      ),
+      allowed_literals: uniqueSorted(allowedLiterals),
       constraints,
       description_sha256: sha256(description),
       description
