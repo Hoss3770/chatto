@@ -516,7 +516,7 @@ function parseManifestFields(page) {
   const start = page.markdown.search(/^### Metadata\b/m);
   const markdown = start < 0 ? page.markdown : page.markdown.slice(start);
   const matches = [...markdown.matchAll(/^`([A-Za-z_][A-Za-z0-9_.\[\]-]*)`\s*$/gm)];
-  return matches.map((match, index) => {
+  const fields = matches.map((match, index) => {
     const end = index + 1 < matches.length ? matches[index + 1].index : markdown.length;
     const body = markdown.slice(match.index + match[0].length, end);
     const identityConfigFields = new Set([
@@ -534,26 +534,95 @@ function parseManifestFields(page) {
       .map((line) => line.trim())
       .filter(Boolean);
     const requirement =
-      lines.find((line) => ['Required', 'Optional'].includes(line)) || 'unspecified';
+      lines.find((line) => line === 'Optional' || line.startsWith('Required')) || 'unspecified';
     const description =
       lines.find(
         (line) =>
           !['Field', 'Description', 'Required', 'Optional', 'v1', 'v2', '✅', '❌'].includes(line)
       ) || '';
-    const maximum = description.match(/maximum (?:length (?:is|of) |of )?(\d+)/i)?.[1];
-    const minimum = description.match(/minimum (?:length (?:is|of) |of )?(\d+)/i)?.[1];
+    const normalizedDescription = description.toLowerCase();
+    const typeHint = normalizedDescription.includes('array')
+      ? 'array'
+      : normalizedDescription.includes('boolean') || normalizedDescription.startsWith('whether ')
+        ? 'boolean'
+        : normalizedDescription.includes('integer')
+          ? 'integer'
+          : normalizedDescription.includes('object') ||
+              normalizedDescription.includes('group of settings') ||
+              normalizedDescription.includes('keyed by')
+            ? 'object'
+            : /\b(?:string|text|url|email address|hex value|link to)\b/.test(
+                  normalizedDescription
+                ) || normalizedDescription.startsWith('can be either ')
+              ? 'string'
+              : null;
+    const numberFrom = (pattern) => {
+      const value = description.match(pattern)?.[1];
+      return value ? Number(value.replaceAll(',', '')) : null;
+    };
+    const minLength = numberFrom(/minimum length (?:is|of)\s*([\d,]+)/i);
+    const maxLength = numberFrom(/maximum length (?:is|of)\s*([\d,]+)/i);
+    const perItemLength = /\beach\b.*\bmaximum length\b/i.test(description);
+    const keyLengthRange = description.match(/\bkey of\s*([\d,]+)\s+to\s+([\d,]+)\s+characters\b/i);
+    const itemRange = description.match(
+      /between\s*([\d,]+)\s+and\s+([\d,]+)\s+(?:items|entries|categories|languages)\b/i
+    );
+    const maxItems =
+      numberFrom(
+        /max(?:imum)?(?: of)?\s*([\d,]+)\s+(?:items|entries|categories|languages|servers|types|datastores|workflows)/i
+      ) ?? numberFrom(/\bmax\s*([\d,]+)\s*\.?(?:\s|$)/i);
+    const versionMarkers = lines.filter((line) => line === '✅' || line === '❌').slice(0, 2);
+    const allowedLiteralSection = description.match(
+      /(?:can be either|one of(?: the following)?):?\s*([^.]*)/i
+    )?.[1];
     return {
       path,
-      required: requirement === 'Required',
-      versions: uniqueSorted([body.includes('✅') ? 'documented' : null]),
+      type_hint: typeHint,
+      required: requirement.startsWith('Required'),
+      requirement,
+      versions: uniqueSorted([
+        versionMarkers[0] === '✅' ? 'v1' : null,
+        versionMarkers[1] === '✅' ? 'v2' : null
+      ]),
+      allowed_literals: allowedLiteralSection
+        ? uniqueSorted([...allowedLiteralSection.matchAll(/`([^`]+)`/g)].map((value) => value[1]))
+        : [],
       constraints: {
-        ...(minimum ? { minimum: Number(minimum) } : {}),
-        ...(maximum ? { maximum: Number(maximum) } : {})
+        ...(minLength !== null ? { min_length: minLength } : {}),
+        ...(maxLength !== null && !perItemLength ? { max_length: maxLength } : {}),
+        ...(maxLength !== null && perItemLength && typeHint === 'array'
+          ? { max_item_length: maxLength }
+          : {}),
+        ...(maxLength !== null && perItemLength && typeHint === 'object'
+          ? { max_key_length: maxLength }
+          : {}),
+        ...(keyLengthRange
+          ? {
+              min_key_length: Number(keyLengthRange[1].replaceAll(',', '')),
+              max_key_length: Number(keyLengthRange[2].replaceAll(',', ''))
+            }
+          : {}),
+        ...(itemRange
+          ? {
+              min_items: Number(itemRange[1].replaceAll(',', '')),
+              max_items: Number(itemRange[2].replaceAll(',', ''))
+            }
+          : {}),
+        ...(maxItems !== null ? { max_items: maxItems } : {})
       },
       description_sha256: sha256(description),
       compatibility: manifestPolicy(path)
     };
   });
+  for (const field of fields) {
+    if (
+      field.type_hint === null &&
+      fields.some((candidate) => candidate.path.startsWith(`${field.path}.`))
+    ) {
+      field.type_hint = 'object';
+    }
+  }
+  return fields;
 }
 
 async function fileExists(path) {

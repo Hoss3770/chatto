@@ -16171,8 +16171,8 @@
       "compatibility": {
         "status": "unsupported",
         "reason": "The target Web API route does not exist yet.",
-        "target_phase": 5,
-        "semantic_mapping": "App lifecycle adapter"
+        "target_phase": 3,
+        "semantic_mapping": "List the installations authorized for one delivered event"
       },
       "sdk_signatures": {
         "node": {
@@ -18199,9 +18199,9 @@
       "deprecated": false,
       "compatibility": {
         "status": "unsupported",
-        "reason": "The target Web API route does not exist yet.",
-        "target_phase": 1,
-        "semantic_mapping": "Identity service"
+        "reason": "No safe Chatto semantic mapping has been approved for this method.",
+        "target_phase": 8,
+        "semantic_mapping": "Review during platform breadth or legacy work"
       },
       "sdk_signatures": {
         "node": {
@@ -21033,8 +21033,8 @@
       "compatibility": {
         "status": "unsupported",
         "reason": "The target Web API route does not exist yet.",
-        "target_phase": 2,
-        "semantic_mapping": "Message domain adapter"
+        "target_phase": 6,
+        "semantic_mapping": "Append content to an agent streaming message"
       },
       "sdk_signatures": {
         "node": {
@@ -21218,8 +21218,8 @@
       "compatibility": {
         "status": "unsupported",
         "reason": "The target Web API route does not exist yet.",
-        "target_phase": 2,
-        "semantic_mapping": "Message domain adapter"
+        "target_phase": 5,
+        "semantic_mapping": "Cancel a scheduled app message"
       },
       "sdk_signatures": {
         "node": {
@@ -21403,7 +21403,7 @@
         "status": "unsupported",
         "reason": "The target Web API route does not exist yet.",
         "target_phase": 2,
-        "semantic_mapping": "Message domain adapter"
+        "semantic_mapping": "MessageService.CreateMessage with me-message presentation"
       },
       "sdk_signatures": {
         "node": {
@@ -21517,8 +21517,8 @@
       "compatibility": {
         "status": "unsupported",
         "reason": "The target Web API route does not exist yet.",
-        "target_phase": 2,
-        "semantic_mapping": "Message domain adapter"
+        "target_phase": 5,
+        "semantic_mapping": "Create app-owned ephemeral content"
       },
       "sdk_signatures": {
         "node": {
@@ -21810,8 +21810,8 @@
       "compatibility": {
         "status": "unsupported",
         "reason": "The target Web API route does not exist yet.",
-        "target_phase": 2,
-        "semantic_mapping": "Message domain adapter"
+        "target_phase": 5,
+        "semantic_mapping": "List scheduled app messages"
       },
       "sdk_signatures": {
         "node": {
@@ -21961,8 +21961,8 @@
       "compatibility": {
         "status": "unsupported",
         "reason": "The target Web API route does not exist yet.",
-        "target_phase": 2,
-        "semantic_mapping": "Message domain adapter"
+        "target_phase": 5,
+        "semantic_mapping": "Create a scheduled app message"
       },
       "sdk_signatures": {
         "node": {
@@ -22090,8 +22090,8 @@
       "compatibility": {
         "status": "unsupported",
         "reason": "The target Web API route does not exist yet.",
-        "target_phase": 2,
-        "semantic_mapping": "Message domain adapter"
+        "target_phase": 6,
+        "semantic_mapping": "Start an agent streaming message"
       },
       "sdk_signatures": {
         "node": {
@@ -22242,8 +22242,8 @@
       "compatibility": {
         "status": "unsupported",
         "reason": "The target Web API route does not exist yet.",
-        "target_phase": 2,
-        "semantic_mapping": "Message domain adapter"
+        "target_phase": 6,
+        "semantic_mapping": "Finish an agent streaming message"
       },
       "sdk_signatures": {
         "node": {
@@ -22347,8 +22347,8 @@
       "compatibility": {
         "status": "unsupported",
         "reason": "The target Web API route does not exist yet.",
-        "target_phase": 2,
-        "semantic_mapping": "Message domain adapter"
+        "target_phase": 5,
+        "semantic_mapping": "Submit app-owned link previews"
       },
       "sdk_signatures": {
         "node": {
@@ -22632,9 +22632,9 @@
       "deprecated": false,
       "compatibility": {
         "status": "unsupported",
-        "reason": "The target Web API route does not exist yet.",
-        "target_phase": 2,
-        "semantic_mapping": "Room and timeline domain adapter"
+        "reason": "No safe Chatto semantic mapping has been approved for this method.",
+        "target_phase": 8,
+        "semantic_mapping": "Review during platform breadth or legacy work"
       },
       "sdk_signatures": {
         "node": {
@@ -22728,9 +22728,9 @@
       "deprecated": false,
       "compatibility": {
         "status": "unsupported",
-        "reason": "The target Web API route does not exist yet.",
-        "target_phase": 2,
-        "semantic_mapping": "Room and timeline domain adapter"
+        "reason": "No safe Chatto semantic mapping has been approved for this method.",
+        "target_phase": 8,
+        "semantic_mapping": "Review during platform breadth or legacy work"
       },
       "sdk_signatures": {
         "node": {
@@ -22921,9 +22921,9 @@
       "deprecated": false,
       "compatibility": {
         "status": "unsupported",
-        "reason": "The target Web API route does not exist yet.",
-        "target_phase": 2,
-        "semantic_mapping": "Room and timeline domain adapter"
+        "reason": "No safe Chatto semantic mapping has been approved for this method.",
+        "target_phase": 8,
+        "semantic_mapping": "Review during platform breadth or legacy work"
       },
       "sdk_signatures": {
         "node": {
@@ -23018,9 +23018,9 @@
       "deprecated": false,
       "compatibility": {
         "status": "unsupported",
-        "reason": "The target Web API route does not exist yet.",
-        "target_phase": 2,
-        "semantic_mapping": "Room and timeline domain adapter"
+        "reason": "No safe Chatto semantic mapping has been approved for this method.",
+        "target_phase": 8,
+        "semantic_mapping": "Review during platform breadth or legacy work"
       },
       "sdk_signatures": {
         "node": {
@@ -23280,9 +23280,9 @@
       "deprecated": false,
       "compatibility": {
         "status": "unsupported",
-        "reason": "The target Web API route does not exist yet.",
-        "target_phase": 2,
-        "semantic_mapping": "Room and timeline domain adapter"
+        "reason": "No safe Chatto semantic mapping has been approved for this method.",
+        "target_phase": 8,
+        "semantic_mapping": "Review during platform breadth or legacy work"
       },
       "sdk_signatures": {
         "node": {
@@ -23371,9 +23371,9 @@
       "deprecated": false,
       "compatibility": {
         "status": "unsupported",
-        "reason": "The target Web API route does not exist yet.",
-        "target_phase": 2,
-        "semantic_mapping": "Room and timeline domain adapter"
+        "reason": "No safe Chatto semantic mapping has been approved for this method.",
+        "target_phase": 8,
+        "semantic_mapping": "Review during platform breadth or legacy work"
       },
       "sdk_signatures": {
         "node": {
@@ -24106,9 +24106,9 @@
       "deprecated": false,
       "compatibility": {
         "status": "unsupported",
-        "reason": "The target Web API route does not exist yet.",
-        "target_phase": 2,
-        "semantic_mapping": "Room and timeline domain adapter"
+        "reason": "No safe Chatto semantic mapping has been approved for this method.",
+        "target_phase": 8,
+        "semantic_mapping": "Review during platform breadth or legacy work"
       },
       "sdk_signatures": {
         "node": {
@@ -24811,9 +24811,9 @@
       "deprecated": false,
       "compatibility": {
         "status": "unsupported",
-        "reason": "The target Web API route does not exist yet.",
-        "target_phase": 2,
-        "semantic_mapping": "Room and timeline domain adapter"
+        "reason": "No safe Chatto semantic mapping has been approved for this method.",
+        "target_phase": 8,
+        "semantic_mapping": "Review during platform breadth or legacy work"
       },
       "sdk_signatures": {
         "node": {
@@ -25572,9 +25572,9 @@
       "deprecated": false,
       "compatibility": {
         "status": "unsupported",
-        "reason": "The target Web API route does not exist yet.",
-        "target_phase": 2,
-        "semantic_mapping": "Room and timeline domain adapter"
+        "reason": "No safe Chatto semantic mapping has been approved for this method.",
+        "target_phase": 8,
+        "semantic_mapping": "Review during platform breadth or legacy work"
       },
       "sdk_signatures": {
         "node": {
@@ -25672,9 +25672,9 @@
       "deprecated": false,
       "compatibility": {
         "status": "unsupported",
-        "reason": "The target Web API route does not exist yet.",
-        "target_phase": 2,
-        "semantic_mapping": "Room and timeline domain adapter"
+        "reason": "No safe Chatto semantic mapping has been approved for this method.",
+        "target_phase": 8,
+        "semantic_mapping": "Review during platform breadth or legacy work"
       },
       "sdk_signatures": {
         "node": {
@@ -25987,9 +25987,9 @@
       "deprecated": false,
       "compatibility": {
         "status": "unsupported",
-        "reason": "The target Web API route does not exist yet.",
-        "target_phase": 2,
-        "semantic_mapping": "Room and timeline domain adapter"
+        "reason": "No safe Chatto semantic mapping has been approved for this method.",
+        "target_phase": 8,
+        "semantic_mapping": "Review during platform breadth or legacy work"
       },
       "sdk_signatures": {
         "node": {
@@ -31675,9 +31675,9 @@
       "deprecated": false,
       "compatibility": {
         "status": "unsupported",
-        "reason": "The target Web API route does not exist yet.",
-        "target_phase": 1,
-        "semantic_mapping": "Identity service"
+        "reason": "No safe Chatto semantic mapping has been approved for this method.",
+        "target_phase": 8,
+        "semantic_mapping": "Review during platform breadth or legacy work"
       },
       "sdk_signatures": {
         "node": {
@@ -31726,9 +31726,9 @@
       "deprecated": false,
       "compatibility": {
         "status": "unsupported",
-        "reason": "The target Web API route does not exist yet.",
-        "target_phase": 1,
-        "semantic_mapping": "Identity service"
+        "reason": "The method appears in an SDK but not in the current documentation and has no approved mapping.",
+        "target_phase": 8,
+        "semantic_mapping": "Review during platform breadth or legacy work"
       }
     },
     {
@@ -31994,9 +31994,9 @@
       "deprecated": false,
       "compatibility": {
         "status": "unsupported",
-        "reason": "The target Web API route does not exist yet.",
-        "target_phase": 1,
-        "semantic_mapping": "Identity service"
+        "reason": "No safe Chatto semantic mapping has been approved for this method.",
+        "target_phase": 8,
+        "semantic_mapping": "Review during platform breadth or legacy work"
       },
       "sdk_signatures": { "node": null, "python": null, "java": null }
     },
@@ -32070,9 +32070,9 @@
       "deprecated": false,
       "compatibility": {
         "status": "unsupported",
-        "reason": "The target Web API route does not exist yet.",
-        "target_phase": 1,
-        "semantic_mapping": "Identity service"
+        "reason": "No safe Chatto semantic mapping has been approved for this method.",
+        "target_phase": 8,
+        "semantic_mapping": "Review during platform breadth or legacy work"
       },
       "sdk_signatures": { "node": null, "python": null, "java": null }
     },
@@ -41732,7 +41732,7 @@
         "status": "unsupported",
         "reason": "The target Web API route does not exist yet.",
         "target_phase": 2,
-        "semantic_mapping": "User domain adapter"
+        "semantic_mapping": "RoomDirectoryService.ListRooms for one visible user"
       },
       "sdk_signatures": {
         "node": {
@@ -41808,8 +41808,8 @@
       "compatibility": {
         "status": "unsupported",
         "reason": "The target Web API route does not exist yet.",
-        "target_phase": 2,
-        "semantic_mapping": "User domain adapter"
+        "target_phase": 5,
+        "semantic_mapping": "Remove the authenticated user avatar"
       },
       "sdk_signatures": {
         "node": {
@@ -41902,9 +41902,9 @@
       "deprecated": false,
       "compatibility": {
         "status": "unsupported",
-        "reason": "The target Web API route does not exist yet.",
-        "target_phase": 2,
-        "semantic_mapping": "User domain adapter"
+        "reason": "No safe Chatto semantic mapping has been approved for this method.",
+        "target_phase": 8,
+        "semantic_mapping": "Review during platform breadth or legacy work"
       },
       "sdk_signatures": {
         "node": {
@@ -42007,8 +42007,8 @@
       "compatibility": {
         "status": "unsupported",
         "reason": "The target Web API route does not exist yet.",
-        "target_phase": 2,
-        "semantic_mapping": "User domain adapter"
+        "target_phase": 5,
+        "semantic_mapping": "Read current user presence"
       },
       "sdk_signatures": {
         "node": {
@@ -42143,9 +42143,9 @@
       "deprecated": false,
       "compatibility": {
         "status": "unsupported",
-        "reason": "The target Web API route does not exist yet.",
-        "target_phase": 2,
-        "semantic_mapping": "User domain adapter"
+        "reason": "No safe Chatto semantic mapping has been approved for this method.",
+        "target_phase": 8,
+        "semantic_mapping": "Review during platform breadth or legacy work"
       },
       "sdk_signatures": {
         "node": {
@@ -43111,9 +43111,9 @@
       "deprecated": false,
       "compatibility": {
         "status": "unsupported",
-        "reason": "The target Web API route does not exist yet.",
-        "target_phase": 2,
-        "semantic_mapping": "User domain adapter"
+        "reason": "No safe Chatto semantic mapping has been approved for this method.",
+        "target_phase": 8,
+        "semantic_mapping": "Review during platform breadth or legacy work"
       },
       "sdk_signatures": {
         "java": {
@@ -43189,8 +43189,8 @@
       "compatibility": {
         "status": "unsupported",
         "reason": "The target Web API route does not exist yet.",
-        "target_phase": 2,
-        "semantic_mapping": "User domain adapter"
+        "target_phase": 5,
+        "semantic_mapping": "Update the authenticated user avatar"
       },
       "sdk_signatures": {
         "node": {
@@ -43278,8 +43278,8 @@
       "compatibility": {
         "status": "unsupported",
         "reason": "The target Web API route does not exist yet.",
-        "target_phase": 2,
-        "semantic_mapping": "User domain adapter"
+        "target_phase": 5,
+        "semantic_mapping": "Update the authenticated user presence"
       },
       "sdk_signatures": {
         "node": {

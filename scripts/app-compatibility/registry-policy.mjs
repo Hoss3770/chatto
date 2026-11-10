@@ -10,6 +10,10 @@ const methodMappings = new Map([
   ['auth.test', ['Resolve the installed app credential and its Chatto principal', 1]],
   ['auth.revoke', ['Revoke one app installation token', 1]],
   ['apps.connections.open', ['Create a short-lived Socket Mode URL', 3]],
+  [
+    'apps.event.authorizations.list',
+    ['List the installations authorized for one delivered event', 3]
+  ],
   ['apps.manifest.create', ['Create an app definition from a manifest', 1]],
   ['apps.manifest.delete', ['Delete an app definition after install checks', 1]],
   ['apps.manifest.export', ['Export the preserved app manifest', 1]],
@@ -21,9 +25,18 @@ const methodMappings = new Map([
   ['oauth.v2.user.access', ['Exchange a user-only authorization code', 5]],
   ['openid.connect.token', ['Exchange an OpenID Connect authorization code', 5]],
   ['openid.connect.userInfo', ['Return claims for a Chatto human account', 5]],
+  ['chat.appendStream', ['Append content to an agent streaming message', 6]],
   ['chat.delete', ['MessageService.DeleteMessage', 2]],
+  ['chat.deleteScheduledMessage', ['Cancel a scheduled app message', 5]],
   ['chat.getPermalink', ['Build a URL from webserver.url and a message alias', 2]],
+  ['chat.meMessage', ['MessageService.CreateMessage with me-message presentation', 2]],
+  ['chat.postEphemeral', ['Create app-owned ephemeral content', 5]],
   ['chat.postMessage', ['MessageService.CreateMessage', 2]],
+  ['chat.scheduleMessage', ['Create a scheduled app message', 5]],
+  ['chat.scheduledMessages.list', ['List scheduled app messages', 5]],
+  ['chat.startStream', ['Start an agent streaming message', 6]],
+  ['chat.stopStream', ['Finish an agent streaming message', 6]],
+  ['chat.unfurl', ['Submit app-owned link previews', 5]],
   ['chat.update', ['MessageService.UpdateMessage', 2]],
   ['conversations.archive', ['RoomService.ArchiveRoom', 2]],
   ['conversations.create', ['RoomService.CreateRoom', 2]],
@@ -51,8 +64,13 @@ const methodMappings = new Map([
     'users.lookupByEmail',
     ['Restricted account lookup; do not expose email through public profiles', 2]
   ],
+  ['users.conversations', ['RoomDirectoryService.ListRooms for one visible user', 2]],
+  ['users.deletePhoto', ['Remove the authenticated user avatar', 5]],
+  ['users.getPresence', ['Read current user presence', 5]],
   ['users.profile.get', ['UserService.GetUser', 2]],
   ['users.profile.set', ['UserService.UpdateUserProfile for the authenticated human or bot', 2]],
+  ['users.setPhoto', ['Update the authenticated user avatar', 5]],
+  ['users.setPresence', ['Update the authenticated user presence', 5]],
   ['bots.info', ['UserService.GetUser with bot metadata', 2]],
   ['files.delete', ['MessageService.DeleteAttachment', 5]],
   ['files.info', ['Read one Chatto attachment and its signed locator', 5]],
@@ -89,13 +107,7 @@ const methodFamilyPlans = [
   ['apps.manifest.', 1, 'Manifest service'],
   ['apps.connections.', 3, 'Socket hub'],
   ['apps.', 5, 'App lifecycle adapter'],
-  ['auth.', 1, 'Identity service'],
-  ['oauth.', 1, 'Identity service'],
   ['openid.', 5, 'OpenID Connect service'],
-  ['chat.', 2, 'Message domain adapter'],
-  ['conversations.', 2, 'Room and timeline domain adapter'],
-  ['users.', 2, 'User domain adapter'],
-  ['bots.', 2, 'Bot user adapter'],
   ['blocks.', 4, 'Block validator'],
   ['views.', 4, 'Interactive view service'],
   ['dialog.', 8, 'Legacy interaction shim'],
@@ -254,12 +266,16 @@ export function eventPolicy(name) {
 
 const scopePermissions = new Map([
   ['app_mentions:read', ['message.read-interactions']],
+  ['assistant:write', []],
   ['channels:history', ['message.read']],
   ['channels:join', ['room.join']],
   ['channels:manage', ['room.create', 'room.manage']],
   ['channels:read', ['room.list']],
   ['chat:write', ['message.post']],
+  ['chat:write.customize', ['message.post']],
   ['chat:write.public', ['message.post', 'room.join']],
+  ['commands', []],
+  ['connections:write', []],
   ['files:read', ['message.read']],
   ['files:write', ['message.attach', 'message.post']],
   ['groups:history', ['message.read']],
@@ -270,6 +286,8 @@ const scopePermissions = new Map([
   ['im:write', ['message.post']],
   ['links:read', ['message.read']],
   ['links:write', ['message.post']],
+  ['mcp:connect', []],
+  ['metadata.message:read', ['message.read']],
   ['mpim:history', ['message.read']],
   ['mpim:read', ['message.read']],
   ['mpim:write', ['message.post']],
@@ -278,9 +296,29 @@ const scopePermissions = new Map([
   ['reactions:read', ['message.read']],
   ['reactions:write', ['message.react']],
   ['search:read', ['message.read']],
+  ['triggers:read', []],
+  ['triggers:write', []],
   ['users:read', []],
+  ['users:read.email', ['user.read-email']],
   ['users.profile:read', []],
-  ['users.profile:write', []]
+  ['users.profile:write', []],
+  ['workflows.templates:read', []],
+  ['workflows.templates:write', []]
+]);
+
+const scopeTargetPhases = new Map([
+  ['app_mentions:read', 3],
+  ['assistant:write', 6],
+  ['chat:write.customize', 5],
+  ['commands', 3],
+  ['connections:write', 3],
+  ['mcp:connect', 6],
+  ['metadata.message:read', 5],
+  ['triggers:read', 7],
+  ['triggers:write', 7],
+  ['users:read.email', 2],
+  ['workflows.templates:read', 7],
+  ['workflows.templates:write', 7]
 ]);
 
 /** Return the planned Chatto permission mapping for one OAuth scope. */
@@ -290,17 +328,19 @@ export function scopePolicy(name, compatibleMethods = []) {
     return {
       status: 'unsupported',
       reason: 'The app OAuth scope grant model does not exist yet.',
-      target_phase: Math.min(
-        ...compatibleMethods.map(
-          (method) =>
-            methodPolicy(method, { documented: true, deprecated: false }).target_phase ?? 8
+      target_phase:
+        scopeTargetPhases.get(name) ??
+        Math.min(
+          ...compatibleMethods.map(
+            (method) =>
+              methodPolicy(method, { documented: true, deprecated: false }).target_phase ?? 8
+          ),
+          8
         ),
-        8
-      ),
       chatto_permissions: permissions,
       semantic_mapping:
         permissions.length === 0
-          ? 'Public profile access still needs an app scope gate and normal resource visibility.'
+          ? 'This scope has no direct Chatto RBAC equivalent; current resource authorization remains mandatory.'
           : 'The app scope permits a method; Chatto membership, policy, and effective RBAC remain mandatory.'
     };
   }

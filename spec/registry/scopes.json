@@ -724,7 +724,7 @@
       "compatibility": {
         "status": "unsupported",
         "reason": "The app OAuth scope grant model does not exist yet.",
-        "target_phase": 8,
+        "target_phase": 3,
         "chatto_permissions": ["message.read-interactions"],
         "semantic_mapping": "The app scope permits a method; Chatto membership, policy, and effective RBAC remain mandatory."
       }
@@ -746,10 +746,10 @@
       "compatible_events": ["app_context_changed"],
       "compatibility": {
         "status": "unsupported",
-        "reason": "No Chatto permission mapping has been approved for this scope.",
-        "target_phase": null,
+        "reason": "The app OAuth scope grant model does not exist yet.",
+        "target_phase": 6,
         "chatto_permissions": [],
-        "semantic_mapping": null
+        "semantic_mapping": "This scope has no direct Chatto RBAC equivalent; current resource authorization remains mandatory."
       }
     },
     {
@@ -1183,10 +1183,10 @@
       "compatible_events": [],
       "compatibility": {
         "status": "unsupported",
-        "reason": "No Chatto permission mapping has been approved for this scope.",
-        "target_phase": null,
-        "chatto_permissions": [],
-        "semantic_mapping": null
+        "reason": "The app OAuth scope grant model does not exist yet.",
+        "target_phase": 5,
+        "chatto_permissions": ["message.post"],
+        "semantic_mapping": "The app scope permits a method; Chatto membership, policy, and effective RBAC remain mandatory."
       }
     },
     {
@@ -1272,10 +1272,10 @@
       "compatible_events": [],
       "compatibility": {
         "status": "unsupported",
-        "reason": "No Chatto permission mapping has been approved for this scope.",
-        "target_phase": null,
+        "reason": "The app OAuth scope grant model does not exist yet.",
+        "target_phase": 3,
         "chatto_permissions": [],
-        "semantic_mapping": null
+        "semantic_mapping": "This scope has no direct Chatto RBAC equivalent; current resource authorization remains mandatory."
       }
     },
     {
@@ -1291,10 +1291,10 @@
       "compatible_events": [],
       "compatibility": {
         "status": "unsupported",
-        "reason": "No Chatto permission mapping has been approved for this scope.",
-        "target_phase": null,
+        "reason": "The app OAuth scope grant model does not exist yet.",
+        "target_phase": 3,
         "chatto_permissions": [],
-        "semantic_mapping": null
+        "semantic_mapping": "This scope has no direct Chatto RBAC equivalent; current resource authorization remains mandatory."
       }
     },
     {
@@ -1890,7 +1890,7 @@
       "compatibility": {
         "status": "unsupported",
         "reason": "The app OAuth scope grant model does not exist yet.",
-        "target_phase": 2,
+        "target_phase": 5,
         "chatto_permissions": ["message.post"],
         "semantic_mapping": "The app scope permits a method; Chatto membership, policy, and effective RBAC remain mandatory."
       }
@@ -1998,10 +1998,10 @@
       "compatible_events": [],
       "compatibility": {
         "status": "unsupported",
-        "reason": "No Chatto permission mapping has been approved for this scope.",
-        "target_phase": null,
+        "reason": "The app OAuth scope grant model does not exist yet.",
+        "target_phase": 6,
         "chatto_permissions": [],
-        "semantic_mapping": null
+        "semantic_mapping": "This scope has no direct Chatto RBAC equivalent; current resource authorization remains mandatory."
       }
     },
     {
@@ -2021,10 +2021,10 @@
       ],
       "compatibility": {
         "status": "unsupported",
-        "reason": "No Chatto permission mapping has been approved for this scope.",
-        "target_phase": null,
-        "chatto_permissions": [],
-        "semantic_mapping": null
+        "reason": "The app OAuth scope grant model does not exist yet.",
+        "target_phase": 5,
+        "chatto_permissions": ["message.read"],
+        "semantic_mapping": "The app scope permits a method; Chatto membership, policy, and effective RBAC remain mandatory."
       }
     },
     {
@@ -2674,10 +2674,10 @@
       "compatible_events": [],
       "compatibility": {
         "status": "unsupported",
-        "reason": "No Chatto permission mapping has been approved for this scope.",
-        "target_phase": null,
+        "reason": "The app OAuth scope grant model does not exist yet.",
+        "target_phase": 7,
         "chatto_permissions": [],
-        "semantic_mapping": null
+        "semantic_mapping": "This scope has no direct Chatto RBAC equivalent; current resource authorization remains mandatory."
       }
     },
     {
@@ -2697,10 +2697,10 @@
       "compatible_events": [],
       "compatibility": {
         "status": "unsupported",
-        "reason": "No Chatto permission mapping has been approved for this scope.",
-        "target_phase": null,
+        "reason": "The app OAuth scope grant model does not exist yet.",
+        "target_phase": 7,
         "chatto_permissions": [],
-        "semantic_mapping": null
+        "semantic_mapping": "This scope has no direct Chatto RBAC equivalent; current resource authorization remains mandatory."
       }
     },
     {
@@ -2775,7 +2775,7 @@
         "reason": "The app OAuth scope grant model does not exist yet.",
         "target_phase": 2,
         "chatto_permissions": [],
-        "semantic_mapping": "Public profile access still needs an app scope gate and normal resource visibility."
+        "semantic_mapping": "This scope has no direct Chatto RBAC equivalent; current resource authorization remains mandatory."
       }
     },
     {
@@ -2791,10 +2791,10 @@
       "compatible_events": [],
       "compatibility": {
         "status": "unsupported",
-        "reason": "No Chatto permission mapping has been approved for this scope.",
-        "target_phase": null,
-        "chatto_permissions": [],
-        "semantic_mapping": null
+        "reason": "The app OAuth scope grant model does not exist yet.",
+        "target_phase": 2,
+        "chatto_permissions": ["user.read-email"],
+        "semantic_mapping": "The app scope permits a method; Chatto membership, policy, and effective RBAC remain mandatory."
       }
     },
     {
@@ -2832,7 +2832,7 @@
         "reason": "The app OAuth scope grant model does not exist yet.",
         "target_phase": 2,
         "chatto_permissions": [],
-        "semantic_mapping": "Public profile access still needs an app scope gate and normal resource visibility."
+        "semantic_mapping": "This scope has no direct Chatto RBAC equivalent; current resource authorization remains mandatory."
       }
     },
     {
@@ -2851,7 +2851,7 @@
         "reason": "The app OAuth scope grant model does not exist yet.",
         "target_phase": 2,
         "chatto_permissions": [],
-        "semantic_mapping": "Public profile access still needs an app scope gate and normal resource visibility."
+        "semantic_mapping": "This scope has no direct Chatto RBAC equivalent; current resource authorization remains mandatory."
       }
     },
     {
@@ -2867,10 +2867,10 @@
       "compatible_events": [],
       "compatibility": {
         "status": "unsupported",
-        "reason": "No Chatto permission mapping has been approved for this scope.",
-        "target_phase": null,
+        "reason": "The app OAuth scope grant model does not exist yet.",
+        "target_phase": 7,
         "chatto_permissions": [],
-        "semantic_mapping": null
+        "semantic_mapping": "This scope has no direct Chatto RBAC equivalent; current resource authorization remains mandatory."
       }
     },
     {
@@ -2886,10 +2886,10 @@
       "compatible_events": [],
       "compatibility": {
         "status": "unsupported",
-        "reason": "No Chatto permission mapping has been approved for this scope.",
-        "target_phase": null,
+        "reason": "The app OAuth scope grant model does not exist yet.",
+        "target_phase": 7,
         "chatto_permissions": [],
-        "semantic_mapping": null
+        "semantic_mapping": "This scope has no direct Chatto RBAC equivalent; current resource authorization remains mandatory."
       }
     }
   ]

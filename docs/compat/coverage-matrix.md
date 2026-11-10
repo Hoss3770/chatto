@@ -223,7 +223,7 @@ The counts differ because SDK releases contain different new and legacy surfaces
 | `apps.datastore.put` | unsupported | Phase 5 | App lifecycle adapter | The target Web API route does not exist yet. | documented |
 | `apps.datastore.query` | unsupported | Phase 5 | App lifecycle adapter | The target Web API route does not exist yet. | documented |
 | `apps.datastore.update` | unsupported | Phase 5 | App lifecycle adapter | The target Web API route does not exist yet. | documented |
-| `apps.event.authorizations.list` | unsupported | Phase 5 | App lifecycle adapter | The target Web API route does not exist yet. | documented; node, python, java |
+| `apps.event.authorizations.list` | unsupported | Phase 3 | List the installations authorized for one delivered event | The target Web API route does not exist yet. | documented; node, python, java |
 | `apps.icon.set` | unsupported | Phase 5 | App lifecycle adapter | The target Web API route does not exist yet. | documented |
 | `apps.managed.permissions.set` | unsupported | Phase 5 | App lifecycle adapter | The target Web API route does not exist yet. | documented |
 | `apps.manifest.create` | unsupported | Phase 1 | Create an app definition from a manifest | The target Web API route does not exist yet. | documented; node, python, java |
@@ -247,7 +247,7 @@ The counts differ because SDK releases contain different new and legacy surfaces
 | `assistant.threads.setSuggestedPrompts` | unsupported | Phase 6 | Agent surface adapter | The target Web API route does not exist yet. | documented; node, python, java |
 | `assistant.threads.setTitle` | unsupported | Phase 6 | Agent surface adapter | The target Web API route does not exist yet. | documented; node, python, java |
 | `auth.revoke` | unsupported | Phase 1 | Revoke one app installation token | The target Web API route does not exist yet. | documented; node, python, java |
-| `auth.teams.list` | unsupported | Phase 1 | Identity service | The target Web API route does not exist yet. | documented; node, python, java |
+| `auth.teams.list` | unsupported | Phase 8 | Review during platform breadth or legacy work | No safe Chatto semantic mapping has been approved for this method. | documented; node, python, java |
 | `auth.test` | unsupported | Phase 1 | Resolve the installed app credential and its Chatto principal | The target Web API route does not exist yet. | documented; node, python, java |
 | `blocks.validate` | unsupported | Phase 4 | Block validator | The target Web API route does not exist yet. | documented; node, python, java |
 | `bookmarks.add` | unsupported | Phase 5 | No Chatto bookmark resource; requires product design | The target Web API route does not exist yet. | documented; node, python, java |
@@ -283,44 +283,44 @@ The counts differ because SDK releases contain different new and legacy surfaces
 | `channels.setPurpose` | unsupported | Phase 8 | Legacy compatibility decision per method | This SDK-only legacy method is deprecated and has no Chatto contract. | SDK only; python, java; deprecated |
 | `channels.setTopic` | unsupported | Phase 8 | Legacy compatibility decision per method | This SDK-only legacy method is deprecated and has no Chatto contract. | SDK only; python, java; deprecated |
 | `channels.unarchive` | unsupported | Phase 8 | Legacy compatibility decision per method | This SDK-only legacy method is deprecated and has no Chatto contract. | SDK only; python, java; deprecated |
-| `chat.appendStream` | unsupported | Phase 2 | Message domain adapter | The target Web API route does not exist yet. | documented; node, python, java |
+| `chat.appendStream` | unsupported | Phase 6 | Append content to an agent streaming message | The target Web API route does not exist yet. | documented; node, python, java |
 | `chat.delete` | unsupported | Phase 2 | MessageService.DeleteMessage | The target Web API route does not exist yet. | documented; node, python, java |
-| `chat.deleteScheduledMessage` | unsupported | Phase 2 | Message domain adapter | The target Web API route does not exist yet. | documented; node, python, java |
+| `chat.deleteScheduledMessage` | unsupported | Phase 5 | Cancel a scheduled app message | The target Web API route does not exist yet. | documented; node, python, java |
 | `chat.getPermalink` | unsupported | Phase 2 | Build a URL from webserver.url and a message alias | The target Web API route does not exist yet. | documented; node, python, java |
-| `chat.meMessage` | unsupported | Phase 2 | Message domain adapter | The target Web API route does not exist yet. | documented; node, python, java |
-| `chat.postEphemeral` | unsupported | Phase 2 | Message domain adapter | The target Web API route does not exist yet. | documented; node, python, java |
+| `chat.meMessage` | unsupported | Phase 2 | MessageService.CreateMessage with me-message presentation | The target Web API route does not exist yet. | documented; node, python, java |
+| `chat.postEphemeral` | unsupported | Phase 5 | Create app-owned ephemeral content | The target Web API route does not exist yet. | documented; node, python, java |
 | `chat.postMessage` | unsupported | Phase 2 | MessageService.CreateMessage | The target Web API route does not exist yet. | documented; node, python, java |
-| `chat.scheduledMessages.list` | unsupported | Phase 2 | Message domain adapter | The target Web API route does not exist yet. | documented; node, python, java |
-| `chat.scheduleMessage` | unsupported | Phase 2 | Message domain adapter | The target Web API route does not exist yet. | documented; node, python, java |
-| `chat.startStream` | unsupported | Phase 2 | Message domain adapter | The target Web API route does not exist yet. | documented; node, python, java |
-| `chat.stopStream` | unsupported | Phase 2 | Message domain adapter | The target Web API route does not exist yet. | documented; node, python, java |
-| `chat.unfurl` | unsupported | Phase 2 | Message domain adapter | The target Web API route does not exist yet. | documented; node, python, java |
+| `chat.scheduledMessages.list` | unsupported | Phase 5 | List scheduled app messages | The target Web API route does not exist yet. | documented; node, python, java |
+| `chat.scheduleMessage` | unsupported | Phase 5 | Create a scheduled app message | The target Web API route does not exist yet. | documented; node, python, java |
+| `chat.startStream` | unsupported | Phase 6 | Start an agent streaming message | The target Web API route does not exist yet. | documented; node, python, java |
+| `chat.stopStream` | unsupported | Phase 6 | Finish an agent streaming message | The target Web API route does not exist yet. | documented; node, python, java |
+| `chat.unfurl` | unsupported | Phase 5 | Submit app-owned link previews | The target Web API route does not exist yet. | documented; node, python, java |
 | `chat.update` | unsupported | Phase 2 | MessageService.UpdateMessage | The target Web API route does not exist yet. | documented; node, python, java |
-| `conversations.acceptSharedInvite` | unsupported | Phase 2 | Room and timeline domain adapter | The target Web API route does not exist yet. | documented; node, python, java |
-| `conversations.approveSharedInvite` | unsupported | Phase 2 | Room and timeline domain adapter | The target Web API route does not exist yet. | documented; node, python, java |
+| `conversations.acceptSharedInvite` | unsupported | Phase 8 | Review during platform breadth or legacy work | No safe Chatto semantic mapping has been approved for this method. | documented; node, python, java |
+| `conversations.approveSharedInvite` | unsupported | Phase 8 | Review during platform breadth or legacy work | No safe Chatto semantic mapping has been approved for this method. | documented; node, python, java |
 | `conversations.archive` | unsupported | Phase 2 | RoomService.ArchiveRoom | The target Web API route does not exist yet. | documented; node, python, java |
-| `conversations.canvases.create` | unsupported | Phase 2 | Room and timeline domain adapter | The target Web API route does not exist yet. | documented; node, python, java |
-| `conversations.close` | unsupported | Phase 2 | Room and timeline domain adapter | The target Web API route does not exist yet. | documented; node, python, java |
+| `conversations.canvases.create` | unsupported | Phase 8 | Review during platform breadth or legacy work | No safe Chatto semantic mapping has been approved for this method. | documented; node, python, java |
+| `conversations.close` | unsupported | Phase 8 | Review during platform breadth or legacy work | No safe Chatto semantic mapping has been approved for this method. | documented; node, python, java |
 | `conversations.create` | unsupported | Phase 2 | RoomService.CreateRoom | The target Web API route does not exist yet. | documented; node, python, java |
-| `conversations.declineSharedInvite` | unsupported | Phase 2 | Room and timeline domain adapter | The target Web API route does not exist yet. | documented; node, python, java |
-| `conversations.externalInvitePermissions.set` | unsupported | Phase 2 | Room and timeline domain adapter | The target Web API route does not exist yet. | documented; node, python, java |
+| `conversations.declineSharedInvite` | unsupported | Phase 8 | Review during platform breadth or legacy work | No safe Chatto semantic mapping has been approved for this method. | documented; node, python, java |
+| `conversations.externalInvitePermissions.set` | unsupported | Phase 8 | Review during platform breadth or legacy work | No safe Chatto semantic mapping has been approved for this method. | documented; node, python, java |
 | `conversations.history` | unsupported | Phase 2 | RoomService.GetRoomEvents | The target Web API route does not exist yet. | documented; node, python, java |
 | `conversations.info` | unsupported | Phase 2 | RoomDirectoryService.GetRoom | The target Web API route does not exist yet. | documented; node, python, java |
 | `conversations.invite` | unsupported | Phase 2 | RoomService.AddMember | The target Web API route does not exist yet. | documented; node, python, java |
-| `conversations.inviteShared` | unsupported | Phase 2 | Room and timeline domain adapter | The target Web API route does not exist yet. | documented; node, python, java |
+| `conversations.inviteShared` | unsupported | Phase 8 | Review during platform breadth or legacy work | No safe Chatto semantic mapping has been approved for this method. | documented; node, python, java |
 | `conversations.join` | unsupported | Phase 2 | RoomService.JoinRoom | The target Web API route does not exist yet. | documented; node, python, java |
 | `conversations.kick` | unsupported | Phase 2 | RoomService.RemoveMember | The target Web API route does not exist yet. | documented; node, python, java |
 | `conversations.leave` | unsupported | Phase 2 | RoomService.LeaveRoom | The target Web API route does not exist yet. | documented; node, python, java |
 | `conversations.list` | unsupported | Phase 2 | RoomDirectoryService.ListRooms | The target Web API route does not exist yet. | documented; node, python, java |
-| `conversations.listConnectInvites` | unsupported | Phase 2 | Room and timeline domain adapter | The target Web API route does not exist yet. | documented; node, python, java |
+| `conversations.listConnectInvites` | unsupported | Phase 8 | Review during platform breadth or legacy work | No safe Chatto semantic mapping has been approved for this method. | documented; node, python, java |
 | `conversations.mark` | unsupported | Phase 2 | RoomService.MarkRoomAsRead | The target Web API route does not exist yet. | documented; node, python, java |
 | `conversations.members` | unsupported | Phase 2 | RoomService.ListMembers | The target Web API route does not exist yet. | documented; node, python, java |
 | `conversations.open` | unsupported | Phase 2 | RoomService.StartDM for human grants; bots can use existing DMs only | The target Web API route does not exist yet. | documented; node, python, java |
 | `conversations.rename` | unsupported | Phase 2 | RoomService.UpdateRoom | The target Web API route does not exist yet. | documented; node, python, java |
 | `conversations.replies` | unsupported | Phase 2 | RoomService.GetRoomEvents around one thread root | The target Web API route does not exist yet. | documented; node, python, java |
-| `conversations.requestSharedInvite.approve` | unsupported | Phase 2 | Room and timeline domain adapter | The target Web API route does not exist yet. | documented; node, python, java |
-| `conversations.requestSharedInvite.deny` | unsupported | Phase 2 | Room and timeline domain adapter | The target Web API route does not exist yet. | documented; node, python, java |
-| `conversations.requestSharedInvite.list` | unsupported | Phase 2 | Room and timeline domain adapter | The target Web API route does not exist yet. | documented; node, python, java |
+| `conversations.requestSharedInvite.approve` | unsupported | Phase 8 | Review during platform breadth or legacy work | No safe Chatto semantic mapping has been approved for this method. | documented; node, python, java |
+| `conversations.requestSharedInvite.deny` | unsupported | Phase 8 | Review during platform breadth or legacy work | No safe Chatto semantic mapping has been approved for this method. | documented; node, python, java |
+| `conversations.requestSharedInvite.list` | unsupported | Phase 8 | Review during platform breadth or legacy work | No safe Chatto semantic mapping has been approved for this method. | documented; node, python, java |
 | `conversations.setPurpose` | unsupported | Phase 2 | RoomService.UpdateRoom purpose mapping | The target Web API route does not exist yet. | documented; node, python, java |
 | `conversations.setTopic` | unsupported | Phase 2 | RoomService.UpdateRoom description mapping | The target Web API route does not exist yet. | documented; node, python, java |
 | `conversations.unarchive` | unsupported | Phase 2 | RoomService.UnarchiveRoom | The target Web API route does not exist yet. | documented; node, python, java |
@@ -389,11 +389,11 @@ The counts differ because SDK releases contain different new and legacy surfaces
 | `mpim.mark` | unsupported | Phase 8 | Legacy compatibility decision per method | This SDK-only legacy method is deprecated and has no Chatto contract. | SDK only; python, java; deprecated |
 | `mpim.open` | unsupported | Phase 8 | Legacy compatibility decision per method | This SDK-only legacy method is deprecated and has no Chatto contract. | SDK only; python, java; deprecated |
 | `mpim.replies` | unsupported | Phase 8 | Legacy compatibility decision per method | This SDK-only legacy method is deprecated and has no Chatto contract. | SDK only; python, java; deprecated |
-| `oauth.access` | unsupported | Phase 1 | Identity service | The target Web API route does not exist yet. | documented; node, python, java |
-| `oauth.token` | unsupported | Phase 1 | Identity service | The target Web API route does not exist yet. | SDK only; java |
+| `oauth.access` | unsupported | Phase 8 | Review during platform breadth or legacy work | No safe Chatto semantic mapping has been approved for this method. | documented; node, python, java |
+| `oauth.token` | unsupported | Phase 8 | Review during platform breadth or legacy work | The method appears in an SDK but not in the current documentation and has no approved mapping. | SDK only; java |
 | `oauth.v2.access` | unsupported | Phase 1 | Exchange an app authorization code for installation credentials | The target Web API route does not exist yet. | documented; node, python, java |
-| `oauth.v2.beginShortTokenRotation` | unsupported | Phase 1 | Identity service | The target Web API route does not exist yet. | documented |
-| `oauth.v2.completeShortTokenRotation` | unsupported | Phase 1 | Identity service | The target Web API route does not exist yet. | documented |
+| `oauth.v2.beginShortTokenRotation` | unsupported | Phase 8 | Review during platform breadth or legacy work | No safe Chatto semantic mapping has been approved for this method. | documented |
+| `oauth.v2.completeShortTokenRotation` | unsupported | Phase 8 | Review during platform breadth or legacy work | No safe Chatto semantic mapping has been approved for this method. | documented |
 | `oauth.v2.exchange` | unsupported | Phase 5 | Convert an installation to rotating credentials | The target Web API route does not exist yet. | documented; node, python, java |
 | `oauth.v2.user.access` | unsupported | Phase 5 | Exchange a user-only authorization code | The target Web API route does not exist yet. | documented |
 | `openid.connect.token` | unsupported | Phase 5 | Exchange an OpenID Connect authorization code | The target Web API route does not exist yet. | documented; node, python, java |
@@ -454,19 +454,19 @@ The counts differ because SDK releases contain different new and legacy surfaces
 | `usergroups.update` | unsupported | Phase 5 | No user-group resource; requires product design | The target Web API route does not exist yet. | documented; node, python, java |
 | `usergroups.users.list` | unsupported | Phase 5 | No user-group resource; requires product design | The target Web API route does not exist yet. | documented; node, python, java |
 | `usergroups.users.update` | unsupported | Phase 5 | No user-group resource; requires product design | The target Web API route does not exist yet. | documented; node, python, java |
-| `users.conversations` | unsupported | Phase 2 | User domain adapter | The target Web API route does not exist yet. | documented; node, python, java |
-| `users.deletePhoto` | unsupported | Phase 2 | User domain adapter | The target Web API route does not exist yet. | documented; node, python, java |
-| `users.discoverableContacts.lookup` | unsupported | Phase 2 | User domain adapter | The target Web API route does not exist yet. | documented; node, python, java |
-| `users.getPresence` | unsupported | Phase 2 | User domain adapter | The target Web API route does not exist yet. | documented; node, python, java |
-| `users.identity` | unsupported | Phase 2 | User domain adapter | The target Web API route does not exist yet. | documented; node, python, java |
+| `users.conversations` | unsupported | Phase 2 | RoomDirectoryService.ListRooms for one visible user | The target Web API route does not exist yet. | documented; node, python, java |
+| `users.deletePhoto` | unsupported | Phase 5 | Remove the authenticated user avatar | The target Web API route does not exist yet. | documented; node, python, java |
+| `users.discoverableContacts.lookup` | unsupported | Phase 8 | Review during platform breadth or legacy work | No safe Chatto semantic mapping has been approved for this method. | documented; node, python, java |
+| `users.getPresence` | unsupported | Phase 5 | Read current user presence | The target Web API route does not exist yet. | documented; node, python, java |
+| `users.identity` | unsupported | Phase 8 | Review during platform breadth or legacy work | No safe Chatto semantic mapping has been approved for this method. | documented; node, python, java |
 | `users.info` | unsupported | Phase 2 | UserService.GetUser | The target Web API route does not exist yet. | documented; node, python, java |
 | `users.list` | unsupported | Phase 2 | UserService.ListUsers | The target Web API route does not exist yet. | documented; node, python, java |
 | `users.lookupByEmail` | unsupported | Phase 2 | Restricted account lookup; do not expose email through public profiles | The target Web API route does not exist yet. | documented; node, python, java |
 | `users.profile.get` | unsupported | Phase 2 | UserService.GetUser | The target Web API route does not exist yet. | documented; node, python, java |
 | `users.profile.set` | unsupported | Phase 2 | UserService.UpdateUserProfile for the authenticated human or bot | The target Web API route does not exist yet. | documented; node, python, java |
-| `users.setActive` | unsupported | Phase 2 | User domain adapter | The target Web API route does not exist yet. | documented; java |
-| `users.setPhoto` | unsupported | Phase 2 | User domain adapter | The target Web API route does not exist yet. | documented; node, python, java |
-| `users.setPresence` | unsupported | Phase 2 | User domain adapter | The target Web API route does not exist yet. | documented; node, python, java |
+| `users.setActive` | unsupported | Phase 8 | Review during platform breadth or legacy work | No safe Chatto semantic mapping has been approved for this method. | documented; java |
+| `users.setPhoto` | unsupported | Phase 5 | Update the authenticated user avatar | The target Web API route does not exist yet. | documented; node, python, java |
+| `users.setPresence` | unsupported | Phase 5 | Update the authenticated user presence | The target Web API route does not exist yet. | documented; node, python, java |
 | `views.open` | unsupported | Phase 4 | Interactive view service | The target Web API route does not exist yet. | documented; node, python, java |
 | `views.publish` | unsupported | Phase 4 | Interactive view service | The target Web API route does not exist yet. | documented; node, python, java |
 | `views.push` | unsupported | Phase 4 | Interactive view service | The target Web API route does not exist yet. | documented; node, python, java |
@@ -676,8 +676,8 @@ The counts differ because SDK releases contain different new and legacy surfaces
 | `admin.workflows:write` | unsupported | Not planned | — | No Chatto permission mapping has been approved for this scope. | User |
 | `app_configurations:read` | unsupported | Not planned | — | No Chatto permission mapping has been approved for this scope. | Configuration |
 | `app_configurations:write` | unsupported | Not planned | — | No Chatto permission mapping has been approved for this scope. | Configuration |
-| `app_mentions:read` | unsupported | Phase 8 | The app scope permits a method; Chatto membership, policy, and effective RBAC remain mandatory. | The app OAuth scope grant model does not exist yet. | Chatto permissions: message.read-interactions |
-| `assistant:write` | unsupported | Not planned | — | No Chatto permission mapping has been approved for this scope. | Bot, Legacy Bot |
+| `app_mentions:read` | unsupported | Phase 3 | The app scope permits a method; Chatto membership, policy, and effective RBAC remain mandatory. | The app OAuth scope grant model does not exist yet. | Chatto permissions: message.read-interactions |
+| `assistant:write` | unsupported | Phase 6 | This scope has no direct Chatto RBAC equivalent; current resource authorization remains mandatory. | The app OAuth scope grant model does not exist yet. | Bot, Legacy Bot |
 | `auditlogs:read` | unsupported | Not planned | — | No Chatto permission mapping has been approved for this scope. | User |
 | `authorizations:read` | unsupported | Not planned | — | No Chatto permission mapping has been approved for this scope. | App-level |
 | `bookmarks:read` | unsupported | Not planned | — | No Chatto permission mapping has been approved for this scope. | Bot, Legacy Bot, User |
@@ -695,12 +695,12 @@ The counts differ because SDK releases contain different new and legacy surfaces
 | `channels:write.invites` | unsupported | Not planned | — | No Chatto permission mapping has been approved for this scope. | Bot, Legacy Bot, User |
 | `channels:write.topic` | unsupported | Not planned | — | No Chatto permission mapping has been approved for this scope. | Bot, Legacy Bot, User |
 | `chat:write` | unsupported | Phase 2 | The app scope permits a method; Chatto membership, policy, and effective RBAC remain mandatory. | The app OAuth scope grant model does not exist yet. | Chatto permissions: message.post |
-| `chat:write.customize` | unsupported | Not planned | — | No Chatto permission mapping has been approved for this scope. | Bot, Legacy Bot |
+| `chat:write.customize` | unsupported | Phase 5 | The app scope permits a method; Chatto membership, policy, and effective RBAC remain mandatory. | The app OAuth scope grant model does not exist yet. | Chatto permissions: message.post |
 | `chat:write.public` | unsupported | Phase 8 | The app scope permits a method; Chatto membership, policy, and effective RBAC remain mandatory. | The app OAuth scope grant model does not exist yet. | Chatto permissions: message.post, room.join |
 | `client` | unsupported | Not planned | — | No Chatto permission mapping has been approved for this scope. | — |
 | `code_channels:manage` | unsupported | Not planned | — | No Chatto permission mapping has been approved for this scope. | Bot |
-| `commands` | unsupported | Not planned | — | No Chatto permission mapping has been approved for this scope. | Bot |
-| `connections:write` | unsupported | Not planned | — | No Chatto permission mapping has been approved for this scope. | App-level |
+| `commands` | unsupported | Phase 3 | This scope has no direct Chatto RBAC equivalent; current resource authorization remains mandatory. | The app OAuth scope grant model does not exist yet. | Bot |
+| `connections:write` | unsupported | Phase 3 | This scope has no direct Chatto RBAC equivalent; current resource authorization remains mandatory. | The app OAuth scope grant model does not exist yet. | App-level |
 | `conversations.connect:manage` | unsupported | Not planned | — | No Chatto permission mapping has been approved for this scope. | Bot, Legacy Bot |
 | `conversations.connect:read` | unsupported | Not planned | — | No Chatto permission mapping has been approved for this scope. | Bot, Legacy Bot |
 | `conversations.connect:write` | unsupported | Not planned | — | No Chatto permission mapping has been approved for this scope. | Bot, Legacy Bot |
@@ -725,13 +725,13 @@ The counts differ because SDK releases contain different new and legacy surfaces
 | `im:write.topic` | unsupported | Not planned | — | No Chatto permission mapping has been approved for this scope. | Bot, Legacy Bot, User |
 | `incoming-webhook` | unsupported | Not planned | — | No Chatto permission mapping has been approved for this scope. | Bot, Legacy Bot |
 | `links:read` | unsupported | Phase 8 | The app scope permits a method; Chatto membership, policy, and effective RBAC remain mandatory. | The app OAuth scope grant model does not exist yet. | Chatto permissions: message.read |
-| `links:write` | unsupported | Phase 2 | The app scope permits a method; Chatto membership, policy, and effective RBAC remain mandatory. | The app OAuth scope grant model does not exist yet. | Chatto permissions: message.post |
+| `links:write` | unsupported | Phase 5 | The app scope permits a method; Chatto membership, policy, and effective RBAC remain mandatory. | The app OAuth scope grant model does not exist yet. | Chatto permissions: message.post |
 | `links.embed:write` | unsupported | Not planned | — | No Chatto permission mapping has been approved for this scope. | Bot, User |
 | `lists:read` | unsupported | Not planned | — | No Chatto permission mapping has been approved for this scope. | Bot, User |
 | `lists:write` | unsupported | Not planned | — | No Chatto permission mapping has been approved for this scope. | Bot, User |
 | `managed_apps:install` | unsupported | Not planned | — | No Chatto permission mapping has been approved for this scope. | Bot, User |
-| `mcp:connect` | unsupported | Not planned | — | No Chatto permission mapping has been approved for this scope. | Bot |
-| `metadata.message:read` | unsupported | Not planned | — | No Chatto permission mapping has been approved for this scope. | Bot, Legacy Bot |
+| `mcp:connect` | unsupported | Phase 6 | This scope has no direct Chatto RBAC equivalent; current resource authorization remains mandatory. | The app OAuth scope grant model does not exist yet. | Bot |
+| `metadata.message:read` | unsupported | Phase 5 | The app scope permits a method; Chatto membership, policy, and effective RBAC remain mandatory. | The app OAuth scope grant model does not exist yet. | Chatto permissions: message.read |
 | `mpim:history` | unsupported | Phase 2 | The app scope permits a method; Chatto membership, policy, and effective RBAC remain mandatory. | The app OAuth scope grant model does not exist yet. | Chatto permissions: message.read |
 | `mpim:read` | unsupported | Phase 2 | The app scope permits a method; Chatto membership, policy, and effective RBAC remain mandatory. | The app OAuth scope grant model does not exist yet. | Chatto permissions: message.read |
 | `mpim:write` | unsupported | Phase 2 | The app scope permits a method; Chatto membership, policy, and effective RBAC remain mandatory. | The app OAuth scope grant model does not exist yet. | Chatto permissions: message.post |
@@ -763,17 +763,17 @@ The counts differ because SDK releases contain different new and legacy surfaces
 | `team.billing:read` | unsupported | Not planned | — | No Chatto permission mapping has been approved for this scope. | Bot, Legacy Bot, User |
 | `team.preferences:read` | unsupported | Not planned | — | No Chatto permission mapping has been approved for this scope. | Bot, Legacy Bot, User |
 | `tokens.basic` | unsupported | Not planned | — | No Chatto permission mapping has been approved for this scope. | Bot, Legacy Bot, User |
-| `triggers:read` | unsupported | Not planned | — | No Chatto permission mapping has been approved for this scope. | Bot |
-| `triggers:write` | unsupported | Not planned | — | No Chatto permission mapping has been approved for this scope. | Bot |
+| `triggers:read` | unsupported | Phase 7 | This scope has no direct Chatto RBAC equivalent; current resource authorization remains mandatory. | The app OAuth scope grant model does not exist yet. | Bot |
+| `triggers:write` | unsupported | Phase 7 | This scope has no direct Chatto RBAC equivalent; current resource authorization remains mandatory. | The app OAuth scope grant model does not exist yet. | Bot |
 | `usergroups:read` | unsupported | Not planned | — | No Chatto permission mapping has been approved for this scope. | Bot, Legacy Bot, User |
 | `usergroups:write` | unsupported | Not planned | — | No Chatto permission mapping has been approved for this scope. | Bot, Legacy Bot, User |
-| `users:read` | unsupported | Phase 2 | Public profile access still needs an app scope gate and normal resource visibility. | The app OAuth scope grant model does not exist yet. | Bot, Legacy Bot, User |
-| `users:read.email` | unsupported | Not planned | — | No Chatto permission mapping has been approved for this scope. | Bot, Legacy Bot, User |
+| `users:read` | unsupported | Phase 2 | This scope has no direct Chatto RBAC equivalent; current resource authorization remains mandatory. | The app OAuth scope grant model does not exist yet. | Bot, Legacy Bot, User |
+| `users:read.email` | unsupported | Phase 2 | The app scope permits a method; Chatto membership, policy, and effective RBAC remain mandatory. | The app OAuth scope grant model does not exist yet. | Chatto permissions: user.read-email |
 | `users:write` | unsupported | Not planned | — | No Chatto permission mapping has been approved for this scope. | Bot, Legacy Bot, User |
-| `users.profile:read` | unsupported | Phase 2 | Public profile access still needs an app scope gate and normal resource visibility. | The app OAuth scope grant model does not exist yet. | Bot, Legacy Bot, User |
-| `users.profile:write` | unsupported | Phase 2 | Public profile access still needs an app scope gate and normal resource visibility. | The app OAuth scope grant model does not exist yet. | User |
-| `workflows.templates:read` | unsupported | Not planned | — | No Chatto permission mapping has been approved for this scope. | Bot, User |
-| `workflows.templates:write` | unsupported | Not planned | — | No Chatto permission mapping has been approved for this scope. | Bot, User |
+| `users.profile:read` | unsupported | Phase 2 | This scope has no direct Chatto RBAC equivalent; current resource authorization remains mandatory. | The app OAuth scope grant model does not exist yet. | Bot, Legacy Bot, User |
+| `users.profile:write` | unsupported | Phase 2 | This scope has no direct Chatto RBAC equivalent; current resource authorization remains mandatory. | The app OAuth scope grant model does not exist yet. | User |
+| `workflows.templates:read` | unsupported | Phase 7 | This scope has no direct Chatto RBAC equivalent; current resource authorization remains mandatory. | The app OAuth scope grant model does not exist yet. | Bot, User |
+| `workflows.templates:write` | unsupported | Phase 7 | This scope has no direct Chatto RBAC equivalent; current resource authorization remains mandatory. | The app OAuth scope grant model does not exist yet. | Bot, User |
 
 ## Blocks
 
@@ -892,23 +892,23 @@ The counts differ because SDK releases contain different new and legacy surfaces
 | `app_directory` | unsupported | Not planned | Preserve unknown keys for round-trip only | Chatto has no equivalent hosted or enterprise feature for this key. | optional or conditionally required |
 | `app_directory.app_directory_categories` | unsupported | Not planned | Preserve unknown keys for round-trip only | Chatto has no equivalent hosted or enterprise feature for this key. | optional or conditionally required |
 | `app_directory.direct_install_url` | unsupported | Not planned | Preserve unknown keys for round-trip only | Chatto has no equivalent hosted or enterprise feature for this key. | optional or conditionally required |
-| `app_directory.installation_landing_page` | unsupported | Not planned | Preserve unknown keys for round-trip only | Chatto has no equivalent hosted or enterprise feature for this key. | optional or conditionally required |
+| `app_directory.installation_landing_page` | unsupported | Not planned | Preserve unknown keys for round-trip only | Chatto has no equivalent hosted or enterprise feature for this key. | required by source schema |
 | `app_directory.pricing` | unsupported | Not planned | Preserve unknown keys for round-trip only | Chatto has no equivalent hosted or enterprise feature for this key. | required by source schema |
-| `app_directory.privacy_policy_url` | unsupported | Not planned | Preserve unknown keys for round-trip only | Chatto has no equivalent hosted or enterprise feature for this key. | optional or conditionally required |
-| `app_directory.support_email` | unsupported | Not planned | Preserve unknown keys for round-trip only | Chatto has no equivalent hosted or enterprise feature for this key. | optional or conditionally required |
-| `app_directory.support_url` | unsupported | Not planned | Preserve unknown keys for round-trip only | Chatto has no equivalent hosted or enterprise feature for this key. | optional or conditionally required |
-| `app_directory.supported_languages` | unsupported | Not planned | Preserve unknown keys for round-trip only | Chatto has no equivalent hosted or enterprise feature for this key. | optional or conditionally required |
+| `app_directory.privacy_policy_url` | unsupported | Not planned | Preserve unknown keys for round-trip only | Chatto has no equivalent hosted or enterprise feature for this key. | required by source schema |
+| `app_directory.support_email` | unsupported | Not planned | Preserve unknown keys for round-trip only | Chatto has no equivalent hosted or enterprise feature for this key. | required by source schema |
+| `app_directory.support_url` | unsupported | Not planned | Preserve unknown keys for round-trip only | Chatto has no equivalent hosted or enterprise feature for this key. | required by source schema |
+| `app_directory.supported_languages` | unsupported | Not planned | Preserve unknown keys for round-trip only | Chatto has no equivalent hosted or enterprise feature for this key. | required by source schema |
 | `app_directory.use_direct_install` | unsupported | Not planned | Preserve unknown keys for round-trip only | Chatto has no equivalent hosted or enterprise feature for this key. | optional or conditionally required |
 | `compliance` | unsupported | Not planned | Preserve unknown keys for round-trip only | Chatto has no equivalent hosted or enterprise feature for this key. | optional or conditionally required |
 | `compliance.dod_srg_ilx` | unsupported | Not planned | Preserve unknown keys for round-trip only | Chatto has no equivalent hosted or enterprise feature for this key. | optional or conditionally required |
 | `compliance.fedramp_authorization` | unsupported | Not planned | Preserve unknown keys for round-trip only | Chatto has no equivalent hosted or enterprise feature for this key. | optional or conditionally required |
 | `compliance.itar_compliant` | unsupported | Not planned | Preserve unknown keys for round-trip only | Chatto has no equivalent hosted or enterprise feature for this key. | optional or conditionally required |
 | `datastores` | unsupported | Not planned | Preserve unknown keys for round-trip only | Chatto has no equivalent hosted or enterprise feature for this key. | optional or conditionally required |
-| `datastores.attributes` | unsupported | Not planned | Preserve unknown keys for round-trip only | Chatto has no equivalent hosted or enterprise feature for this key. | optional or conditionally required |
+| `datastores.attributes` | unsupported | Not planned | Preserve unknown keys for round-trip only | Chatto has no equivalent hosted or enterprise feature for this key. | required by source schema |
 | `datastores.attributes.items` | unsupported | Not planned | Preserve unknown keys for round-trip only | Chatto has no equivalent hosted or enterprise feature for this key. | optional or conditionally required |
 | `datastores.attributes.properties` | unsupported | Not planned | Preserve unknown keys for round-trip only | Chatto has no equivalent hosted or enterprise feature for this key. | optional or conditionally required |
-| `datastores.attributes.type` | unsupported | Not planned | Preserve unknown keys for round-trip only | Chatto has no equivalent hosted or enterprise feature for this key. | optional or conditionally required |
-| `datastores.primary_key` | unsupported | Not planned | Preserve unknown keys for round-trip only | Chatto has no equivalent hosted or enterprise feature for this key. | optional or conditionally required |
+| `datastores.attributes.type` | unsupported | Not planned | Preserve unknown keys for round-trip only | Chatto has no equivalent hosted or enterprise feature for this key. | required by source schema |
+| `datastores.primary_key` | unsupported | Not planned | Preserve unknown keys for round-trip only | Chatto has no equivalent hosted or enterprise feature for this key. | required by source schema |
 | `datastores.time_to_live_attribute` | unsupported | Not planned | Preserve unknown keys for round-trip only | Chatto has no equivalent hosted or enterprise feature for this key. | optional or conditionally required |
 | `display_information` | unsupported | Phase 1 | Preserve, validate, and apply through the app definition | The manifest service and console do not exist yet. | required by source schema |
 | `display_information.background_color` | unsupported | Phase 1 | Preserve, validate, and apply through the app definition | The manifest service and console do not exist yet. | optional or conditionally required |
@@ -917,26 +917,26 @@ The counts differ because SDK releases contain different new and legacy surfaces
 | `display_information.name` | unsupported | Phase 1 | Preserve, validate, and apply through the app definition | The manifest service and console do not exist yet. | required by source schema |
 | `events` | unsupported | Not planned | Preserve unknown keys for round-trip only | Chatto has no equivalent hosted or enterprise feature for this key. | optional or conditionally required |
 | `external_auth_providers` | unsupported | Not planned | Preserve unknown keys for round-trip only | Chatto has no equivalent hosted or enterprise feature for this key. | optional or conditionally required |
-| `external_auth_providers.options` | unsupported | Not planned | Preserve unknown keys for round-trip only | Chatto has no equivalent hosted or enterprise feature for this key. | optional or conditionally required |
-| `external_auth_providers.options.authorization_url` | unsupported | Not planned | Preserve unknown keys for round-trip only | Chatto has no equivalent hosted or enterprise feature for this key. | optional or conditionally required |
+| `external_auth_providers.options` | unsupported | Not planned | Preserve unknown keys for round-trip only | Chatto has no equivalent hosted or enterprise feature for this key. | required by source schema |
+| `external_auth_providers.options.authorization_url` | unsupported | Not planned | Preserve unknown keys for round-trip only | Chatto has no equivalent hosted or enterprise feature for this key. | required by source schema |
 | `external_auth_providers.options.authorization_url_extras` | unsupported | Not planned | Preserve unknown keys for round-trip only | Chatto has no equivalent hosted or enterprise feature for this key. | optional or conditionally required |
-| `external_auth_providers.options.client_id` | unsupported | Not planned | Preserve unknown keys for round-trip only | Chatto has no equivalent hosted or enterprise feature for this key. | optional or conditionally required |
-| `external_auth_providers.options.identity_config` | unsupported | Not planned | Preserve unknown keys for round-trip only | Chatto has no equivalent hosted or enterprise feature for this key. | optional or conditionally required |
-| `external_auth_providers.options.identity_config.account_identifier` | unsupported | Not planned | Preserve unknown keys for round-trip only | Chatto has no equivalent hosted or enterprise feature for this key. | optional or conditionally required |
+| `external_auth_providers.options.client_id` | unsupported | Not planned | Preserve unknown keys for round-trip only | Chatto has no equivalent hosted or enterprise feature for this key. | required by source schema |
+| `external_auth_providers.options.identity_config` | unsupported | Not planned | Preserve unknown keys for round-trip only | Chatto has no equivalent hosted or enterprise feature for this key. | required by source schema |
+| `external_auth_providers.options.identity_config.account_identifier` | unsupported | Not planned | Preserve unknown keys for round-trip only | Chatto has no equivalent hosted or enterprise feature for this key. | required by source schema |
 | `external_auth_providers.options.identity_config.body` | unsupported | Not planned | Preserve unknown keys for round-trip only | Chatto has no equivalent hosted or enterprise feature for this key. | optional or conditionally required |
 | `external_auth_providers.options.identity_config.headers` | unsupported | Not planned | Preserve unknown keys for round-trip only | Chatto has no equivalent hosted or enterprise feature for this key. | optional or conditionally required |
 | `external_auth_providers.options.identity_config.http_method_type` | unsupported | Not planned | Preserve unknown keys for round-trip only | Chatto has no equivalent hosted or enterprise feature for this key. | optional or conditionally required |
-| `external_auth_providers.options.identity_config.url` | unsupported | Not planned | Preserve unknown keys for round-trip only | Chatto has no equivalent hosted or enterprise feature for this key. | optional or conditionally required |
-| `external_auth_providers.options.provider_name` | unsupported | Not planned | Preserve unknown keys for round-trip only | Chatto has no equivalent hosted or enterprise feature for this key. | optional or conditionally required |
-| `external_auth_providers.options.scope` | unsupported | Not planned | Preserve unknown keys for round-trip only | Chatto has no equivalent hosted or enterprise feature for this key. | optional or conditionally required |
-| `external_auth_providers.options.token_url` | unsupported | Not planned | Preserve unknown keys for round-trip only | Chatto has no equivalent hosted or enterprise feature for this key. | optional or conditionally required |
+| `external_auth_providers.options.identity_config.url` | unsupported | Not planned | Preserve unknown keys for round-trip only | Chatto has no equivalent hosted or enterprise feature for this key. | required by source schema |
+| `external_auth_providers.options.provider_name` | unsupported | Not planned | Preserve unknown keys for round-trip only | Chatto has no equivalent hosted or enterprise feature for this key. | required by source schema |
+| `external_auth_providers.options.scope` | unsupported | Not planned | Preserve unknown keys for round-trip only | Chatto has no equivalent hosted or enterprise feature for this key. | required by source schema |
+| `external_auth_providers.options.token_url` | unsupported | Not planned | Preserve unknown keys for round-trip only | Chatto has no equivalent hosted or enterprise feature for this key. | required by source schema |
 | `external_auth_providers.options.token_url_config` | unsupported | Not planned | Preserve unknown keys for round-trip only | Chatto has no equivalent hosted or enterprise feature for this key. | optional or conditionally required |
 | `external_auth_providers.options.use_pkce` | unsupported | Not planned | Preserve unknown keys for round-trip only | Chatto has no equivalent hosted or enterprise feature for this key. | optional or conditionally required |
-| `external_auth_providers.provider_type` | unsupported | Not planned | Preserve unknown keys for round-trip only | Chatto has no equivalent hosted or enterprise feature for this key. | optional or conditionally required |
+| `external_auth_providers.provider_type` | unsupported | Not planned | Preserve unknown keys for round-trip only | Chatto has no equivalent hosted or enterprise feature for this key. | required by source schema |
 | `features` | unsupported | Not planned | Preserve unknown keys for round-trip only | Chatto has no equivalent hosted or enterprise feature for this key. | optional or conditionally required |
 | `features.agent_view` | unsupported | Not planned | Preserve unknown keys for round-trip only | Chatto has no equivalent hosted or enterprise feature for this key. | optional or conditionally required |
 | `features.agent_view.actions` | unsupported | Not planned | Preserve unknown keys for round-trip only | Chatto has no equivalent hosted or enterprise feature for this key. | optional or conditionally required |
-| `features.agent_view.agent_description` | unsupported | Not planned | Preserve unknown keys for round-trip only | Chatto has no equivalent hosted or enterprise feature for this key. | optional or conditionally required |
+| `features.agent_view.agent_description` | unsupported | Not planned | Preserve unknown keys for round-trip only | Chatto has no equivalent hosted or enterprise feature for this key. | required by source schema |
 | `features.agent_view.suggested_prompts` | unsupported | Not planned | Preserve unknown keys for round-trip only | Chatto has no equivalent hosted or enterprise feature for this key. | optional or conditionally required |
 | `features.app_home` | unsupported | Phase 4 | Preserve, validate, and apply through the app definition | The manifest service and console do not exist yet. | optional or conditionally required |
 | `features.app_home.home_tab_enabled` | unsupported | Phase 4 | Preserve, validate, and apply through the app definition | The manifest service and console do not exist yet. | optional or conditionally required |
@@ -944,11 +944,11 @@ The counts differ because SDK releases contain different new and legacy surfaces
 | `features.app_home.messages_tab_read_only_enabled` | unsupported | Phase 4 | Preserve, validate, and apply through the app definition | The manifest service and console do not exist yet. | optional or conditionally required |
 | `features.assistant_view` | unsupported | Not planned | Preserve unknown keys for round-trip only | Chatto has no equivalent hosted or enterprise feature for this key. | optional or conditionally required |
 | `features.assistant_view.actions` | unsupported | Not planned | Preserve unknown keys for round-trip only | Chatto has no equivalent hosted or enterprise feature for this key. | optional or conditionally required |
-| `features.assistant_view.assistant_description` | unsupported | Not planned | Preserve unknown keys for round-trip only | Chatto has no equivalent hosted or enterprise feature for this key. | optional or conditionally required |
+| `features.assistant_view.assistant_description` | unsupported | Not planned | Preserve unknown keys for round-trip only | Chatto has no equivalent hosted or enterprise feature for this key. | required by source schema |
 | `features.assistant_view.suggested_prompts` | unsupported | Not planned | Preserve unknown keys for round-trip only | Chatto has no equivalent hosted or enterprise feature for this key. | optional or conditionally required |
 | `features.bot_user` | unsupported | Phase 1 | Preserve, validate, and apply through the app definition | The manifest service and console do not exist yet. | optional or conditionally required |
 | `features.bot_user.always_online` | unsupported | Phase 1 | Preserve, validate, and apply through the app definition | The manifest service and console do not exist yet. | optional or conditionally required |
-| `features.bot_user.display_name` | unsupported | Phase 1 | Preserve, validate, and apply through the app definition | The manifest service and console do not exist yet. | optional or conditionally required |
+| `features.bot_user.display_name` | unsupported | Phase 1 | Preserve, validate, and apply through the app definition | The manifest service and console do not exist yet. | required by source schema |
 | `features.code_channels` | unsupported | Not planned | Preserve unknown keys for round-trip only | Chatto has no equivalent hosted or enterprise feature for this key. | optional or conditionally required |
 | `features.code_channels.enabled` | unsupported | Not planned | Preserve unknown keys for round-trip only | Chatto has no equivalent hosted or enterprise feature for this key. | optional or conditionally required |
 | `features.code_channels.slash_command_url` | unsupported | Not planned | Preserve unknown keys for round-trip only | Chatto has no equivalent hosted or enterprise feature for this key. | optional or conditionally required |
@@ -961,23 +961,23 @@ The counts differ because SDK releases contain different new and legacy surfaces
 | `features.rich_previews.slug.hide_display_id` | unsupported | Not planned | Preserve unknown keys for round-trip only | Chatto has no equivalent hosted or enterprise feature for this key. | optional or conditionally required |
 | `features.search` | unsupported | Not planned | Preserve unknown keys for round-trip only | Chatto has no equivalent hosted or enterprise feature for this key. | optional or conditionally required |
 | `features.search.search_filters_function_callback_id` | unsupported | Not planned | Preserve unknown keys for round-trip only | Chatto has no equivalent hosted or enterprise feature for this key. | optional or conditionally required |
-| `features.search.search_function_callback_id` | unsupported | Not planned | Preserve unknown keys for round-trip only | Chatto has no equivalent hosted or enterprise feature for this key. | optional or conditionally required |
+| `features.search.search_function_callback_id` | unsupported | Not planned | Preserve unknown keys for round-trip only | Chatto has no equivalent hosted or enterprise feature for this key. | required by source schema |
 | `features.search.slackbot_metadata` | unsupported | Not planned | Preserve unknown keys for round-trip only | Chatto has no equivalent hosted or enterprise feature for this key. | optional or conditionally required |
 | `features.shortcuts` | unsupported | Phase 4 | Preserve, validate, and apply through the app definition | The manifest service and console do not exist yet. | optional or conditionally required |
-| `features.shortcuts[].callback_id` | unsupported | Not planned | Preserve unknown keys for round-trip only | Chatto has no equivalent hosted or enterprise feature for this key. | optional or conditionally required |
-| `features.shortcuts[].description` | unsupported | Not planned | Preserve unknown keys for round-trip only | Chatto has no equivalent hosted or enterprise feature for this key. | optional or conditionally required |
-| `features.shortcuts[].name` | unsupported | Not planned | Preserve unknown keys for round-trip only | Chatto has no equivalent hosted or enterprise feature for this key. | optional or conditionally required |
-| `features.shortcuts[].type` | unsupported | Not planned | Preserve unknown keys for round-trip only | Chatto has no equivalent hosted or enterprise feature for this key. | optional or conditionally required |
+| `features.shortcuts[].callback_id` | unsupported | Not planned | Preserve unknown keys for round-trip only | Chatto has no equivalent hosted or enterprise feature for this key. | required by source schema |
+| `features.shortcuts[].description` | unsupported | Not planned | Preserve unknown keys for round-trip only | Chatto has no equivalent hosted or enterprise feature for this key. | required by source schema |
+| `features.shortcuts[].name` | unsupported | Not planned | Preserve unknown keys for round-trip only | Chatto has no equivalent hosted or enterprise feature for this key. | required by source schema |
+| `features.shortcuts[].type` | unsupported | Not planned | Preserve unknown keys for round-trip only | Chatto has no equivalent hosted or enterprise feature for this key. | required by source schema |
 | `features.slash_commands` | unsupported | Phase 3 | Preserve, validate, and apply through the app definition | The manifest service and console do not exist yet. | optional or conditionally required |
-| `features.slash_commands[].command` | unsupported | Not planned | Preserve unknown keys for round-trip only | Chatto has no equivalent hosted or enterprise feature for this key. | optional or conditionally required |
-| `features.slash_commands[].description` | unsupported | Not planned | Preserve unknown keys for round-trip only | Chatto has no equivalent hosted or enterprise feature for this key. | optional or conditionally required |
+| `features.slash_commands[].command` | unsupported | Not planned | Preserve unknown keys for round-trip only | Chatto has no equivalent hosted or enterprise feature for this key. | required by source schema |
+| `features.slash_commands[].description` | unsupported | Not planned | Preserve unknown keys for round-trip only | Chatto has no equivalent hosted or enterprise feature for this key. | required by source schema |
 | `features.slash_commands[].should_escape` | unsupported | Not planned | Preserve unknown keys for round-trip only | Chatto has no equivalent hosted or enterprise feature for this key. | optional or conditionally required |
 | `features.slash_commands[].url` | unsupported | Not planned | Preserve unknown keys for round-trip only | Chatto has no equivalent hosted or enterprise feature for this key. | optional or conditionally required |
 | `features.slash_commands[].usage_hint` | unsupported | Not planned | Preserve unknown keys for round-trip only | Chatto has no equivalent hosted or enterprise feature for this key. | optional or conditionally required |
 | `features.unfurl_domains` | unsupported | Phase 5 | Preserve, validate, and apply through the app definition | The manifest service and console do not exist yet. | optional or conditionally required |
 | `features.workflow_steps` | unsupported | Not planned | Preserve unknown keys for round-trip only | Chatto has no equivalent hosted or enterprise feature for this key. | optional or conditionally required |
 | `features.workflow_steps[].callback_id` | unsupported | Not planned | Preserve unknown keys for round-trip only | Chatto has no equivalent hosted or enterprise feature for this key. | required by source schema |
-| `features.workflow_steps[].name` | unsupported | Not planned | Preserve unknown keys for round-trip only | Chatto has no equivalent hosted or enterprise feature for this key. | optional or conditionally required |
+| `features.workflow_steps[].name` | unsupported | Not planned | Preserve unknown keys for round-trip only | Chatto has no equivalent hosted or enterprise feature for this key. | required by source schema |
 | `mcp_servers` | unsupported | Not planned | Preserve unknown keys for round-trip only | Chatto has no equivalent hosted or enterprise feature for this key. | optional or conditionally required |
 | `oauth_config` | unsupported | Phase 1 | Preserve, validate, and apply through the app definition | The manifest service and console do not exist yet. | optional or conditionally required |
 | `oauth_config.is_enterprise_managed_auth_supported` | unsupported | Phase 1 | Preserve, validate, and apply through the app definition | The manifest service and console do not exist yet. | optional or conditionally required |
@@ -1001,7 +1001,7 @@ The counts differ because SDK releases contain different new and legacy surfaces
 | `settings.function_runtime` | unsupported | Not planned | Preserve unknown keys for round-trip only | Chatto has no equivalent hosted or enterprise feature for this key. | required by source schema |
 | `settings.incoming_webhooks` | unsupported | Phase 2 | Preserve, validate, and apply through the app definition | The manifest service and console do not exist yet. | optional or conditionally required |
 | `settings.interactivity` | unsupported | Phase 4 | Preserve, validate, and apply through the app definition | The manifest service and console do not exist yet. | optional or conditionally required |
-| `settings.interactivity.is_enabled` | unsupported | Phase 4 | Preserve, validate, and apply through the app definition | The manifest service and console do not exist yet. | optional or conditionally required |
+| `settings.interactivity.is_enabled` | unsupported | Phase 4 | Preserve, validate, and apply through the app definition | The manifest service and console do not exist yet. | required by source schema |
 | `settings.interactivity.message_menu_options_url` | unsupported | Phase 4 | Preserve, validate, and apply through the app definition | The manifest service and console do not exist yet. | optional or conditionally required |
 | `settings.interactivity.request_url` | unsupported | Phase 4 | Preserve, validate, and apply through the app definition | The manifest service and console do not exist yet. | optional or conditionally required |
 | `settings.is_hosted` | unsupported | Not planned | Preserve unknown keys for round-trip only | Chatto has no equivalent hosted or enterprise feature for this key. | optional or conditionally required |
@@ -1017,14 +1017,14 @@ The counts differ because SDK releases contain different new and legacy surfaces
 | `types.is_hidden` | unsupported | Not planned | Preserve unknown keys for round-trip only | Chatto has no equivalent hosted or enterprise feature for this key. | optional or conditionally required |
 | `types.is_required` | unsupported | Not planned | Preserve unknown keys for round-trip only | Chatto has no equivalent hosted or enterprise feature for this key. | optional or conditionally required |
 | `types.title` | unsupported | Not planned | Preserve unknown keys for round-trip only | Chatto has no equivalent hosted or enterprise feature for this key. | optional or conditionally required |
-| `types.type` | unsupported | Not planned | Preserve unknown keys for round-trip only | Chatto has no equivalent hosted or enterprise feature for this key. | optional or conditionally required |
+| `types.type` | unsupported | Not planned | Preserve unknown keys for round-trip only | Chatto has no equivalent hosted or enterprise feature for this key. | required by source schema |
 | `workflows` | unsupported | Not planned | Preserve unknown keys for round-trip only | Chatto has no equivalent hosted or enterprise feature for this key. | optional or conditionally required |
-| `workflows.description` | unsupported | Not planned | Preserve unknown keys for round-trip only | Chatto has no equivalent hosted or enterprise feature for this key. | optional or conditionally required |
+| `workflows.description` | unsupported | Not planned | Preserve unknown keys for round-trip only | Chatto has no equivalent hosted or enterprise feature for this key. | required by source schema |
 | `workflows.input_parameters` | unsupported | Not planned | Preserve unknown keys for round-trip only | Chatto has no equivalent hosted or enterprise feature for this key. | optional or conditionally required |
 | `workflows.output_parameters` | unsupported | Not planned | Preserve unknown keys for round-trip only | Chatto has no equivalent hosted or enterprise feature for this key. | optional or conditionally required |
-| `workflows.steps` | unsupported | Not planned | Preserve unknown keys for round-trip only | Chatto has no equivalent hosted or enterprise feature for this key. | optional or conditionally required |
+| `workflows.steps` | unsupported | Not planned | Preserve unknown keys for round-trip only | Chatto has no equivalent hosted or enterprise feature for this key. | required by source schema |
 | `workflows.suggested_triggers` | unsupported | Not planned | Preserve unknown keys for round-trip only | Chatto has no equivalent hosted or enterprise feature for this key. | optional or conditionally required |
-| `workflows.title` | unsupported | Not planned | Preserve unknown keys for round-trip only | Chatto has no equivalent hosted or enterprise feature for this key. | optional or conditionally required |
+| `workflows.title` | unsupported | Not planned | Preserve unknown keys for round-trip only | Chatto has no equivalent hosted or enterprise feature for this key. | required by source schema |
 
 ## Compatibility claim
 

@@ -108,6 +108,9 @@ async function main() {
   assert.ok(methodByName.has('workflows.stepCompleted'));
   assert.equal(methodByName.get('chat.postMessage').deprecated, false);
   assert.equal(methodByName.get('chat.postMessage').compatibility.target_phase, 2);
+  assert.equal(methodByName.get('chat.scheduleMessage').compatibility.target_phase, 5);
+  assert.equal(methodByName.get('chat.startStream').compatibility.target_phase, 6);
+  assert.equal(methodByName.get('conversations.inviteShared').compatibility.target_phase, 8);
   assert.equal(methodByName.get('workflows.stepCompleted').compatibility.target_phase, 7);
   assert.equal(
     methodByName.get('chat.postMessage').sdk_signatures.node.argument_type,
@@ -158,6 +161,14 @@ async function main() {
     );
   }
 
+  const scopeByName = new Map(scopes.scopes.map((scope) => [scope.name, scope]));
+  assert.equal(scopeByName.get('commands').compatibility.target_phase, 3);
+  assert.equal(scopeByName.get('assistant:write').compatibility.target_phase, 6);
+  assert.equal(scopeByName.get('users:read.email').compatibility.target_phase, 2);
+  assert.deepEqual(scopeByName.get('users:read.email').compatibility.chatto_permissions, [
+    'user.read-email'
+  ]);
+
   const blockTypes = new Set(blocks.blocks.map((block) => block.wire_type));
   for (const type of ['auth_provider', 'call', 'data_visualization', 'layout']) {
     assert.ok(blockTypes.has(type), `block union is missing ${type}`);
@@ -174,6 +185,33 @@ async function main() {
   assert.ok(manifestPaths.has('external_auth_providers.options.identity_config.url'));
   assert.ok(!manifestPaths.has('url'));
   const manifestByPath = new Map(manifest.manifest_keys.map((key) => [key.path, key]));
+  assert.ok(
+    manifest.manifest_keys.every((key) =>
+      ['array', 'boolean', 'integer', 'object', 'string'].includes(key.type_hint)
+    ),
+    'a manifest key has no recognized type hint'
+  );
+  assert.ok(
+    manifest.manifest_keys.every((key) => key.versions.length > 0),
+    'a manifest key has no schema version'
+  );
+  assert.deepEqual(manifestByPath.get('_metadata').versions, ['v1', 'v2']);
+  assert.equal(manifestByPath.get('display_information.name').type_hint, 'string');
+  assert.equal(manifestByPath.get('display_information.name').required, true);
+  assert.equal(manifestByPath.get('display_information.name').constraints.max_length, 35);
+  assert.equal(
+    manifestByPath.get('app_directory.installation_landing_page').requirement,
+    'Required (if `app_directory` subgroup is included)'
+  );
+  assert.equal(
+    manifestByPath.get('app_directory.supported_languages').constraints.max_item_length,
+    50
+  );
+  assert.deepEqual(
+    manifestByPath.get('external_auth_providers.options.identity_config.http_method_type')
+      .allowed_literals,
+    ['GET', 'POST']
+  );
   assert.equal(manifestByPath.get('display_information.name').compatibility.target_phase, 1);
   assert.equal(manifestByPath.get('settings.incoming_webhooks').compatibility.target_phase, 2);
   assert.equal(manifestByPath.get('settings.interactivity').compatibility.target_phase, 4);
