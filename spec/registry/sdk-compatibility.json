@@ -1,0 +1,117 @@
+{
+  "schema_version": 1,
+  "source": {
+    "documentation": {
+      "sitemap_url": "https://docs.slack.dev/llms-sitemap.md",
+      "sitemap_sha256": "d2573373cac23044ee07d292b8469bdff024c5ecc774217919765d938859afb3",
+      "selected_page_count": 719
+    },
+    "sdks": {
+      "node": {
+        "@slack/bolt": "5.1.0",
+        "@slack/oauth": "4.0.0",
+        "@slack/socket-mode": "3.2.0",
+        "@slack/types": "3.3.0",
+        "@slack/web-api": "8.3.0"
+      },
+      "python": { "slack-bolt": "1.30.0", "slack-sdk": "3.46.0" },
+      "java": { "bolt": "1.54.0", "slack-api-client": "1.54.0" }
+    }
+  },
+  "method_counts": { "node": 283, "python": 332, "java": 345 },
+  "signature_counts": { "node": 283, "python": 332, "java": 344 },
+  "parsed_source_files": [
+    {
+      "path": "npm/slack-web-api-8.3.0/package/dist/methods.js",
+      "sha256": "08a437d4bbd22fb857e5859a633b1cd0bafdb113cfabe05105d25abd2e879c3f"
+    },
+    {
+      "path": "npm/slack-web-api-8.3.0/package/dist/methods.d.ts",
+      "sha256": "eb658bb0770d24810dee4bc45d8b02c5566801177df4d1e97644da747acb9601"
+    },
+    {
+      "path": "npm/slack-types-3.3.0/package/dist/block-kit/blocks.d.ts",
+      "sha256": "57687f97c390478bf0659f675fd60e696cdb81c4c0259e37af360bf79e9b9082"
+    },
+    {
+      "path": "npm/slack-types-3.3.0/package/dist/block-kit/block-elements.d.ts",
+      "sha256": "ebd073a102798739bf269bf54799fc662719d642766046b9dc5a2801bfd665f8"
+    },
+    {
+      "path": "python/slack_sdk-3.46.0/slack_sdk/web/client.py",
+      "sha256": "bc9dfda87690a1557e12ef162230103481c5347be107d7191ea7c018c6858402"
+    },
+    {
+      "path": "python/slack_sdk-3.46.0/slack_sdk/web/async_client.py",
+      "sha256": "1d455947cd463455603585a0f2cae87865327fc0afab3886205757fc8b84d56e"
+    },
+    {
+      "path": "python/slack_sdk-3.46.0/slack_sdk/models/blocks/blocks.py",
+      "sha256": "8d8c4e7ae03927bcdaed6ce10955fe22d55570a2e0c96459118ae288549686ea"
+    },
+    {
+      "path": "java/slack-api-client/com/slack/api/methods/Methods.java",
+      "sha256": "9a4e6f5ec170f616256e9b68ce893ef19bd56621bd125856831929d41667c562"
+    },
+    {
+      "path": "java/slack-api-client/com/slack/api/methods/MethodsClient.java",
+      "sha256": "5b72eeee6ceef070f87f568f6faa49cd5f28086865700953d31a59d20b2d0610"
+    }
+  ],
+  "api_and_oauth_configuration_evidence": [
+    {
+      "name": "node_web_api_host",
+      "present": true,
+      "source_path": "npm/slack-web-api-8.3.0/package/dist/WebClient.d.ts",
+      "source_sha256": "93ab9db8b42bcaf0405a8fdf13c667985df02a444b8b0887c6ff50b1fd5615cc"
+    },
+    {
+      "name": "node_oauth_authorize",
+      "present": true,
+      "source_path": "npm/slack-oauth-4.0.0/package/dist/install-provider-options.d.ts",
+      "source_sha256": "0b4d9d25f4b8c603d269368a5b2b97c114a5cd1e7fe7ccc4af70da48f5df57ca"
+    },
+    {
+      "name": "node_bolt_host",
+      "present": true,
+      "source_path": "npm/slack-bolt-5.1.0/package/dist/App.d.ts",
+      "source_sha256": "ff9740ec0aa9267e253e1f97dec885cd6adc320bb2b8f4099affdd52c60c3518"
+    },
+    {
+      "name": "node_socket_host",
+      "present": true,
+      "source_path": "npm/slack-socket-mode-3.2.0/package/dist/src/SocketModeOptions.d.ts",
+      "source_sha256": "aa4b9b75844e0423f9b5982575c4177efe894d699679b88c216efc5758b2afa5"
+    },
+    {
+      "name": "python_web_api_host",
+      "present": true,
+      "source_path": "python/slack_sdk-3.46.0/slack_sdk/web/base_client.py",
+      "source_sha256": "fd7beafe11ec7a0661005c96617378ad4ff0873b5f095205ac993f1a762b88ae"
+    },
+    {
+      "name": "python_oauth_authorize",
+      "present": true,
+      "source_path": "python/slack_sdk-3.46.0/slack_sdk/oauth/authorize_url_generator/__init__.py",
+      "source_sha256": "b796b4620cc3b856e9565dd0abb222c262962085168f67a42e0204b712687b60"
+    },
+    {
+      "name": "python_bolt_oauth_authorize",
+      "present": true,
+      "source_path": "python/slack_bolt-1.30.0/slack_bolt/oauth/oauth_settings.py",
+      "source_sha256": "98dd3da07ceb75aa451fc22cf0db03c63aa5b248f1c6fd4f7e75600d0afb78a1"
+    },
+    {
+      "name": "java_web_api_host",
+      "present": true,
+      "source_path": "java/slack-api-client/com/slack/api/methods/MethodsClient.java",
+      "source_sha256": "5b72eeee6ceef070f87f568f6faa49cd5f28086865700953d31a59d20b2d0610"
+    },
+    {
+      "name": "java_bolt_authorize",
+      "present": true,
+      "source_path": "java/bolt/com/slack/api/bolt/App.java",
+      "source_sha256": "1509f12cfb76e148891377019dce26032c36ca8f08c1f2ead61c40512db656aa"
+    }
+  ]
+}

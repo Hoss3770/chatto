@@ -1,0 +1,40 @@
+{
+  "schema_version": 1,
+  "conflicts": [
+    {
+      "topic": "Message shortcut payload",
+      "decision": "Use message_action.",
+      "evidence": "The payload reference and Bolt types agree; an interaction guide uses message_actions."
+    },
+    {
+      "topic": "views.publish argument",
+      "decision": "Use view and accept views as a compatibility alias.",
+      "evidence": "The examples use view while one argument list uses views."
+    },
+    {
+      "topic": "Metadata event scope",
+      "decision": "Accept metadata.message:read and the older message_metadata:read alias in manifests.",
+      "evidence": "The scope registry uses metadata.message:read."
+    },
+    {
+      "topic": "Approval metadata",
+      "decision": "Use approval and preserve slack_approval as unknown input.",
+      "evidence": "Schema and examples use approval."
+    },
+    {
+      "topic": "Workflow input_parameters",
+      "decision": "Accept the properties object form.",
+      "evidence": "Examples use an object although one table describes an array."
+    },
+    {
+      "topic": "Block inventory",
+      "decision": "Use the union of documentation and published SDK source.",
+      "evidence": "Documentation and SDK releases contain different new and legacy object types."
+    },
+    {
+      "topic": "Manifest extensions",
+      "decision": "Preserve unknown keys and round-trip them.",
+      "evidence": "Live exports can contain fields that are absent from the schema reference."
+    }
+  ]
+}

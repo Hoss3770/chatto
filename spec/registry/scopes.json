@@ -1,0 +1,2896 @@
+{
+  "schema_version": 1,
+  "source": {
+    "documentation": {
+      "sitemap_url": "https://docs.slack.dev/llms-sitemap.md",
+      "sitemap_sha256": "d2573373cac23044ee07d292b8469bdff024c5ecc774217919765d938859afb3",
+      "selected_page_count": 719
+    },
+    "sdks": {
+      "node": {
+        "@slack/bolt": "5.1.0",
+        "@slack/oauth": "4.0.0",
+        "@slack/socket-mode": "3.2.0",
+        "@slack/types": "3.3.0",
+        "@slack/web-api": "8.3.0"
+      },
+      "python": { "slack-bolt": "1.30.0", "slack-sdk": "3.46.0" },
+      "java": { "bolt": "1.54.0", "slack-api-client": "1.54.0" }
+    }
+  },
+  "scopes": [
+    {
+      "name": "admin",
+      "title_sha256": "636c64a6272f92ba4b7888d79a6b0e5a17035f49321feccf8a99c70706863c91",
+      "summary_sha256": "a0c7bee00517a73db4adf1b8adbe8a62971bf5206ff0dcc13b7fc14a93f84176",
+      "source": {
+        "url": "https://docs.slack.dev/reference/scopes/admin.md",
+        "sha256": "0c6798d678e0046ab9862e093625b1174455bdb7b8f200ea45bc2ce0d7a95675"
+      },
+      "token_types": ["User"],
+      "compatible_methods": [
+        "admin.audit.anomaly.allow.getItem",
+        "admin.audit.anomaly.allow.updateItem",
+        "team.accessLogs",
+        "team.billableInfo",
+        "team.integrationLogs"
+      ],
+      "compatible_events": [],
+      "compatibility": {
+        "status": "unsupported",
+        "reason": "No Chatto permission mapping has been approved for this scope.",
+        "target_phase": null,
+        "chatto_permissions": [],
+        "semantic_mapping": null
+      }
+    },
+    {
+      "name": "admin.analytics:read",
+      "title_sha256": "635ddd8e186e6b7fce5469b5dce15904c7167f5005d09288186dd3c138532653",
+      "summary_sha256": "582286b835ff105fe21330bbc4447f064ea96b16e6b68584f88d89a7b2696f86",
+      "source": {
+        "url": "https://docs.slack.dev/reference/scopes/admin.analytics.read.md",
+        "sha256": "c227e30da9fcf8a518f9a3e38011735ff9fb3fc5c698879b9c310c93e74acf52"
+      },
+      "token_types": ["User"],
+      "compatible_methods": [
+        "admin.analytics.getFile",
+        "admin.analytics.messages.activity",
+        "admin.analytics.messages.metadata"
+      ],
+      "compatible_events": [],
+      "compatibility": {
+        "status": "unsupported",
+        "reason": "No Chatto permission mapping has been approved for this scope.",
+        "target_phase": null,
+        "chatto_permissions": [],
+        "semantic_mapping": null
+      }
+    },
+    {
+      "name": "admin.app_activities:read",
+      "title_sha256": "b5baec02280fe1c9c584f9c5b0ee5c86f0165fffb24f6def0f28264b90a684a8",
+      "summary_sha256": "2cf2cbf134a8dc89b2506ebf6c4f1e9710eb495ba12d562bf6d8ade0a6489dce",
+      "source": {
+        "url": "https://docs.slack.dev/reference/scopes/admin.app_activities.read.md",
+        "sha256": "1142979b28f85b0a685696c20b6a6c8027c8b2705f1c1dd2f9ffd1358de4e374"
+      },
+      "token_types": ["User"],
+      "compatible_methods": ["admin.apps.activities.list"],
+      "compatible_events": [],
+      "compatibility": {
+        "status": "unsupported",
+        "reason": "No Chatto permission mapping has been approved for this scope.",
+        "target_phase": null,
+        "chatto_permissions": [],
+        "semantic_mapping": null
+      }
+    },
+    {
+      "name": "admin.apps:read",
+      "title_sha256": "4e1b10ede925f8755e84d6bfa662d5262e6d8907de3c3808d13ef51b3c810344",
+      "summary_sha256": "f91be21f9b6f4b9db0dea9e3294e206fa45041272942a6a2bc57ad87b77caba0",
+      "source": {
+        "url": "https://docs.slack.dev/reference/scopes/admin.apps.read.md",
+        "sha256": "dcb00ca781e21baba310819e53940fcb5e047b690705dd823034a477d4178986"
+      },
+      "token_types": ["User"],
+      "compatible_methods": [
+        "admin.apps.approved.list",
+        "admin.apps.config.lookup",
+        "admin.apps.mcp.servers.list",
+        "admin.apps.mcp.servers.permissions.list",
+        "admin.apps.permissions.list",
+        "admin.apps.requests.list",
+        "admin.apps.restricted.list"
+      ],
+      "compatible_events": ["app_deleted", "app_uninstalled_team"],
+      "compatibility": {
+        "status": "unsupported",
+        "reason": "No Chatto permission mapping has been approved for this scope.",
+        "target_phase": null,
+        "chatto_permissions": [],
+        "semantic_mapping": null
+      }
+    },
+    {
+      "name": "admin.apps:write",
+      "title_sha256": "8e5eaf7d8c9cbab60145b9e9e56d0f04543e49fda837c40cb613ee7f8c033d5f",
+      "summary_sha256": "4593b32ac59509152ac91d48f49a528ba480986d3bb5f0a594fcd00908abe026",
+      "source": {
+        "url": "https://docs.slack.dev/reference/scopes/admin.apps.write.md",
+        "sha256": "a060ade2eb10a094ff85d49d0aed40fb091f05e4e21a3294504a37263656768f"
+      },
+      "token_types": ["User"],
+      "compatible_methods": [
+        "admin.apps.approve",
+        "admin.apps.clearResolution",
+        "admin.apps.config.set",
+        "admin.apps.mcp.servers.permissions.set",
+        "admin.apps.permissions.add",
+        "admin.apps.permissions.remove",
+        "admin.apps.permissions.set",
+        "admin.apps.requests.cancel",
+        "admin.apps.restrict",
+        "admin.apps.uninstall"
+      ],
+      "compatible_events": [],
+      "compatibility": {
+        "status": "unsupported",
+        "reason": "No Chatto permission mapping has been approved for this scope.",
+        "target_phase": null,
+        "chatto_permissions": [],
+        "semantic_mapping": null
+      }
+    },
+    {
+      "name": "admin.barriers:read",
+      "title_sha256": "5e10c57057a505b12163ed9405776a5bdff95a3c20849157d256df0dc6d089e2",
+      "summary_sha256": "1a8283ab3f832cc17d56b5325368a42b7d3500aafcb0a08c733eb80b776d4042",
+      "source": {
+        "url": "https://docs.slack.dev/reference/scopes/admin.barriers.read.md",
+        "sha256": "e99f1335467081b8ffc950ab423c5aa8ca8a23ff77a8e46d57c77bc3cd8e3f13"
+      },
+      "token_types": ["User"],
+      "compatible_methods": ["admin.barriers.list"],
+      "compatible_events": [],
+      "compatibility": {
+        "status": "unsupported",
+        "reason": "No Chatto permission mapping has been approved for this scope.",
+        "target_phase": null,
+        "chatto_permissions": [],
+        "semantic_mapping": null
+      }
+    },
+    {
+      "name": "admin.barriers:write",
+      "title_sha256": "196baf3eb4b1e10bd0ed32ec7cab42aa29ff71a5f7562b6bfe31d3e601a66f98",
+      "summary_sha256": "c07636823f3b6b2d91fda10c47ddfdc74d99ba772363a74003bb28243bb183bc",
+      "source": {
+        "url": "https://docs.slack.dev/reference/scopes/admin.barriers.write.md",
+        "sha256": "74a49f41bb3b130fea95c55754266b0535ece6dfe934a812335d0517c4859485"
+      },
+      "token_types": ["User"],
+      "compatible_methods": [
+        "admin.barriers.create",
+        "admin.barriers.delete",
+        "admin.barriers.update"
+      ],
+      "compatible_events": [],
+      "compatibility": {
+        "status": "unsupported",
+        "reason": "No Chatto permission mapping has been approved for this scope.",
+        "target_phase": null,
+        "chatto_permissions": [],
+        "semantic_mapping": null
+      }
+    },
+    {
+      "name": "admin.chat:read",
+      "title_sha256": "d7e5339bfdf13cdefd696573655da7e14012709183613f9248fd7e6bcb313d73",
+      "summary_sha256": "9e15aa2d7bde6d68c21b13cf1c3775c2ba7b3baeb30b1e3dce352bc2ee48a05d",
+      "source": {
+        "url": "https://docs.slack.dev/reference/scopes/admin.chat.read.md",
+        "sha256": "c12422421a003b90958769a17cb8b2a4acb76ac5bd1d1b2ecfd29be531dd7b08"
+      },
+      "token_types": ["User"],
+      "compatible_methods": ["oversight.chat.info"],
+      "compatible_events": [],
+      "compatibility": {
+        "status": "unsupported",
+        "reason": "No Chatto permission mapping has been approved for this scope.",
+        "target_phase": null,
+        "chatto_permissions": [],
+        "semantic_mapping": null
+      }
+    },
+    {
+      "name": "admin.chat:write",
+      "title_sha256": "77b4bb1ae4c382c44d84c4fe4ded0ddd39ee4b0af1e5e34f7294ddaa4a1c74c8",
+      "summary_sha256": "853639c5756a5f14aa6094fe4e199ea14b03cdc7f722caacdc9f7ba890e4ee51",
+      "source": {
+        "url": "https://docs.slack.dev/reference/scopes/admin.chat.write.md",
+        "sha256": "99de6ea01aacdc99d026bd695ca39090db7f1f7e42bd737065ef801b8312509f"
+      },
+      "token_types": ["User"],
+      "compatible_methods": [
+        "oversight.chat.delete",
+        "oversight.chat.restore",
+        "oversight.chat.update"
+      ],
+      "compatible_events": [],
+      "compatibility": {
+        "status": "unsupported",
+        "reason": "No Chatto permission mapping has been approved for this scope.",
+        "target_phase": null,
+        "chatto_permissions": [],
+        "semantic_mapping": null
+      }
+    },
+    {
+      "name": "admin.conversations:manage_objects",
+      "title_sha256": "aacb5ab8027ac722b62058427d7d0dadfe681a962a601a3ea9f302d2836e5e32",
+      "summary_sha256": "5b708332a8ad2ed424605aea2adbd90ca72aa44f1ca15bdbcf46bb1c4d9bf86f",
+      "source": {
+        "url": "https://docs.slack.dev/reference/scopes/admin.conversations.manage_objects.md",
+        "sha256": "d08994053a10072755b2c37fff2529ceaca3cf2bfa962da73bafdfeaf443c790"
+      },
+      "token_types": ["User"],
+      "compatible_methods": [
+        "admin.conversations.createForObjects",
+        "admin.conversations.linkObjects",
+        "admin.conversations.unlinkObjects"
+      ],
+      "compatible_events": [],
+      "compatibility": {
+        "status": "unsupported",
+        "reason": "No Chatto permission mapping has been approved for this scope.",
+        "target_phase": null,
+        "chatto_permissions": [],
+        "semantic_mapping": null
+      }
+    },
+    {
+      "name": "admin.conversations:read",
+      "title_sha256": "e9767e348fd8de99262e0cf80afb2b508fe9712594a629f14e83cca13cff2638",
+      "summary_sha256": "2afc5406b62f6b5aff2a79e19b7795467f3a78baeb0971288d9965bbe4e318d2",
+      "source": {
+        "url": "https://docs.slack.dev/reference/scopes/admin.conversations.read.md",
+        "sha256": "6d2d627f08b1c54f218bf46e49949d644177a838d9ed4b38193ab4cc6760c799"
+      },
+      "token_types": ["User"],
+      "compatible_methods": [
+        "admin.conversations.ekm.listOriginalConnectedChannelInfo",
+        "admin.conversations.getConversationPrefs",
+        "admin.conversations.getCustomRetention",
+        "admin.conversations.getTeams",
+        "admin.conversations.lookup",
+        "admin.conversations.restrictAccess.listGroups",
+        "admin.conversations.search",
+        "oversight.conversations.info",
+        "oversight.conversations.list",
+        "oversight.conversations.members",
+        "oversight.user.conversations"
+      ],
+      "compatible_events": [],
+      "compatibility": {
+        "status": "unsupported",
+        "reason": "No Chatto permission mapping has been approved for this scope.",
+        "target_phase": null,
+        "chatto_permissions": [],
+        "semantic_mapping": null
+      }
+    },
+    {
+      "name": "admin.conversations:write",
+      "title_sha256": "9b3b7179de94f23ea8eeea4057d9cfde4bc1a53b0bfbfce2445b7987be0c2a1c",
+      "summary_sha256": "2174abef369466bb755237df1f46e9e720f35eb6458c7b07cd797ee3371b5d6c",
+      "source": {
+        "url": "https://docs.slack.dev/reference/scopes/admin.conversations.write.md",
+        "sha256": "447b8d74a8ce657f0f75b493eca94c3d048ce1b7b11a82815854fd69e5b978fe"
+      },
+      "token_types": ["User"],
+      "compatible_methods": [
+        "admin.conversations.archive",
+        "admin.conversations.bulkArchive",
+        "admin.conversations.bulkDelete",
+        "admin.conversations.bulkMove",
+        "admin.conversations.bulkSetExcludeFromSlackAi",
+        "admin.conversations.bulkSetProperties",
+        "admin.conversations.convertToPrivate",
+        "admin.conversations.convertToPublic",
+        "admin.conversations.create",
+        "admin.conversations.delete",
+        "admin.conversations.disconnectShared",
+        "admin.conversations.invite",
+        "admin.conversations.kick",
+        "admin.conversations.removeCustomRetention",
+        "admin.conversations.rename",
+        "admin.conversations.restrictAccess.addGroup",
+        "admin.conversations.restrictAccess.removeGroup",
+        "admin.conversations.setConversationPrefs",
+        "admin.conversations.setCustomRetention",
+        "admin.conversations.setTeams",
+        "admin.conversations.unarchive",
+        "admin.conversations.unlinkObjects"
+      ],
+      "compatible_events": [],
+      "compatibility": {
+        "status": "unsupported",
+        "reason": "No Chatto permission mapping has been approved for this scope.",
+        "target_phase": null,
+        "chatto_permissions": [],
+        "semantic_mapping": null
+      }
+    },
+    {
+      "name": "admin.invites:read",
+      "title_sha256": "f8eee03a129134b3c804d62b47e15509e9d04b4a02689451184a7bd616d28dee",
+      "summary_sha256": "0807e2887df2a2d8f13eba6ae35754c49c1fd93c48a37f0b157040127d937b8f",
+      "source": {
+        "url": "https://docs.slack.dev/reference/scopes/admin.invites.read.md",
+        "sha256": "3e0ec73f5e0b5bb1b123079382c1ac33158243769aba225d278ce692bff14a96"
+      },
+      "token_types": ["User"],
+      "compatible_methods": [
+        "admin.inviteRequests.approved.list",
+        "admin.inviteRequests.denied.list",
+        "admin.inviteRequests.list"
+      ],
+      "compatible_events": ["invite_requested"],
+      "compatibility": {
+        "status": "unsupported",
+        "reason": "No Chatto permission mapping has been approved for this scope.",
+        "target_phase": null,
+        "chatto_permissions": [],
+        "semantic_mapping": null
+      }
+    },
+    {
+      "name": "admin.invites:write",
+      "title_sha256": "798dde04dd86202d1b5721ad3bab4b25403fc01e5b3a4e78e2fb973b9e54f9d4",
+      "summary_sha256": "6702f9c867220c7b9ef850c4c29c634d46cb0c688f7f8544f31059e770de1b82",
+      "source": {
+        "url": "https://docs.slack.dev/reference/scopes/admin.invites.write.md",
+        "sha256": "d9e9e71deedfe6b84bdf0fdd54277fedd9b495b0f61905bfd41188c4eb823eb9"
+      },
+      "token_types": ["User"],
+      "compatible_methods": ["admin.inviteRequests.approve", "admin.inviteRequests.deny"],
+      "compatible_events": [],
+      "compatibility": {
+        "status": "unsupported",
+        "reason": "No Chatto permission mapping has been approved for this scope.",
+        "target_phase": null,
+        "chatto_permissions": [],
+        "semantic_mapping": null
+      }
+    },
+    {
+      "name": "admin.roles:read",
+      "title_sha256": "a7d4297c24c6cc644e40e58cba6e7f39ff00408efaf2e6a1edd5b901072372f0",
+      "summary_sha256": "b54bba7d21e223202022cd5f33a18359fe437cf9e6bce4a149fe425e8a9fc5be",
+      "source": {
+        "url": "https://docs.slack.dev/reference/scopes/admin.roles.read.md",
+        "sha256": "adf470ed5cbbc17811493537c6f439bcc685aafb6d5efce5e54912c7dec01780"
+      },
+      "token_types": ["User"],
+      "compatible_methods": ["admin.roles.listAssignments"],
+      "compatible_events": [],
+      "compatibility": {
+        "status": "unsupported",
+        "reason": "No Chatto permission mapping has been approved for this scope.",
+        "target_phase": null,
+        "chatto_permissions": [],
+        "semantic_mapping": null
+      }
+    },
+    {
+      "name": "admin.roles:write",
+      "title_sha256": "4f70f95c2e106f8aeb3f4c2a9fee63c6a4ac9cf0544e489aad5263afced58b6a",
+      "summary_sha256": "89351d07f3d570734e6d98f21081778c0e1453d00e741f79f4f5af8091889932",
+      "source": {
+        "url": "https://docs.slack.dev/reference/scopes/admin.roles.write.md",
+        "sha256": "507a34c78aae7a5db1fd5517f6afda30351d6251a06334c645611935863c4e22"
+      },
+      "token_types": ["User"],
+      "compatible_methods": ["admin.roles.addAssignments", "admin.roles.removeAssignments"],
+      "compatible_events": [],
+      "compatibility": {
+        "status": "unsupported",
+        "reason": "No Chatto permission mapping has been approved for this scope.",
+        "target_phase": null,
+        "chatto_permissions": [],
+        "semantic_mapping": null
+      }
+    },
+    {
+      "name": "admin.skills:read",
+      "title_sha256": "aa6e16a6548880eef03726e3148494e658a9899fc3c6e7fa6f3de3dcc703016b",
+      "summary_sha256": "a874fcf82f28426ee2c563b6f483b90c5bdec62f976a659826cc7760ffafa1dd",
+      "source": {
+        "url": "https://docs.slack.dev/reference/scopes/admin.skills.read.md",
+        "sha256": "8987b4fccc221a612e47e3753390ff3190195c7162f294cfbece0b19be7f4dbf"
+      },
+      "token_types": ["User"],
+      "compatible_methods": ["admin.slackbot.skills.list"],
+      "compatible_events": [],
+      "compatibility": {
+        "status": "unsupported",
+        "reason": "No Chatto permission mapping has been approved for this scope.",
+        "target_phase": null,
+        "chatto_permissions": [],
+        "semantic_mapping": null
+      }
+    },
+    {
+      "name": "admin.skills:write",
+      "title_sha256": "2210831869a62811c3165ecab5de389bbf536b0f4d94408aa4b1c984bf0c959f",
+      "summary_sha256": "cc869850e51567d66581c7f80fdec0b0a7596812253b644285ba72a54caf9fe5",
+      "source": {
+        "url": "https://docs.slack.dev/reference/scopes/admin.skills.write.md",
+        "sha256": "96c46e4c59da873af3ae9bc96ab45f442404e477dcd81a926add16d4aad41ea2"
+      },
+      "token_types": ["User"],
+      "compatible_methods": [
+        "admin.slackbot.skills.publish",
+        "admin.slackbot.skills.setAutoEnabled",
+        "admin.slackbot.skills.unpublish"
+      ],
+      "compatible_events": [],
+      "compatibility": {
+        "status": "unsupported",
+        "reason": "No Chatto permission mapping has been approved for this scope.",
+        "target_phase": null,
+        "chatto_permissions": [],
+        "semantic_mapping": null
+      }
+    },
+    {
+      "name": "admin.teams:read",
+      "title_sha256": "b8a9210d9f340027f2d3eed1c79063643b293b1600487f8e555be65f238be8d4",
+      "summary_sha256": "d12ae2940f78a1698eaf1064513995ad9a86c8d2fc3e9432aa5dd6bf8aaa7b63",
+      "source": {
+        "url": "https://docs.slack.dev/reference/scopes/admin.teams.read.md",
+        "sha256": "196270dd587109a776f99915a9c625cdbd68e08befc435884319978dce308a99"
+      },
+      "token_types": ["User"],
+      "compatible_methods": [
+        "admin.emoji.list",
+        "admin.teams.admins.list",
+        "admin.teams.list",
+        "admin.teams.owners.list",
+        "admin.teams.settings.info",
+        "oversight.enterprise.info"
+      ],
+      "compatible_events": [],
+      "compatibility": {
+        "status": "unsupported",
+        "reason": "No Chatto permission mapping has been approved for this scope.",
+        "target_phase": null,
+        "chatto_permissions": [],
+        "semantic_mapping": null
+      }
+    },
+    {
+      "name": "admin.teams:write",
+      "title_sha256": "213161a9b99adb2276d1e968a6e0390603f021969aa54ba9d098b255b9d2780e",
+      "summary_sha256": "0d4fad015a3bf0a35c4af7304d0d2a58997edc9c45f5ce5de299859ee98d82f8",
+      "source": {
+        "url": "https://docs.slack.dev/reference/scopes/admin.teams.write.md",
+        "sha256": "1aa2bd2840124df4610214b72f24e729448c7e1cd6557ced454a95e860f93600"
+      },
+      "token_types": ["User"],
+      "compatible_methods": [
+        "admin.emoji.add",
+        "admin.emoji.addAlias",
+        "admin.emoji.remove",
+        "admin.emoji.rename",
+        "admin.teams.create",
+        "admin.teams.settings.setDefaultChannels",
+        "admin.teams.settings.setDescription",
+        "admin.teams.settings.setDiscoverability",
+        "admin.teams.settings.setIcon",
+        "admin.teams.settings.setName",
+        "admin.usergroups.addTeams",
+        "admin.usergroups.removeTeams"
+      ],
+      "compatible_events": [],
+      "compatibility": {
+        "status": "unsupported",
+        "reason": "No Chatto permission mapping has been approved for this scope.",
+        "target_phase": null,
+        "chatto_permissions": [],
+        "semantic_mapping": null
+      }
+    },
+    {
+      "name": "admin.usergroups:read",
+      "title_sha256": "5b8348f70b5e5e6817eedc1b79c060fe9f05bfea7c5df0bbb47f8f907e0f7c2d",
+      "summary_sha256": "71f310799ad8d86cee303ba6b795acee8d93fbb51ac0194d77a83437eb101379",
+      "source": {
+        "url": "https://docs.slack.dev/reference/scopes/admin.usergroups.read.md",
+        "sha256": "10e291e1a867377ccc9f877aab74870bafcbe5c26e5c9cbc75f25339ea457565"
+      },
+      "token_types": ["User"],
+      "compatible_methods": ["admin.usergroups.fetch", "admin.usergroups.listChannels"],
+      "compatible_events": [],
+      "compatibility": {
+        "status": "unsupported",
+        "reason": "No Chatto permission mapping has been approved for this scope.",
+        "target_phase": null,
+        "chatto_permissions": [],
+        "semantic_mapping": null
+      }
+    },
+    {
+      "name": "admin.usergroups:write",
+      "title_sha256": "597c8749214a2bdebbe9d3508b90b8ec390b95ca62f0fed379e0e65b8c11fc86",
+      "summary_sha256": "b5ece166f945d8fe3dcd5b6aa24c4e020e951645eeed7ac4bf142555e508d73a",
+      "source": {
+        "url": "https://docs.slack.dev/reference/scopes/admin.usergroups.write.md",
+        "sha256": "0fdfa98f17e1468a02b5a17a70adaf6563d885023b64e27578aaa230215e1397"
+      },
+      "token_types": ["User"],
+      "compatible_methods": [
+        "admin.usergroups.addChannels",
+        "admin.usergroups.addUsers",
+        "admin.usergroups.create",
+        "admin.usergroups.removeChannels",
+        "admin.usergroups.removeUsers",
+        "admin.usergroups.update",
+        "admin.usergroups.uploadUsers"
+      ],
+      "compatible_events": [],
+      "compatibility": {
+        "status": "unsupported",
+        "reason": "No Chatto permission mapping has been approved for this scope.",
+        "target_phase": null,
+        "chatto_permissions": [],
+        "semantic_mapping": null
+      }
+    },
+    {
+      "name": "admin.users:read",
+      "title_sha256": "d8327ef048db19c1a448ed5f25f7b5964d802bf8bf643d083b190f0d6ab2e0c5",
+      "summary_sha256": "31d5f659720bb4fe3e6c729cca496c6b249a4b557bbe6f68a3565643babbf453",
+      "source": {
+        "url": "https://docs.slack.dev/reference/scopes/admin.users.read.md",
+        "sha256": "46724c5145bf008f701a2caaacae9b9c87dda5a1200012a77e9dee6edb3a31cf"
+      },
+      "token_types": ["User"],
+      "compatible_methods": [
+        "admin.auth.policy.getEntities",
+        "admin.users.getExpiration",
+        "admin.users.list",
+        "admin.users.session.getSettings",
+        "admin.users.session.list",
+        "admin.users.unsupportedVersions.export",
+        "oversight.user.info",
+        "oversight.users.list"
+      ],
+      "compatible_events": [],
+      "compatibility": {
+        "status": "unsupported",
+        "reason": "No Chatto permission mapping has been approved for this scope.",
+        "target_phase": null,
+        "chatto_permissions": [],
+        "semantic_mapping": null
+      }
+    },
+    {
+      "name": "admin.users:write",
+      "title_sha256": "9c149ce9009205321c02a75ed078a4f6daee5fb0c9862efe65d4ae611c74b516",
+      "summary_sha256": "9aaf11411752816dd551748d7780830e36e90660f4e535a0dbe189d42f871270",
+      "source": {
+        "url": "https://docs.slack.dev/reference/scopes/admin.users.write.md",
+        "sha256": "c7bcd3721dbb1a6567cef07b4d46b447a4403d9856af7b8dc0adda738636b394"
+      },
+      "token_types": ["User"],
+      "compatible_methods": [
+        "admin.auth.policy.assignEntities",
+        "admin.auth.policy.removeEntities",
+        "admin.users.access.pause",
+        "admin.users.access.resume",
+        "admin.users.assign",
+        "admin.users.deactivate",
+        "admin.users.invite",
+        "admin.users.remove",
+        "admin.users.session.clearSettings",
+        "admin.users.session.invalidate",
+        "admin.users.session.reset",
+        "admin.users.session.resetBulk",
+        "admin.users.session.setSettings",
+        "admin.users.setAdmin",
+        "admin.users.setExpiration",
+        "admin.users.setOwner",
+        "admin.users.setRegular"
+      ],
+      "compatible_events": [],
+      "compatibility": {
+        "status": "unsupported",
+        "reason": "No Chatto permission mapping has been approved for this scope.",
+        "target_phase": null,
+        "chatto_permissions": [],
+        "semantic_mapping": null
+      }
+    },
+    {
+      "name": "admin.workflows:read",
+      "title_sha256": "a53e54149273ec4557d1b03be4268342c749dc098495b8e96d617628c909e333",
+      "summary_sha256": "603fdb3d7ab596bc25c278065bce10e68f56225816d403543e6adabcde6c5edb",
+      "source": {
+        "url": "https://docs.slack.dev/reference/scopes/admin.workflows.read.md",
+        "sha256": "82d7420efd201519445af24511fc3e41f32d01b84619e9d93c0f885dc0fccd5f"
+      },
+      "token_types": ["User"],
+      "compatible_methods": [
+        "admin.functions.list",
+        "admin.functions.permissions.lookup",
+        "admin.functions.permissions.set",
+        "admin.workflows.permissions.lookup",
+        "admin.workflows.search"
+      ],
+      "compatible_events": [],
+      "compatibility": {
+        "status": "unsupported",
+        "reason": "No Chatto permission mapping has been approved for this scope.",
+        "target_phase": null,
+        "chatto_permissions": [],
+        "semantic_mapping": null
+      }
+    },
+    {
+      "name": "admin.workflows:write",
+      "title_sha256": "402db6a048cc02a2136c05457bde3884de5907d547c7d913129225dc8f215f5d",
+      "summary_sha256": "944c10773cb69039c9d32eccd2670c69b7b8dd8bd44a9e73e8d25953713dc6c6",
+      "source": {
+        "url": "https://docs.slack.dev/reference/scopes/admin.workflows.write.md",
+        "sha256": "299600081a0dab067571b3b3966adbe50c1a5eeeac67551c4717d5fa82fb10eb"
+      },
+      "token_types": ["User"],
+      "compatible_methods": [
+        "admin.workflows.collaborators.add",
+        "admin.workflows.collaborators.remove",
+        "admin.workflows.unpublish"
+      ],
+      "compatible_events": [],
+      "compatibility": {
+        "status": "unsupported",
+        "reason": "No Chatto permission mapping has been approved for this scope.",
+        "target_phase": null,
+        "chatto_permissions": [],
+        "semantic_mapping": null
+      }
+    },
+    {
+      "name": "app_configurations:read",
+      "title_sha256": "656a5b68a4501a3ed44d55ebe80f2e59d46e4f89cf49e002de3971795c4043b4",
+      "summary_sha256": "17e2013d97929e1e96c66305376010af7570c4cbdc9dc6d73a7c1d847c48b01b",
+      "source": {
+        "url": "https://docs.slack.dev/reference/scopes/app_configurations.read.md",
+        "sha256": "207a0c11e26bda7f7c466052738c95cff45cc0074ef256d9deb259e0eae0b909"
+      },
+      "token_types": ["Configuration"],
+      "compatible_methods": ["apps.manifest.export", "functions.distributions.permissions.list"],
+      "compatible_events": [],
+      "compatibility": {
+        "status": "unsupported",
+        "reason": "No Chatto permission mapping has been approved for this scope.",
+        "target_phase": null,
+        "chatto_permissions": [],
+        "semantic_mapping": null
+      }
+    },
+    {
+      "name": "app_configurations:write",
+      "title_sha256": "50b14b9e2dd5a5c89fa1564842d1b8b92e646de64035e18ba8dfb24d95baf071",
+      "summary_sha256": "6b9cd6e740b429aa9702572a1bb93d3be78bf303cb940f3f34ed82dfb889882c",
+      "source": {
+        "url": "https://docs.slack.dev/reference/scopes/app_configurations.write.md",
+        "sha256": "9f652af1b7bcfc2b937ca61f3b37fe1265f3db4ee1b2360ac6f9fe03bb3a6e51"
+      },
+      "token_types": ["Configuration"],
+      "compatible_methods": [
+        "apps.icon.set",
+        "apps.managed.permissions.set",
+        "apps.manifest.create",
+        "apps.manifest.delete",
+        "apps.manifest.update",
+        "apps.manifest.validate",
+        "functions.distributions.permissions.add",
+        "functions.distributions.permissions.remove",
+        "functions.distributions.permissions.set"
+      ],
+      "compatible_events": [],
+      "compatibility": {
+        "status": "unsupported",
+        "reason": "No Chatto permission mapping has been approved for this scope.",
+        "target_phase": null,
+        "chatto_permissions": [],
+        "semantic_mapping": null
+      }
+    },
+    {
+      "name": "app_mentions:read",
+      "title_sha256": "6ac9fe9de69345cb717ad35881b2bb0ba2356b6df3939ccdae88063b0e44cc0f",
+      "summary_sha256": "bf989dd06e7c448090109c50057ed553427c53a6aa9a045d195eff27e014550b",
+      "source": {
+        "url": "https://docs.slack.dev/reference/scopes/app_mentions.read.md",
+        "sha256": "7bb088c11222a9577dd1a1b27af89f164c58ffb02f69e072d5ee53fa941869b2"
+      },
+      "token_types": ["Bot", "Legacy Bot"],
+      "compatible_methods": [],
+      "compatible_events": [],
+      "compatibility": {
+        "status": "unsupported",
+        "reason": "The app OAuth scope grant model does not exist yet.",
+        "target_phase": 8,
+        "chatto_permissions": ["message.read-interactions"],
+        "semantic_mapping": "The app scope permits a method; Chatto membership, policy, and effective RBAC remain mandatory."
+      }
+    },
+    {
+      "name": "assistant:write",
+      "title_sha256": "f21d06ae1413d2e6b3f3c19a9dae8889022b0de3cd4a8bf5b053c9794e5b5f79",
+      "summary_sha256": "3c91bb71dccd86176408035a1c2ab4c330b12c148934460cfe83c11284f700ba",
+      "source": {
+        "url": "https://docs.slack.dev/reference/scopes/assistant.write.md",
+        "sha256": "c2eadb8a2054fbe2b76cd27f8c883b3247578f7f06faf22ee5539550eb1c5a1b"
+      },
+      "token_types": ["Bot", "Legacy Bot"],
+      "compatible_methods": [
+        "assistant.threads.setStatus",
+        "assistant.threads.setSuggestedPrompts",
+        "assistant.threads.setTitle"
+      ],
+      "compatible_events": ["app_context_changed"],
+      "compatibility": {
+        "status": "unsupported",
+        "reason": "No Chatto permission mapping has been approved for this scope.",
+        "target_phase": null,
+        "chatto_permissions": [],
+        "semantic_mapping": null
+      }
+    },
+    {
+      "name": "auditlogs:read",
+      "title_sha256": "a1fde752254202ef84d6ea20817f892705779d32accea28aa6193ade589d4a00",
+      "summary_sha256": "a98b0c7649e1ad519a0278010d0688bac9730bd8f58344a212c56a8c2de565cf",
+      "source": {
+        "url": "https://docs.slack.dev/reference/scopes/auditlogs.read.md",
+        "sha256": "b539e3299f72b8bd36aa4d4d4eaac17ae1dabc3634725c2713ff3ec0b209f394"
+      },
+      "token_types": ["User"],
+      "compatible_methods": [],
+      "compatible_events": [],
+      "compatibility": {
+        "status": "unsupported",
+        "reason": "No Chatto permission mapping has been approved for this scope.",
+        "target_phase": null,
+        "chatto_permissions": [],
+        "semantic_mapping": null
+      }
+    },
+    {
+      "name": "authorizations:read",
+      "title_sha256": "ed028c8c247610ffa4484d3e3cc20c9c9d594f5bbd9e3c046f6bd558a136d0d9",
+      "summary_sha256": "af2e48428a476bdf9ce2d9141b427bdd70f8530515a332034adddbf673a43d60",
+      "source": {
+        "url": "https://docs.slack.dev/reference/scopes/authorizations.read.md",
+        "sha256": "3d20c9144e7b9a35b7ced1c5307ae388cd5ba1805275c43f5edf3423e5c026b7"
+      },
+      "token_types": ["App-level"],
+      "compatible_methods": ["apps.event.authorizations.list"],
+      "compatible_events": [],
+      "compatibility": {
+        "status": "unsupported",
+        "reason": "No Chatto permission mapping has been approved for this scope.",
+        "target_phase": null,
+        "chatto_permissions": [],
+        "semantic_mapping": null
+      }
+    },
+    {
+      "name": "bookmarks:read",
+      "title_sha256": "03ff3937c7eaf01fb9e4687c6471bc3b0a79cca36795e408feb73a8b5e83bec7",
+      "summary_sha256": "8f06055d76bc024727426a3790091da1d3bd23b7507bcf1d6b4fc61dedb6eab8",
+      "source": {
+        "url": "https://docs.slack.dev/reference/scopes/bookmarks.read.md",
+        "sha256": "f4cc971d22f3eab1b09a9b3d8b1c2c4e9218a6df5c133edaadb43eac1b77ec99"
+      },
+      "token_types": ["Bot", "Legacy Bot", "User"],
+      "compatible_methods": ["bookmarks.list", "workflows.featured.list"],
+      "compatible_events": [],
+      "compatibility": {
+        "status": "unsupported",
+        "reason": "No Chatto permission mapping has been approved for this scope.",
+        "target_phase": null,
+        "chatto_permissions": [],
+        "semantic_mapping": null
+      }
+    },
+    {
+      "name": "bookmarks:write",
+      "title_sha256": "fc2f7f5ce537b38e0534c6cc0842861c650b6daf91836974d77141c86a6d2a67",
+      "summary_sha256": "2690b7748944bb0943194bd7446aa4f5d520dd494224b14055b6475be3aaab50",
+      "source": {
+        "url": "https://docs.slack.dev/reference/scopes/bookmarks.write.md",
+        "sha256": "989485708da1d3715dd121d81d84270b80ab1341f796d6f5592f8ea5fb68b1ae"
+      },
+      "token_types": ["Bot", "Legacy Bot", "User"],
+      "compatible_methods": [
+        "bookmarks.add",
+        "bookmarks.edit",
+        "bookmarks.remove",
+        "workflows.featured.add",
+        "workflows.featured.remove",
+        "workflows.featured.set"
+      ],
+      "compatible_events": [],
+      "compatibility": {
+        "status": "unsupported",
+        "reason": "No Chatto permission mapping has been approved for this scope.",
+        "target_phase": null,
+        "chatto_permissions": [],
+        "semantic_mapping": null
+      }
+    },
+    {
+      "name": "bot",
+      "title_sha256": "6b7fdedf8a02281f531a7826d759aa3ff7571aaf6e6b0e98129c6688ef518f0b",
+      "summary_sha256": "7202790c27fae455a3e5d60be775f44b8481de3220ec2d783c7fc8fbab9cdd55",
+      "source": {
+        "url": "https://docs.slack.dev/reference/scopes/bot.md",
+        "sha256": "bef8ed733b7ac02b5dcbebb994a1d8c933ed00067798edc1382245e7e83c8368"
+      },
+      "token_types": ["Legacy Bot"],
+      "compatible_methods": [],
+      "compatible_events": [],
+      "compatibility": {
+        "status": "unsupported",
+        "reason": "No Chatto permission mapping has been approved for this scope.",
+        "target_phase": null,
+        "chatto_permissions": [],
+        "semantic_mapping": null
+      }
+    },
+    {
+      "name": "calls:read",
+      "title_sha256": "a3d4ab54f5e437808ea7bac3652479274430488a3424a8ddd6f6bd7094ba59df",
+      "summary_sha256": "5842b14c1149d25ac6afffb5232e22db633835716cf8b5305b253cb74f39b3e3",
+      "source": {
+        "url": "https://docs.slack.dev/reference/scopes/calls.read.md",
+        "sha256": "5600b544f314563532bf12686c443436af430389d4775c3326db70b123fd1322"
+      },
+      "token_types": ["Bot", "Legacy Bot", "User"],
+      "compatible_methods": ["calls.info"],
+      "compatible_events": [],
+      "compatibility": {
+        "status": "unsupported",
+        "reason": "No Chatto permission mapping has been approved for this scope.",
+        "target_phase": null,
+        "chatto_permissions": [],
+        "semantic_mapping": null
+      }
+    },
+    {
+      "name": "calls:write",
+      "title_sha256": "51505d54a45682fcbe3557298495f5145fcf9fb7a2467955efdffff29dbd612c",
+      "summary_sha256": "8c6cbf1febecb686488fa0ca474f7cef9ee6da3358ddbe8ba8f14411110bd3f5",
+      "source": {
+        "url": "https://docs.slack.dev/reference/scopes/calls.write.md",
+        "sha256": "e647c91df65cd78c2c084f0f0a28f4ac15f20f71c0680bfc408f98c2a68f8a32"
+      },
+      "token_types": ["Bot", "Legacy Bot", "User"],
+      "compatible_methods": [
+        "calls.add",
+        "calls.end",
+        "calls.participants.add",
+        "calls.participants.remove",
+        "calls.update"
+      ],
+      "compatible_events": [],
+      "compatibility": {
+        "status": "unsupported",
+        "reason": "No Chatto permission mapping has been approved for this scope.",
+        "target_phase": null,
+        "chatto_permissions": [],
+        "semantic_mapping": null
+      }
+    },
+    {
+      "name": "canvases:read",
+      "title_sha256": "97fc752c0a96128d9d34f0785082e96389b941f53afdf7c6abeb94c33edcc91d",
+      "summary_sha256": "6043c571de5f475ec8cb0c20a119fd9e95dbd6d1380d7a89d98c144a009a915c",
+      "source": {
+        "url": "https://docs.slack.dev/reference/scopes/canvases.read.md",
+        "sha256": "0943eb6829fe311823a2a78500f99e097e3b5af3b7104e32b427d28bbe15b5ac"
+      },
+      "token_types": ["Bot", "Legacy Bot", "User"],
+      "compatible_methods": ["canvases.getContent", "canvases.sections.lookup"],
+      "compatible_events": [],
+      "compatibility": {
+        "status": "unsupported",
+        "reason": "No Chatto permission mapping has been approved for this scope.",
+        "target_phase": null,
+        "chatto_permissions": [],
+        "semantic_mapping": null
+      }
+    },
+    {
+      "name": "canvases:write",
+      "title_sha256": "63beec73043e9bfef1dc80f4c6224c7898991b4ab6178f85dc4475dea714b0a7",
+      "summary_sha256": "727af2881fcba133f5855dca0c2942971e166174a2c45e849e3e9a73acbc220f",
+      "source": {
+        "url": "https://docs.slack.dev/reference/scopes/canvases.write.md",
+        "sha256": "88798ed6b348af76a07b2379258e57c4387cab570b4693e024e611ecb7831d0c"
+      },
+      "token_types": ["Bot", "User"],
+      "compatible_methods": [
+        "canvases.access.delete",
+        "canvases.access.set",
+        "canvases.create",
+        "canvases.delete",
+        "canvases.edit",
+        "conversations.canvases.create"
+      ],
+      "compatible_events": [],
+      "compatibility": {
+        "status": "unsupported",
+        "reason": "No Chatto permission mapping has been approved for this scope.",
+        "target_phase": null,
+        "chatto_permissions": [],
+        "semantic_mapping": null
+      }
+    },
+    {
+      "name": "channels:history",
+      "title_sha256": "86d67c9a9505f09d7fefc7e86fd336dc07589a73775a505df87180a92cca4e02",
+      "summary_sha256": "ebaf8c59da40a48955183c77618c8f96b4d7752633ae8ea23970a250aef65bf2",
+      "source": {
+        "url": "https://docs.slack.dev/reference/scopes/channels.history.md",
+        "sha256": "d7c549cfa6c8c974c09646fcf8dcbeaeb6e28a107014cbc25847d7c317b49c1d"
+      },
+      "token_types": ["Bot", "Legacy Bot", "User"],
+      "compatible_methods": ["conversations.history", "conversations.replies"],
+      "compatible_events": [
+        "assistant_app_thread",
+        "channel_convert_to_private",
+        "channel_history_changed",
+        "channel_posting_permissions",
+        "document_mention",
+        "ekm_access_denied",
+        "me_message",
+        "message",
+        "message.channels",
+        "message.session",
+        "message_changed",
+        "message_deleted",
+        "message_replied",
+        "reminder_add",
+        "reply_broadcast",
+        "thread_broadcast"
+      ],
+      "compatibility": {
+        "status": "unsupported",
+        "reason": "The app OAuth scope grant model does not exist yet.",
+        "target_phase": 2,
+        "chatto_permissions": ["message.read"],
+        "semantic_mapping": "The app scope permits a method; Chatto membership, policy, and effective RBAC remain mandatory."
+      }
+    },
+    {
+      "name": "channels:join",
+      "title_sha256": "b22a0ea65c658405a64960739297516d4100055d0c895a639a2fa0a0c750d968",
+      "summary_sha256": "c72aad010f78e110f41bcf7b47bd9591460552412af8ec721884b4824cccf0a1",
+      "source": {
+        "url": "https://docs.slack.dev/reference/scopes/channels.join.md",
+        "sha256": "93e5e599f2e37d592211a6ceac89a6e63aa3aa10c4f81357974c23ddd5657fec"
+      },
+      "token_types": ["Bot", "Legacy Bot"],
+      "compatible_methods": ["conversations.join"],
+      "compatible_events": [],
+      "compatibility": {
+        "status": "unsupported",
+        "reason": "The app OAuth scope grant model does not exist yet.",
+        "target_phase": 2,
+        "chatto_permissions": ["room.join"],
+        "semantic_mapping": "The app scope permits a method; Chatto membership, policy, and effective RBAC remain mandatory."
+      }
+    },
+    {
+      "name": "channels:manage",
+      "title_sha256": "04d4aeb11b8d7c729bf07b8d9d84b658604a9593499f9c26804aa458ffdc0631",
+      "summary_sha256": "d80e5f07ae000c94762ce1463cd9fb89ab9b199316689a1dbfe5414b2adbb1d3",
+      "source": {
+        "url": "https://docs.slack.dev/reference/scopes/channels.manage.md",
+        "sha256": "1181e2136e65618e1a97bf25c0f0272d68e5bd3b18bdb14c66764a1e0917363d"
+      },
+      "token_types": ["Bot", "Legacy Bot"],
+      "compatible_methods": [
+        "conversations.archive",
+        "conversations.close",
+        "conversations.create",
+        "conversations.invite",
+        "conversations.kick",
+        "conversations.leave",
+        "conversations.mark",
+        "conversations.open",
+        "conversations.rename",
+        "conversations.setPurpose",
+        "conversations.setTopic",
+        "conversations.unarchive"
+      ],
+      "compatible_events": [],
+      "compatibility": {
+        "status": "unsupported",
+        "reason": "The app OAuth scope grant model does not exist yet.",
+        "target_phase": 2,
+        "chatto_permissions": ["room.create", "room.manage"],
+        "semantic_mapping": "The app scope permits a method; Chatto membership, policy, and effective RBAC remain mandatory."
+      }
+    },
+    {
+      "name": "channels:read",
+      "title_sha256": "2d2135a2ba80dbf075cb61751b360f9cfd44b075977731a18b70088a5e5d9f84",
+      "summary_sha256": "107d28af680d7e172343d1bf162f08aff8225c20e06ec60f20b66de2a09fd357",
+      "source": {
+        "url": "https://docs.slack.dev/reference/scopes/channels.read.md",
+        "sha256": "2facdc33762603c6d9803fe7bc5493ec68f73f51ce84364b515621f5e987e404"
+      },
+      "token_types": ["Bot", "Legacy Bot", "User"],
+      "compatible_methods": [
+        "conversations.info",
+        "conversations.list",
+        "conversations.members",
+        "conversations.open",
+        "users.conversations"
+      ],
+      "compatible_events": [
+        "channel_archive",
+        "channel_created",
+        "channel_deleted",
+        "channel_left",
+        "channel_rename",
+        "channel_shared",
+        "channel_unarchive",
+        "channel_unshared",
+        "member_joined_channel",
+        "member_left_channel"
+      ],
+      "compatibility": {
+        "status": "unsupported",
+        "reason": "The app OAuth scope grant model does not exist yet.",
+        "target_phase": 2,
+        "chatto_permissions": ["room.list"],
+        "semantic_mapping": "The app scope permits a method; Chatto membership, policy, and effective RBAC remain mandatory."
+      }
+    },
+    {
+      "name": "channels:write",
+      "title_sha256": "c0fd34140463ccd886731c3890d7ca8f6e056121550025094caf9c5f086bdf6e",
+      "summary_sha256": "3a08cc55de53b2441c8a9267b8f4be5be795679837f88d8752dbb5dc15ef1b0a",
+      "source": {
+        "url": "https://docs.slack.dev/reference/scopes/channels.write.md",
+        "sha256": "8d1efc12ab9902fda6c6246936cc5b1830b29320db23f5ab8892767679ee36a1"
+      },
+      "token_types": ["User"],
+      "compatible_methods": [
+        "conversations.archive",
+        "conversations.close",
+        "conversations.create",
+        "conversations.invite",
+        "conversations.join",
+        "conversations.kick",
+        "conversations.leave",
+        "conversations.mark",
+        "conversations.open",
+        "conversations.rename",
+        "conversations.setPurpose",
+        "conversations.setTopic",
+        "conversations.unarchive"
+      ],
+      "compatible_events": [],
+      "compatibility": {
+        "status": "unsupported",
+        "reason": "No Chatto permission mapping has been approved for this scope.",
+        "target_phase": null,
+        "chatto_permissions": [],
+        "semantic_mapping": null
+      }
+    },
+    {
+      "name": "channels:write.invites",
+      "title_sha256": "dd4a87db42329132094cb36f2b2459a7469f1956211ecd8f54fe44841cf66800",
+      "summary_sha256": "706d21d0813ff33eefcb0784e6953fa8c623713f602e5a9cecc0e63b191e6519",
+      "source": {
+        "url": "https://docs.slack.dev/reference/scopes/channels.write.invites.md",
+        "sha256": "ed5a1eb3e3668e708f18103f129d2a5a55203a217c71af0df3869f7e78eeb053"
+      },
+      "token_types": ["Bot", "Legacy Bot", "User"],
+      "compatible_methods": ["conversations.invite"],
+      "compatible_events": [],
+      "compatibility": {
+        "status": "unsupported",
+        "reason": "No Chatto permission mapping has been approved for this scope.",
+        "target_phase": null,
+        "chatto_permissions": [],
+        "semantic_mapping": null
+      }
+    },
+    {
+      "name": "channels:write.topic",
+      "title_sha256": "aeec6dc895650dec9ce90b7c966d1386314d67956a8c01d603615680f860d623",
+      "summary_sha256": "7147db8f53d2807f4106890191bf27c8a6b4e4deb227aa3f1c28f2bd78c11b80",
+      "source": {
+        "url": "https://docs.slack.dev/reference/scopes/channels.write.topic.md",
+        "sha256": "15ec5c91369674b5a52a2dcc352df4b615b7e61f306e16792ad8654a88de8b4e"
+      },
+      "token_types": ["Bot", "Legacy Bot", "User"],
+      "compatible_methods": ["conversations.setPurpose", "conversations.setTopic"],
+      "compatible_events": [],
+      "compatibility": {
+        "status": "unsupported",
+        "reason": "No Chatto permission mapping has been approved for this scope.",
+        "target_phase": null,
+        "chatto_permissions": [],
+        "semantic_mapping": null
+      }
+    },
+    {
+      "name": "chat:write",
+      "title_sha256": "698963c01c927ea76c0cbea644a6264b6cea693f997aa8caebad5bf5b1314cf7",
+      "summary_sha256": "4df7ab0c054c52d5cadaa1ba4c33ae089cbc2147e864b06dfb98ca7bd06bfb43",
+      "source": {
+        "url": "https://docs.slack.dev/reference/scopes/chat.write.md",
+        "sha256": "91657a4383ab201dbfed8c632b019f3a5acd2ffd74d865221d9f17842a8fd203"
+      },
+      "token_types": ["Bot", "User"],
+      "compatible_methods": [
+        "agents.sessions.rename",
+        "agents.sessions.setStatus",
+        "assistant.threads.setStatus",
+        "chat.appendStream",
+        "chat.delete",
+        "chat.deleteScheduledMessage",
+        "chat.meMessage",
+        "chat.postEphemeral",
+        "chat.postMessage",
+        "chat.scheduleMessage",
+        "chat.startStream",
+        "chat.stopStream",
+        "chat.update"
+      ],
+      "compatible_events": ["agent_session_stopped", "agent_session_title_changed"],
+      "compatibility": {
+        "status": "unsupported",
+        "reason": "The app OAuth scope grant model does not exist yet.",
+        "target_phase": 2,
+        "chatto_permissions": ["message.post"],
+        "semantic_mapping": "The app scope permits a method; Chatto membership, policy, and effective RBAC remain mandatory."
+      }
+    },
+    {
+      "name": "chat:write.customize",
+      "title_sha256": "196b628c7c300ec7f65cf64e29a59586468d748fa3b55dbf55a9b1fdaf4efdd8",
+      "summary_sha256": "b458f7dd605fb32de3d9ed877be020293834de68e17bebde93298f1ee1fe2579",
+      "source": {
+        "url": "https://docs.slack.dev/reference/scopes/chat.write.customize.md",
+        "sha256": "2c6571c26f78bc5a8441a57accba4ab618eea01c2aae9edf28739e784ff95268"
+      },
+      "token_types": ["Bot", "Legacy Bot"],
+      "compatible_methods": [],
+      "compatible_events": [],
+      "compatibility": {
+        "status": "unsupported",
+        "reason": "No Chatto permission mapping has been approved for this scope.",
+        "target_phase": null,
+        "chatto_permissions": [],
+        "semantic_mapping": null
+      }
+    },
+    {
+      "name": "chat:write.public",
+      "title_sha256": "512841992c1652c0076bddd270cef490d3f7a451970d19b3c467e05088139e20",
+      "summary_sha256": "f9407ac8b8c3024a73e811accb557faadd3597c79040961871f523c24d21b204",
+      "source": {
+        "url": "https://docs.slack.dev/reference/scopes/chat.write.public.md",
+        "sha256": "3b2f3cedc629e69b04160baad30f928647a1aeda172030b4569bce24c6dd1425"
+      },
+      "token_types": ["Bot", "Legacy Bot"],
+      "compatible_methods": [],
+      "compatible_events": [],
+      "compatibility": {
+        "status": "unsupported",
+        "reason": "The app OAuth scope grant model does not exist yet.",
+        "target_phase": 8,
+        "chatto_permissions": ["message.post", "room.join"],
+        "semantic_mapping": "The app scope permits a method; Chatto membership, policy, and effective RBAC remain mandatory."
+      }
+    },
+    {
+      "name": "client",
+      "title_sha256": "9fe729e095e9da9933b4a7295dd30d43994f930c041cc1624fc344971bb2b17a",
+      "summary_sha256": "3e903740115d5c6df7676a6e1ad68fbf243a7a28feb3de1de29fdae0ee1a9cd9",
+      "source": {
+        "url": "https://docs.slack.dev/reference/scopes/client.md",
+        "sha256": "71caae520c7c179757b199fa3b351022841878dd23806d6d7a07d0359f04e2cc"
+      },
+      "token_types": [],
+      "compatible_methods": [
+        "admin.workflows.triggers.types.permissions.lookup",
+        "admin.workflows.triggers.types.permissions.set"
+      ],
+      "compatible_events": [],
+      "compatibility": {
+        "status": "unsupported",
+        "reason": "No Chatto permission mapping has been approved for this scope.",
+        "target_phase": null,
+        "chatto_permissions": [],
+        "semantic_mapping": null
+      }
+    },
+    {
+      "name": "code_channels:manage",
+      "title_sha256": "5a44415a42e0212d6a4051c4cf6d3cd98be4f495ec9f3f03dac5ec3e4790a257",
+      "summary_sha256": "e7add2e462be92716ca2a87445f4a764270e8faf72f65f650e72070f12b5c1c8",
+      "source": {
+        "url": "https://docs.slack.dev/reference/scopes/code_channels.manage.md",
+        "sha256": "3bcf92d1b537926ee79976c11fd610180b12670f96c7cd60aa3d317c59510296"
+      },
+      "token_types": ["Bot"],
+      "compatible_methods": [
+        "agents.conversations.archive",
+        "agents.conversations.create",
+        "agents.conversations.getCanvas",
+        "agents.conversations.listViews",
+        "agents.conversations.removeView",
+        "agents.conversations.setCanvasContent",
+        "agents.conversations.setCommands",
+        "agents.conversations.setProperties",
+        "agents.conversations.setView"
+      ],
+      "compatible_events": [],
+      "compatibility": {
+        "status": "unsupported",
+        "reason": "No Chatto permission mapping has been approved for this scope.",
+        "target_phase": null,
+        "chatto_permissions": [],
+        "semantic_mapping": null
+      }
+    },
+    {
+      "name": "commands",
+      "title_sha256": "af5ed105adeef460e7461be95cd8c4c0809a175dfd2537785a1f1d05c0c40cdf",
+      "summary_sha256": "12005c3674a429aa91d9a9fc4fd0741e95a6eab6dc5cbe5e1273bf8b24f97eed",
+      "source": {
+        "url": "https://docs.slack.dev/reference/scopes/commands.md",
+        "sha256": "42fc55f69468eafc6362835be20a16922f6a7335386bada9dc2145432245505d"
+      },
+      "token_types": ["Bot"],
+      "compatible_methods": [],
+      "compatible_events": [],
+      "compatibility": {
+        "status": "unsupported",
+        "reason": "No Chatto permission mapping has been approved for this scope.",
+        "target_phase": null,
+        "chatto_permissions": [],
+        "semantic_mapping": null
+      }
+    },
+    {
+      "name": "connections:write",
+      "title_sha256": "5f7a69041428cc07c787c77c574b8a406733cc7411c010a40ec028e85b3e34b9",
+      "summary_sha256": "b9336f5a3f9226e410dbb8babfa6210e2e0c1efa5468d5cc1b0bc36ab1a45afb",
+      "source": {
+        "url": "https://docs.slack.dev/reference/scopes/connections.write.md",
+        "sha256": "328c42da10ede706e439f7faacb7fc8a74bba1a4abc30c735b0c246c35da5d2f"
+      },
+      "token_types": ["App-level"],
+      "compatible_methods": ["apps.connections.open"],
+      "compatible_events": [],
+      "compatibility": {
+        "status": "unsupported",
+        "reason": "No Chatto permission mapping has been approved for this scope.",
+        "target_phase": null,
+        "chatto_permissions": [],
+        "semantic_mapping": null
+      }
+    },
+    {
+      "name": "conversations.connect:manage",
+      "title_sha256": "57f6182fe88226784b02ca5d7e92b9e8e8d5235ccc4afafeb8a42314d6f48098",
+      "summary_sha256": "40db79d7262f0f27e67fa25de82e1dceca5e520cef8d1c525a9ac935579dca21",
+      "source": {
+        "url": "https://docs.slack.dev/reference/scopes/conversations.connect.manage.md",
+        "sha256": "0bcbf64f7d2dd447137cc0a7787d08e81bf518b68241e38117df6611b218db49"
+      },
+      "token_types": ["Bot", "Legacy Bot"],
+      "compatible_methods": [
+        "conversations.approveSharedInvite",
+        "conversations.declineSharedInvite",
+        "conversations.externalInvitePermissions.set",
+        "conversations.listConnectInvites",
+        "conversations.requestSharedInvite.approve",
+        "conversations.requestSharedInvite.deny",
+        "conversations.requestSharedInvite.list",
+        "team.externalTeams.disconnect",
+        "team.externalTeams.list",
+        "users.discoverableContacts.lookup"
+      ],
+      "compatible_events": [],
+      "compatibility": {
+        "status": "unsupported",
+        "reason": "No Chatto permission mapping has been approved for this scope.",
+        "target_phase": null,
+        "chatto_permissions": [],
+        "semantic_mapping": null
+      }
+    },
+    {
+      "name": "conversations.connect:read",
+      "title_sha256": "5af6d15587d134a74b2b7785842bf4f4437fda3e753509249246d91ae28a4c56",
+      "summary_sha256": "d3f80849eb4df7a3dd756da0783b2d92b950ecf23c85f539f817aac94df59542",
+      "source": {
+        "url": "https://docs.slack.dev/reference/scopes/conversations.connect.read.md",
+        "sha256": "396fc606d2379d933ef02f3744a2ba0579612e8f5bb3646602b784dc95c59ee4"
+      },
+      "token_types": ["Bot", "Legacy Bot"],
+      "compatible_methods": [],
+      "compatible_events": [],
+      "compatibility": {
+        "status": "unsupported",
+        "reason": "No Chatto permission mapping has been approved for this scope.",
+        "target_phase": null,
+        "chatto_permissions": [],
+        "semantic_mapping": null
+      }
+    },
+    {
+      "name": "conversations.connect:write",
+      "title_sha256": "2155d0769034e93adfb05f6745bc33f7eefdb0c75f9d45883ee1e9c74be2a098",
+      "summary_sha256": "440d091622d9b3c2734364a8ad972e8fa8a93638d0f25e90ffc4ee269132f126",
+      "source": {
+        "url": "https://docs.slack.dev/reference/scopes/conversations.connect.write.md",
+        "sha256": "d978dc36370e6626c869fb0f4826dee7db7fceafb4725d5ebc62c5a133ffebc5"
+      },
+      "token_types": ["Bot", "Legacy Bot"],
+      "compatible_methods": ["conversations.acceptSharedInvite", "conversations.inviteShared"],
+      "compatible_events": [],
+      "compatibility": {
+        "status": "unsupported",
+        "reason": "No Chatto permission mapping has been approved for this scope.",
+        "target_phase": null,
+        "chatto_permissions": [],
+        "semantic_mapping": null
+      }
+    },
+    {
+      "name": "datastore:read",
+      "title_sha256": "21bfcf33f287e977afbb632a7d0efe190cd521f594c1fc640102ad90800a4dd4",
+      "summary_sha256": "c484c6800e3b86aeb629fff80de9b4b47f43e8d93913ad0696ebb8b8173f41d1",
+      "source": {
+        "url": "https://docs.slack.dev/reference/scopes/datastore.read.md",
+        "sha256": "36d7b027a58aadaa8ff4c33dc0a44d4406557deeca2cabc049af71fa05b1720c"
+      },
+      "token_types": ["Bot", "Legacy Bot"],
+      "compatible_methods": [
+        "apps.datastore.bulkGet",
+        "apps.datastore.count",
+        "apps.datastore.get",
+        "apps.datastore.query"
+      ],
+      "compatible_events": [],
+      "compatibility": {
+        "status": "unsupported",
+        "reason": "No Chatto permission mapping has been approved for this scope.",
+        "target_phase": null,
+        "chatto_permissions": [],
+        "semantic_mapping": null
+      }
+    },
+    {
+      "name": "datastore:write",
+      "title_sha256": "a645361218165e310f3909f30ad60d4b0774d3ee204e9a39e8493b664f1f4b4f",
+      "summary_sha256": "3bf6efa125708d107630892c1eeeb71c40c30d4c6c5146e0160e3d5948a7f604",
+      "source": {
+        "url": "https://docs.slack.dev/reference/scopes/datastore.write.md",
+        "sha256": "4e0dce4b6840e6ca418550c15de490b0258494d1a42a8dd7122e7163e78ca133"
+      },
+      "token_types": ["Bot", "Legacy Bot"],
+      "compatible_methods": [
+        "apps.datastore.bulkDelete",
+        "apps.datastore.bulkPut",
+        "apps.datastore.delete",
+        "apps.datastore.put",
+        "apps.datastore.update"
+      ],
+      "compatible_events": [],
+      "compatibility": {
+        "status": "unsupported",
+        "reason": "No Chatto permission mapping has been approved for this scope.",
+        "target_phase": null,
+        "chatto_permissions": [],
+        "semantic_mapping": null
+      }
+    },
+    {
+      "name": "dnd:read",
+      "title_sha256": "0237a24c46fdcd1cd8a9a8c082c9165ef200e866c1a4281397183e9d8d54c8d5",
+      "summary_sha256": "cd4a86a52381ce8090dd944f5ae4cb45202081fedee7928726de4b826f09fa71",
+      "source": {
+        "url": "https://docs.slack.dev/reference/scopes/dnd.read.md",
+        "sha256": "2c792a87421f44fa58fdc3e8821774442e97e74c8d9a1c4e99559e49040ae2fa"
+      },
+      "token_types": ["Bot", "User"],
+      "compatible_methods": ["dnd.info", "dnd.teamInfo"],
+      "compatible_events": ["dnd_updated", "dnd_updated_user"],
+      "compatibility": {
+        "status": "unsupported",
+        "reason": "No Chatto permission mapping has been approved for this scope.",
+        "target_phase": null,
+        "chatto_permissions": [],
+        "semantic_mapping": null
+      }
+    },
+    {
+      "name": "dnd:write",
+      "title_sha256": "4d277ac4bde5bb84397cfecc1bc19eeffd51e38f06caa8cca3cafdeaeab1d151",
+      "summary_sha256": "18a3cfad34cf165a9d39c29f21a9262e82a5377c988c00dc345bc39b5eeeef64",
+      "source": {
+        "url": "https://docs.slack.dev/reference/scopes/dnd.write.md",
+        "sha256": "4920cb80e7882caf18d57d0bcba7144cd07546338da6114bcb4dcf047a53a043"
+      },
+      "token_types": ["User"],
+      "compatible_methods": ["dnd.endDnd", "dnd.endSnooze", "dnd.setSnooze"],
+      "compatible_events": [],
+      "compatibility": {
+        "status": "unsupported",
+        "reason": "No Chatto permission mapping has been approved for this scope.",
+        "target_phase": null,
+        "chatto_permissions": [],
+        "semantic_mapping": null
+      }
+    },
+    {
+      "name": "email",
+      "title_sha256": "2b5b7f63ea3954d7032caa58edc6389770db9de882c5344fc732bbae046a34d6",
+      "summary_sha256": "e67b8ae4438bc1849d8f41490706374b669efda74b7690bc9cf9985c5b25e1a3",
+      "source": {
+        "url": "https://docs.slack.dev/reference/scopes/email.md",
+        "sha256": "07998b0ba3fd6a9f24976ba91d318454f9393351e5fe9e014a8a26249cd21313"
+      },
+      "token_types": ["User"],
+      "compatible_methods": [],
+      "compatible_events": [],
+      "compatibility": {
+        "status": "unsupported",
+        "reason": "No Chatto permission mapping has been approved for this scope.",
+        "target_phase": null,
+        "chatto_permissions": [],
+        "semantic_mapping": null
+      }
+    },
+    {
+      "name": "emoji:read",
+      "title_sha256": "bbc41fe78c181d39d5e5aafe7992b60faecc71bfd05da2258f34c223c37ac609",
+      "summary_sha256": "c7c77329b4c37f8909a66bc225a2132e864464e75281251d27e4cfd0646eea85",
+      "source": {
+        "url": "https://docs.slack.dev/reference/scopes/emoji.read.md",
+        "sha256": "b22166f5f7e7163248090b9a04661c3f2b355806869ed39d8ce0eeb59e878464"
+      },
+      "token_types": ["Bot", "Legacy Bot", "User"],
+      "compatible_methods": ["emoji.list"],
+      "compatible_events": ["emoji_changed"],
+      "compatibility": {
+        "status": "unsupported",
+        "reason": "No Chatto permission mapping has been approved for this scope.",
+        "target_phase": null,
+        "chatto_permissions": [],
+        "semantic_mapping": null
+      }
+    },
+    {
+      "name": "files:read",
+      "title_sha256": "8a65fc736901029bbd929c70f73719117be749e721c60afdc5aee5cb800fbd60",
+      "summary_sha256": "221fef67bfe5005edc48ea45625a43686657a7967484102365fda65eca1e0033",
+      "source": {
+        "url": "https://docs.slack.dev/reference/scopes/files.read.md",
+        "sha256": "b6b194733beb5789d2297c69036d862b8af28eafb99a70fde82a9ee4227b63d9"
+      },
+      "token_types": ["Bot", "Legacy Bot", "User"],
+      "compatible_methods": ["files.info", "files.list"],
+      "compatible_events": [
+        "file_change",
+        "file_comment_added",
+        "file_comment_deleted",
+        "file_comment_edited",
+        "file_created",
+        "file_deleted",
+        "file_public",
+        "file_shared",
+        "file_unshared"
+      ],
+      "compatibility": {
+        "status": "unsupported",
+        "reason": "The app OAuth scope grant model does not exist yet.",
+        "target_phase": 5,
+        "chatto_permissions": ["message.read"],
+        "semantic_mapping": "The app scope permits a method; Chatto membership, policy, and effective RBAC remain mandatory."
+      }
+    },
+    {
+      "name": "files:write",
+      "title_sha256": "8b4e82022523f490508620f7b09949330b0d787f4ec309271b5eac6c35d03e84",
+      "summary_sha256": "e15e6d0b213b82c4bbd999d710ddcc1533d32b6d3fe9d5e89dd0ff4f56e2cf4a",
+      "source": {
+        "url": "https://docs.slack.dev/reference/scopes/files.write.md",
+        "sha256": "ff610090aa3e4c748da5d79709100e94d1a0f9d979e3973a0b326bf37a8f3ab7"
+      },
+      "token_types": ["Bot", "User"],
+      "compatible_methods": [
+        "files.comments.delete",
+        "files.completeUploadExternal",
+        "files.delete",
+        "files.getUploadURLExternal",
+        "files.revokePublicURL",
+        "files.sharedPublicURL",
+        "files.upload"
+      ],
+      "compatible_events": [],
+      "compatibility": {
+        "status": "unsupported",
+        "reason": "The app OAuth scope grant model does not exist yet.",
+        "target_phase": 5,
+        "chatto_permissions": ["message.attach", "message.post"],
+        "semantic_mapping": "The app scope permits a method; Chatto membership, policy, and effective RBAC remain mandatory."
+      }
+    },
+    {
+      "name": "groups:history",
+      "title_sha256": "e83c8e73a2807d35c897e80cbb2d9a11789330da5616a670583fdea38f3920e2",
+      "summary_sha256": "f2aecd7e46d99d75064216d7497a94cd1fa3e36de6a4dd4d56e94f52d5285dbd",
+      "source": {
+        "url": "https://docs.slack.dev/reference/scopes/groups.history.md",
+        "sha256": "d78a068d241f21fe8ee8e734e955ca60a8b90d5064626c18ddd921269e89fcf3"
+      },
+      "token_types": ["Bot", "Legacy Bot", "User"],
+      "compatible_methods": ["conversations.history", "conversations.replies"],
+      "compatible_events": [
+        "assistant_app_thread",
+        "channel_convert_to_private",
+        "channel_history_changed",
+        "channel_posting_permissions",
+        "document_mention",
+        "ekm_access_denied",
+        "group_history_changed",
+        "me_message",
+        "message",
+        "message.groups",
+        "message.session",
+        "message_changed",
+        "message_deleted",
+        "message_replied",
+        "reminder_add",
+        "reply_broadcast",
+        "thread_broadcast"
+      ],
+      "compatibility": {
+        "status": "unsupported",
+        "reason": "The app OAuth scope grant model does not exist yet.",
+        "target_phase": 2,
+        "chatto_permissions": ["message.read"],
+        "semantic_mapping": "The app scope permits a method; Chatto membership, policy, and effective RBAC remain mandatory."
+      }
+    },
+    {
+      "name": "groups:read",
+      "title_sha256": "dc1a844e6e79e2a3aabfec0fc565f926b3c9243215d4ae8adb3730fb9d13605c",
+      "summary_sha256": "5ee610514a0210e37e9496c8414f5f8c9905be0acccbbe14f6d81b7623940483",
+      "source": {
+        "url": "https://docs.slack.dev/reference/scopes/groups.read.md",
+        "sha256": "688c08d4859935c98a739477db346c6f2fbfe74bcef45e310d4fa442138e9e23"
+      },
+      "token_types": ["Bot", "Legacy Bot", "User"],
+      "compatible_methods": [
+        "conversations.info",
+        "conversations.list",
+        "conversations.members",
+        "conversations.open",
+        "users.conversations"
+      ],
+      "compatible_events": [
+        "channel_shared",
+        "channel_unshared",
+        "group_archive",
+        "group_close",
+        "group_deleted",
+        "group_left",
+        "group_open",
+        "group_rename",
+        "group_unarchive",
+        "member_joined_channel",
+        "member_left_channel"
+      ],
+      "compatibility": {
+        "status": "unsupported",
+        "reason": "The app OAuth scope grant model does not exist yet.",
+        "target_phase": 2,
+        "chatto_permissions": ["room.list"],
+        "semantic_mapping": "The app scope permits a method; Chatto membership, policy, and effective RBAC remain mandatory."
+      }
+    },
+    {
+      "name": "groups:write",
+      "title_sha256": "8b9caef7697b105f107dce68a799015d98351a3a331863c8d409f791f074844c",
+      "summary_sha256": "8d14a0134e3bda6776b786386d257b50860aa370aa8015ffdd5c9b90a4ea3847",
+      "source": {
+        "url": "https://docs.slack.dev/reference/scopes/groups.write.md",
+        "sha256": "ebe4d9608e46e429edb3554aba2e271cfd3b7ddedadfc8b0839cafecb6e6badd"
+      },
+      "token_types": ["Bot", "Legacy Bot", "User"],
+      "compatible_methods": [
+        "conversations.archive",
+        "conversations.close",
+        "conversations.create",
+        "conversations.invite",
+        "conversations.kick",
+        "conversations.leave",
+        "conversations.mark",
+        "conversations.open",
+        "conversations.rename",
+        "conversations.setPurpose",
+        "conversations.setTopic",
+        "conversations.unarchive"
+      ],
+      "compatible_events": [],
+      "compatibility": {
+        "status": "unsupported",
+        "reason": "The app OAuth scope grant model does not exist yet.",
+        "target_phase": 2,
+        "chatto_permissions": ["room.manage"],
+        "semantic_mapping": "The app scope permits a method; Chatto membership, policy, and effective RBAC remain mandatory."
+      }
+    },
+    {
+      "name": "groups:write.invites",
+      "title_sha256": "2707687928b5b336e5ea19eb3aacb6f12067c02b1e4a5ec1630c1ba858374477",
+      "summary_sha256": "b6cb0a8c2423fdf2b7e492429a53b99fea69835deafbfdf548d41409bcaa13aa",
+      "source": {
+        "url": "https://docs.slack.dev/reference/scopes/groups.write.invites.md",
+        "sha256": "ac08dad9ae6942c3ee280898a9b1b080e40558466c6b39060084f4acf73dae8b"
+      },
+      "token_types": ["Bot", "Legacy Bot", "User"],
+      "compatible_methods": ["conversations.invite"],
+      "compatible_events": [],
+      "compatibility": {
+        "status": "unsupported",
+        "reason": "No Chatto permission mapping has been approved for this scope.",
+        "target_phase": null,
+        "chatto_permissions": [],
+        "semantic_mapping": null
+      }
+    },
+    {
+      "name": "groups:write.topic",
+      "title_sha256": "5a5e1e2a4a6892969d97fd7cc7350184cd3267b8d5d77d35c796b56ec5f1573c",
+      "summary_sha256": "a33978a72364077a248690c783fc277162c6c4d45104c3306e88fa0894bd99d7",
+      "source": {
+        "url": "https://docs.slack.dev/reference/scopes/groups.write.topic.md",
+        "sha256": "2a86c4d4eb1cfd1464d4c486e6ef1ea37fe23d8a563102cd771c896ccf55fee7"
+      },
+      "token_types": ["Bot", "Legacy Bot", "User"],
+      "compatible_methods": ["conversations.setPurpose", "conversations.setTopic"],
+      "compatible_events": [],
+      "compatibility": {
+        "status": "unsupported",
+        "reason": "No Chatto permission mapping has been approved for this scope.",
+        "target_phase": null,
+        "chatto_permissions": [],
+        "semantic_mapping": null
+      }
+    },
+    {
+      "name": "hosting:read",
+      "title_sha256": "ca1ba6cc32e8060483368dc18e54002d0eec4de070789f5f0b67b1041ad62fba",
+      "summary_sha256": "832361569939eb04cda1d3a4a5681b3055cfc634e0a0d239c691bc4fa21dc853",
+      "source": {
+        "url": "https://docs.slack.dev/reference/scopes/hosting.read.md",
+        "sha256": "a7c1926133260d2ab6b655a1163944708b06ac53e608edee0b61ece5ae7616b9"
+      },
+      "token_types": ["User"],
+      "compatible_methods": ["apps.activities.list"],
+      "compatible_events": [],
+      "compatibility": {
+        "status": "unsupported",
+        "reason": "No Chatto permission mapping has been approved for this scope.",
+        "target_phase": null,
+        "chatto_permissions": [],
+        "semantic_mapping": null
+      }
+    },
+    {
+      "name": "identify",
+      "title_sha256": "a253406c0352fe57b778885a568917fd000f136cd897f8b10e0c57077d8ea7b3",
+      "summary_sha256": "bc20d807eaaaade436a53c33dc412f1825beff8aa3440962615ef15efa9fb03f",
+      "source": {
+        "url": "https://docs.slack.dev/reference/scopes/identify.md",
+        "sha256": "a579a2209526d5fa7ffb35b9ccc802e094c0f1387dd2aa42515061f6bcd6852b"
+      },
+      "token_types": ["User"],
+      "compatible_methods": [],
+      "compatible_events": [],
+      "compatibility": {
+        "status": "unsupported",
+        "reason": "No Chatto permission mapping has been approved for this scope.",
+        "target_phase": null,
+        "chatto_permissions": [],
+        "semantic_mapping": null
+      }
+    },
+    {
+      "name": "im:history",
+      "title_sha256": "a43a2e7a739f9a80ad64b5fe0667c2455baa984829b7fc90455c16a14e9a0f93",
+      "summary_sha256": "880f43a807e359d504dedfb4650295258a03e988f69a101edcc9c8afabc77298",
+      "source": {
+        "url": "https://docs.slack.dev/reference/scopes/im.history.md",
+        "sha256": "f4eef32f9d0e9ef8ce4b6f1b3cc84a2b74648044e2ad38b4bfabb51df3996996"
+      },
+      "token_types": ["Bot", "Legacy Bot", "User"],
+      "compatible_methods": ["conversations.history", "conversations.replies"],
+      "compatible_events": [
+        "assistant_app_thread",
+        "channel_convert_to_private",
+        "channel_posting_permissions",
+        "document_mention",
+        "ekm_access_denied",
+        "im_history_changed",
+        "me_message",
+        "message",
+        "message.im",
+        "message_changed",
+        "message_deleted",
+        "message_replied",
+        "reminder_add",
+        "reply_broadcast",
+        "thread_broadcast"
+      ],
+      "compatibility": {
+        "status": "unsupported",
+        "reason": "The app OAuth scope grant model does not exist yet.",
+        "target_phase": 2,
+        "chatto_permissions": ["message.read"],
+        "semantic_mapping": "The app scope permits a method; Chatto membership, policy, and effective RBAC remain mandatory."
+      }
+    },
+    {
+      "name": "im:read",
+      "title_sha256": "96de7b67fdd5d12c988dd6e0e82eed665d484e89e40d389fcdce72f384670c50",
+      "summary_sha256": "994c2edbe5b729d787fc805ec5f8f4cf0cfb04aae61b0c8c357da9177bc3d10e",
+      "source": {
+        "url": "https://docs.slack.dev/reference/scopes/im.read.md",
+        "sha256": "2c6a5f846cbcb19fb480ca6bf396bb12499f6032fd158b5dd94b0e28460171ee"
+      },
+      "token_types": ["Bot", "Legacy Bot", "User"],
+      "compatible_methods": [
+        "conversations.info",
+        "conversations.list",
+        "conversations.members",
+        "users.conversations"
+      ],
+      "compatible_events": ["im_close", "im_created", "im_open"],
+      "compatibility": {
+        "status": "unsupported",
+        "reason": "The app OAuth scope grant model does not exist yet.",
+        "target_phase": 2,
+        "chatto_permissions": ["message.read"],
+        "semantic_mapping": "The app scope permits a method; Chatto membership, policy, and effective RBAC remain mandatory."
+      }
+    },
+    {
+      "name": "im:write",
+      "title_sha256": "ae3d732a253ed94264780cb041f0d8308d34f8bcb77bd3dd8f4ae16c5507dc18",
+      "summary_sha256": "cd484c521479f0c9aa809803caf0308d60617c67ee8f0a0495dfd3c45443deb6",
+      "source": {
+        "url": "https://docs.slack.dev/reference/scopes/im.write.md",
+        "sha256": "e83a2a638e35ddb09022bd522e0f54a5967aaf16ddbadcfe125127bb3a10dc43"
+      },
+      "token_types": ["Bot", "Legacy Bot", "User"],
+      "compatible_methods": [
+        "conversations.archive",
+        "conversations.close",
+        "conversations.create",
+        "conversations.invite",
+        "conversations.kick",
+        "conversations.leave",
+        "conversations.mark",
+        "conversations.open",
+        "conversations.rename",
+        "conversations.setPurpose",
+        "conversations.setTopic",
+        "conversations.unarchive"
+      ],
+      "compatible_events": [],
+      "compatibility": {
+        "status": "unsupported",
+        "reason": "The app OAuth scope grant model does not exist yet.",
+        "target_phase": 2,
+        "chatto_permissions": ["message.post"],
+        "semantic_mapping": "The app scope permits a method; Chatto membership, policy, and effective RBAC remain mandatory."
+      }
+    },
+    {
+      "name": "im:write.topic",
+      "title_sha256": "e7c7a50473c4025a1edea45976ac6681ba976e4bc40489ded749298824663678",
+      "summary_sha256": "f35e8a6014d452a098dc374eb81a076450bef0bd840bfef90dfad82a38e00cc2",
+      "source": {
+        "url": "https://docs.slack.dev/reference/scopes/im.write.topic.md",
+        "sha256": "c6eeca02b2567bc6dbf48c36d98c5ac02518dbc0e8c09302e3f950462d08f633"
+      },
+      "token_types": ["Bot", "Legacy Bot", "User"],
+      "compatible_methods": ["conversations.setPurpose", "conversations.setTopic"],
+      "compatible_events": [],
+      "compatibility": {
+        "status": "unsupported",
+        "reason": "No Chatto permission mapping has been approved for this scope.",
+        "target_phase": null,
+        "chatto_permissions": [],
+        "semantic_mapping": null
+      }
+    },
+    {
+      "name": "incoming-webhook",
+      "title_sha256": "b627a3540fa7417236cb7cff81950ad34a49bcb187ad1dee4f3652b1bd44b1e2",
+      "summary_sha256": "7d96115dea73af5dba8bec3bd33d09d9d4fb5f978ce36e3c2da318fba7d20b27",
+      "source": {
+        "url": "https://docs.slack.dev/reference/scopes/incoming-webhook.md",
+        "sha256": "05dd1e2a99bdc54a7bc1d67588fe8a0a210871a21246a31e3304923355e14dc1"
+      },
+      "token_types": ["Bot", "Legacy Bot"],
+      "compatible_methods": [],
+      "compatible_events": [],
+      "compatibility": {
+        "status": "unsupported",
+        "reason": "No Chatto permission mapping has been approved for this scope.",
+        "target_phase": null,
+        "chatto_permissions": [],
+        "semantic_mapping": null
+      }
+    },
+    {
+      "name": "links:read",
+      "title_sha256": "1fe6d3753254697291fc86df23970008f02125f942c1ea11ff69c8c2642972ec",
+      "summary_sha256": "6882a96b25e83f9ed3860894a9777912838a1e4e38da98fafab243f9bd46550e",
+      "source": {
+        "url": "https://docs.slack.dev/reference/scopes/links.read.md",
+        "sha256": "e1155ff05284c897a41684b99b6d9729cc36506dfafb77864e054f5b41819fd6"
+      },
+      "token_types": ["Bot", "Legacy Bot", "User"],
+      "compatible_methods": [],
+      "compatible_events": ["link_shared"],
+      "compatibility": {
+        "status": "unsupported",
+        "reason": "The app OAuth scope grant model does not exist yet.",
+        "target_phase": 8,
+        "chatto_permissions": ["message.read"],
+        "semantic_mapping": "The app scope permits a method; Chatto membership, policy, and effective RBAC remain mandatory."
+      }
+    },
+    {
+      "name": "links:write",
+      "title_sha256": "576035ac4624b4a605774e5c441eaa5b6d94fe3cf0e4c1309d02d7e48870d320",
+      "summary_sha256": "179b8e61af4ea5d6a40c1fec16e7d33c69d4b7128bba6c78e63531a894134f1e",
+      "source": {
+        "url": "https://docs.slack.dev/reference/scopes/links.write.md",
+        "sha256": "58a81fedcbf6c34e701eb4e30ab9c33aa1a5c59e159bd81d0b2b0fe1ece45097"
+      },
+      "token_types": ["Bot", "Legacy Bot", "User"],
+      "compatible_methods": ["chat.unfurl"],
+      "compatible_events": [],
+      "compatibility": {
+        "status": "unsupported",
+        "reason": "The app OAuth scope grant model does not exist yet.",
+        "target_phase": 2,
+        "chatto_permissions": ["message.post"],
+        "semantic_mapping": "The app scope permits a method; Chatto membership, policy, and effective RBAC remain mandatory."
+      }
+    },
+    {
+      "name": "links.embed:write",
+      "title_sha256": "4fdff468d686b0915a4f7da3f70617565f8dc59e62b91399f0a7b81f0726499e",
+      "summary_sha256": "6b54255187198a4a7ab7795e85c70ee0b9270f927b46cb5fea5b66567dd69a1b",
+      "source": {
+        "url": "https://docs.slack.dev/reference/scopes/links.embed.write.md",
+        "sha256": "d5fae91674af94a3b8456276681db8f2308e11ce42bc1f5b1c6d4173bb3bdf22"
+      },
+      "token_types": ["Bot", "User"],
+      "compatible_methods": [],
+      "compatible_events": [],
+      "compatibility": {
+        "status": "unsupported",
+        "reason": "No Chatto permission mapping has been approved for this scope.",
+        "target_phase": null,
+        "chatto_permissions": [],
+        "semantic_mapping": null
+      }
+    },
+    {
+      "name": "lists:read",
+      "title_sha256": "44100efb0045855acb2a49fe28a42980d2cf61ff52ac60642e7a1e2ccf4fac34",
+      "summary_sha256": "57bc2bbee917f9351769dfbe8cff57e7384e935c1c8a33ac2cb296399296112a",
+      "source": {
+        "url": "https://docs.slack.dev/reference/scopes/lists.read.md",
+        "sha256": "84c709a79f8a263ca4cdcda0f28d002d6a5a47887e3518929c14935b065fd2f7"
+      },
+      "token_types": ["Bot", "User"],
+      "compatible_methods": [
+        "slackLists.download.get",
+        "slackLists.download.start",
+        "slackLists.items.info",
+        "slackLists.items.list"
+      ],
+      "compatible_events": [],
+      "compatibility": {
+        "status": "unsupported",
+        "reason": "No Chatto permission mapping has been approved for this scope.",
+        "target_phase": null,
+        "chatto_permissions": [],
+        "semantic_mapping": null
+      }
+    },
+    {
+      "name": "lists:write",
+      "title_sha256": "a86cb60577fd735a4377d1217f3664c51132a23c1dad9086b2799e962020bb52",
+      "summary_sha256": "62897ecf8af22a2379ad22e1cbe966924368752641acf8182edbad803e58c505",
+      "source": {
+        "url": "https://docs.slack.dev/reference/scopes/lists.write.md",
+        "sha256": "117659d99b882def4ece380d322147540d8b1e3348b827fb767eff31f1bee589"
+      },
+      "token_types": ["Bot", "User"],
+      "compatible_methods": [
+        "slackLists.access.delete",
+        "slackLists.access.set",
+        "slackLists.create",
+        "slackLists.items.create",
+        "slackLists.items.delete",
+        "slackLists.items.deleteMultiple",
+        "slackLists.items.update",
+        "slackLists.update"
+      ],
+      "compatible_events": [],
+      "compatibility": {
+        "status": "unsupported",
+        "reason": "No Chatto permission mapping has been approved for this scope.",
+        "target_phase": null,
+        "chatto_permissions": [],
+        "semantic_mapping": null
+      }
+    },
+    {
+      "name": "managed_apps:install",
+      "title_sha256": "94853aa0cd81b469985f58c4c8e38ddf6eda5c8f1f0553e4dc07ef83d9c77817",
+      "summary_sha256": "bfed0d3e41f2e5a006517090ad322363a46125a542eae15231097906c738debe",
+      "source": {
+        "url": "https://docs.slack.dev/reference/scopes/managed_apps.install.md",
+        "sha256": "5e1f82c8b404705b23cd6009c5e8f315625493150b00b92f019ba8cae00fce4d"
+      },
+      "token_types": ["Bot", "User"],
+      "compatible_methods": [],
+      "compatible_events": [],
+      "compatibility": {
+        "status": "unsupported",
+        "reason": "No Chatto permission mapping has been approved for this scope.",
+        "target_phase": null,
+        "chatto_permissions": [],
+        "semantic_mapping": null
+      }
+    },
+    {
+      "name": "mcp:connect",
+      "title_sha256": "43451dd5ff5153c28c1ca4415395b9a7a71fc5aba298be9035f33afe0eaf3b1e",
+      "summary_sha256": "108d3de46ef5792bb9f4d01a9b53ee8f841a54572b4da6cd94c6152dd7b0e5db",
+      "source": {
+        "url": "https://docs.slack.dev/reference/scopes/mcp.connect.md",
+        "sha256": "f00a61973649dbaf1b7d9c99c0e6373dec977a6780eb2a36197f48e25618791a"
+      },
+      "token_types": ["Bot"],
+      "compatible_methods": [],
+      "compatible_events": [],
+      "compatibility": {
+        "status": "unsupported",
+        "reason": "No Chatto permission mapping has been approved for this scope.",
+        "target_phase": null,
+        "chatto_permissions": [],
+        "semantic_mapping": null
+      }
+    },
+    {
+      "name": "metadata.message:read",
+      "title_sha256": "2b4178afee291e3ea77918c0f138eb0f6136ca566efd904b4ed780266cc0bd3c",
+      "summary_sha256": "e4c4eef329536a2e4eeeb457c30f31d5a2e446a92c8ee338d17ea70f9c70e240",
+      "source": {
+        "url": "https://docs.slack.dev/reference/scopes/metadata.message.read.md",
+        "sha256": "93f305d4289c6155e7e7ef3195b1b34b17c78db0f95f3bdaa7fdd553e5be7f84"
+      },
+      "token_types": ["Bot", "Legacy Bot"],
+      "compatible_methods": [],
+      "compatible_events": [
+        "message_metadata_deleted",
+        "message_metadata_posted",
+        "message_metadata_updated"
+      ],
+      "compatibility": {
+        "status": "unsupported",
+        "reason": "No Chatto permission mapping has been approved for this scope.",
+        "target_phase": null,
+        "chatto_permissions": [],
+        "semantic_mapping": null
+      }
+    },
+    {
+      "name": "mpim:history",
+      "title_sha256": "5531570e3fa5dcf7ed39ecc4b9a4d0a949f73eff7346ddd90d5fe82c3cc1e94a",
+      "summary_sha256": "be0f1e628d4c017dd845f747041a290c485896dabbcf34ba432e86c627ca74cf",
+      "source": {
+        "url": "https://docs.slack.dev/reference/scopes/mpim.history.md",
+        "sha256": "799e2a1d21a1bb2a9c767c168ce81518666e5e214da95e75983cc31f30a19435"
+      },
+      "token_types": ["Bot", "Legacy Bot", "User"],
+      "compatible_methods": ["conversations.history", "conversations.replies"],
+      "compatible_events": [
+        "assistant_app_thread",
+        "channel_convert_to_private",
+        "channel_history_changed",
+        "channel_posting_permissions",
+        "document_mention",
+        "ekm_access_denied",
+        "me_message",
+        "message",
+        "message.mpim",
+        "message_changed",
+        "message_deleted",
+        "message_replied",
+        "reminder_add",
+        "reply_broadcast",
+        "thread_broadcast"
+      ],
+      "compatibility": {
+        "status": "unsupported",
+        "reason": "The app OAuth scope grant model does not exist yet.",
+        "target_phase": 2,
+        "chatto_permissions": ["message.read"],
+        "semantic_mapping": "The app scope permits a method; Chatto membership, policy, and effective RBAC remain mandatory."
+      }
+    },
+    {
+      "name": "mpim:read",
+      "title_sha256": "ed6f86c88f85ae7146bb8b4617d71f01c6ccbe8f5fe0272dffa242defaffa3b2",
+      "summary_sha256": "b8b57e0b9417b5104615099eedf8b2942f9d7484fe2621d3253ba7866e8dc7ac",
+      "source": {
+        "url": "https://docs.slack.dev/reference/scopes/mpim.read.md",
+        "sha256": "6e61e6bea7ff038fdf2bfd9f5880ce784717c236244da06fe5010b692f05e8d2"
+      },
+      "token_types": ["Bot", "Legacy Bot", "User"],
+      "compatible_methods": [
+        "conversations.info",
+        "conversations.list",
+        "conversations.members",
+        "conversations.open",
+        "users.conversations"
+      ],
+      "compatible_events": ["member_joined_channel"],
+      "compatibility": {
+        "status": "unsupported",
+        "reason": "The app OAuth scope grant model does not exist yet.",
+        "target_phase": 2,
+        "chatto_permissions": ["message.read"],
+        "semantic_mapping": "The app scope permits a method; Chatto membership, policy, and effective RBAC remain mandatory."
+      }
+    },
+    {
+      "name": "mpim:write",
+      "title_sha256": "2e23c0e3d36b1f861a25404f6945a7d975b673b51e304f84421b4e622ae522f4",
+      "summary_sha256": "9d65e1f2bcae154b3a9b9b503e88f23f63cd6a8c2f15ac1148adf5c81f2e8b63",
+      "source": {
+        "url": "https://docs.slack.dev/reference/scopes/mpim.write.md",
+        "sha256": "7a876d13fac82dcaf2d83319f211f272f265d8b56231867edcecb1f36fc19225"
+      },
+      "token_types": ["Legacy Bot", "User"],
+      "compatible_methods": [
+        "conversations.archive",
+        "conversations.close",
+        "conversations.create",
+        "conversations.invite",
+        "conversations.kick",
+        "conversations.leave",
+        "conversations.mark",
+        "conversations.open",
+        "conversations.rename",
+        "conversations.setPurpose",
+        "conversations.setTopic",
+        "conversations.unarchive"
+      ],
+      "compatible_events": [],
+      "compatibility": {
+        "status": "unsupported",
+        "reason": "The app OAuth scope grant model does not exist yet.",
+        "target_phase": 2,
+        "chatto_permissions": ["message.post"],
+        "semantic_mapping": "The app scope permits a method; Chatto membership, policy, and effective RBAC remain mandatory."
+      }
+    },
+    {
+      "name": "mpim:write.topic",
+      "title_sha256": "a392619aa68b4876347045d83e3c64e5eee483909f7d114cf19e8b31ecddf5dc",
+      "summary_sha256": "66f76eeb2e1883c4dc2d541a84869405d8d1f280133b1b4508fd622055eae8e1",
+      "source": {
+        "url": "https://docs.slack.dev/reference/scopes/mpim.write.topic.md",
+        "sha256": "c8a949fc825bbfd265c2f6f6c8e352ad222f0ae39761ef26f2e35028c1ad72ab"
+      },
+      "token_types": ["Bot", "Legacy Bot", "User"],
+      "compatible_methods": ["conversations.setPurpose", "conversations.setTopic"],
+      "compatible_events": [],
+      "compatibility": {
+        "status": "unsupported",
+        "reason": "No Chatto permission mapping has been approved for this scope.",
+        "target_phase": null,
+        "chatto_permissions": [],
+        "semantic_mapping": null
+      }
+    },
+    {
+      "name": "openid",
+      "title_sha256": "fd1e3b6e53207ef79320d7f6f3c05c54b958306493a66ba587c1a7547cb40ad7",
+      "summary_sha256": "bc20d807eaaaade436a53c33dc412f1825beff8aa3440962615ef15efa9fb03f",
+      "source": {
+        "url": "https://docs.slack.dev/reference/scopes/openid.md",
+        "sha256": "5f7a476b6c53238d0bf3acd62013af592ba07bbc349891557c7b6ffc2e84c988"
+      },
+      "token_types": ["User"],
+      "compatible_methods": ["openid.connect.userInfo"],
+      "compatible_events": [],
+      "compatibility": {
+        "status": "unsupported",
+        "reason": "No Chatto permission mapping has been approved for this scope.",
+        "target_phase": null,
+        "chatto_permissions": [],
+        "semantic_mapping": null
+      }
+    },
+    {
+      "name": "pins:read",
+      "title_sha256": "c5a2748c91cf7fc07725433599eb11ba0137c5b5793649c1879bd6063a6d034c",
+      "summary_sha256": "8fb8d9628e5aa91a87ac8ee78af74842c817c4f5cf7e59ac17af2ffbfc39d70a",
+      "source": {
+        "url": "https://docs.slack.dev/reference/scopes/pins.read.md",
+        "sha256": "e3532068ed0784f76ea03053e6d146b946356f9cc1d6a084d4155f9ec18f1808"
+      },
+      "token_types": ["Bot", "Legacy Bot", "User"],
+      "compatible_methods": ["pins.list"],
+      "compatible_events": ["pin_added", "pin_removed", "workflow_step_deleted"],
+      "compatibility": {
+        "status": "unsupported",
+        "reason": "The app OAuth scope grant model does not exist yet.",
+        "target_phase": 5,
+        "chatto_permissions": ["message.read"],
+        "semantic_mapping": "The app scope permits a method; Chatto membership, policy, and effective RBAC remain mandatory."
+      }
+    },
+    {
+      "name": "pins:write",
+      "title_sha256": "6aa46be9512e391abca7619b15193d51ade9f7da024ceb124ded9e2c57ad8516",
+      "summary_sha256": "54a8b32cd9606eb5dc657db0b16cd509e82504e944d604736b02c69a38f00a4e",
+      "source": {
+        "url": "https://docs.slack.dev/reference/scopes/pins.write.md",
+        "sha256": "d611a6eccbf143b00b190b0f7d87793e5fdb494dae9f90cc517bf39f59e266b7"
+      },
+      "token_types": ["Bot", "Legacy Bot", "User"],
+      "compatible_methods": ["pins.add", "pins.remove"],
+      "compatible_events": [],
+      "compatibility": {
+        "status": "unsupported",
+        "reason": "The app OAuth scope grant model does not exist yet.",
+        "target_phase": 5,
+        "chatto_permissions": ["message.pin"],
+        "semantic_mapping": "The app scope permits a method; Chatto membership, policy, and effective RBAC remain mandatory."
+      }
+    },
+    {
+      "name": "profile",
+      "title_sha256": "f5406a4f68e6268dbab4d65db7fa0dcf6cc378f8632ebdb094038ce6ba326ac4",
+      "summary_sha256": "3bfd257282dc977fc7ff6c5c8b4ae0a45522f9408b2de2ecad7232db14e03fd1",
+      "source": {
+        "url": "https://docs.slack.dev/reference/scopes/profile.md",
+        "sha256": "b3f4726e060c4e21ed8bbc4fdaa5d0141c6e749ac3fc82e7c0ea9733b38bcf85"
+      },
+      "token_types": ["User"],
+      "compatible_methods": [],
+      "compatible_events": [],
+      "compatibility": {
+        "status": "unsupported",
+        "reason": "No Chatto permission mapping has been approved for this scope.",
+        "target_phase": null,
+        "chatto_permissions": [],
+        "semantic_mapping": null
+      }
+    },
+    {
+      "name": "reactions:read",
+      "title_sha256": "8b85c50e909496b68df56afb3e832be9a921054f8f34c41a21b5749b140e571d",
+      "summary_sha256": "9038c9c5f5c4229bb0269c2a3cc62032298a9ea59a0eca29f1ab5c85f109ae2d",
+      "source": {
+        "url": "https://docs.slack.dev/reference/scopes/reactions.read.md",
+        "sha256": "b12529746e9fab7cd64d214e4de8d51af91acb744623afcbcc58b45d122ea3b6"
+      },
+      "token_types": ["Bot", "Legacy Bot", "User"],
+      "compatible_methods": ["reactions.get", "reactions.list"],
+      "compatible_events": ["reaction_added", "reaction_removed"],
+      "compatibility": {
+        "status": "unsupported",
+        "reason": "The app OAuth scope grant model does not exist yet.",
+        "target_phase": 5,
+        "chatto_permissions": ["message.read"],
+        "semantic_mapping": "The app scope permits a method; Chatto membership, policy, and effective RBAC remain mandatory."
+      }
+    },
+    {
+      "name": "reactions:write",
+      "title_sha256": "fc999245d8cb46777a3463b72659f2e1386f224a12fe3b78a5774390139a29c0",
+      "summary_sha256": "1b5fd6b0a297ec8a6f6e2ebea0ccbce29760a892e36304fecb4c1c577166e0a4",
+      "source": {
+        "url": "https://docs.slack.dev/reference/scopes/reactions.write.md",
+        "sha256": "abc879899f1ec711f7352cc45faaa8a7b859bf4c200a9104e947d21fb4c3f807"
+      },
+      "token_types": ["Bot", "Legacy Bot", "User"],
+      "compatible_methods": ["reactions.add", "reactions.remove"],
+      "compatible_events": [],
+      "compatibility": {
+        "status": "unsupported",
+        "reason": "The app OAuth scope grant model does not exist yet.",
+        "target_phase": 5,
+        "chatto_permissions": ["message.react"],
+        "semantic_mapping": "The app scope permits a method; Chatto membership, policy, and effective RBAC remain mandatory."
+      }
+    },
+    {
+      "name": "reminders:read",
+      "title_sha256": "bfe400ff660454c2a4cda06e0d609514e628e470949332c4efab66c8bc0fe55e",
+      "summary_sha256": "97954ed778b9cc65f12ae380a6d772dd8ace942cb16325d57a71c2f41d69103e",
+      "source": {
+        "url": "https://docs.slack.dev/reference/scopes/reminders.read.md",
+        "sha256": "4825d52728bc9937ac526b421c414ce322a9a6742f476a5c2eadbf38f708f81b"
+      },
+      "token_types": ["Bot", "Legacy Bot", "User"],
+      "compatible_methods": ["reminders.info", "reminders.list"],
+      "compatible_events": [],
+      "compatibility": {
+        "status": "unsupported",
+        "reason": "No Chatto permission mapping has been approved for this scope.",
+        "target_phase": null,
+        "chatto_permissions": [],
+        "semantic_mapping": null
+      }
+    },
+    {
+      "name": "reminders:write",
+      "title_sha256": "7aad83269e5773e4c6b88b5209369ae897e98b6ba4fc1c3805a49426909ed568",
+      "summary_sha256": "e1e89d0c3594e03af03415377ed9198199733bc787801bab7179bfb866b0a136",
+      "source": {
+        "url": "https://docs.slack.dev/reference/scopes/reminders.write.md",
+        "sha256": "a1373ef6b0f99b32767f7a50227712155b98cb36b081f3e048fdff7f27d36258"
+      },
+      "token_types": ["Bot", "Legacy Bot", "User"],
+      "compatible_methods": ["reminders.add", "reminders.complete", "reminders.delete"],
+      "compatible_events": [],
+      "compatibility": {
+        "status": "unsupported",
+        "reason": "No Chatto permission mapping has been approved for this scope.",
+        "target_phase": null,
+        "chatto_permissions": [],
+        "semantic_mapping": null
+      }
+    },
+    {
+      "name": "remote_files:read",
+      "title_sha256": "08340421294c74a3b32c440680bf2bfa924502b04566847797622234e4926922",
+      "summary_sha256": "92e3f4c72cbcd05d4fff2304581aff49e50f01c7b90e06b85620e9ceeb4a883d",
+      "source": {
+        "url": "https://docs.slack.dev/reference/scopes/remote_files.read.md",
+        "sha256": "216f966cc374b32ba81cf60949a3d050e89018cee0cd241e6c931e6da3671335"
+      },
+      "token_types": ["Bot", "Legacy Bot", "User"],
+      "compatible_methods": ["files.remote.info", "files.remote.list"],
+      "compatible_events": [],
+      "compatibility": {
+        "status": "unsupported",
+        "reason": "No Chatto permission mapping has been approved for this scope.",
+        "target_phase": null,
+        "chatto_permissions": [],
+        "semantic_mapping": null
+      }
+    },
+    {
+      "name": "remote_files:share",
+      "title_sha256": "367a0d9b03240fb082a83966963cdc8bb8e0f11e2f5805126afd6cccdec300ed",
+      "summary_sha256": "1d2e01b1da9567dab506c54a9aacb34cffbda488422a408a1481ca34ed250150",
+      "source": {
+        "url": "https://docs.slack.dev/reference/scopes/remote_files.share.md",
+        "sha256": "3d4b345f23ab91cfcd5a8766c609073f41e93e8f965ac8b8f375e8dadde6cdfe"
+      },
+      "token_types": ["Bot", "Legacy Bot", "User"],
+      "compatible_methods": ["files.remote.share"],
+      "compatible_events": [],
+      "compatibility": {
+        "status": "unsupported",
+        "reason": "No Chatto permission mapping has been approved for this scope.",
+        "target_phase": null,
+        "chatto_permissions": [],
+        "semantic_mapping": null
+      }
+    },
+    {
+      "name": "remote_files:write",
+      "title_sha256": "5f28c6d17707387018016e16296d6f8fc69bca74ec76c4d535826d1255b4a576",
+      "summary_sha256": "4510fbb817841f95f09e078b1cb1365209be08a40c9be6b7e44464fc6c09c647",
+      "source": {
+        "url": "https://docs.slack.dev/reference/scopes/remote_files.write.md",
+        "sha256": "08beb52371198a1a4079d77b5a6f8f7a6405b238de8912c7831ccb4f9c9f1488"
+      },
+      "token_types": ["Bot", "Legacy Bot"],
+      "compatible_methods": ["files.remote.add", "files.remote.remove", "files.remote.update"],
+      "compatible_events": [],
+      "compatibility": {
+        "status": "unsupported",
+        "reason": "No Chatto permission mapping has been approved for this scope.",
+        "target_phase": null,
+        "chatto_permissions": [],
+        "semantic_mapping": null
+      }
+    },
+    {
+      "name": "search:read",
+      "title_sha256": "db8ea05712f1e6f5ebcb600e305509d15c33064b90636cab608514df0bd878e5",
+      "summary_sha256": "b7fea763903639476ed91fb35d264f03a4a14d5f41c4116644c41ece994de8c3",
+      "source": {
+        "url": "https://docs.slack.dev/reference/scopes/search.read.md",
+        "sha256": "fc0ed08198b27808ddc20f4896a038b2dba3c8904f297728faffcfde03154f92"
+      },
+      "token_types": ["User"],
+      "compatible_methods": ["search.all", "search.files", "search.messages"],
+      "compatible_events": [],
+      "compatibility": {
+        "status": "unsupported",
+        "reason": "The app OAuth scope grant model does not exist yet.",
+        "target_phase": 5,
+        "chatto_permissions": ["message.read"],
+        "semantic_mapping": "The app scope permits a method; Chatto membership, policy, and effective RBAC remain mandatory."
+      }
+    },
+    {
+      "name": "search:read.enterprise",
+      "title_sha256": "06bb4afbadfba1f0f3cf43b10fb1c92e6870902b9ca325e4d69de54b2f8b2ebd",
+      "summary_sha256": "2e3e569bebad30d2d43dc9be52b916d5a75d0c84476e9df371d0e3e14a9cef12",
+      "source": {
+        "url": "https://docs.slack.dev/reference/scopes/search.read.enterprise.md",
+        "sha256": "7cef8199e6f92c5f71d2562855a9c4324b74214cce4903b5b1640c6eb7ee494e"
+      },
+      "token_types": ["Bot", "Legacy Bot"],
+      "compatible_methods": [],
+      "compatible_events": [],
+      "compatibility": {
+        "status": "unsupported",
+        "reason": "No Chatto permission mapping has been approved for this scope.",
+        "target_phase": null,
+        "chatto_permissions": [],
+        "semantic_mapping": null
+      }
+    },
+    {
+      "name": "search:read.files",
+      "title_sha256": "a39f3455ea4f81cb98b472ea0950e923d1e102dcd162a62b37632e144885a0eb",
+      "summary_sha256": "f221245f4e9d4bb93a9c4cd29e6a31215d24de56a27ae45e5a0070c0ca0a9e20",
+      "source": {
+        "url": "https://docs.slack.dev/reference/scopes/search.read.files.md",
+        "sha256": "ea093edc30fc16e067e75c29f258ffaec76b123bf9b326fbc61bafdb714f9348"
+      },
+      "token_types": ["Bot", "Legacy Bot", "User"],
+      "compatible_methods": ["assistant.search.context"],
+      "compatible_events": [],
+      "compatibility": {
+        "status": "unsupported",
+        "reason": "No Chatto permission mapping has been approved for this scope.",
+        "target_phase": null,
+        "chatto_permissions": [],
+        "semantic_mapping": null
+      }
+    },
+    {
+      "name": "search:read.im",
+      "title_sha256": "5ca87d749635a23dd3f365e469999963dd1da59fb098249f5ed6ccfe768126d8",
+      "summary_sha256": "b602ab399bec80eb81aee70c5e807b08513de022c674337182ce11afffff0f65",
+      "source": {
+        "url": "https://docs.slack.dev/reference/scopes/search.read.im.md",
+        "sha256": "969f45e26943dc1e3a2a80b137ee88160e68ad030be4cea88af7ef35b2151ecb"
+      },
+      "token_types": ["User"],
+      "compatible_methods": ["assistant.search.context"],
+      "compatible_events": [],
+      "compatibility": {
+        "status": "unsupported",
+        "reason": "No Chatto permission mapping has been approved for this scope.",
+        "target_phase": null,
+        "chatto_permissions": [],
+        "semantic_mapping": null
+      }
+    },
+    {
+      "name": "search:read.mpim",
+      "title_sha256": "b220aaaa5f4a665fb2e7658118bde70e34ce1b7579d161a6b10f22afccaebbde",
+      "summary_sha256": "45bb1232fea413b31dceec140e7746b3ea828e16b7886bd54ac3c309707224f9",
+      "source": {
+        "url": "https://docs.slack.dev/reference/scopes/search.read.mpim.md",
+        "sha256": "ab3b6a67f42c419f8a1c41c9a90f27b53bbf835b67e8d57776f9175d8a56303f"
+      },
+      "token_types": ["User"],
+      "compatible_methods": ["assistant.search.context"],
+      "compatible_events": [],
+      "compatibility": {
+        "status": "unsupported",
+        "reason": "No Chatto permission mapping has been approved for this scope.",
+        "target_phase": null,
+        "chatto_permissions": [],
+        "semantic_mapping": null
+      }
+    },
+    {
+      "name": "search:read.private",
+      "title_sha256": "a9d38e7453f6376d0a575476670e0197c796a68bda59f3d4ca8baf203eb51840",
+      "summary_sha256": "92eedbc8830996779331ce33f0eb40ad53fcde0380a3c48df5fe774a8ef7ead2",
+      "source": {
+        "url": "https://docs.slack.dev/reference/scopes/search.read.private.md",
+        "sha256": "322d7968dcf7ab95e88d465ad2518a033aba626ad5d7fc52433228a752a5e8b0"
+      },
+      "token_types": ["User"],
+      "compatible_methods": ["assistant.search.context"],
+      "compatible_events": [],
+      "compatibility": {
+        "status": "unsupported",
+        "reason": "No Chatto permission mapping has been approved for this scope.",
+        "target_phase": null,
+        "chatto_permissions": [],
+        "semantic_mapping": null
+      }
+    },
+    {
+      "name": "search:read.public",
+      "title_sha256": "8c2d796222a37ba1c545ff65386f68632e4ccfd2e68ff9e7448e48f25f198a73",
+      "summary_sha256": "49374a725c27e351e435a82182c3d07a24d282e0bdbd00ee020428dae0ac5a80",
+      "source": {
+        "url": "https://docs.slack.dev/reference/scopes/search.read.public.md",
+        "sha256": "b823828e7f5dafc35ecdcb6e01683efb5a7ef67bc45bf02cba7930fdbaca8526"
+      },
+      "token_types": ["Bot", "User"],
+      "compatible_methods": ["assistant.search.context", "assistant.search.info"],
+      "compatible_events": [],
+      "compatibility": {
+        "status": "unsupported",
+        "reason": "No Chatto permission mapping has been approved for this scope.",
+        "target_phase": null,
+        "chatto_permissions": [],
+        "semantic_mapping": null
+      }
+    },
+    {
+      "name": "search:read.users",
+      "title_sha256": "95cf3f1ca480dd4f395d7f29870b20180778ebcdf13ff822d48c406ba97c342d",
+      "summary_sha256": "6a466fe8adff88cc6f42008b244e88cc87708e7006325d32751ccec168012bf6",
+      "source": {
+        "url": "https://docs.slack.dev/reference/scopes/search.read.users.md",
+        "sha256": "47c0d951ff6db0b95f739eb8c3119a96f730f3062b05cd6caf2d64f9fad4ea08"
+      },
+      "token_types": ["Bot", "User"],
+      "compatible_methods": ["assistant.search.context"],
+      "compatible_events": [],
+      "compatibility": {
+        "status": "unsupported",
+        "reason": "No Chatto permission mapping has been approved for this scope.",
+        "target_phase": null,
+        "chatto_permissions": [],
+        "semantic_mapping": null
+      }
+    },
+    {
+      "name": "skills:read",
+      "title_sha256": "9220d50510dddd7131705d5e17b2554f0819fcec2df15d377fccd930f0016020",
+      "summary_sha256": "42137ccd92b6b03743e49a2bc48315411c7da6b761d385725ed34f5bfbe2b012",
+      "source": {
+        "url": "https://docs.slack.dev/reference/scopes/skills.read.md",
+        "sha256": "d67f9fad0c228da24cd76acc59b742be2d12bf12acd195c78d838146550f26bb"
+      },
+      "token_types": ["Bot", "User"],
+      "compatible_methods": ["slackbot.skills.info", "slackbot.skills.list"],
+      "compatible_events": [],
+      "compatibility": {
+        "status": "unsupported",
+        "reason": "No Chatto permission mapping has been approved for this scope.",
+        "target_phase": null,
+        "chatto_permissions": [],
+        "semantic_mapping": null
+      }
+    },
+    {
+      "name": "skills:write",
+      "title_sha256": "ed01eeceea1d918f43fe252f7701e0fdf8ed3715ed311aa8015d450723e61949",
+      "summary_sha256": "55a195061357cefaaf4fee3a678948bcca0f417b0c5959877adbeae9bdb241ff",
+      "source": {
+        "url": "https://docs.slack.dev/reference/scopes/skills.write.md",
+        "sha256": "472079c0599b7c202e5819f2eff91bacfb8b9757ca960dc8242809517e8a950d"
+      },
+      "token_types": ["Bot", "User"],
+      "compatible_methods": [
+        "slackbot.skills.create",
+        "slackbot.skills.delete",
+        "slackbot.skills.library.add",
+        "slackbot.skills.library.remove",
+        "slackbot.skills.update"
+      ],
+      "compatible_events": [],
+      "compatibility": {
+        "status": "unsupported",
+        "reason": "No Chatto permission mapping has been approved for this scope.",
+        "target_phase": null,
+        "chatto_permissions": [],
+        "semantic_mapping": null
+      }
+    },
+    {
+      "name": "stars:read",
+      "title_sha256": "53e5f78a6d717368acc83e1e6802793d5d89e84bac6dafea0008e2ee8c703de8",
+      "summary_sha256": "897671c031464a1e1f9a4ff20ad909364d3903ec4b84748d73adda33deacc959",
+      "source": {
+        "url": "https://docs.slack.dev/reference/scopes/stars.read.md",
+        "sha256": "63895e3b1bc00b200b941722cef45834dd92bf067acf23a4a9d1e28c28f7874e"
+      },
+      "token_types": ["User"],
+      "compatible_methods": ["stars.list"],
+      "compatible_events": ["star_added", "star_removed"],
+      "compatibility": {
+        "status": "unsupported",
+        "reason": "No Chatto permission mapping has been approved for this scope.",
+        "target_phase": null,
+        "chatto_permissions": [],
+        "semantic_mapping": null
+      }
+    },
+    {
+      "name": "stars:write",
+      "title_sha256": "0213fd17e1ddf1979d9d4646eb0d6f14d0ea78f4fa1fab836392879442164333",
+      "summary_sha256": "9e5e089839f3e7829367962971f628b59cdff74f381ec57aaae3b2f88f687e8e",
+      "source": {
+        "url": "https://docs.slack.dev/reference/scopes/stars.write.md",
+        "sha256": "e9e7901f7201f55ccb02d8003b4ad28b206e04aa0fb4a0db13fa27d9102aa873"
+      },
+      "token_types": ["User"],
+      "compatible_methods": ["stars.add", "stars.remove"],
+      "compatible_events": [],
+      "compatibility": {
+        "status": "unsupported",
+        "reason": "No Chatto permission mapping has been approved for this scope.",
+        "target_phase": null,
+        "chatto_permissions": [],
+        "semantic_mapping": null
+      }
+    },
+    {
+      "name": "team:read",
+      "title_sha256": "72d51a28db80aaa989a2dc298172434eb8e950bb42f3845fadc4e9fdc8b77fa9",
+      "summary_sha256": "499ad32f4b52ab1c3d163a411d368a8c4a9341a8afd7023a38c72925f1c13425",
+      "source": {
+        "url": "https://docs.slack.dev/reference/scopes/team.read.md",
+        "sha256": "f521ec737f654b55a797770482713409f643feb35cae819c33373d478d99c025"
+      },
+      "token_types": ["Bot", "User"],
+      "compatible_methods": [
+        "team.externalTeams.list",
+        "team.info",
+        "users.discoverableContacts.lookup"
+      ],
+      "compatible_events": ["email_domain_changed", "team_domain_change", "team_rename"],
+      "compatibility": {
+        "status": "unsupported",
+        "reason": "No Chatto permission mapping has been approved for this scope.",
+        "target_phase": null,
+        "chatto_permissions": [],
+        "semantic_mapping": null
+      }
+    },
+    {
+      "name": "team.billing:read",
+      "title_sha256": "7c7549973e8020c625d4f532dd2e39de1e9cd2bc1b68970efdcc0a21f1b03edb",
+      "summary_sha256": "43147e41a4c548f4ef3e5b1e2e284568849eef48ec73ef8b10f23ff62700e9d6",
+      "source": {
+        "url": "https://docs.slack.dev/reference/scopes/team.billing.read.md",
+        "sha256": "581bb4d35d92f4bda8e56ddb0ede41aebe70790dad32a99ff729b265db3673e6"
+      },
+      "token_types": ["Bot", "Legacy Bot", "User"],
+      "compatible_methods": ["team.billing.info"],
+      "compatible_events": [],
+      "compatibility": {
+        "status": "unsupported",
+        "reason": "No Chatto permission mapping has been approved for this scope.",
+        "target_phase": null,
+        "chatto_permissions": [],
+        "semantic_mapping": null
+      }
+    },
+    {
+      "name": "team.preferences:read",
+      "title_sha256": "e5b569f9fc2946db629d602dc4db5a2793c9def1c67599f9a82fa3cbae0cf826",
+      "summary_sha256": "52b43f8b2faa536ec2303fa0491e812b14ad129f2bfed0527bd4aa93307c91be",
+      "source": {
+        "url": "https://docs.slack.dev/reference/scopes/team.preferences.read.md",
+        "sha256": "ddc4f914a6279815e05cb81ec787ca4fdb3b99ad4d1d28b30b0a14637e4c7315"
+      },
+      "token_types": ["Bot", "Legacy Bot", "User"],
+      "compatible_methods": ["team.preferences.list"],
+      "compatible_events": [],
+      "compatibility": {
+        "status": "unsupported",
+        "reason": "No Chatto permission mapping has been approved for this scope.",
+        "target_phase": null,
+        "chatto_permissions": [],
+        "semantic_mapping": null
+      }
+    },
+    {
+      "name": "tokens.basic",
+      "title_sha256": "e1ed498e0a0783623e1db5e8c2ae1dd6a90dc834d1c598812c45dfb998f59af8",
+      "summary_sha256": "c72415696a4213e887f91f9942c7b1fd762ed09a802211a04e0c6c56e51ae41e",
+      "source": {
+        "url": "https://docs.slack.dev/reference/scopes/tokens.basic.md",
+        "sha256": "5c5c56f6dbc75bb47df8970f72ad09157acf42816f76346f05444efd6b019f0f"
+      },
+      "token_types": ["Bot", "Legacy Bot", "User"],
+      "compatible_methods": ["migration.exchange"],
+      "compatible_events": [],
+      "compatibility": {
+        "status": "unsupported",
+        "reason": "No Chatto permission mapping has been approved for this scope.",
+        "target_phase": null,
+        "chatto_permissions": [],
+        "semantic_mapping": null
+      }
+    },
+    {
+      "name": "triggers:read",
+      "title_sha256": "bd0be44360795dca80b6ad311287cb1688fbae21871f0ca0e1a6a7604016cd07",
+      "summary_sha256": "8760d2c514fac62ff11cb4326381fc651617957a6e0826790cb0522d6c294849",
+      "source": {
+        "url": "https://docs.slack.dev/reference/scopes/triggers.read.md",
+        "sha256": "3ad07c03ae5030b425751ea88209fa524f5f5356d1d75346acdb87323e5fd6b5"
+      },
+      "token_types": ["Bot"],
+      "compatible_methods": ["workflows.triggers.permissions.list"],
+      "compatible_events": [],
+      "compatibility": {
+        "status": "unsupported",
+        "reason": "No Chatto permission mapping has been approved for this scope.",
+        "target_phase": null,
+        "chatto_permissions": [],
+        "semantic_mapping": null
+      }
+    },
+    {
+      "name": "triggers:write",
+      "title_sha256": "c9ae5454df5bfd8624bdf5d1cccedcd9521f3c2f5a41764cc2575b099c6d209e",
+      "summary_sha256": "45108dc7e458e05901f19f4fe936137ccdb3319e55c5d729cdd9dc7de8d7393a",
+      "source": {
+        "url": "https://docs.slack.dev/reference/scopes/triggers.write.md",
+        "sha256": "cede63fa5704a4dffadcde35a10a5e674f6f818b3d6d3a9b905c142bba5e6a4b"
+      },
+      "token_types": ["Bot"],
+      "compatible_methods": [
+        "workflows.triggers.permissions.add",
+        "workflows.triggers.permissions.remove",
+        "workflows.triggers.permissions.set"
+      ],
+      "compatible_events": [],
+      "compatibility": {
+        "status": "unsupported",
+        "reason": "No Chatto permission mapping has been approved for this scope.",
+        "target_phase": null,
+        "chatto_permissions": [],
+        "semantic_mapping": null
+      }
+    },
+    {
+      "name": "usergroups:read",
+      "title_sha256": "adad44468380fc2d420f03641e0b6ae81de8f60e0185f2782029c562214d4c6a",
+      "summary_sha256": "3acdf5db3f2b1fbbaa70ba17232a27608a85118929dd0a81eb7726afe11c84ca",
+      "source": {
+        "url": "https://docs.slack.dev/reference/scopes/usergroups.read.md",
+        "sha256": "a146e9eaa7e67b4f56aa43cd7695abca55ac0edb0aeb3f6272f7f41ac9fd7488"
+      },
+      "token_types": ["Bot", "Legacy Bot", "User"],
+      "compatible_methods": ["usergroups.list", "usergroups.users.list"],
+      "compatible_events": [
+        "subteam_created",
+        "subteam_members_changed",
+        "subteam_self_added",
+        "subteam_self_removed",
+        "subteam_updated"
+      ],
+      "compatibility": {
+        "status": "unsupported",
+        "reason": "No Chatto permission mapping has been approved for this scope.",
+        "target_phase": null,
+        "chatto_permissions": [],
+        "semantic_mapping": null
+      }
+    },
+    {
+      "name": "usergroups:write",
+      "title_sha256": "488704b1fbfa0c09e20b4e55d70d0b149fc6b67e4da93cfcf6ba3665ec1683b7",
+      "summary_sha256": "a932423a74b8e60b3fa97335eb46c8ba915c89d779ce61a2289ded8daf557660",
+      "source": {
+        "url": "https://docs.slack.dev/reference/scopes/usergroups.write.md",
+        "sha256": "508963a26644c2bdbf64c49fca5526a52a19efdc7a46b139fe2a16b4071703fc"
+      },
+      "token_types": ["Bot", "Legacy Bot", "User"],
+      "compatible_methods": [
+        "usergroups.create",
+        "usergroups.disable",
+        "usergroups.enable",
+        "usergroups.update",
+        "usergroups.users.update"
+      ],
+      "compatible_events": [],
+      "compatibility": {
+        "status": "unsupported",
+        "reason": "No Chatto permission mapping has been approved for this scope.",
+        "target_phase": null,
+        "chatto_permissions": [],
+        "semantic_mapping": null
+      }
+    },
+    {
+      "name": "users:read",
+      "title_sha256": "939b0b260035e9bff650d776ab8e3dc0d43f6ab23f2d1ed2f411ca7b38e5be9e",
+      "summary_sha256": "efa9e1727d034c43b8899c719f05cf33f9629b54aa7926b45f403e6e1a6ca541",
+      "source": {
+        "url": "https://docs.slack.dev/reference/scopes/users.read.md",
+        "sha256": "ec25d87e9ed6ff3eeca532b9ff5ba44042dd00c9d8d3926ecb51f2c971a10e2d"
+      },
+      "token_types": ["Bot", "Legacy Bot", "User"],
+      "compatible_methods": ["bots.info", "users.getPresence", "users.info", "users.list"],
+      "compatible_events": [
+        "team_join",
+        "user_change",
+        "user_guest_status_changed",
+        "user_profile_changed",
+        "user_status_changed"
+      ],
+      "compatibility": {
+        "status": "unsupported",
+        "reason": "The app OAuth scope grant model does not exist yet.",
+        "target_phase": 2,
+        "chatto_permissions": [],
+        "semantic_mapping": "Public profile access still needs an app scope gate and normal resource visibility."
+      }
+    },
+    {
+      "name": "users:read.email",
+      "title_sha256": "41ac3b7310bc352b5a8f1181cf432297e28f13242988855df78a5e3c7b2aee09",
+      "summary_sha256": "e4c194941308d1c7f4079499ac2cc83519fc85b5ec545d73fcf8e0ffe4e844d1",
+      "source": {
+        "url": "https://docs.slack.dev/reference/scopes/users.read.email.md",
+        "sha256": "9864b8687bbd4080821f6fa1ed29f964272b113ffb62ea6168de33c22cf73e70"
+      },
+      "token_types": ["Bot", "Legacy Bot", "User"],
+      "compatible_methods": ["users.lookupByEmail"],
+      "compatible_events": [],
+      "compatibility": {
+        "status": "unsupported",
+        "reason": "No Chatto permission mapping has been approved for this scope.",
+        "target_phase": null,
+        "chatto_permissions": [],
+        "semantic_mapping": null
+      }
+    },
+    {
+      "name": "users:write",
+      "title_sha256": "2eb72bd4aac40c719e96829409875840d2351796914505dd970676930f966f01",
+      "summary_sha256": "2a45cc90774d2f278cf3e8ee8d98946ed435799b82c124c18ad8eae0d37ae8ff",
+      "source": {
+        "url": "https://docs.slack.dev/reference/scopes/users.write.md",
+        "sha256": "06dcd1041322fe70b1261117863cae55e1167a24e00ae81d0775264f284d517c"
+      },
+      "token_types": ["Bot", "Legacy Bot", "User"],
+      "compatible_methods": ["apps.user.connection.update", "users.setActive", "users.setPresence"],
+      "compatible_events": ["user_connection"],
+      "compatibility": {
+        "status": "unsupported",
+        "reason": "No Chatto permission mapping has been approved for this scope.",
+        "target_phase": null,
+        "chatto_permissions": [],
+        "semantic_mapping": null
+      }
+    },
+    {
+      "name": "users.profile:read",
+      "title_sha256": "947e1d6681dc99dec088fb587147d852c43e151485483a9920b6410240636ea1",
+      "summary_sha256": "29b2b60311cb77b6cedb32d7ed6d12ca49dcc9ffbe9445b7e504a155b28cfe6b",
+      "source": {
+        "url": "https://docs.slack.dev/reference/scopes/users.profile.read.md",
+        "sha256": "a1e7a74b8f0a0a04235a996538453d51520d9073cb1af12f6e8161df9c759c74"
+      },
+      "token_types": ["Bot", "Legacy Bot", "User"],
+      "compatible_methods": ["team.profile.get", "users.profile.get"],
+      "compatible_events": [],
+      "compatibility": {
+        "status": "unsupported",
+        "reason": "The app OAuth scope grant model does not exist yet.",
+        "target_phase": 2,
+        "chatto_permissions": [],
+        "semantic_mapping": "Public profile access still needs an app scope gate and normal resource visibility."
+      }
+    },
+    {
+      "name": "users.profile:write",
+      "title_sha256": "ca9dcc8e061624f465c5a5edaef1dbe30816ff994f092b65560eb9e02abfa9f4",
+      "summary_sha256": "1a9ea81bf94f6f53b6e79dca9edf8ae8d80b1cff7996c266a9c5eb96926d2801",
+      "source": {
+        "url": "https://docs.slack.dev/reference/scopes/users.profile.write.md",
+        "sha256": "9648c3181d5ea6fc9cc5c7a511aed6e7d71957e23634568c94a6a198b5d3a3f4"
+      },
+      "token_types": ["User"],
+      "compatible_methods": ["users.deletePhoto", "users.profile.set", "users.setPhoto"],
+      "compatible_events": [],
+      "compatibility": {
+        "status": "unsupported",
+        "reason": "The app OAuth scope grant model does not exist yet.",
+        "target_phase": 2,
+        "chatto_permissions": [],
+        "semantic_mapping": "Public profile access still needs an app scope gate and normal resource visibility."
+      }
+    },
+    {
+      "name": "workflows.templates:read",
+      "title_sha256": "cea0e7ca5e4a6ea2f253797ac96c3d1971caa919ad96d3a4745dc21a268bdd10",
+      "summary_sha256": "5ecbc7c7d4d3bdbf35c74f879524685e963d30ab47a5ba84abb965d02240aaff",
+      "source": {
+        "url": "https://docs.slack.dev/reference/scopes/workflows.templates.read.md",
+        "sha256": "fee995b03771aab42d5b313cb3e44232758d80a666d5103c093c138851c90d2c"
+      },
+      "token_types": ["Bot", "User"],
+      "compatible_methods": [],
+      "compatible_events": [],
+      "compatibility": {
+        "status": "unsupported",
+        "reason": "No Chatto permission mapping has been approved for this scope.",
+        "target_phase": null,
+        "chatto_permissions": [],
+        "semantic_mapping": null
+      }
+    },
+    {
+      "name": "workflows.templates:write",
+      "title_sha256": "5e2f8b5034f2c898feb1bdd95ca772e36ea9856b80432ef5ac29ce03213446ca",
+      "summary_sha256": "cebb320ca1e967a556a489730d162c7d2887bd9070934935ca07ada237d1f3b2",
+      "source": {
+        "url": "https://docs.slack.dev/reference/scopes/workflows.templates.write.md",
+        "sha256": "c50ad973e92d50cec31486caff35e63769a1f4062825888c97e8af6a8a8de759"
+      },
+      "token_types": ["Bot", "User"],
+      "compatible_methods": [],
+      "compatible_events": [],
+      "compatibility": {
+        "status": "unsupported",
+        "reason": "No Chatto permission mapping has been approved for this scope.",
+        "target_phase": null,
+        "chatto_permissions": [],
+        "semantic_mapping": null
+      }
+    }
+  ]
+}

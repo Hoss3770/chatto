@@ -1,0 +1,65 @@
+{
+  "schema_version": 1,
+  "surfaces": [
+    {
+      "name": "incoming_webhooks",
+      "status": "partial",
+      "reason": "Chatto accepts compatible text and channel fields at /webhooks/incoming/:credential, but it does not implement the complete payload, response, rate-limit, or install contract.",
+      "target_phase": 2
+    },
+    {
+      "name": "web_api",
+      "status": "unsupported",
+      "reason": "No /api/{method} compatibility gateway exists.",
+      "target_phase": 1
+    },
+    {
+      "name": "oauth_v2",
+      "status": "unsupported",
+      "reason": "Chatto OAuth is a client-session flow, not an app installation flow.",
+      "target_phase": 1
+    },
+    {
+      "name": "app_manifests",
+      "status": "unsupported",
+      "reason": "No app manifest import, validation, storage, or export service exists.",
+      "target_phase": 1
+    },
+    {
+      "name": "request_url_events",
+      "status": "unsupported",
+      "reason": "Existing outbound bot webhooks cover selected messages only and use a different best-effort contract.",
+      "target_phase": 3
+    },
+    {
+      "name": "socket_mode",
+      "status": "unsupported",
+      "reason": "The native protobuf realtime protocol is not Socket Mode.",
+      "target_phase": 3
+    },
+    {
+      "name": "slash_commands",
+      "status": "unsupported",
+      "reason": "No command registration or interaction delivery service exists.",
+      "target_phase": 3
+    },
+    {
+      "name": "interactivity",
+      "status": "unsupported",
+      "reason": "No signed actions, shortcuts, options, views, or response_url service exists.",
+      "target_phase": 4
+    },
+    {
+      "name": "block_kit",
+      "status": "unsupported",
+      "reason": "Messages store Chatto text and attachments; clients do not render the target structured surfaces.",
+      "target_phase": 4
+    },
+    {
+      "name": "level_3_egress_gateway",
+      "status": "unsupported",
+      "reason": "No host-interception gateway or private-CA deployment package exists.",
+      "target_phase": 9
+    }
+  ]
+}

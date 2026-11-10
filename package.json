@@ -9,7 +9,7 @@
     "build:docs": "pnpm turbo run build --filter=docs-website",
     "build:frontend": "pnpm turbo run build --filter=chatto-frontend",
     "build:storybook": "pnpm turbo run build-storybook --filter=chatto-frontend",
-    "check": "pnpm turbo run check --concurrency=1",
+    "check": "pnpm app-compat:check-registry && pnpm turbo run check --concurrency=1",
     "check:frontend": "pnpm turbo run check --filter=chatto-frontend",
     "dev:docs": "mise dev-docs-website",
     "dev:frontend": "pnpm turbo run dev --filter=chatto-frontend",
@@ -22,7 +22,10 @@
     "test": "pnpm turbo run test --concurrency=1",
     "test:translatto": "pnpm turbo run test --filter=@chatto/translatto",
     "test:frontend": "pnpm turbo run test --filter=chatto-frontend",
-    "test:frontend:focused": "pnpm turbo run test:focused --filter=chatto-frontend --output-logs=new-only --"
+    "test:frontend:focused": "pnpm turbo run test:focused --filter=chatto-frontend --output-logs=new-only --",
+    "app-compat:generate-registry": "node scripts/app-compatibility/generate-contract-registry.mjs --fetch-docs --fetch-sdks && node scripts/app-compatibility/generate-coverage-matrix.mjs",
+    "app-compat:generate-coverage": "node scripts/app-compatibility/generate-coverage-matrix.mjs",
+    "app-compat:check-registry": "node scripts/app-compatibility/check-contract-registry.mjs"
   },
   "devDependencies": {
     "knip": "^6.22.0",

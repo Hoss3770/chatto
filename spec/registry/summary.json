@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "source": {
+    "documentation": {
+      "sitemap_url": "https://docs.slack.dev/llms-sitemap.md",
+      "sitemap_sha256": "d2573373cac23044ee07d292b8469bdff024c5ecc774217919765d938859afb3",
+      "selected_page_count": 719
+    },
+    "sdks": {
+      "node": {
+        "@slack/bolt": "5.1.0",
+        "@slack/oauth": "4.0.0",
+        "@slack/socket-mode": "3.2.0",
+        "@slack/types": "3.3.0",
+        "@slack/web-api": "8.3.0"
+      },
+      "python": { "slack-bolt": "1.30.0", "slack-sdk": "3.46.0" },
+      "java": { "bolt": "1.54.0", "slack-api-client": "1.54.0" }
+    }
+  },
+  "counts": {
+    "methods": 418,
+    "documented_methods": 357,
+    "sdk_only_methods": 61,
+    "events": 154,
+    "scopes": 126,
+    "blocks": 24,
+    "elements": 54,
+    "composition_objects": 10,
+    "manifest_keys": 139
+  },
+  "coverage": { "implemented": 0, "partial": 1, "unsupported": 934 }
+}

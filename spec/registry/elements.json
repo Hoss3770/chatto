@@ -1,0 +1,3874 @@
+{
+  "schema_version": 1,
+  "source": {
+    "documentation": {
+      "sitemap_url": "https://docs.slack.dev/llms-sitemap.md",
+      "sitemap_sha256": "d2573373cac23044ee07d292b8469bdff024c5ecc774217919765d938859afb3",
+      "selected_page_count": 719
+    },
+    "sdks": {
+      "node": {
+        "@slack/bolt": "5.1.0",
+        "@slack/oauth": "4.0.0",
+        "@slack/socket-mode": "3.2.0",
+        "@slack/types": "3.3.0",
+        "@slack/web-api": "8.3.0"
+      },
+      "python": { "slack-bolt": "1.30.0", "slack-sdk": "3.46.0" },
+      "java": { "bolt": "1.54.0", "slack-api-client": "1.54.0" }
+    }
+  },
+  "elements": [
+    {
+      "name": "attachment-mention-element",
+      "wire_type": "attachment_mention",
+      "title_sha256": "e724cc3892741afaca4c6478e030e9541e2f481b9c39c330791bfe82da2d1a44",
+      "summary_sha256": "ef6cae10bdcf372523774053cc4f9c622f9e62cf168d435697862c0029bc17e5",
+      "source": {
+        "url": "https://docs.slack.dev/reference/block-kit/block-elements/attachment-mention-element.md",
+        "sha256": "be62f3915d8ab49478af285c6a53812a090b71a7ca49ba2e2f84d6feea02feec",
+        "kind": "documentation"
+      },
+      "sdk_presence": { "node": false },
+      "available_in_surfaces": ["Home tabs", "Messages", "Modals"],
+      "compatible_elements": [],
+      "fields": [
+        {
+          "name": "type",
+          "type": "String",
+          "required": true,
+          "requirement": "Required",
+          "allowed_literals": [],
+          "constraints": {},
+          "description_sha256": "3b66656d5cff366d7839138b151c28c0143fd337065e5a684ac89e127927a9e5"
+        },
+        {
+          "name": "url",
+          "type": "String",
+          "required": true,
+          "requirement": "Required",
+          "allowed_literals": [],
+          "constraints": {},
+          "description_sha256": "97da68d5fdd33d674b71ea4a48bb56d08783ad118be8ed0e18285b3ad14c3283"
+        },
+        {
+          "name": "text",
+          "type": "String",
+          "required": false,
+          "requirement": "Optional",
+          "allowed_literals": [],
+          "constraints": {},
+          "description_sha256": "6e510736d20fa1be5376db55499b8fd8d0c93efc9453c804608cd8392255d241"
+        },
+        {
+          "name": "app_id",
+          "type": "String",
+          "required": false,
+          "requirement": "Optional",
+          "allowed_literals": [],
+          "constraints": {},
+          "description_sha256": "d21c0f18a20700055469a3794d643603454606d218ad38cb8b41a92017b0657b"
+        },
+        {
+          "name": "entity_id",
+          "type": "String",
+          "required": false,
+          "requirement": "Optional",
+          "allowed_literals": [],
+          "constraints": {},
+          "description_sha256": "4faf1aa4e609397bc5df547ebbbca4b7565f4de675f2c460e293b4ab82226398"
+        },
+        {
+          "name": "icon_url",
+          "type": "String",
+          "required": false,
+          "requirement": "Optional",
+          "allowed_literals": [],
+          "constraints": {},
+          "description_sha256": "4923a18851ed7b52f1c7d5677ee7fb5c7039748ede291fd2fc6a058a75b149be"
+        },
+        {
+          "name": "channel_id",
+          "type": "String",
+          "required": false,
+          "requirement": "Optional",
+          "allowed_literals": [],
+          "constraints": {},
+          "description_sha256": "e84582a89b3503dccba303d987673d56ba0eca096105d37e0f70990b181fcb11"
+        },
+        {
+          "name": "ts",
+          "type": "String",
+          "required": false,
+          "requirement": "Optional",
+          "allowed_literals": [],
+          "constraints": {},
+          "description_sha256": "4143ad4139d9988f02d514664d1b7e97c2bae4ae92ccd8404d280190becc4ecc"
+        },
+        {
+          "name": "full_size_preview_enabled",
+          "type": "Boolean",
+          "required": false,
+          "requirement": "Optional",
+          "allowed_literals": [],
+          "constraints": {},
+          "description_sha256": "0468841edc4b3cb5210abbff601503f10f19ddd6ac676e69a568692323d31376"
+        },
+        {
+          "name": "icon_name",
+          "type": "String",
+          "required": false,
+          "requirement": "Optional",
+          "allowed_literals": [],
+          "constraints": {},
+          "description_sha256": "a6c981464a66ae878dd327363eaf0f26867d12328826578a7338c1711bde0e39"
+        },
+        {
+          "name": "reference_object_type",
+          "type": "String",
+          "required": false,
+          "requirement": "Optional",
+          "allowed_literals": [],
+          "constraints": {},
+          "description_sha256": "74bab7da75289e53b864744867b8b7d7bad3ace5a3fba6bb62b23ae3e1acbba4"
+        },
+        {
+          "name": "product_name",
+          "type": "String",
+          "required": false,
+          "requirement": "Optional",
+          "allowed_literals": [],
+          "constraints": {},
+          "description_sha256": "ee4058276dd5c7615b2390082241b40029b839f507143b3cca92bdf361c1a238"
+        },
+        {
+          "name": "style",
+          "type": "Object",
+          "required": false,
+          "requirement": "Optional",
+          "allowed_literals": [
+            "bold",
+            "client_highlight",
+            "highlight",
+            "italic",
+            "strike",
+            "underline",
+            "unlink"
+          ],
+          "constraints": {},
+          "description_sha256": "4ef5fca36739d40de95c8cb46267b1547c07e09225ace25f80327baf15796c55"
+        }
+      ],
+      "compatibility": {
+        "status": "unsupported",
+        "reason": "This object has no approved Chatto surface or renderer.",
+        "target_phase": null,
+        "semantic_mapping": null
+      }
+    },
+    {
+      "name": "broadcast-element",
+      "wire_type": "broadcast",
+      "title_sha256": "3164b23c78da842dd52a02985a1824ec0fd03a68e1a2e946463c32b3b6fab2d7",
+      "summary_sha256": "c08eb3fc9bf5885083d355c56e4ea1a4e23ef412653a8cb288d0a772c958b8e4",
+      "source": {
+        "url": "https://docs.slack.dev/reference/block-kit/block-elements/broadcast-element.md",
+        "sha256": "f69c0ad36ce3bdef1222ba4b213d7420fa93adcb68fbf180a1ef3e1992440c01",
+        "kind": "documentation"
+      },
+      "sdk_presence": { "node": true },
+      "available_in_surfaces": ["Home tabs", "Messages", "Modals"],
+      "compatible_elements": [],
+      "fields": [
+        {
+          "name": "type",
+          "type": "String",
+          "required": true,
+          "requirement": "Required",
+          "allowed_literals": [],
+          "constraints": {},
+          "description_sha256": "c44c2055c95f17002bbda81343cc9811fc1199e71101bac71542c7e668924765"
+        },
+        {
+          "name": "range",
+          "type": "String",
+          "required": true,
+          "requirement": "Required",
+          "allowed_literals": ["channel", "everyone", "here"],
+          "constraints": {},
+          "description_sha256": "e7ea0d9ba9f52b4125a6cba6f8566e47b4d91d9fd1f367650ba6f2c1fd41a390"
+        },
+        {
+          "name": "style",
+          "type": "Object",
+          "required": false,
+          "requirement": "Optional",
+          "allowed_literals": [
+            "bold",
+            "client_highlight",
+            "highlight",
+            "italic",
+            "strike",
+            "underline",
+            "unlink"
+          ],
+          "constraints": {},
+          "description_sha256": "4ef5fca36739d40de95c8cb46267b1547c07e09225ace25f80327baf15796c55"
+        }
+      ],
+      "compatibility": {
+        "status": "unsupported",
+        "reason": "This object has no approved Chatto surface or renderer.",
+        "target_phase": null,
+        "semantic_mapping": null
+      }
+    },
+    {
+      "name": "button-element",
+      "wire_type": "button",
+      "title_sha256": "76449145a694cef69599ddda5c0fa85af4bca9f6a13b93dbb7713ef621b03e06",
+      "summary_sha256": "1a36fd7fe31e50d184bb791244715c335f0ed36d6226a2e22444b9ab74e55bb3",
+      "source": {
+        "url": "https://docs.slack.dev/reference/block-kit/block-elements/button-element.md",
+        "sha256": "69f2712057d5df4324179f56cadc030a91f1421f82cb1a61d5e587ea0ddac744",
+        "kind": "documentation"
+      },
+      "sdk_presence": { "node": true },
+      "available_in_surfaces": ["Home tabs", "Messages", "Modals"],
+      "compatible_elements": [],
+      "fields": [
+        {
+          "name": "type",
+          "type": "String",
+          "required": true,
+          "requirement": "Required",
+          "allowed_literals": ["button"],
+          "constraints": {},
+          "description_sha256": "6b2cf1dce45a546ac617463733747e21f7ffd7d54c0b4cf211c432f74ad0371d"
+        },
+        {
+          "name": "text",
+          "type": "Object",
+          "required": true,
+          "requirement": "Required",
+          "allowed_literals": ["type: plain_text"],
+          "constraints": {},
+          "description_sha256": "79750cc7c9bc771731f2c11e910526d56000df25ab35fe9c934f53a7d3c16855"
+        },
+        {
+          "name": "action_id",
+          "type": "String",
+          "required": false,
+          "requirement": "Optional",
+          "allowed_literals": [],
+          "constraints": { "max_length": 255 },
+          "description_sha256": "68a56a5ee9cade60f0d8e87937ce379e33258919232a6e5f0f5f204947ecb679"
+        },
+        {
+          "name": "url",
+          "type": "String",
+          "required": false,
+          "requirement": "Optional",
+          "allowed_literals": [],
+          "constraints": { "max_length": 3000 },
+          "description_sha256": "5630535a3a73121f1e336904bba60fdcee3c967b271a51e6a7648f4e7a38e9d7"
+        },
+        {
+          "name": "value",
+          "type": "String",
+          "required": false,
+          "requirement": "Optional",
+          "allowed_literals": [],
+          "constraints": { "max_length": 2000 },
+          "description_sha256": "295d69e547020bbfb9034373f06e580b6dde145ff55a4ea7d151b722afee06cd"
+        },
+        {
+          "name": "style",
+          "type": "String",
+          "required": false,
+          "requirement": "Optional",
+          "allowed_literals": ["danger", "primary"],
+          "constraints": {},
+          "description_sha256": "6127981ab8b0087e92eacfd88f95ed0b8b814a1d56a25f23cf669a2c9deb2f45"
+        },
+        {
+          "name": "confirm",
+          "type": "Object",
+          "required": false,
+          "requirement": "Optional",
+          "allowed_literals": [],
+          "constraints": {},
+          "description_sha256": "597cba2e78658868fd0daa9f5e413c1b0ed5aab0ea1a1ce6df1a553e2c4bccd4"
+        },
+        {
+          "name": "accessibility_label",
+          "type": "String",
+          "required": false,
+          "requirement": "Optional",
+          "allowed_literals": ["text"],
+          "constraints": { "max_length": 75 },
+          "description_sha256": "8d0b0c11ba678aaabbdff37a27d409690c09e1b587ff685142166d64a81327f0"
+        },
+        {
+          "name": "agent_prompt",
+          "type": "String",
+          "required": false,
+          "requirement": "Optional",
+          "allowed_literals": [],
+          "constraints": {},
+          "description_sha256": "908ba4b3373e41b46893e46759a3f2a30606ed6604afac14810d308dcc30b2ca"
+        },
+        {
+          "name": "agent_prompt_display",
+          "type": "String",
+          "required": false,
+          "requirement": "Optional",
+          "allowed_literals": ["agent_prompt", "text"],
+          "constraints": {},
+          "description_sha256": "cbc377ed28b2eabd07269820522616baa07c9571c5f20d212d78119f9bc86f92"
+        },
+        {
+          "name": "visible_to_user_ids",
+          "type": "Array",
+          "required": false,
+          "requirement": "Optional",
+          "allowed_literals": [],
+          "constraints": {},
+          "description_sha256": "242ae59f21294de84f1c91a8cd5397889f5ad0e7149185711bbb59589d5266a9"
+        }
+      ],
+      "compatibility": {
+        "status": "unsupported",
+        "reason": "Chatto does not validate or render this structured object yet.",
+        "target_phase": 4,
+        "semantic_mapping": "Chatto block validator and client renderers"
+      }
+    },
+    {
+      "name": "canvas-element",
+      "wire_type": "canvas",
+      "title_sha256": "2987c9ce68f4eff7e1d418d6f5bcc269a78943170c47d86d3f516b86837dd893",
+      "summary_sha256": "5f2ba80ea5e053112e04d59ca486500203bada45d710b9b0f6ecc93b22f951a9",
+      "source": {
+        "url": "https://docs.slack.dev/reference/block-kit/block-elements/canvas-element.md",
+        "sha256": "d38ebd5f83fad5ae586c314c8ca39be0c01779d1c4aade0c7c409c88814ea9e8",
+        "kind": "documentation"
+      },
+      "sdk_presence": { "node": false },
+      "available_in_surfaces": ["Home tabs", "Messages", "Modals"],
+      "compatible_elements": [],
+      "fields": [
+        {
+          "name": "type",
+          "type": "String",
+          "required": true,
+          "requirement": "Required",
+          "allowed_literals": [],
+          "constraints": {},
+          "description_sha256": "45d67e0cea590757fc2efca02ca6261b3fb62d6fb49c96d0fd8869107aa44c5c"
+        },
+        {
+          "name": "file_id",
+          "type": "String",
+          "required": true,
+          "requirement": "Required",
+          "allowed_literals": [],
+          "constraints": {},
+          "description_sha256": "f17ea999a7e82fb10a6f003e889cb19794841fab2e445cde9031e36fa7cddb55"
+        },
+        {
+          "name": "label",
+          "type": "String",
+          "required": false,
+          "requirement": "Optional",
+          "allowed_literals": [],
+          "constraints": {},
+          "description_sha256": "7e9022ae0d8d30e2babcafb2c103e001c72695f0d4cf7c000cedce576f8cdf28"
+        },
+        {
+          "name": "hide_title",
+          "type": "Boolean",
+          "required": false,
+          "requirement": "Optional",
+          "allowed_literals": [],
+          "constraints": {},
+          "description_sha256": "f8962c2ad93f2202fce31ad50d6ddca347e30f8fc5e7540927f523d894d5e0ce"
+        },
+        {
+          "name": "section_id",
+          "type": "String",
+          "required": false,
+          "requirement": "Optional",
+          "allowed_literals": [],
+          "constraints": {},
+          "description_sha256": "7e657bbefc77f8e378c4692a7c3d9355c660ae86b0ebb5c108ececeedca1d515"
+        },
+        {
+          "name": "style",
+          "type": "Object",
+          "required": false,
+          "requirement": "Optional",
+          "allowed_literals": [
+            "bold",
+            "client_highlight",
+            "highlight",
+            "italic",
+            "strike",
+            "underline",
+            "unlink"
+          ],
+          "constraints": {},
+          "description_sha256": "4ef5fca36739d40de95c8cb46267b1547c07e09225ace25f80327baf15796c55"
+        },
+        {
+          "name": "text",
+          "type": "String",
+          "required": false,
+          "requirement": "Optional",
+          "allowed_literals": [],
+          "constraints": {},
+          "description_sha256": "7b4720215eaad62830b1c6b6ca641099d1049667c80c104fb00e909269cb33ac"
+        },
+        {
+          "name": "url",
+          "type": "String",
+          "required": false,
+          "requirement": "Optional",
+          "allowed_literals": [],
+          "constraints": {},
+          "description_sha256": "4a3852d69418b2bd86ca41dd34d79760436493a414f2020e3352a4d41336c1d3"
+        },
+        {
+          "name": "is_skill_invocation",
+          "type": "Boolean",
+          "required": false,
+          "requirement": "Optional",
+          "allowed_literals": [],
+          "constraints": {},
+          "description_sha256": "b57146833745da1a20a63cba0aed43842997628d62e2f8cb881b7fd7468b0346"
+        }
+      ],
+      "compatibility": {
+        "status": "unsupported",
+        "reason": "This object has no approved Chatto surface or renderer.",
+        "target_phase": null,
+        "semantic_mapping": null
+      }
+    },
+    {
+      "name": "canvas-message-unfurl-element",
+      "wire_type": "canvas_message_unfurl",
+      "title_sha256": "2bf25e89ff5f15a8b84fbfd893d22d0ddcfdf5a8ca5e8fec3f679a70f8ddf104",
+      "summary_sha256": "ed4f8aee67e073bb8607c991da4cf17b2d4fcf3ddc9e18c0159014b7fb1ae9e7",
+      "source": {
+        "url": "https://docs.slack.dev/reference/block-kit/block-elements/canvas-message-unfurl-element.md",
+        "sha256": "799382a0200e999149280de53413e36f629cee063df7b97dfac4085b9a5ccf17",
+        "kind": "documentation"
+      },
+      "sdk_presence": { "node": false },
+      "available_in_surfaces": ["Home tabs", "Messages", "Modals"],
+      "compatible_elements": [],
+      "fields": [
+        {
+          "name": "type",
+          "type": "String",
+          "required": true,
+          "requirement": "Required",
+          "allowed_literals": [],
+          "constraints": {},
+          "description_sha256": "16b485e1c3aa393c9b6d1ffae33cfa08b596c210f82e1d344701d531d2133901"
+        },
+        {
+          "name": "root_message_ts",
+          "type": "String",
+          "required": true,
+          "requirement": "Required",
+          "allowed_literals": [],
+          "constraints": {},
+          "description_sha256": "6631db2600d0b25670fbdafa8b1e2432da6f9b47556c8b444418fc34da5be12e"
+        },
+        {
+          "name": "root_message_channel",
+          "type": "String",
+          "required": true,
+          "requirement": "Required",
+          "allowed_literals": [],
+          "constraints": {},
+          "description_sha256": "023863164874038c9b3a77e94543bee4566a5c7c5d4aa015bc2868e1f422e680"
+        },
+        {
+          "name": "style",
+          "type": "Object",
+          "required": false,
+          "requirement": "Optional",
+          "allowed_literals": [
+            "bold",
+            "client_highlight",
+            "highlight",
+            "italic",
+            "strike",
+            "underline"
+          ],
+          "constraints": {},
+          "description_sha256": "752aa36b0c205436fbbcdc72b793e81d566cdcfa1f9b435274881d72c55a44f6"
+        }
+      ],
+      "compatibility": {
+        "status": "unsupported",
+        "reason": "This object has no approved Chatto surface or renderer.",
+        "target_phase": null,
+        "semantic_mapping": null
+      }
+    },
+    {
+      "name": "canvas-user-mention-element",
+      "wire_type": "canvas_user_mention",
+      "title_sha256": "f6654b58bce108eaf925d79828e26c1a818cad5909e480efc0011f01abc13ce4",
+      "summary_sha256": "0e2e432036072dd0ceb6376ec21821c32a10ca6c401dc38c376fae3c73354789",
+      "source": {
+        "url": "https://docs.slack.dev/reference/block-kit/block-elements/canvas-user-mention-element.md",
+        "sha256": "b29c6976ad88a6c1270270a61a4725e5d3f357070d65451476b04616aa6b56f6",
+        "kind": "documentation"
+      },
+      "sdk_presence": { "node": false },
+      "available_in_surfaces": ["Home tabs", "Messages", "Modals"],
+      "compatible_elements": [],
+      "fields": [
+        {
+          "name": "type",
+          "type": "String",
+          "required": true,
+          "requirement": "Required",
+          "allowed_literals": [],
+          "constraints": {},
+          "description_sha256": "7cbab4e4aea4f4da7faa19815ad58ad6f404a1421fe62a3b4bdee6b5ced57981"
+        },
+        {
+          "name": "user_id",
+          "type": "String",
+          "required": true,
+          "requirement": "Required",
+          "allowed_literals": [],
+          "constraints": {},
+          "description_sha256": "d2293f9593ff09150aa42f304121137897030962b9be221345d98dc194b3dc60"
+        },
+        {
+          "name": "thread_id",
+          "type": "String",
+          "required": false,
+          "requirement": "Optional",
+          "allowed_literals": [],
+          "constraints": {},
+          "description_sha256": "88142c02246af78fb2b296a45dc2a115c5aefb79d9d33f2a5ecc9b8885a33f0f"
+        },
+        {
+          "name": "style",
+          "type": "Object",
+          "required": false,
+          "requirement": "Optional",
+          "allowed_literals": [
+            "bold",
+            "client_highlight",
+            "highlight",
+            "italic",
+            "strike",
+            "underline",
+            "unlink"
+          ],
+          "constraints": {},
+          "description_sha256": "4ef5fca36739d40de95c8cb46267b1547c07e09225ace25f80327baf15796c55"
+        }
+      ],
+      "compatibility": {
+        "status": "unsupported",
+        "reason": "This object has no approved Chatto surface or renderer.",
+        "target_phase": null,
+        "semantic_mapping": null
+      }
+    },
+    {
+      "name": "channel-element",
+      "wire_type": "channel",
+      "title_sha256": "4043c1d0ce00cc8420acdebf2682f28d7e9890ea7ef5dc127787d1c814226b5a",
+      "summary_sha256": "9969e8bbd8e03ca1ebe75a776269e5199d33555651917bcd5c6491e286a20884",
+      "source": {
+        "url": "https://docs.slack.dev/reference/block-kit/block-elements/channel-element.md",
+        "sha256": "234739e3f8e68b237302ca9d01f996a2c0479d4150e6e6eb5ce255dc1107924a",
+        "kind": "documentation"
+      },
+      "sdk_presence": { "node": true },
+      "available_in_surfaces": ["Home tabs", "Messages", "Modals"],
+      "compatible_elements": [],
+      "fields": [
+        {
+          "name": "type",
+          "type": "String",
+          "required": true,
+          "requirement": "Required",
+          "allowed_literals": [],
+          "constraints": {},
+          "description_sha256": "b34282d4ea68380c71bcf3012a7a4cd178762704d47641791d39b50ee926eab7"
+        },
+        {
+          "name": "channel_id",
+          "type": "String",
+          "required": true,
+          "requirement": "Required",
+          "allowed_literals": [],
+          "constraints": {},
+          "description_sha256": "e98194c9b99cb83690d304d6dcbfec9a32d56047353a44097ce50bf0c66b0b11"
+        },
+        {
+          "name": "tab_id",
+          "type": "String",
+          "required": false,
+          "requirement": "Optional",
+          "allowed_literals": [],
+          "constraints": {},
+          "description_sha256": "5f792c5860907e9bf2be3acb3393c0f07921507eefc429c86c26c6e10c814ccf"
+        },
+        {
+          "name": "style",
+          "type": "Object",
+          "required": false,
+          "requirement": "Optional",
+          "allowed_literals": [
+            "bold",
+            "client_highlight",
+            "highlight",
+            "italic",
+            "strike",
+            "underline",
+            "unlink"
+          ],
+          "constraints": {},
+          "description_sha256": "4ef5fca36739d40de95c8cb46267b1547c07e09225ace25f80327baf15796c55"
+        },
+        {
+          "name": "from_llm",
+          "type": "Boolean",
+          "required": false,
+          "requirement": "Optional",
+          "allowed_literals": [],
+          "constraints": {},
+          "description_sha256": "a5b1660fb4bbf870b97f807407ba11fb1818589a5f08178d8919d5f2519e22ea"
+        }
+      ],
+      "compatibility": {
+        "status": "unsupported",
+        "reason": "This object has no approved Chatto surface or renderer.",
+        "target_phase": null,
+        "semantic_mapping": null
+      }
+    },
+    {
+      "name": "channels-select",
+      "wire_type": "channels_select",
+      "title_sha256": null,
+      "summary_sha256": null,
+      "source": { "url": null, "sha256": null, "kind": "sdk_only" },
+      "sdk_presence": { "node": true },
+      "available_in_surfaces": [],
+      "compatible_elements": [],
+      "fields": [],
+      "compatibility": {
+        "status": "unsupported",
+        "reason": "This object has no approved Chatto surface or renderer.",
+        "target_phase": null,
+        "semantic_mapping": null
+      }
+    },
+    {
+      "name": "checkboxes-element",
+      "wire_type": "checkboxes",
+      "title_sha256": "3bef18a4598013402769bbf60a1cc873301589adfc51e73443a6cd4380526655",
+      "summary_sha256": "64423d304c7aec7117aa40398c18957e004ce26b927a4685d452375959b1be40",
+      "source": {
+        "url": "https://docs.slack.dev/reference/block-kit/block-elements/checkboxes-element.md",
+        "sha256": "efda09a650afc9be1c5ded5826ab60dd27693dca89fd1317a16b5f38dac446dd",
+        "kind": "documentation"
+      },
+      "sdk_presence": { "node": true },
+      "available_in_surfaces": ["Home tabs", "Messages", "Modals"],
+      "compatible_elements": [],
+      "fields": [
+        {
+          "name": "type",
+          "type": "String",
+          "required": true,
+          "requirement": "Required",
+          "allowed_literals": ["checkboxes"],
+          "constraints": {},
+          "description_sha256": "490e33d84131be053bbafbc478619dcd4437cc039da51d716daec993794480c1"
+        },
+        {
+          "name": "action_id",
+          "type": "String",
+          "required": false,
+          "requirement": "Optional",
+          "allowed_literals": [],
+          "constraints": { "max_length": 255 },
+          "description_sha256": "04bc00143635de4544baa58240cb7e91fbe06183cd7bbd44871be9623e146dc4"
+        },
+        {
+          "name": "options",
+          "type": "Object\\[\\]",
+          "required": true,
+          "requirement": "Required",
+          "allowed_literals": [],
+          "constraints": {},
+          "description_sha256": "a462b1a2f330be9187c201ddc464df236d66a3156fc482e75e7966af6e7cb3b1"
+        },
+        {
+          "name": "initial_options",
+          "type": "Object\\[\\]",
+          "required": false,
+          "requirement": "Optional",
+          "allowed_literals": ["options"],
+          "constraints": {},
+          "description_sha256": "ef060a7d946b7738181bcde3eff971958d6b77e918a075068373fcdd8d63e66d"
+        },
+        {
+          "name": "confirm",
+          "type": "Object",
+          "required": false,
+          "requirement": "Optional",
+          "allowed_literals": [],
+          "constraints": {},
+          "description_sha256": "924d8ae39f2fdab6db760c503ae0cd12a367631bebcacfc9192d2913a4c56ee2"
+        },
+        {
+          "name": "focus_on_load",
+          "type": "Boolean",
+          "required": false,
+          "requirement": "Optional",
+          "allowed_literals": ["false", "true", "view object"],
+          "constraints": {},
+          "description_sha256": "8c6026305ae638575efe8cf346467cf6ecdc17d8164ce70ffd7eb2492e50d7ae"
+        },
+        {
+          "name": "visible_to_user_ids",
+          "type": "Array",
+          "required": false,
+          "requirement": "Optional",
+          "allowed_literals": [],
+          "constraints": {},
+          "description_sha256": "da8979ff6b20db7d4b78a2e67103e8ca69e4554861c1514b9a093b23da71da87"
+        }
+      ],
+      "compatibility": {
+        "status": "unsupported",
+        "reason": "Chatto does not validate or render this structured object yet.",
+        "target_phase": 4,
+        "semantic_mapping": "Chatto block validator and client renderers"
+      }
+    },
+    {
+      "name": "citation-element",
+      "wire_type": "citation",
+      "title_sha256": "7d65d55fee0081349e31c0ac9ce7ebce6ebd94dd31c35d48f579f4a14242d78c",
+      "summary_sha256": "77b808103cf4988b4baa1953dd3c867c2e4178d34d36d5a85ee634323682e342",
+      "source": {
+        "url": "https://docs.slack.dev/reference/block-kit/block-elements/citation-element.md",
+        "sha256": "2462efd928442198bc608a318168e462959dc68cc1d435838498c55e7d430783",
+        "kind": "documentation"
+      },
+      "sdk_presence": { "node": false },
+      "available_in_surfaces": ["Home tabs", "Messages", "Modals"],
+      "compatible_elements": [],
+      "fields": [
+        {
+          "name": "type",
+          "type": "String",
+          "required": true,
+          "requirement": "Required",
+          "allowed_literals": [],
+          "constraints": {},
+          "description_sha256": "9fa5deb8aa3cd68869face28155299529303ae2634b49f059ac73e9d0dfd1e2e"
+        },
+        {
+          "name": "url",
+          "type": "String",
+          "required": true,
+          "requirement": "Required",
+          "allowed_literals": [],
+          "constraints": {},
+          "description_sha256": "d12c97ad387dbc6d01a7b5119140fa5c0ab3229899ceea46d8d06f4b3364bf1a"
+        },
+        {
+          "name": "text",
+          "type": "String",
+          "required": true,
+          "requirement": "Required",
+          "allowed_literals": [],
+          "constraints": {},
+          "description_sha256": "c4dda24937d4fe78a99d6dba619e5feb2eedf393990e22819fb440bfd81c66df"
+        },
+        {
+          "name": "index",
+          "type": "Number",
+          "required": true,
+          "requirement": "Required",
+          "allowed_literals": [],
+          "constraints": {},
+          "description_sha256": "bc6378d5e88c20793b45a529fa084959ec97e484f0630e3f6ec7ef17ca1a12a4"
+        },
+        {
+          "name": "details",
+          "type": "Object",
+          "required": true,
+          "requirement": "Required",
+          "allowed_literals": ["external", "file", "memory", "message", "web"],
+          "constraints": {},
+          "description_sha256": "2f86cf1c51c4ca442d6e422342279ffb8bfbc8c165abab81b79e6f2d87795a0e"
+        },
+        {
+          "name": "from_llm",
+          "type": "Boolean",
+          "required": false,
+          "requirement": "Optional",
+          "allowed_literals": [],
+          "constraints": {},
+          "description_sha256": "f97c93da45f0065b37cf542484b1cc58550e2977b4fa0b17203f6b66f582767d"
+        },
+        {
+          "name": "is_slack_url",
+          "type": "Boolean",
+          "required": false,
+          "requirement": "Optional",
+          "allowed_literals": [],
+          "constraints": {},
+          "description_sha256": "8b377cb4765245342f8dc81c3b22befc12a86d2f1f51840aa1233da810a5b888"
+        }
+      ],
+      "compatibility": {
+        "status": "unsupported",
+        "reason": "This object has no approved Chatto surface or renderer.",
+        "target_phase": null,
+        "semantic_mapping": null
+      }
+    },
+    {
+      "name": "color-element",
+      "wire_type": "color",
+      "title_sha256": "8273da4a533a468d15f8d6b384fabcfcc8efa4f65dccf79aecaf1a54508f7b31",
+      "summary_sha256": "96bef2e2ae62dd34d6671b2835a7937c51a49b2b3fe747262753de94301dd3e3",
+      "source": {
+        "url": "https://docs.slack.dev/reference/block-kit/block-elements/color-element.md",
+        "sha256": "088bab7a4debdbff1141f339eb78535f0f4a770e6286a00dc922270e3a2a770d",
+        "kind": "documentation"
+      },
+      "sdk_presence": { "node": true },
+      "available_in_surfaces": ["Home tabs", "Messages", "Modals"],
+      "compatible_elements": [],
+      "fields": [
+        {
+          "name": "type",
+          "type": "String",
+          "required": true,
+          "requirement": "Required",
+          "allowed_literals": [],
+          "constraints": {},
+          "description_sha256": "0c3593e5e5c2953270c86dd66fbc410619e20d78e35e6343b48f426f01cff0c2"
+        },
+        {
+          "name": "value",
+          "type": "String",
+          "required": true,
+          "requirement": "Required",
+          "allowed_literals": [],
+          "constraints": {},
+          "description_sha256": "4041a892015a27f84791e34e1e7581248dcf8d7f3ebe30205f26cd615a238cd6"
+        },
+        {
+          "name": "style",
+          "type": "Object",
+          "required": false,
+          "requirement": "Optional",
+          "allowed_literals": [
+            "bold",
+            "client_highlight",
+            "highlight",
+            "italic",
+            "strike",
+            "underline"
+          ],
+          "constraints": {},
+          "description_sha256": "752aa36b0c205436fbbcdc72b793e81d566cdcfa1f9b435274881d72c55a44f6"
+        }
+      ],
+      "compatibility": {
+        "status": "unsupported",
+        "reason": "This object has no approved Chatto surface or renderer.",
+        "target_phase": null,
+        "semantic_mapping": null
+      }
+    },
+    {
+      "name": "conversations-select",
+      "wire_type": "conversations_select",
+      "title_sha256": null,
+      "summary_sha256": null,
+      "source": { "url": null, "sha256": null, "kind": "sdk_only" },
+      "sdk_presence": { "node": true },
+      "available_in_surfaces": [],
+      "compatible_elements": [],
+      "fields": [],
+      "compatibility": {
+        "status": "unsupported",
+        "reason": "This object has no approved Chatto surface or renderer.",
+        "target_phase": null,
+        "semantic_mapping": null
+      }
+    },
+    {
+      "name": "date-element",
+      "wire_type": "date",
+      "title_sha256": "cebfc08a6eaf7f8e212e8b2facb5e952ddc450b28ce8e9707cfcdbbeb9e20ece",
+      "summary_sha256": "4ccf7aae337c0122802125c64be14e1e708fc0c3a2bea2737c9b6b9b5002e5ea",
+      "source": {
+        "url": "https://docs.slack.dev/reference/block-kit/block-elements/date-element.md",
+        "sha256": "204c38e9577e663690ea1b18829b89bc815e8b4e9410112fba2813557a1e9d49",
+        "kind": "documentation"
+      },
+      "sdk_presence": { "node": true },
+      "available_in_surfaces": ["Home tabs", "Messages", "Modals"],
+      "compatible_elements": [],
+      "fields": [
+        {
+          "name": "type",
+          "type": "String",
+          "required": true,
+          "requirement": "Required",
+          "allowed_literals": [],
+          "constraints": {},
+          "description_sha256": "3d6cd1f4063ea91158a9d92332816d319ad76399e08e70c57b3efe6f9849d8af"
+        },
+        {
+          "name": "timestamp",
+          "type": "Number",
+          "required": true,
+          "requirement": "Required",
+          "allowed_literals": [],
+          "constraints": {},
+          "description_sha256": "88fc1106b07cad7e8c956e2a1d88efa78635d64a7235fa11b7b3a0b7f11e3921"
+        },
+        {
+          "name": "format",
+          "type": "String",
+          "required": true,
+          "requirement": "Required",
+          "allowed_literals": ["timestamp"],
+          "constraints": {},
+          "description_sha256": "5ea74b6de8c81c77324551e256e63cdccdd875d6dd83d462b0c3ff408769d27a"
+        },
+        {
+          "name": "timezone",
+          "type": "String",
+          "required": false,
+          "requirement": "Optional",
+          "allowed_literals": [],
+          "constraints": {},
+          "description_sha256": "fbc07060e135f355689c3b993e3e9efa26dd5fa7b523a910780032b1ac3ff809"
+        },
+        {
+          "name": "url",
+          "type": "String",
+          "required": false,
+          "requirement": "Optional",
+          "allowed_literals": ["format"],
+          "constraints": {},
+          "description_sha256": "d4cb47fe95f38b6c4762de47dc02e986deeceb70044fa06661549fa98c225201"
+        },
+        {
+          "name": "fallback",
+          "type": "String",
+          "required": false,
+          "requirement": "Optional",
+          "allowed_literals": [],
+          "constraints": {},
+          "description_sha256": "4ef4b491e25fa6e78b94269cd54b7447b0b5cd29a4ec30ea0f8b5991c7cd0548"
+        },
+        {
+          "name": "style",
+          "type": "Object",
+          "required": false,
+          "requirement": "Optional",
+          "allowed_literals": [
+            "bold",
+            "client_highlight",
+            "highlight",
+            "italic",
+            "strike",
+            "underline"
+          ],
+          "constraints": {},
+          "description_sha256": "752aa36b0c205436fbbcdc72b793e81d566cdcfa1f9b435274881d72c55a44f6"
+        }
+      ],
+      "compatibility": {
+        "status": "unsupported",
+        "reason": "This object has no approved Chatto surface or renderer.",
+        "target_phase": null,
+        "semantic_mapping": null
+      }
+    },
+    {
+      "name": "date-picker-element",
+      "wire_type": "datepicker",
+      "title_sha256": "34de7914398ae2b73edf4b24fef9c5abd4c4206100f84b233ebd4b60cad4790e",
+      "summary_sha256": "49ecb78b25000363c84ee95463d9e780bf88199e706341539a817b7cd4204eb8",
+      "source": {
+        "url": "https://docs.slack.dev/reference/block-kit/block-elements/date-picker-element.md",
+        "sha256": "a49c45f4c651346289667a26d4b7feed79ec5d885e21eac7159a5232c3cb9f31",
+        "kind": "documentation"
+      },
+      "sdk_presence": { "node": true },
+      "available_in_surfaces": ["Home tabs", "Messages", "Modals"],
+      "compatible_elements": [],
+      "fields": [
+        {
+          "name": "type",
+          "type": "String",
+          "required": true,
+          "requirement": "Required",
+          "allowed_literals": ["datepicker"],
+          "constraints": {},
+          "description_sha256": "beef078e2da47b8058e4c82d3feb9980f409d3ecc9fc2f11286163cf53035ac8"
+        },
+        {
+          "name": "action_id",
+          "type": "String",
+          "required": false,
+          "requirement": "Optional",
+          "allowed_literals": [],
+          "constraints": { "max_length": 255 },
+          "description_sha256": "19d55f1867f18f5c2c118f4fdbd7acb8fc0c881a2e0b53b778f5b443e269ea14"
+        },
+        {
+          "name": "initial_date",
+          "type": "String",
+          "required": false,
+          "requirement": "Optional",
+          "allowed_literals": ["YYYY-MM-DD"],
+          "constraints": {},
+          "description_sha256": "70047780e2ad65035085a16a6412aa65010e8dc8a1d1290cf04b4caf11f477f5"
+        },
+        {
+          "name": "confirm",
+          "type": "Object",
+          "required": false,
+          "requirement": "Optional",
+          "allowed_literals": [],
+          "constraints": {},
+          "description_sha256": "8605b8912b84735fe9b8c0ded977d28c5c1e64f325deece5fba665bbb04c7b15"
+        },
+        {
+          "name": "focus_on_load",
+          "type": "Boolean",
+          "required": false,
+          "requirement": "Optional",
+          "allowed_literals": ["false", "true", "view object"],
+          "constraints": {},
+          "description_sha256": "8c6026305ae638575efe8cf346467cf6ecdc17d8164ce70ffd7eb2492e50d7ae"
+        },
+        {
+          "name": "placeholder",
+          "type": "Object",
+          "required": false,
+          "requirement": "Optional",
+          "allowed_literals": ["plain_text", "text"],
+          "constraints": {},
+          "description_sha256": "6e4055293daeb96d054489c40f43ff34e4a01f5b4c1935a7740d800d0225e7b0"
+        }
+      ],
+      "compatibility": {
+        "status": "unsupported",
+        "reason": "Chatto does not validate or render this structured object yet.",
+        "target_phase": 4,
+        "semantic_mapping": "Chatto block validator and client renderers"
+      }
+    },
+    {
+      "name": "datetime-picker-element",
+      "wire_type": "datetimepicker",
+      "title_sha256": "b793726ee30e02b45e5c8bc1602b8f278d2b890bf747204f1b46540eb9927d4d",
+      "summary_sha256": "619cf42c2a817f894da5d0cecd89220d5874fc60872e334d28931ef1c9d0dc94",
+      "source": {
+        "url": "https://docs.slack.dev/reference/block-kit/block-elements/datetime-picker-element.md",
+        "sha256": "72cf1c0ca851a62b101cc4c7bec5e98b628efa5aee28a7c6d1fb3475a5b6a0fc",
+        "kind": "documentation"
+      },
+      "sdk_presence": { "node": true },
+      "available_in_surfaces": ["Messages", "Modals"],
+      "compatible_elements": [],
+      "fields": [
+        {
+          "name": "type",
+          "type": "String",
+          "required": true,
+          "requirement": "Required",
+          "allowed_literals": ["datetimepicker"],
+          "constraints": {},
+          "description_sha256": "721b31213adc88bd4d2379880f5f8d04a427219bbf7c14f9bdcb7f1dea5f1130"
+        },
+        {
+          "name": "action_id",
+          "type": "String",
+          "required": false,
+          "requirement": "Optional",
+          "allowed_literals": ["view_submission"],
+          "constraints": { "max_length": 255 },
+          "description_sha256": "6c634832337e4ddeb224b71435d342706fc7ffe5774c6c6f769d17022240336e"
+        },
+        {
+          "name": "initial_date_time",
+          "type": "Integer",
+          "required": false,
+          "requirement": "Optional",
+          "allowed_literals": ["1628633820"],
+          "constraints": {},
+          "description_sha256": "f9f51bf7dd37a99c5c6aec76bbf90e18019a3af749e61f5e1951477f72f259b2"
+        },
+        {
+          "name": "confirm",
+          "type": "Object",
+          "required": false,
+          "requirement": "Optional",
+          "allowed_literals": [],
+          "constraints": {},
+          "description_sha256": "47045624bab9f79f062d1d70c0eed73728c7d9dc368e0729b2596ecea1d47c7e"
+        },
+        {
+          "name": "focus_on_load",
+          "type": "Boolean",
+          "required": false,
+          "requirement": "Optional",
+          "allowed_literals": ["false", "true", "view object"],
+          "constraints": {},
+          "description_sha256": "8c6026305ae638575efe8cf346467cf6ecdc17d8164ce70ffd7eb2492e50d7ae"
+        }
+      ],
+      "compatibility": {
+        "status": "unsupported",
+        "reason": "Chatto does not validate or render this structured object yet.",
+        "target_phase": 4,
+        "semantic_mapping": "Chatto block validator and client renderers"
+      }
+    },
+    {
+      "name": "email-input-element",
+      "wire_type": "email_text_input",
+      "title_sha256": "cbd25c38716dc9b56168b4b87e7748a9ca9da753aa099a9a01086ee42fec9bef",
+      "summary_sha256": "9613be1840354226bf6b2b65bec9c22524af39b2909dcc59c0acca6e4dd9ffd5",
+      "source": {
+        "url": "https://docs.slack.dev/reference/block-kit/block-elements/email-input-element.md",
+        "sha256": "8872be3c6f5068b92d9b9ff70142cedb713e83675616660396bc46967d9a3760",
+        "kind": "documentation"
+      },
+      "sdk_presence": { "node": true },
+      "available_in_surfaces": ["Modals"],
+      "compatible_elements": [],
+      "fields": [
+        {
+          "name": "type",
+          "type": "String",
+          "required": true,
+          "requirement": "Required",
+          "allowed_literals": ["email_text_input"],
+          "constraints": {},
+          "description_sha256": "cc55932328dec4a0eba28b4ce54a17a5f878b56af50e2aee2f1ec3f8ecd37f2a"
+        },
+        {
+          "name": "action_id",
+          "type": "String",
+          "required": false,
+          "requirement": "Optional",
+          "allowed_literals": ["view_submission"],
+          "constraints": { "max_length": 255 },
+          "description_sha256": "6c634832337e4ddeb224b71435d342706fc7ffe5774c6c6f769d17022240336e"
+        },
+        {
+          "name": "initial_value",
+          "type": "String",
+          "required": false,
+          "requirement": "Optional",
+          "allowed_literals": [],
+          "constraints": {},
+          "description_sha256": "37f4e6985f885eef43b59f46bf684f3fd97135da2aa47807910399242a46b6ee"
+        },
+        {
+          "name": "dispatch_action_config",
+          "type": "Object",
+          "required": false,
+          "requirement": "Optional",
+          "allowed_literals": ["block_actions"],
+          "constraints": {},
+          "description_sha256": "dc6f22b5fb928cdf41e1787e3a6cad101bf0f9db20ff5abc2392b49de152ba38"
+        },
+        {
+          "name": "focus_on_load",
+          "type": "Boolean",
+          "required": false,
+          "requirement": "Optional",
+          "allowed_literals": ["false", "true", "view object"],
+          "constraints": {},
+          "description_sha256": "8c6026305ae638575efe8cf346467cf6ecdc17d8164ce70ffd7eb2492e50d7ae"
+        },
+        {
+          "name": "placeholder",
+          "type": "Object",
+          "required": false,
+          "requirement": "Optional",
+          "allowed_literals": ["plain_text", "text"],
+          "constraints": {},
+          "description_sha256": "0da6516bd51edd6dee840aa804db3ac53ed786cd9d4e704ff848da8a82bfb589"
+        }
+      ],
+      "compatibility": {
+        "status": "unsupported",
+        "reason": "This object has no approved Chatto surface or renderer.",
+        "target_phase": null,
+        "semantic_mapping": null
+      }
+    },
+    {
+      "name": "emoji-element",
+      "wire_type": "emoji",
+      "title_sha256": "0004fd0c204da68b079df87fb13a9118bbce2978e50f43f5be29b05975aabee5",
+      "summary_sha256": "6a1492d07a826b6d818627e3a83a862c968ec30b7e098b370c72ab26f5f8f073",
+      "source": {
+        "url": "https://docs.slack.dev/reference/block-kit/block-elements/emoji-element.md",
+        "sha256": "6fd83c2722302eca81a89dbb847338a3f3ce6ea169b789f872dc9d532f530cbe",
+        "kind": "documentation"
+      },
+      "sdk_presence": { "node": true },
+      "available_in_surfaces": ["Home tabs", "Messages", "Modals"],
+      "compatible_elements": [],
+      "fields": [
+        {
+          "name": "type",
+          "type": "String",
+          "required": true,
+          "requirement": "Required",
+          "allowed_literals": [],
+          "constraints": {},
+          "description_sha256": "621673afd954f212d63080dd5180c81b91b93e1501b534a45e061fa30f06173a"
+        },
+        {
+          "name": "name",
+          "type": "String",
+          "required": true,
+          "requirement": "Required",
+          "allowed_literals": [],
+          "constraints": {},
+          "description_sha256": "1e05cdee94d0a7a3f089e3be96d480ccc54ee1d296b9e7b7e4655d88e06e45f6"
+        },
+        {
+          "name": "unicode",
+          "type": "String",
+          "required": false,
+          "requirement": "Optional",
+          "allowed_literals": [],
+          "constraints": {},
+          "description_sha256": "a9823e18bf9745058639986b764d1f065697b74999ee283f4825d37b1220df3d"
+        }
+      ],
+      "compatibility": {
+        "status": "unsupported",
+        "reason": "This object has no approved Chatto surface or renderer.",
+        "target_phase": null,
+        "semantic_mapping": null
+      }
+    },
+    {
+      "name": "external-select",
+      "wire_type": "external_select",
+      "title_sha256": null,
+      "summary_sha256": null,
+      "source": { "url": null, "sha256": null, "kind": "sdk_only" },
+      "sdk_presence": { "node": true },
+      "available_in_surfaces": [],
+      "compatible_elements": [],
+      "fields": [],
+      "compatibility": {
+        "status": "unsupported",
+        "reason": "This object has no approved Chatto surface or renderer.",
+        "target_phase": null,
+        "semantic_mapping": null
+      }
+    },
+    {
+      "name": "feedback-buttons-element",
+      "wire_type": "feedback_buttons",
+      "title_sha256": "4452e80d711846613399cb57a2a563e7e328fd68e09b81c9a6d2e08d600c792b",
+      "summary_sha256": "163f73b3599599d346e047607138767d962962902d8fb7d7c66197435bec5501",
+      "source": {
+        "url": "https://docs.slack.dev/reference/block-kit/block-elements/feedback-buttons-element.md",
+        "sha256": "72fda8248e464cbaacb23368dbe61e7bc74994592f28477e179edceb33afed87",
+        "kind": "documentation"
+      },
+      "sdk_presence": { "node": true },
+      "available_in_surfaces": ["Messages"],
+      "compatible_elements": [],
+      "fields": [
+        {
+          "name": "type",
+          "type": "String",
+          "required": true,
+          "requirement": "Required",
+          "allowed_literals": ["feedback_buttons"],
+          "constraints": {},
+          "description_sha256": "b590e3d859be8f5d2938160e77114961542384b82a92f8360143045cc1a35907"
+        },
+        {
+          "name": "positive_button",
+          "type": "Object",
+          "required": true,
+          "requirement": "Required",
+          "allowed_literals": [],
+          "constraints": {},
+          "description_sha256": "0f52c619200c008fb248cb2a4f7f6ba179a8a7e350b618bfbe0a463a5426c622"
+        },
+        {
+          "name": "negative_button",
+          "type": "Object",
+          "required": true,
+          "requirement": "Required",
+          "allowed_literals": [],
+          "constraints": {},
+          "description_sha256": "217103e2ed7a91e34347b9042d1c57e31683fd9b946b5fe9b3e345aa84d9ffbc"
+        },
+        {
+          "name": "action_id",
+          "type": "String",
+          "required": false,
+          "requirement": "Optional",
+          "allowed_literals": [],
+          "constraints": { "max_length": 255 },
+          "description_sha256": "f6942506a94bb42d5ea234b04caa7e4ded192b487df770cc13c77057cb09a258"
+        },
+        {
+          "name": "text",
+          "type": "Object",
+          "required": true,
+          "requirement": "Required",
+          "allowed_literals": ["type: plain_text"],
+          "constraints": {},
+          "description_sha256": "eec8b4b20cd92135b52a7469eb7e38be2675b454a478994c89f82f3d598bda61"
+        },
+        {
+          "name": "value",
+          "type": "String",
+          "required": true,
+          "requirement": "Required",
+          "allowed_literals": [],
+          "constraints": { "max_length": 2000 },
+          "description_sha256": "295d69e547020bbfb9034373f06e580b6dde145ff55a4ea7d151b722afee06cd"
+        },
+        {
+          "name": "accessibility_label",
+          "type": "String",
+          "required": false,
+          "requirement": "Optional",
+          "allowed_literals": ["text"],
+          "constraints": { "max_length": 75 },
+          "description_sha256": "9c970f150ad0d75df931f29c5f1e5ba76e0d8b9d26a8f5d9931fa71cd8c0723e"
+        }
+      ],
+      "compatibility": {
+        "status": "unsupported",
+        "reason": "This object has no approved Chatto surface or renderer.",
+        "target_phase": null,
+        "semantic_mapping": null
+      }
+    },
+    {
+      "name": "file-element",
+      "wire_type": "file",
+      "title_sha256": "dcef76171f403fd1a80383811bdf830006f4ad5a2e5b31f72d17a3594609b2d7",
+      "summary_sha256": "3a29dbe4c30543c350c4fca5f09dbfd1405cd38b4fb8918930e194c922d10164",
+      "source": {
+        "url": "https://docs.slack.dev/reference/block-kit/block-elements/file-element.md",
+        "sha256": "1a8c142de3c9a1333247fbfa143d4b2f1eecfa6c2698d3fcbc63fc75e2ab3a69",
+        "kind": "documentation"
+      },
+      "sdk_presence": { "node": false },
+      "available_in_surfaces": ["Home tabs", "Messages", "Modals"],
+      "compatible_elements": [],
+      "fields": [
+        {
+          "name": "type",
+          "type": "String",
+          "required": true,
+          "requirement": "Required",
+          "allowed_literals": [],
+          "constraints": {},
+          "description_sha256": "003f594799fc5c060518ecb9f220bd8d209641c58b804eb3ccc93430ae9756b6"
+        },
+        {
+          "name": "file_id",
+          "type": "String",
+          "required": true,
+          "requirement": "Required",
+          "allowed_literals": [],
+          "constraints": {},
+          "description_sha256": "9f302c1145c302046c94ddb3a54c5bcb8c57453ff785687ea5099229d2c86898"
+        },
+        {
+          "name": "style",
+          "type": "Object",
+          "required": false,
+          "requirement": "Optional",
+          "allowed_literals": [
+            "bold",
+            "client_highlight",
+            "highlight",
+            "italic",
+            "strike",
+            "underline"
+          ],
+          "constraints": {},
+          "description_sha256": "752aa36b0c205436fbbcdc72b793e81d566cdcfa1f9b435274881d72c55a44f6"
+        },
+        {
+          "name": "text",
+          "type": "String",
+          "required": false,
+          "requirement": "Optional",
+          "allowed_literals": [],
+          "constraints": {},
+          "description_sha256": "442d44db79b392362b02ca332f59a7d2a5f918bce78089bc70dfdecc9aaf5cce"
+        },
+        {
+          "name": "url",
+          "type": "String",
+          "required": false,
+          "requirement": "Optional",
+          "allowed_literals": [],
+          "constraints": {},
+          "description_sha256": "d67d4768c069791e0443bce7f6c6aed944ddde120e50626e7b017978695ae29c"
+        },
+        {
+          "name": "is_skill_invocation",
+          "type": "Boolean",
+          "required": false,
+          "requirement": "Optional",
+          "allowed_literals": [],
+          "constraints": {},
+          "description_sha256": "6aa05ad901bd2a8a5022ebe1d193f3d2fddb859cf58418d9fd6110fe13ce6929"
+        }
+      ],
+      "compatibility": {
+        "status": "unsupported",
+        "reason": "This object has no approved Chatto surface or renderer.",
+        "target_phase": null,
+        "semantic_mapping": null
+      }
+    },
+    {
+      "name": "file-input-element",
+      "wire_type": "file_input",
+      "title_sha256": "eee183f061b2c30fa2a31aaa2f595829a2bc7692b45978d9b92ca842019a5d18",
+      "summary_sha256": "96d9c9fa04c1b61a7f729d67da1a60e71b390a27b0de13633424c93fcfa4894e",
+      "source": {
+        "url": "https://docs.slack.dev/reference/block-kit/block-elements/file-input-element.md",
+        "sha256": "5e553da873182432ad212dcaa4a8c6a68a1a0744a960e036d8f6e8279814a192",
+        "kind": "documentation"
+      },
+      "sdk_presence": { "node": true },
+      "available_in_surfaces": ["Modals"],
+      "compatible_elements": [],
+      "fields": [
+        {
+          "name": "type",
+          "type": "String",
+          "required": true,
+          "requirement": "Required",
+          "allowed_literals": ["file_input"],
+          "constraints": {},
+          "description_sha256": "14d66740bffa71c1010537a2fef58af45064501a767d5c7df9b45ad5c4ce09a1"
+        },
+        {
+          "name": "action_id",
+          "type": "String",
+          "required": false,
+          "requirement": "Optional",
+          "allowed_literals": ["view_submission"],
+          "constraints": { "max_length": 255 },
+          "description_sha256": "6c634832337e4ddeb224b71435d342706fc7ffe5774c6c6f769d17022240336e"
+        },
+        {
+          "name": "filetypes",
+          "type": "String\\[\\]",
+          "required": false,
+          "requirement": "Optional",
+          "allowed_literals": [],
+          "constraints": {},
+          "description_sha256": "669da631e23deae1157c1d2927af65ac6d2015d85cb73d83f9eeca652bf9fe79"
+        },
+        {
+          "name": "max_files",
+          "type": "Integer",
+          "required": false,
+          "requirement": "Optional",
+          "allowed_literals": ["file_input"],
+          "constraints": {},
+          "description_sha256": "b5f5515b277c06392efc7ebf6eed7bfde207da2c5327ccf01488b3c1aefab016"
+        }
+      ],
+      "compatibility": {
+        "status": "unsupported",
+        "reason": "This object has no approved Chatto surface or renderer.",
+        "target_phase": null,
+        "semantic_mapping": null
+      }
+    },
+    {
+      "name": "icon-button-element",
+      "wire_type": "icon_button",
+      "title_sha256": "9c7858422b7ceb8bacfa153e13b0599a4d7c069ab7edbb1a558c335e7f6e457d",
+      "summary_sha256": "616f48c1db195b6f23031e5064d19920ab9f1c394100bbad51800d1020f7702d",
+      "source": {
+        "url": "https://docs.slack.dev/reference/block-kit/block-elements/icon-button-element.md",
+        "sha256": "ad7e40741da1ff1da34529f486e91c299ca576ed9c64dff08645e603530ce68a",
+        "kind": "documentation"
+      },
+      "sdk_presence": { "node": true },
+      "available_in_surfaces": ["Messages"],
+      "compatible_elements": [],
+      "fields": [
+        {
+          "name": "type",
+          "type": "String",
+          "required": true,
+          "requirement": "Required",
+          "allowed_literals": ["icon_button"],
+          "constraints": {},
+          "description_sha256": "674291cd5b40b61fd0576dece52fe44be811aba06cd79c2800d91d116a47311f"
+        },
+        {
+          "name": "icon",
+          "type": "String",
+          "required": true,
+          "requirement": "Required",
+          "allowed_literals": ["trash"],
+          "constraints": {},
+          "description_sha256": "9c01a76ba2c30251ffd6bc5e6e653f69f26f9d0fb2cc99b617d831e57a7627cc"
+        },
+        {
+          "name": "text",
+          "type": "Object",
+          "required": true,
+          "requirement": "Required",
+          "allowed_literals": ["type: plain_text"],
+          "constraints": {},
+          "description_sha256": "4844d38490ee192437662a91fbd7173f8188559ce7c22e824c8f4d2fff5235b7"
+        },
+        {
+          "name": "action_id",
+          "type": "String",
+          "required": false,
+          "requirement": "Optional",
+          "allowed_literals": [],
+          "constraints": { "max_length": 255 },
+          "description_sha256": "68a56a5ee9cade60f0d8e87937ce379e33258919232a6e5f0f5f204947ecb679"
+        },
+        {
+          "name": "value",
+          "type": "String",
+          "required": false,
+          "requirement": "Optional",
+          "allowed_literals": [],
+          "constraints": { "max_length": 2000 },
+          "description_sha256": "295d69e547020bbfb9034373f06e580b6dde145ff55a4ea7d151b722afee06cd"
+        },
+        {
+          "name": "confirm",
+          "type": "Object",
+          "required": false,
+          "requirement": "Optional",
+          "allowed_literals": [],
+          "constraints": {},
+          "description_sha256": "597cba2e78658868fd0daa9f5e413c1b0ed5aab0ea1a1ce6df1a553e2c4bccd4"
+        },
+        {
+          "name": "accessibility_label",
+          "type": "String",
+          "required": false,
+          "requirement": "Optional",
+          "allowed_literals": ["text"],
+          "constraints": { "max_length": 75 },
+          "description_sha256": "9c970f150ad0d75df931f29c5f1e5ba76e0d8b9d26a8f5d9931fa71cd8c0723e"
+        },
+        {
+          "name": "visible_to_user_ids",
+          "type": "Array",
+          "required": false,
+          "requirement": "Optional",
+          "allowed_literals": [],
+          "constraints": {},
+          "description_sha256": "6c49e99137064dd6f7ffecafc3f747b6bf5f1f556ef6d7cb4555b2b9c962368b"
+        }
+      ],
+      "compatibility": {
+        "status": "unsupported",
+        "reason": "This object has no approved Chatto surface or renderer.",
+        "target_phase": null,
+        "semantic_mapping": null
+      }
+    },
+    {
+      "name": "image-element",
+      "wire_type": "image",
+      "title_sha256": "f86b2d34b69ea10c0a908ecdfa779b7db01211d534c0b0af0b1a713d62c66c66",
+      "summary_sha256": "42dfef6bcccbe66b7905bcc110615213830362e93e5652e411ca1173079f282a",
+      "source": {
+        "url": "https://docs.slack.dev/reference/block-kit/block-elements/image-element.md",
+        "sha256": "d3826d0dfe15d60361e1ae8304f91126ad0edecdc08a7214c1e3dc95d8fdb6a6",
+        "kind": "documentation"
+      },
+      "sdk_presence": { "node": true },
+      "available_in_surfaces": ["Home tabs", "Messages", "Modals"],
+      "compatible_elements": [],
+      "fields": [
+        {
+          "name": "type",
+          "type": "String",
+          "required": true,
+          "requirement": "Required",
+          "allowed_literals": ["image"],
+          "constraints": {},
+          "description_sha256": "df45f7ab7a317c7ade27185c279f6da338e95fc5922f1318febe920428d90224"
+        },
+        {
+          "name": "alt_text",
+          "type": "String",
+          "required": true,
+          "requirement": "Required",
+          "allowed_literals": [],
+          "constraints": {},
+          "description_sha256": "23dae425d87b50d3343857dd6715272dedf4d5b4e0f07c1b7673b93492cab1b2"
+        },
+        {
+          "name": "image_url",
+          "type": "String",
+          "required": false,
+          "requirement": "Optional",
+          "allowed_literals": ["slack_file"],
+          "constraints": {},
+          "description_sha256": "de46d6d9d6b4b03054df43a5093f912ed1657e468abbd0eedd8e3b22f9f79655"
+        },
+        {
+          "name": "slack_file",
+          "type": "Object",
+          "required": false,
+          "requirement": "Optional",
+          "allowed_literals": [],
+          "constraints": {},
+          "description_sha256": "e412eeb2a14a38c9411a4bfda5ff87943be49e4a2ef9fed221efe5e032cc3a73"
+        }
+      ],
+      "compatibility": {
+        "status": "unsupported",
+        "reason": "Chatto does not validate or render this structured object yet.",
+        "target_phase": 4,
+        "semantic_mapping": "Chatto block validator and client renderers"
+      }
+    },
+    {
+      "name": "link-element",
+      "wire_type": "link",
+      "title_sha256": "0bde3cbaef54decf22abcf32941d74384257cdf2699232f4b792a4036afd8ce6",
+      "summary_sha256": "f884331cb4e52de62b1abc68bfcc080200c659b9119944bd630ad7495c0e2776",
+      "source": {
+        "url": "https://docs.slack.dev/reference/block-kit/block-elements/link-element.md",
+        "sha256": "97b989e219e6d2e3495ea6b39799cca46b34aff2e0c38fb298994579102ba1dd",
+        "kind": "documentation"
+      },
+      "sdk_presence": { "node": true },
+      "available_in_surfaces": ["Home tabs", "Messages", "Modals"],
+      "compatible_elements": [],
+      "fields": [
+        {
+          "name": "type",
+          "type": "String",
+          "required": true,
+          "requirement": "Required",
+          "allowed_literals": [],
+          "constraints": {},
+          "description_sha256": "55cbb74b81344ce719bdc5182afefc7c4d9d43bf0127e65bc5e42e64956803e5"
+        },
+        {
+          "name": "url",
+          "type": "String",
+          "required": true,
+          "requirement": "Required",
+          "allowed_literals": [],
+          "constraints": {},
+          "description_sha256": "a51283d6d16d55c69d01317af4d610db395b78186b91a3949a39baf729fb0769"
+        },
+        {
+          "name": "text",
+          "type": "String",
+          "required": false,
+          "requirement": "Optional",
+          "allowed_literals": [],
+          "constraints": {},
+          "description_sha256": "896cb42f88fa89008d34a31effac34eff88b70e7d5f04683c0916e364b6a3feb"
+        },
+        {
+          "name": "unsafe",
+          "type": "Boolean",
+          "required": false,
+          "requirement": "Optional",
+          "allowed_literals": [],
+          "constraints": {},
+          "description_sha256": "c94b93f3bf3a835e0d7edc3b1d4a932c13923d0e6280a7912c28af260977b77c"
+        },
+        {
+          "name": "from_llm",
+          "type": "Boolean",
+          "required": false,
+          "requirement": "Optional",
+          "allowed_literals": [],
+          "constraints": {},
+          "description_sha256": "ee89581b840abb99d8beca42d2d6665ec124118bcea6f3142aba70bc926a7d82"
+        },
+        {
+          "name": "is_slack_url",
+          "type": "Boolean",
+          "required": false,
+          "requirement": "Optional",
+          "allowed_literals": [],
+          "constraints": {},
+          "description_sha256": "fa46584a9f10b5b70f1b5cf6c4bb43d2eedd4c781ff70979c28a06152f1763e8"
+        },
+        {
+          "name": "truncated",
+          "type": "Boolean",
+          "required": false,
+          "requirement": "Optional",
+          "allowed_literals": [],
+          "constraints": {},
+          "description_sha256": "bf52dfe7cdab556fbcb82e04810f911aacb13dd6f3ed70d64598a1d551371668"
+        },
+        {
+          "name": "style",
+          "type": "Object",
+          "required": false,
+          "requirement": "Optional",
+          "allowed_literals": [
+            "bold",
+            "client_highlight",
+            "highlight",
+            "italic",
+            "strike",
+            "underline",
+            "unlink"
+          ],
+          "constraints": {},
+          "description_sha256": "4ef5fca36739d40de95c8cb46267b1547c07e09225ace25f80327baf15796c55"
+        }
+      ],
+      "compatibility": {
+        "status": "unsupported",
+        "reason": "This object has no approved Chatto surface or renderer.",
+        "target_phase": null,
+        "semantic_mapping": null
+      }
+    },
+    {
+      "name": "list-record-element",
+      "wire_type": "list_record",
+      "title_sha256": "f348ef4ad935f09a35ebe012de775e00e630dbe1f8b8529b01222c5187e5871d",
+      "summary_sha256": "0bf18d5895fa6517b21a4c71566c2066ee246ed88e1bc82b38f2166721a12416",
+      "source": {
+        "url": "https://docs.slack.dev/reference/block-kit/block-elements/list-record-element.md",
+        "sha256": "9669e326aaa2716b5ee558caecee3cf395156cea4e74917765ce230144299fee",
+        "kind": "documentation"
+      },
+      "sdk_presence": { "node": false },
+      "available_in_surfaces": ["Home tabs", "Messages", "Modals"],
+      "compatible_elements": [],
+      "fields": [
+        {
+          "name": "type",
+          "type": "String",
+          "required": true,
+          "requirement": "Required",
+          "allowed_literals": [],
+          "constraints": {},
+          "description_sha256": "b504966415578e17fd53efd6bd400ad765c249c916d675b632655aafe84d1db9"
+        },
+        {
+          "name": "file_id",
+          "type": "String",
+          "required": true,
+          "requirement": "Required",
+          "allowed_literals": [],
+          "constraints": {},
+          "description_sha256": "b4e40c26ec2f4b357fe23b308010efa6356df6963302147b605194600c1cb620"
+        },
+        {
+          "name": "record_id",
+          "type": "String",
+          "required": false,
+          "requirement": "Optional",
+          "allowed_literals": [],
+          "constraints": {},
+          "description_sha256": "8ba5e030fab6690caaf12a5adef04f4f24a6193d10efed2b63593c3d90a410c9"
+        },
+        {
+          "name": "view_id",
+          "type": "String",
+          "required": false,
+          "requirement": "Optional",
+          "allowed_literals": [],
+          "constraints": {},
+          "description_sha256": "331b31c693ee413404e6ef704d10b3f358ed7e8cc418fc13b0b648f96581145d"
+        },
+        {
+          "name": "style",
+          "type": "Object",
+          "required": false,
+          "requirement": "Optional",
+          "allowed_literals": [
+            "bold",
+            "client_highlight",
+            "highlight",
+            "italic",
+            "strike",
+            "underline",
+            "unlink"
+          ],
+          "constraints": {},
+          "description_sha256": "4ef5fca36739d40de95c8cb46267b1547c07e09225ace25f80327baf15796c55"
+        },
+        {
+          "name": "text",
+          "type": "String",
+          "required": false,
+          "requirement": "Optional",
+          "allowed_literals": [],
+          "constraints": {},
+          "description_sha256": "3f738119a10dcd9949dc8049357292d69019f7b617b23bb8c5ad2110aa1e2a88"
+        },
+        {
+          "name": "url",
+          "type": "String",
+          "required": false,
+          "requirement": "Optional",
+          "allowed_literals": [],
+          "constraints": {},
+          "description_sha256": "8c3c9c429b20d4d2a136cc40ed1ad7c90aa05a62ef68b9303cebb59eaad23484"
+        }
+      ],
+      "compatibility": {
+        "status": "unsupported",
+        "reason": "This object has no approved Chatto surface or renderer.",
+        "target_phase": null,
+        "semantic_mapping": null
+      }
+    },
+    {
+      "name": "message-mention-element",
+      "wire_type": "message_mention",
+      "title_sha256": "0ac33ae7df13d07f0c4178bdc6829f6e5ef49829c4a12549e8020763384c9e98",
+      "summary_sha256": "dc51c1ebb4ca1adc69b668dd92d4cab8d23969332d982abd2bf9f2559d082ade",
+      "source": {
+        "url": "https://docs.slack.dev/reference/block-kit/block-elements/message-mention-element.md",
+        "sha256": "9031c62b4de12c7c44ec55cc224e690df7548a7ed7546762251af05c61c7ab29",
+        "kind": "documentation"
+      },
+      "sdk_presence": { "node": false },
+      "available_in_surfaces": ["Home tabs", "Messages", "Modals"],
+      "compatible_elements": [],
+      "fields": [
+        {
+          "name": "type",
+          "type": "String",
+          "required": true,
+          "requirement": "Required",
+          "allowed_literals": [],
+          "constraints": {},
+          "description_sha256": "a5fdb7b8696bf268c0418275657a0c9ee495cb4d961d568686b76469507487c2"
+        },
+        {
+          "name": "channel_id",
+          "type": "String",
+          "required": true,
+          "requirement": "Required",
+          "allowed_literals": [],
+          "constraints": {},
+          "description_sha256": "3df2a54225fc65798f2239616b57097b2139589ebaafb0e1212e646fd9e77738"
+        },
+        {
+          "name": "message_ts",
+          "type": "String",
+          "required": true,
+          "requirement": "Required",
+          "allowed_literals": [],
+          "constraints": {},
+          "description_sha256": "fbefecfa25e4a88d4036b41dc8ab1ed8a3d238345c81d333105c0ac57078dfdc"
+        },
+        {
+          "name": "author_id",
+          "type": "String",
+          "required": false,
+          "requirement": "Optional",
+          "allowed_literals": [],
+          "constraints": {},
+          "description_sha256": "84cb0e6064a992796919fd11a651820d07ddff2df9e6d47d28c4b2271925ef2a"
+        },
+        {
+          "name": "thread_ts",
+          "type": "String",
+          "required": false,
+          "requirement": "Optional",
+          "allowed_literals": [],
+          "constraints": {},
+          "description_sha256": "04ce68926e23e230243d70218debf8072f7f7ebfee943c98a80b468522fefab7"
+        },
+        {
+          "name": "style",
+          "type": "Object",
+          "required": false,
+          "requirement": "Optional",
+          "allowed_literals": [
+            "bold",
+            "client_highlight",
+            "highlight",
+            "italic",
+            "strike",
+            "underline",
+            "unlink"
+          ],
+          "constraints": {},
+          "description_sha256": "4ef5fca36739d40de95c8cb46267b1547c07e09225ace25f80327baf15796c55"
+        },
+        {
+          "name": "text",
+          "type": "String",
+          "required": false,
+          "requirement": "Optional",
+          "allowed_literals": [],
+          "constraints": {},
+          "description_sha256": "0cb56f928d2c32c801a9b481a4041ba8d919abfafbfc2e865c527165e605899d"
+        },
+        {
+          "name": "url",
+          "type": "String",
+          "required": false,
+          "requirement": "Optional",
+          "allowed_literals": [],
+          "constraints": {},
+          "description_sha256": "ff6ba3337f5cfcd78be941403a3519eb37aa813fb7a8671a210ae45f5cbc3618"
+        }
+      ],
+      "compatibility": {
+        "status": "unsupported",
+        "reason": "This object has no approved Chatto surface or renderer.",
+        "target_phase": null,
+        "semantic_mapping": null
+      }
+    },
+    {
+      "name": "multi-channels-select",
+      "wire_type": "multi_channels_select",
+      "title_sha256": null,
+      "summary_sha256": null,
+      "source": { "url": null, "sha256": null, "kind": "sdk_only" },
+      "sdk_presence": { "node": true },
+      "available_in_surfaces": [],
+      "compatible_elements": [],
+      "fields": [],
+      "compatibility": {
+        "status": "unsupported",
+        "reason": "Chatto does not validate or render this structured object yet.",
+        "target_phase": 4,
+        "semantic_mapping": "Chatto block validator and client renderers"
+      }
+    },
+    {
+      "name": "multi-conversations-select",
+      "wire_type": "multi_conversations_select",
+      "title_sha256": null,
+      "summary_sha256": null,
+      "source": { "url": null, "sha256": null, "kind": "sdk_only" },
+      "sdk_presence": { "node": true },
+      "available_in_surfaces": [],
+      "compatible_elements": [],
+      "fields": [],
+      "compatibility": {
+        "status": "unsupported",
+        "reason": "Chatto does not validate or render this structured object yet.",
+        "target_phase": 4,
+        "semantic_mapping": "Chatto block validator and client renderers"
+      }
+    },
+    {
+      "name": "multi-external-select",
+      "wire_type": "multi_external_select",
+      "title_sha256": null,
+      "summary_sha256": null,
+      "source": { "url": null, "sha256": null, "kind": "sdk_only" },
+      "sdk_presence": { "node": true },
+      "available_in_surfaces": [],
+      "compatible_elements": [],
+      "fields": [],
+      "compatibility": {
+        "status": "unsupported",
+        "reason": "Chatto does not validate or render this structured object yet.",
+        "target_phase": 4,
+        "semantic_mapping": "Chatto block validator and client renderers"
+      }
+    },
+    {
+      "name": "multi-select-menu-element",
+      "wire_type": "multi_static_select",
+      "title_sha256": "aee91a644ab0911f6b5f36269dd175452c279de694fb051293d541be76f920a0",
+      "summary_sha256": "f8f3f6016dfdb811feedac8ce9a6f5277cdfeeb5b5bf668a078cfebb72817edb",
+      "source": {
+        "url": "https://docs.slack.dev/reference/block-kit/block-elements/multi-select-menu-element.md",
+        "sha256": "adfee4280c89567032b47255f69b1ed2039ef0bf3d588e62c498beaf0e3976b8",
+        "kind": "documentation"
+      },
+      "sdk_presence": { "node": true },
+      "available_in_surfaces": ["Home tabs", "Messages", "Modals"],
+      "compatible_elements": [],
+      "fields": [
+        {
+          "name": "type",
+          "type": "String",
+          "required": true,
+          "requirement": "Required",
+          "allowed_literals": ["multi_static_select"],
+          "constraints": {},
+          "description_sha256": "e68fc00f730ef8ff7938d1a51907879ac4b7f3e69c67928654c50e4c23c18115"
+        },
+        {
+          "name": "action_id",
+          "type": "String",
+          "required": false,
+          "requirement": "Optional",
+          "allowed_literals": [],
+          "constraints": { "max_length": 255 },
+          "description_sha256": "b79b9a1bb72c7cfed1bd06d1740efce174d7f4be5dbb82cad0481e4b08750918"
+        },
+        {
+          "name": "options",
+          "type": "Object\\[\\]",
+          "required": true,
+          "requirement": "Required",
+          "allowed_literals": ["option_groups"],
+          "constraints": { "max_items": 100 },
+          "description_sha256": "124b5c866bfcea3de533e727e82b8615fffe0a596869cdc6d30a71437ef079da"
+        },
+        {
+          "name": "option_groups",
+          "type": "Object\\[\\]",
+          "required": false,
+          "requirement": "Optional",
+          "allowed_literals": ["options"],
+          "constraints": {},
+          "description_sha256": "f7e18f975f0be4be9350c8f734ca9f0076263bbf48e420db8327c4eeab194670"
+        },
+        {
+          "name": "initial_options",
+          "type": "Object\\[\\]",
+          "required": false,
+          "requirement": "Optional",
+          "allowed_literals": ["option_groups", "options"],
+          "constraints": {},
+          "description_sha256": "bcaa4615e8c72e9ece2eb09b3d7da095e0b77185643e21342b2dee98a1c33ead"
+        },
+        {
+          "name": "confirm",
+          "type": "Object",
+          "required": false,
+          "requirement": "Optional",
+          "allowed_literals": [],
+          "constraints": {},
+          "description_sha256": "620b90941bb4ec585ed4c87d436ccd0d09fe6a782a752a20130e7e52a0548aba"
+        },
+        {
+          "name": "max_selected_items",
+          "type": "Integer",
+          "required": false,
+          "requirement": "Optional",
+          "allowed_literals": [],
+          "constraints": {},
+          "description_sha256": "23ac54ce1cbe8a4e579ef72ef6a787f34f2e1128aedd0667a9ae533633f7ac26"
+        },
+        {
+          "name": "focus_on_load",
+          "type": "Boolean",
+          "required": false,
+          "requirement": "Optional",
+          "allowed_literals": ["false", "true", "view object"],
+          "constraints": {},
+          "description_sha256": "8c6026305ae638575efe8cf346467cf6ecdc17d8164ce70ffd7eb2492e50d7ae"
+        },
+        {
+          "name": "placeholder",
+          "type": "Object",
+          "required": false,
+          "requirement": "Optional",
+          "allowed_literals": ["plain_text", "text"],
+          "constraints": {},
+          "description_sha256": "19326e0b8cc06c2136aacdba6c226e93c3d85e9d39183b1f1d88235fbebbde43"
+        }
+      ],
+      "compatibility": {
+        "status": "unsupported",
+        "reason": "Chatto does not validate or render this structured object yet.",
+        "target_phase": 4,
+        "semantic_mapping": "Chatto block validator and client renderers"
+      }
+    },
+    {
+      "name": "multi-users-select",
+      "wire_type": "multi_users_select",
+      "title_sha256": null,
+      "summary_sha256": null,
+      "source": { "url": null, "sha256": null, "kind": "sdk_only" },
+      "sdk_presence": { "node": true },
+      "available_in_surfaces": [],
+      "compatible_elements": [],
+      "fields": [],
+      "compatibility": {
+        "status": "unsupported",
+        "reason": "Chatto does not validate or render this structured object yet.",
+        "target_phase": 4,
+        "semantic_mapping": "Chatto block validator and client renderers"
+      }
+    },
+    {
+      "name": "number-input-element",
+      "wire_type": "number_input",
+      "title_sha256": "1aeaffe17601125173ed444beef4d5f386c89ac9807db0b53031ec035c0bbabf",
+      "summary_sha256": "749c1d99c961a3244ddc1fabf46d5e5bf55ef2b05879cd39e825b283d1a2b384",
+      "source": {
+        "url": "https://docs.slack.dev/reference/block-kit/block-elements/number-input-element.md",
+        "sha256": "15ba22c1f9f4269f4b8d00eb2f26c0b2f33db6e9fb23789817c0662d79fa4532",
+        "kind": "documentation"
+      },
+      "sdk_presence": { "node": true },
+      "available_in_surfaces": ["Modals"],
+      "compatible_elements": [],
+      "fields": [
+        {
+          "name": "type",
+          "type": "String",
+          "required": true,
+          "requirement": "Required",
+          "allowed_literals": ["number_input"],
+          "constraints": {},
+          "description_sha256": "c68563937216fe9176bed8ce71e307bfac10a3909cfdb70ea9ac1b49b0475aea"
+        },
+        {
+          "name": "is_decimal_allowed",
+          "type": "Boolean",
+          "required": true,
+          "requirement": "Required",
+          "allowed_literals": ["false", "true"],
+          "constraints": {},
+          "description_sha256": "f19598a0d33c4b66dda9a03e659aa0711b7f3e8da9b6e24c272131f5c71990b0"
+        },
+        {
+          "name": "action_id",
+          "type": "String",
+          "required": false,
+          "requirement": "Optional",
+          "allowed_literals": ["view_submission"],
+          "constraints": { "max_length": 255 },
+          "description_sha256": "6c634832337e4ddeb224b71435d342706fc7ffe5774c6c6f769d17022240336e"
+        },
+        {
+          "name": "initial_value",
+          "type": "String",
+          "required": false,
+          "requirement": "Optional",
+          "allowed_literals": [],
+          "constraints": {},
+          "description_sha256": "8e837ed1707fabfc8f6c334b7b3c22832649c2d280af0539ca31188825497669"
+        },
+        {
+          "name": "min_value",
+          "type": "String",
+          "required": false,
+          "requirement": "Optional",
+          "allowed_literals": ["max_value"],
+          "constraints": {},
+          "description_sha256": "fe92fd9b70e129ab64eec035ad2010fdd54094e48b9e458b45c1c7471e101610"
+        },
+        {
+          "name": "max_value",
+          "type": "String",
+          "required": false,
+          "requirement": "Optional",
+          "allowed_literals": ["min_value"],
+          "constraints": {},
+          "description_sha256": "c7267f9ecd1b69547fd6922f08216dd8a058480aba67f04883971456a9921bd5"
+        },
+        {
+          "name": "dispatch_action_config",
+          "type": "Object",
+          "required": false,
+          "requirement": "Optional",
+          "allowed_literals": ["block_actions"],
+          "constraints": {},
+          "description_sha256": "dc6f22b5fb928cdf41e1787e3a6cad101bf0f9db20ff5abc2392b49de152ba38"
+        },
+        {
+          "name": "focus_on_load",
+          "type": "Boolean",
+          "required": false,
+          "requirement": "Optional",
+          "allowed_literals": ["false", "true", "view object"],
+          "constraints": {},
+          "description_sha256": "8c6026305ae638575efe8cf346467cf6ecdc17d8164ce70ffd7eb2492e50d7ae"
+        },
+        {
+          "name": "placeholder",
+          "type": "Object",
+          "required": false,
+          "requirement": "Optional",
+          "allowed_literals": ["plain_text", "text"],
+          "constraints": {},
+          "description_sha256": "8268a27984eb27560ba573dfa66fadd29ce4aec59a2063701f10091f90e7ba76"
+        }
+      ],
+      "compatibility": {
+        "status": "unsupported",
+        "reason": "This object has no approved Chatto surface or renderer.",
+        "target_phase": null,
+        "semantic_mapping": null
+      }
+    },
+    {
+      "name": "overflow-menu-element",
+      "wire_type": "overflow",
+      "title_sha256": "95c89c39b85e6b1e073b847650b70df303c756d50984e82528e11db0a4eeb28b",
+      "summary_sha256": "6be47e70b243134d37c9c3f71542d083d3a97f0371637aa6bb0cace4831fc2c5",
+      "source": {
+        "url": "https://docs.slack.dev/reference/block-kit/block-elements/overflow-menu-element.md",
+        "sha256": "f0de90391438f7054536582a7c8680f41d4e9a861912aa78593b099e5027df52",
+        "kind": "documentation"
+      },
+      "sdk_presence": { "node": true },
+      "available_in_surfaces": ["Home tabs", "Messages", "Modals"],
+      "compatible_elements": [],
+      "fields": [
+        {
+          "name": "type",
+          "type": "String",
+          "required": true,
+          "requirement": "Required",
+          "allowed_literals": ["overflow"],
+          "constraints": {},
+          "description_sha256": "9bece11544f61302dc71c19f15031f77262eb0213597d42fc2467a16c9a7798d"
+        },
+        {
+          "name": "action_id",
+          "type": "String",
+          "required": false,
+          "requirement": "Optional",
+          "allowed_literals": [],
+          "constraints": { "max_length": 255 },
+          "description_sha256": "19d55f1867f18f5c2c118f4fdbd7acb8fc0c881a2e0b53b778f5b443e269ea14"
+        },
+        {
+          "name": "options",
+          "type": "Object\\[\\]",
+          "required": true,
+          "requirement": "Required",
+          "allowed_literals": [],
+          "constraints": {},
+          "description_sha256": "bd412df13a47f964304d2cf7a888dfd0b75f09d58e8c3f97ba15180e0507db28"
+        },
+        {
+          "name": "confirm",
+          "type": "Object",
+          "required": false,
+          "requirement": "Optional",
+          "allowed_literals": [],
+          "constraints": {},
+          "description_sha256": "f621a06871f1ed3f7ae74c30e12a2d08385484e17fe9a45401164c558390de78"
+        }
+      ],
+      "compatibility": {
+        "status": "unsupported",
+        "reason": "Chatto does not validate or render this structured object yet.",
+        "target_phase": 4,
+        "semantic_mapping": "Chatto block validator and client renderers"
+      }
+    },
+    {
+      "name": "plain-text-input-element",
+      "wire_type": "plain_text_input",
+      "title_sha256": "4bb5d597d5d7d4e2f146ca1597ed992bbe36e854f9aa4f1ca5d2230e7d68f43b",
+      "summary_sha256": "76ec6a1ce8b42de85828406c952aedd097083e3be7b27803f846cd18b32073ea",
+      "source": {
+        "url": "https://docs.slack.dev/reference/block-kit/block-elements/plain-text-input-element.md",
+        "sha256": "b3c0a7db884c38cab793f82abcf41a282d8a5c0a001c6a4ba75a51a1986b7624",
+        "kind": "documentation"
+      },
+      "sdk_presence": { "node": true },
+      "available_in_surfaces": ["Home tabs", "Messages", "Modals"],
+      "compatible_elements": [],
+      "fields": [
+        {
+          "name": "type",
+          "type": "String",
+          "required": true,
+          "requirement": "Required",
+          "allowed_literals": ["plain_text_input"],
+          "constraints": {},
+          "description_sha256": "6ff068252d735347025a4cf9fe06bb6dee5df0bc6129ae1a773da2f3495e82d7"
+        },
+        {
+          "name": "action_id",
+          "type": "String",
+          "required": false,
+          "requirement": "Optional",
+          "allowed_literals": ["view_submission"],
+          "constraints": { "max_length": 255 },
+          "description_sha256": "6c634832337e4ddeb224b71435d342706fc7ffe5774c6c6f769d17022240336e"
+        },
+        {
+          "name": "initial_value",
+          "type": "String",
+          "required": false,
+          "requirement": "Optional",
+          "allowed_literals": [],
+          "constraints": {},
+          "description_sha256": "8e837ed1707fabfc8f6c334b7b3c22832649c2d280af0539ca31188825497669"
+        },
+        {
+          "name": "multiline",
+          "type": "Boolean",
+          "required": false,
+          "requirement": "Optional",
+          "allowed_literals": ["false", "true"],
+          "constraints": {},
+          "description_sha256": "717c1b94d5ae0b3e68b58b5af3e4f6289ba8765abac4f4b1020ceeef0b12ea77"
+        },
+        {
+          "name": "min_length",
+          "type": "Integer",
+          "required": false,
+          "requirement": "Optional",
+          "allowed_literals": [],
+          "constraints": {},
+          "description_sha256": "22373b31bf465d8e18d259c7991fccc8b101f6b9767dc623d5a885bc9b9f9660"
+        },
+        {
+          "name": "max_length",
+          "type": "Integer",
+          "required": false,
+          "requirement": "Optional",
+          "allowed_literals": [],
+          "constraints": {},
+          "description_sha256": "346f496ea520e73cc4fab7d3b1aa7725d0fe672f975900eaf70f9e9b061daf04"
+        },
+        {
+          "name": "dispatch_action_config",
+          "type": "Object",
+          "required": false,
+          "requirement": "Optional",
+          "allowed_literals": ["block_actions"],
+          "constraints": {},
+          "description_sha256": "dc6f22b5fb928cdf41e1787e3a6cad101bf0f9db20ff5abc2392b49de152ba38"
+        },
+        {
+          "name": "focus_on_load",
+          "type": "Boolean",
+          "required": false,
+          "requirement": "Optional",
+          "allowed_literals": ["false", "true", "view object"],
+          "constraints": {},
+          "description_sha256": "8c6026305ae638575efe8cf346467cf6ecdc17d8164ce70ffd7eb2492e50d7ae"
+        },
+        {
+          "name": "placeholder",
+          "type": "Object",
+          "required": false,
+          "requirement": "Optional",
+          "allowed_literals": ["plain_text", "text"],
+          "constraints": {},
+          "description_sha256": "0751768bb582c08278a09525fd6bbc4470504241c5aa0c23f7bebcef6c627348"
+        }
+      ],
+      "compatibility": {
+        "status": "unsupported",
+        "reason": "Chatto does not validate or render this structured object yet.",
+        "target_phase": 4,
+        "semantic_mapping": "Chatto block validator and client renderers"
+      }
+    },
+    {
+      "name": "radio-button-group-element",
+      "wire_type": "radio_buttons",
+      "title_sha256": "7b8bcd12c0216f1466b2b481a358af8222ffbf03d33a10e2ebd4e9053355e04d",
+      "summary_sha256": "6122c6a24c9f5f0a0afb46494f9f74e2c5f62f034ee038b8416883a85dfc1419",
+      "source": {
+        "url": "https://docs.slack.dev/reference/block-kit/block-elements/radio-button-group-element.md",
+        "sha256": "ff950a5a43f787213bc5681178191a86e06d652f5ba804078aae73afc8b3176e",
+        "kind": "documentation"
+      },
+      "sdk_presence": { "node": true },
+      "available_in_surfaces": ["Home tabs", "Messages", "Modals"],
+      "compatible_elements": [],
+      "fields": [
+        {
+          "name": "type",
+          "type": "String",
+          "required": true,
+          "requirement": "Required",
+          "allowed_literals": ["radio_buttons"],
+          "constraints": {},
+          "description_sha256": "600b4521fa4f9a3be5f6fd637bfdf92b6d1ce7d902f24cced6d00abfec9c784e"
+        },
+        {
+          "name": "action_id",
+          "type": "String",
+          "required": false,
+          "requirement": "Optional",
+          "allowed_literals": [],
+          "constraints": { "max_length": 255 },
+          "description_sha256": "865b2a7cbff9a86c321af6439cba5f50a24ba12a974778832c1ea898a1580ca2"
+        },
+        {
+          "name": "options",
+          "type": "Object\\[\\]",
+          "required": true,
+          "requirement": "Required",
+          "allowed_literals": [],
+          "constraints": {},
+          "description_sha256": "a462b1a2f330be9187c201ddc464df236d66a3156fc482e75e7966af6e7cb3b1"
+        },
+        {
+          "name": "initial_option",
+          "type": "Object",
+          "required": false,
+          "requirement": "Optional",
+          "allowed_literals": ["options"],
+          "constraints": {},
+          "description_sha256": "5865bcf04af0cb84e3aabc9b8324cab9aa6d1e4e0b6dfd42e32369eed4da859f"
+        },
+        {
+          "name": "confirm",
+          "type": "Object",
+          "required": false,
+          "requirement": "Optional",
+          "allowed_literals": [],
+          "constraints": {},
+          "description_sha256": "09fbbcb7c5dfae94a0ef27c8cc4b0179290a55e7be6bffc3d2b72c84893b346c"
+        },
+        {
+          "name": "focus_on_load",
+          "type": "Boolean",
+          "required": false,
+          "requirement": "Optional",
+          "allowed_literals": ["false", "true", "view object"],
+          "constraints": {},
+          "description_sha256": "8c6026305ae638575efe8cf346467cf6ecdc17d8164ce70ffd7eb2492e50d7ae"
+        }
+      ],
+      "compatibility": {
+        "status": "unsupported",
+        "reason": "Chatto does not validate or render this structured object yet.",
+        "target_phase": 4,
+        "semantic_mapping": "Chatto block validator and client renderers"
+      }
+    },
+    {
+      "name": "rich-text-input-element",
+      "wire_type": "rich_text_input",
+      "title_sha256": "c8cf8e17de286566ca0854f4f42015e12fdb0381ef9a2b20953fb864cf595141",
+      "summary_sha256": "17a04538b6324ec46a1f36f87e536efd42974ab3b13a3a713213b111aef0a90e",
+      "source": {
+        "url": "https://docs.slack.dev/reference/block-kit/block-elements/rich-text-input-element.md",
+        "sha256": "a2a1eddfe0196330194c612813a75f14d79b8c6c252409e96d715f5a9e8d2f99",
+        "kind": "documentation"
+      },
+      "sdk_presence": { "node": true },
+      "available_in_surfaces": ["Home tabs", "Modals"],
+      "compatible_elements": [],
+      "fields": [
+        {
+          "name": "type",
+          "type": "String",
+          "required": true,
+          "requirement": "Required",
+          "allowed_literals": ["rich_text_input"],
+          "constraints": {},
+          "description_sha256": "d88b5f01da11e22b1d590c7514d3154473b337f723967487ed0029490c5315ab"
+        },
+        {
+          "name": "action_id",
+          "type": "String",
+          "required": true,
+          "requirement": "Required",
+          "allowed_literals": ["view_submission"],
+          "constraints": { "max_length": 255 },
+          "description_sha256": "37135d62e51d45102c731b5259f528f7eb96910265129509a6d02f59a390fbbe"
+        },
+        {
+          "name": "initial_value",
+          "type": "[Rich text](https://docs.slack.dev/reference/block-kit/blocks/rich-text-block.md)",
+          "required": false,
+          "requirement": "Optional",
+          "allowed_literals": [],
+          "constraints": {},
+          "description_sha256": "bfa6138a640c21448e07db45b346cbbc46fc03bfc959421e1e90a306968f2cbe"
+        },
+        {
+          "name": "dispatch_action_config",
+          "type": "Object",
+          "required": false,
+          "requirement": "Optional",
+          "allowed_literals": ["block_actions"],
+          "constraints": {},
+          "description_sha256": "3a2b5bb86c6ec7fe7fb0b2694cac7fa360c69f42d676fc1ea974a7273786bac4"
+        },
+        {
+          "name": "focus_on_load",
+          "type": "Boolean",
+          "required": false,
+          "requirement": "Optional",
+          "allowed_literals": ["false", "true", "view object"],
+          "constraints": {},
+          "description_sha256": "8c6026305ae638575efe8cf346467cf6ecdc17d8164ce70ffd7eb2492e50d7ae"
+        },
+        {
+          "name": "placeholder",
+          "type": "Object",
+          "required": false,
+          "requirement": "Optional",
+          "allowed_literals": ["plain_text", "text"],
+          "constraints": {},
+          "description_sha256": "2aee6c0b39df2fb8d27f538ab2ba5d73814ed64dec20c32af97da2e1a57317cb"
+        },
+        {
+          "name": "min_lines",
+          "type": "Integer",
+          "required": false,
+          "requirement": "Optional",
+          "allowed_literals": [],
+          "constraints": {},
+          "description_sha256": "9dd9050fca7342c0e469ba621ccf07fc55cd78951b5b9d0a810648e6bab3d558"
+        },
+        {
+          "name": "max_lines",
+          "type": "Integer",
+          "required": false,
+          "requirement": "Optional",
+          "allowed_literals": [],
+          "constraints": {},
+          "description_sha256": "a92124287ecf617dbe84a1e382332bf429fac5e4b90113a5204269cc111051d1"
+        }
+      ],
+      "compatibility": {
+        "status": "unsupported",
+        "reason": "This object has no approved Chatto surface or renderer.",
+        "target_phase": null,
+        "semantic_mapping": null
+      }
+    },
+    {
+      "name": "rich-text-list-element",
+      "wire_type": "rich_text_list",
+      "title_sha256": "cd20b64d8a22cbbbdf9db5b1a45af43c895006397e8f1f38cdbe2d884ccaca5d",
+      "summary_sha256": "595fbafb4093c0bb57eb169eafa59700f78698a3d83de26a6c46967cff2e5d4a",
+      "source": {
+        "url": "https://docs.slack.dev/reference/block-kit/block-elements/rich-text-list-element.md",
+        "sha256": "32cc4004ac52f3e81aa50e3277fc8c65bffe5e9cb1d1bce425a485dac57e0676",
+        "kind": "documentation"
+      },
+      "sdk_presence": { "node": true },
+      "available_in_surfaces": ["Home tabs", "Messages", "Modals"],
+      "compatible_elements": [],
+      "fields": [
+        {
+          "name": "type",
+          "type": "String",
+          "required": true,
+          "requirement": "Required",
+          "allowed_literals": ["rich_text_list"],
+          "constraints": {},
+          "description_sha256": "80cc609305086b56424b9a226e98c730a5364677ce8fa1350622b43225f89544"
+        },
+        {
+          "name": "style",
+          "type": "String",
+          "required": true,
+          "requirement": "Required",
+          "allowed_literals": ["bullet", "ordered"],
+          "constraints": {},
+          "description_sha256": "a4dbe62e5145854c95379c2b0e4219b7b9bd86ea8ac8424a73806aaaa37e3961"
+        },
+        {
+          "name": "elements",
+          "type": "Object \\[\\]",
+          "required": true,
+          "requirement": "Required",
+          "allowed_literals": [
+            "attachment_mention",
+            "broadcast",
+            "canvas",
+            "canvas_message_unfurl",
+            "canvas_user_mention",
+            "channel",
+            "citation",
+            "color",
+            "date",
+            "emoji",
+            "file",
+            "link",
+            "list_record",
+            "message_mention",
+            "rich_text_section",
+            "salesforce_data_field",
+            "tag",
+            "team",
+            "text",
+            "type",
+            "user",
+            "usergroup",
+            "work_object_mention",
+            "workflow_mention"
+          ],
+          "constraints": {},
+          "description_sha256": "3e4bf1aed14246e3ea80c4f24b63758a34d15d97d0a7c7b04242654c197d0b81"
+        },
+        {
+          "name": "indent",
+          "type": "Number",
+          "required": false,
+          "requirement": "Optional",
+          "allowed_literals": [],
+          "constraints": {},
+          "description_sha256": "4c4f16404375f5885b78065a759191ca31b053b5e78ed1e81ed6a91c4729a9aa"
+        },
+        {
+          "name": "offset",
+          "type": "Number",
+          "required": false,
+          "requirement": "Optional",
+          "allowed_literals": ["offset = 4"],
+          "constraints": {},
+          "description_sha256": "2b60836885a0b6e0f5ba87b0b3dd057ed7912d8439602ca07703b7d27213e98e"
+        },
+        {
+          "name": "border",
+          "type": "Number",
+          "required": false,
+          "requirement": "Optional",
+          "allowed_literals": [],
+          "constraints": {},
+          "description_sha256": "3a28887514b1e97b5256bacae4f4885f8df46ffd56d7fbd4b72daf2c047ccb9f"
+        }
+      ],
+      "compatibility": {
+        "status": "unsupported",
+        "reason": "This object has no approved Chatto surface or renderer.",
+        "target_phase": null,
+        "semantic_mapping": null
+      }
+    },
+    {
+      "name": "rich-text-preformatted-element",
+      "wire_type": "rich_text_preformatted",
+      "title_sha256": "8fecfad8e165df1e70acf887eca96a4f150c9ee02cbc546cb519336226314bb2",
+      "summary_sha256": "e1a4184e84c9f15d7ac567a6dddca5249abddd6fca4df739f5ade40d5b4001f9",
+      "source": {
+        "url": "https://docs.slack.dev/reference/block-kit/block-elements/rich-text-preformatted-element.md",
+        "sha256": "b5d6b28b8eb609d1d10886ac7b6168a138977ed6f909161819b9dd086a4c2b2f",
+        "kind": "documentation"
+      },
+      "sdk_presence": { "node": true },
+      "available_in_surfaces": ["Home tabs", "Messages", "Modals"],
+      "compatible_elements": [],
+      "fields": [
+        {
+          "name": "type",
+          "type": "String",
+          "required": true,
+          "requirement": "Required",
+          "allowed_literals": ["rich_text_preformatted"],
+          "constraints": {},
+          "description_sha256": "7fef68fbec9e22433be0b281256623b865706ba09c0791e6371f2f55f1163e54"
+        },
+        {
+          "name": "elements",
+          "type": "Object \\[\\]",
+          "required": true,
+          "requirement": "Required",
+          "allowed_literals": [],
+          "constraints": {},
+          "description_sha256": "a33b62f96a9935e6e8c668904e9beaea637d573858184ad26b1ebc057eb5fe0a"
+        },
+        {
+          "name": "border",
+          "type": "Number",
+          "required": false,
+          "requirement": "Optional",
+          "allowed_literals": [],
+          "constraints": {},
+          "description_sha256": "3a28887514b1e97b5256bacae4f4885f8df46ffd56d7fbd4b72daf2c047ccb9f"
+        },
+        {
+          "name": "language",
+          "type": "String",
+          "required": false,
+          "requirement": "Optional",
+          "allowed_literals": ["\"javascript\"", "\"json\"", "\"python\""],
+          "constraints": {},
+          "description_sha256": "27a3020fc5297983a4d5351969e31669f365360342a9cbcea54e8fb27563a543"
+        }
+      ],
+      "compatibility": {
+        "status": "unsupported",
+        "reason": "This object has no approved Chatto surface or renderer.",
+        "target_phase": null,
+        "semantic_mapping": null
+      }
+    },
+    {
+      "name": "rich-text-quote-element",
+      "wire_type": "rich_text_quote",
+      "title_sha256": "00c3cb36834291cc2220abcf399cce558e072202c73d661de41dc4128aa9cd25",
+      "summary_sha256": "4a484bc265b843373f070f5bf1b76a543b6ab2de7232aea340231e64d97f2276",
+      "source": {
+        "url": "https://docs.slack.dev/reference/block-kit/block-elements/rich-text-quote-element.md",
+        "sha256": "2933ab3c70e353d23ec3b49ef2cc2ad4f1071cb6261c18c9125c225ea08c059c",
+        "kind": "documentation"
+      },
+      "sdk_presence": { "node": true },
+      "available_in_surfaces": ["Home tabs", "Messages", "Modals"],
+      "compatible_elements": [],
+      "fields": [
+        {
+          "name": "type",
+          "type": "String",
+          "required": true,
+          "requirement": "Required",
+          "allowed_literals": ["rich_text_quote"],
+          "constraints": {},
+          "description_sha256": "586ba553404dfcfde2fb1a42b7809100390bd8aae58b6590fbadf943f296ee8f"
+        },
+        {
+          "name": "elements",
+          "type": "Object \\[\\]",
+          "required": true,
+          "requirement": "Required",
+          "allowed_literals": [
+            "attachment_mention",
+            "broadcast",
+            "canvas",
+            "canvas_message_unfurl",
+            "canvas_user_mention",
+            "channel",
+            "citation",
+            "color",
+            "date",
+            "emoji",
+            "file",
+            "link",
+            "list_record",
+            "message_mention",
+            "salesforce_data_field",
+            "tag",
+            "team",
+            "text",
+            "user",
+            "usergroup",
+            "work_object_mention",
+            "workflow_mention"
+          ],
+          "constraints": {},
+          "description_sha256": "76e716626fba9341946d00178aa6ac515d48284886ab82b2f79f606fd9505cc8"
+        },
+        {
+          "name": "border",
+          "type": "Number",
+          "required": false,
+          "requirement": "Optional",
+          "allowed_literals": [],
+          "constraints": {},
+          "description_sha256": "3a28887514b1e97b5256bacae4f4885f8df46ffd56d7fbd4b72daf2c047ccb9f"
+        }
+      ],
+      "compatibility": {
+        "status": "unsupported",
+        "reason": "This object has no approved Chatto surface or renderer.",
+        "target_phase": null,
+        "semantic_mapping": null
+      }
+    },
+    {
+      "name": "rich-text-section-element",
+      "wire_type": "rich_text_section",
+      "title_sha256": "dbaeaccd6b47cc89d6136c1caf1b7c9c0f35b13d11eeb1cb661468187462e486",
+      "summary_sha256": "547290039dddcd74778141442a68ffc057a6140ac829d8d2858991a1f3603d94",
+      "source": {
+        "url": "https://docs.slack.dev/reference/block-kit/block-elements/rich-text-section-element.md",
+        "sha256": "639011af14c13c717dc08339431ae2f8b3627c9de33738640bf7ff27a3fb1cf3",
+        "kind": "documentation"
+      },
+      "sdk_presence": { "node": true },
+      "available_in_surfaces": ["Home tabs", "Messages", "Modals"],
+      "compatible_elements": [],
+      "fields": [
+        {
+          "name": "type",
+          "type": "String",
+          "required": true,
+          "requirement": "Required",
+          "allowed_literals": ["rich_text_section"],
+          "constraints": {},
+          "description_sha256": "c550e8bc41cf920ec8266d3edb3060ffd839d50dae9785e4dfff10c8ab7465d5"
+        },
+        {
+          "name": "elements",
+          "type": "Object \\[\\]",
+          "required": true,
+          "requirement": "Required",
+          "allowed_literals": [
+            "attachment_mention",
+            "broadcast",
+            "canvas",
+            "canvas_message_unfurl",
+            "canvas_user_mention",
+            "channel",
+            "citation",
+            "color",
+            "date",
+            "emoji",
+            "file",
+            "link",
+            "list_record",
+            "message_mention",
+            "salesforce_data_field",
+            "tag",
+            "team",
+            "text",
+            "user",
+            "usergroup",
+            "work_object_mention",
+            "workflow_mention"
+          ],
+          "constraints": {},
+          "description_sha256": "76e716626fba9341946d00178aa6ac515d48284886ab82b2f79f606fd9505cc8"
+        }
+      ],
+      "compatibility": {
+        "status": "unsupported",
+        "reason": "This object has no approved Chatto surface or renderer.",
+        "target_phase": null,
+        "semantic_mapping": null
+      }
+    },
+    {
+      "name": "salesforce-data-field-element",
+      "wire_type": "salesforce_data_field",
+      "title_sha256": "544986d87c9502c53a086e0423670ec91a49f4336cbfaef69951224d5555f14a",
+      "summary_sha256": "fe01664c4bbb6d06582b76511bfdd01e876e30881e9ef7a364ae7275aeee072a",
+      "source": {
+        "url": "https://docs.slack.dev/reference/block-kit/block-elements/salesforce-data-field-element.md",
+        "sha256": "3be4907c3aa3b4c98944cb881bcd0ebd269ce4d2609b7abf23cad1ce069f9ede",
+        "kind": "documentation"
+      },
+      "sdk_presence": { "node": false },
+      "available_in_surfaces": ["Home tabs", "Messages", "Modals"],
+      "compatible_elements": [],
+      "fields": [
+        {
+          "name": "type",
+          "type": "String",
+          "required": true,
+          "requirement": "Required",
+          "allowed_literals": [],
+          "constraints": {},
+          "description_sha256": "ace59f69d31bd39297fe5be2c8d87ef9f7ba79514f9c7e16159433d4f048ea66"
+        },
+        {
+          "name": "salesforce_record_id",
+          "type": "String",
+          "required": true,
+          "requirement": "Required",
+          "allowed_literals": [],
+          "constraints": {},
+          "description_sha256": "29a6f0f282e47c2b9569ff3391a8f444792e79cb3e73667f3163dfa219358f3f"
+        },
+        {
+          "name": "salesforce_field_label",
+          "type": "String",
+          "required": false,
+          "requirement": "Optional",
+          "allowed_literals": [],
+          "constraints": {},
+          "description_sha256": "4de3645422078d13937fe11380e4153182f9bbc4ef11d512735e8725f3058e19"
+        },
+        {
+          "name": "salesforce_field_api_name",
+          "type": "String",
+          "required": false,
+          "requirement": "Optional",
+          "allowed_literals": [],
+          "constraints": {},
+          "description_sha256": "df441aa0cdac3e74a3031ccf05d22d349e5614a5e13adf0c4050ee9a61b18489"
+        },
+        {
+          "name": "salesforce_include_field_label",
+          "type": "Boolean",
+          "required": false,
+          "requirement": "Optional",
+          "allowed_literals": [],
+          "constraints": {},
+          "description_sha256": "4d58ec781c81935b5b3b1476d29b7134f58a8339f975b58c65da7afb2f703aeb"
+        },
+        {
+          "name": "style",
+          "type": "Object",
+          "required": false,
+          "requirement": "Optional",
+          "allowed_literals": [
+            "bold",
+            "client_highlight",
+            "highlight",
+            "italic",
+            "strike",
+            "underline",
+            "unlink"
+          ],
+          "constraints": {},
+          "description_sha256": "4ef5fca36739d40de95c8cb46267b1547c07e09225ace25f80327baf15796c55"
+        }
+      ],
+      "compatibility": {
+        "status": "unsupported",
+        "reason": "This object has no approved Chatto surface or renderer.",
+        "target_phase": null,
+        "semantic_mapping": null
+      }
+    },
+    {
+      "name": "select-menu-element",
+      "wire_type": "static_select",
+      "title_sha256": "d4e18a78bc48dafccadd778a6e9e031794bb44cd396dea31f3a68ae267c781e4",
+      "summary_sha256": "06fc675ee04c51c353b6dbc6efa8bd83ea8ea1efd60886ee840e3c3835f469d2",
+      "source": {
+        "url": "https://docs.slack.dev/reference/block-kit/block-elements/select-menu-element.md",
+        "sha256": "c3e17ddf43b1d334f70c29d1ece453cc216c72acbfd8a5edcd5fb8a13ddc516a",
+        "kind": "documentation"
+      },
+      "sdk_presence": { "node": true },
+      "available_in_surfaces": ["Home tabs", "Messages", "Modals"],
+      "compatible_elements": [],
+      "fields": [
+        {
+          "name": "type",
+          "type": "String",
+          "required": true,
+          "requirement": "Required",
+          "allowed_literals": ["static_select"],
+          "constraints": {},
+          "description_sha256": "2d1d715b342360ca19e79bdb05e1b1d156686b244de030df896ac3596f63f82e"
+        },
+        {
+          "name": "action_id",
+          "type": "String",
+          "required": false,
+          "requirement": "Optional",
+          "allowed_literals": [],
+          "constraints": { "max_length": 255 },
+          "description_sha256": "19d55f1867f18f5c2c118f4fdbd7acb8fc0c881a2e0b53b778f5b443e269ea14"
+        },
+        {
+          "name": "options",
+          "type": "Object\\[\\]",
+          "required": true,
+          "requirement": "Required",
+          "allowed_literals": ["option_groups"],
+          "constraints": { "max_items": 100 },
+          "description_sha256": "8aed95bdc95dc8f819b8c23bdf094cbdcba97a900a723518af938eb2f5e52a85"
+        },
+        {
+          "name": "option_groups",
+          "type": "Object\\[\\]",
+          "required": false,
+          "requirement": "Optional",
+          "allowed_literals": ["options"],
+          "constraints": {},
+          "description_sha256": "f7e18f975f0be4be9350c8f734ca9f0076263bbf48e420db8327c4eeab194670"
+        },
+        {
+          "name": "initial_option",
+          "type": "Object",
+          "required": false,
+          "requirement": "Optional",
+          "allowed_literals": ["option_groups", "options"],
+          "constraints": {},
+          "description_sha256": "0a42d45a56e90c8ae2237938da4485690e2428c1299bf9da4e0cd451d561aea4"
+        },
+        {
+          "name": "confirm",
+          "type": "Object",
+          "required": false,
+          "requirement": "Optional",
+          "allowed_literals": [],
+          "constraints": {},
+          "description_sha256": "f621a06871f1ed3f7ae74c30e12a2d08385484e17fe9a45401164c558390de78"
+        },
+        {
+          "name": "focus_on_load",
+          "type": "Boolean",
+          "required": false,
+          "requirement": "Optional",
+          "allowed_literals": ["false", "true", "view object"],
+          "constraints": {},
+          "description_sha256": "8c6026305ae638575efe8cf346467cf6ecdc17d8164ce70ffd7eb2492e50d7ae"
+        },
+        {
+          "name": "placeholder",
+          "type": "Object",
+          "required": false,
+          "requirement": "Optional",
+          "allowed_literals": ["plain_text", "text"],
+          "constraints": {},
+          "description_sha256": "8f299b463ad7060097c83e3b1f36e71219bd8d3b0fd0741a885a1ae8452e6b1d"
+        }
+      ],
+      "compatibility": {
+        "status": "unsupported",
+        "reason": "Chatto does not validate or render this structured object yet.",
+        "target_phase": 4,
+        "semantic_mapping": "Chatto block validator and client renderers"
+      }
+    },
+    {
+      "name": "tag-element",
+      "wire_type": "tag",
+      "title_sha256": "a13f3f3dce06fc75ded9da94e84647836990a78b8d69378ccff355afb84f88a4",
+      "summary_sha256": "ffc9ff7784718fd01d0aa5ebdba5b4d22ef9f038931360ef6c0db0df40d72fec",
+      "source": {
+        "url": "https://docs.slack.dev/reference/block-kit/block-elements/tag-element.md",
+        "sha256": "44c943eaf65e26b112f6ac78af9248ca1dfa78153fc499fda9af9236088ccb3d",
+        "kind": "documentation"
+      },
+      "sdk_presence": { "node": false },
+      "available_in_surfaces": ["Home tabs", "Messages", "Modals"],
+      "compatible_elements": [],
+      "fields": [
+        {
+          "name": "type",
+          "type": "String",
+          "required": true,
+          "requirement": "Required",
+          "allowed_literals": [],
+          "constraints": {},
+          "description_sha256": "ab0e6894500f02e27ebc70a96e89b25931dc9533dcea95248ebb04aec1df7d84"
+        },
+        {
+          "name": "text",
+          "type": "String",
+          "required": true,
+          "requirement": "Required",
+          "allowed_literals": [],
+          "constraints": {},
+          "description_sha256": "03100bbfdcd8d253eab8baddf0764d218d209c5577cd80576c126dcd189760eb"
+        },
+        {
+          "name": "color",
+          "type": "String",
+          "required": false,
+          "requirement": "Optional",
+          "allowed_literals": [],
+          "constraints": {},
+          "description_sha256": "2b9b82104a2b913f64ccf5456a61f48f91fab584160b3c5af6b1dc20bdd2f558"
+        },
+        {
+          "name": "style",
+          "type": "Object",
+          "required": false,
+          "requirement": "Optional",
+          "allowed_literals": [
+            "bold",
+            "client_highlight",
+            "highlight",
+            "italic",
+            "strike",
+            "underline",
+            "unlink"
+          ],
+          "constraints": {},
+          "description_sha256": "4ef5fca36739d40de95c8cb46267b1547c07e09225ace25f80327baf15796c55"
+        }
+      ],
+      "compatibility": {
+        "status": "unsupported",
+        "reason": "This object has no approved Chatto surface or renderer.",
+        "target_phase": null,
+        "semantic_mapping": null
+      }
+    },
+    {
+      "name": "team-element",
+      "wire_type": "team",
+      "title_sha256": "da0373aee71ef6bf7a249085450c362aac45a094fc31f5d338dcf1a9285a19c1",
+      "summary_sha256": "baa8506951ea192292898e0768d13b0fb16e00babfd66dbf4a40524d7c4560db",
+      "source": {
+        "url": "https://docs.slack.dev/reference/block-kit/block-elements/team-element.md",
+        "sha256": "63cfb1fbec27a1c1685c013d718284fdd8a0280aab3332ce518d9727b42afef6",
+        "kind": "documentation"
+      },
+      "sdk_presence": { "node": true },
+      "available_in_surfaces": ["Home tabs", "Messages", "Modals"],
+      "compatible_elements": [],
+      "fields": [
+        {
+          "name": "type",
+          "type": "String",
+          "required": true,
+          "requirement": "Required",
+          "allowed_literals": [],
+          "constraints": {},
+          "description_sha256": "ca3cf5309b204a95da49415471e6c3bd7976fe022af9ccc93c7f07eb0e0abcbe"
+        },
+        {
+          "name": "team_id",
+          "type": "String",
+          "required": true,
+          "requirement": "Required",
+          "allowed_literals": [],
+          "constraints": {},
+          "description_sha256": "6a4df546310850e106a3ec1299aef9b5e53041fe4e1f442a71bc330f64e70a42"
+        },
+        {
+          "name": "style",
+          "type": "Object",
+          "required": false,
+          "requirement": "Optional",
+          "allowed_literals": [
+            "bold",
+            "client_highlight",
+            "highlight",
+            "italic",
+            "strike",
+            "underline",
+            "unlink"
+          ],
+          "constraints": {},
+          "description_sha256": "4ef5fca36739d40de95c8cb46267b1547c07e09225ace25f80327baf15796c55"
+        }
+      ],
+      "compatibility": {
+        "status": "unsupported",
+        "reason": "This object has no approved Chatto surface or renderer.",
+        "target_phase": null,
+        "semantic_mapping": null
+      }
+    },
+    {
+      "name": "text-element",
+      "wire_type": "text",
+      "title_sha256": "0e5a638475def659a6022982fac36ef08d6856428c52235e3a2da8c9adca6d7a",
+      "summary_sha256": "7d4689394320a11cc3bab1cbaa261fbe07d02e11374040e658b457b8e253658d",
+      "source": {
+        "url": "https://docs.slack.dev/reference/block-kit/block-elements/text-element.md",
+        "sha256": "a633f4a48d47895e2b3e0eb36fe49e2a3565b94e4dbdc84473509f26416d561e",
+        "kind": "documentation"
+      },
+      "sdk_presence": { "node": true },
+      "available_in_surfaces": ["Home tabs", "Messages", "Modals"],
+      "compatible_elements": [],
+      "fields": [
+        {
+          "name": "type",
+          "type": "String",
+          "required": true,
+          "requirement": "Required",
+          "allowed_literals": [],
+          "constraints": {},
+          "description_sha256": "1342bb36e542787a5f5d7078f04c0eff5188421543a2a396c0785f5ec56dfbf5"
+        },
+        {
+          "name": "text",
+          "type": "String",
+          "required": true,
+          "requirement": "Required",
+          "allowed_literals": [],
+          "constraints": {},
+          "description_sha256": "3fa98c80fdc9e11645d887a4816b86cb2c5d8a11a3db7854f54fabb21947c3fb"
+        },
+        {
+          "name": "style",
+          "type": "Object",
+          "required": false,
+          "requirement": "Optional",
+          "allowed_literals": [
+            "bold",
+            "client_highlight",
+            "code",
+            "highlight",
+            "italic",
+            "strike",
+            "underline",
+            "unlink"
+          ],
+          "constraints": {},
+          "description_sha256": "e536663a604d5a5a200ea8ff68249992f5474ae9a1b152eed8cb28dc27117ddb"
+        }
+      ],
+      "compatibility": {
+        "status": "unsupported",
+        "reason": "This object has no approved Chatto surface or renderer.",
+        "target_phase": null,
+        "semantic_mapping": null
+      }
+    },
+    {
+      "name": "time-picker-element",
+      "wire_type": "timepicker",
+      "title_sha256": "0a20c92c1e9e7239e5e7fd58eb89eab3dfdaa9d3cdb4ebb03d73176f5d273ced",
+      "summary_sha256": "9d61eb490dd6e3216bd0850627bb2002e0e87907a475e255672b3cdfc0fd37ad",
+      "source": {
+        "url": "https://docs.slack.dev/reference/block-kit/block-elements/time-picker-element.md",
+        "sha256": "a3fb43f8bf4b885f5a9d2d48c5c802ed87f583fce5a19c3daf256f385966e22d",
+        "kind": "documentation"
+      },
+      "sdk_presence": { "node": true },
+      "available_in_surfaces": ["Home tabs", "Messages", "Modals"],
+      "compatible_elements": [],
+      "fields": [
+        {
+          "name": "type",
+          "type": "String",
+          "required": true,
+          "requirement": "Required",
+          "allowed_literals": ["timepicker"],
+          "constraints": {},
+          "description_sha256": "58488dfee7b79a55b98e77cf0a5476acc957f82e61645c059d9e134db55aaf62"
+        },
+        {
+          "name": "action_id",
+          "type": "String",
+          "required": false,
+          "requirement": "Optional",
+          "allowed_literals": [],
+          "constraints": { "max_length": 255 },
+          "description_sha256": "09a470101f4d671708501f8ee2474ba50ff83c3bdcfc9e3d18dd146769958be1"
+        },
+        {
+          "name": "initial_time",
+          "type": "String",
+          "required": false,
+          "requirement": "Optional",
+          "allowed_literals": ["22:25", "HH", "HH:mm", "mm"],
+          "constraints": {},
+          "description_sha256": "94d1d3b884b11cb07015c6cdc0949e3717040e18ca0842cdf7773b67daf3624b"
+        },
+        {
+          "name": "confirm",
+          "type": "Object",
+          "required": false,
+          "requirement": "Optional",
+          "allowed_literals": [],
+          "constraints": {},
+          "description_sha256": "47045624bab9f79f062d1d70c0eed73728c7d9dc368e0729b2596ecea1d47c7e"
+        },
+        {
+          "name": "focus_on_load",
+          "type": "Boolean",
+          "required": false,
+          "requirement": "Optional",
+          "allowed_literals": ["false", "true", "view object"],
+          "constraints": {},
+          "description_sha256": "8c6026305ae638575efe8cf346467cf6ecdc17d8164ce70ffd7eb2492e50d7ae"
+        },
+        {
+          "name": "placeholder",
+          "type": "Object",
+          "required": false,
+          "requirement": "Optional",
+          "allowed_literals": ["plain_text", "text"],
+          "constraints": {},
+          "description_sha256": "21a9e1578bb00dd6e48e772be97de70a66f77170f714c98c3fbac1713c95ee19"
+        },
+        {
+          "name": "timezone",
+          "type": "String",
+          "required": false,
+          "requirement": "Optional",
+          "allowed_literals": ["view_submission"],
+          "constraints": {},
+          "description_sha256": "a98c99031f1c13d10de49c3b4f1684c1f2296baba1ce1f0efca6f4ebe735e28b"
+        }
+      ],
+      "compatibility": {
+        "status": "unsupported",
+        "reason": "Chatto does not validate or render this structured object yet.",
+        "target_phase": 4,
+        "semantic_mapping": "Chatto block validator and client renderers"
+      }
+    },
+    {
+      "name": "url-source-element",
+      "wire_type": "url",
+      "title_sha256": "28d170353c0986145bb6ed2a4f29b882599555560dc82bace39807ec78335f69",
+      "summary_sha256": "62c45f7ba25c23680a61711bc45ca0b044ec9247e08b0293a0d0a73622240e0d",
+      "source": {
+        "url": "https://docs.slack.dev/reference/block-kit/block-elements/url-source-element.md",
+        "sha256": "e224961de7d10ce3b9e6d4d87fc63477de042cba28bee24eb791d3391cae7379",
+        "kind": "documentation"
+      },
+      "sdk_presence": { "node": true },
+      "available_in_surfaces": ["Messages"],
+      "compatible_elements": [],
+      "fields": [
+        {
+          "name": "type",
+          "type": "String",
+          "required": true,
+          "requirement": "Required",
+          "allowed_literals": ["url"],
+          "constraints": {},
+          "description_sha256": "19b8c7b8c2d229a2c476182f5f53c93b3784830af2aec83e666254febc6d8cd7"
+        },
+        {
+          "name": "url",
+          "type": "String",
+          "required": true,
+          "requirement": "Required",
+          "allowed_literals": [],
+          "constraints": {},
+          "description_sha256": "5aab4f5e1c8c5813f24b2c8419bc1ac5be0cf51d469cb9eb08ec146cc567fc2b"
+        },
+        {
+          "name": "text",
+          "type": "String",
+          "required": true,
+          "requirement": "Required",
+          "allowed_literals": [],
+          "constraints": {},
+          "description_sha256": "81d5cc9069b1bc60a8d405f3c0081b61ae4e42ec7c8c21c42694c513eb0f6e48"
+        }
+      ],
+      "compatibility": {
+        "status": "unsupported",
+        "reason": "This object has no approved Chatto surface or renderer.",
+        "target_phase": null,
+        "semantic_mapping": null
+      }
+    },
+    {
+      "name": "url-input-element",
+      "wire_type": "url_text_input",
+      "title_sha256": "3dab9fdd05281c2c883df4d91fec0b349fc1d2d5d1683f83a175fe42fc6b6fbe",
+      "summary_sha256": "ce7be1313c83dbfffdb332bb78a44443c10eb54d5d6eb56ef32e36d276b22c0c",
+      "source": {
+        "url": "https://docs.slack.dev/reference/block-kit/block-elements/url-input-element.md",
+        "sha256": "c2221c41dda87899e8aa8e320dd21421fc439a209b2417522425561d42d340cb",
+        "kind": "documentation"
+      },
+      "sdk_presence": { "node": true },
+      "available_in_surfaces": ["Modals"],
+      "compatible_elements": [],
+      "fields": [
+        {
+          "name": "type",
+          "type": "String",
+          "required": true,
+          "requirement": "Required",
+          "allowed_literals": ["url_text_input"],
+          "constraints": {},
+          "description_sha256": "7511287b101068cd74647308fe57f1d2aee2fd392cbdb32b1fb94ead051b8579"
+        },
+        {
+          "name": "action_id",
+          "type": "String",
+          "required": false,
+          "requirement": "Optional",
+          "allowed_literals": ["view_submission"],
+          "constraints": { "max_length": 255 },
+          "description_sha256": "6c634832337e4ddeb224b71435d342706fc7ffe5774c6c6f769d17022240336e"
+        },
+        {
+          "name": "initial_value",
+          "type": "String",
+          "required": false,
+          "requirement": "Optional",
+          "allowed_literals": [],
+          "constraints": {},
+          "description_sha256": "2d96d9ed0d3569f74f57a239fd4e04522ed94d321247656e78d3a964d718dea4"
+        },
+        {
+          "name": "dispatch_action_config",
+          "type": "Object",
+          "required": false,
+          "requirement": "Optional",
+          "allowed_literals": ["block_actions"],
+          "constraints": {},
+          "description_sha256": "dc6f22b5fb928cdf41e1787e3a6cad101bf0f9db20ff5abc2392b49de152ba38"
+        },
+        {
+          "name": "focus_on_load",
+          "type": "Boolean",
+          "required": false,
+          "requirement": "Optional",
+          "allowed_literals": ["false", "true", "view object"],
+          "constraints": {},
+          "description_sha256": "8c6026305ae638575efe8cf346467cf6ecdc17d8164ce70ffd7eb2492e50d7ae"
+        },
+        {
+          "name": "placeholder",
+          "type": "Object",
+          "required": false,
+          "requirement": "Optional",
+          "allowed_literals": ["plain_text", "text"],
+          "constraints": {},
+          "description_sha256": "dc6122f623ec5345662d2ea8d2ef1dc9772ec66b38c41c386a76aa58775818b3"
+        }
+      ],
+      "compatibility": {
+        "status": "unsupported",
+        "reason": "This object has no approved Chatto surface or renderer.",
+        "target_phase": null,
+        "semantic_mapping": null
+      }
+    },
+    {
+      "name": "user-element",
+      "wire_type": "user",
+      "title_sha256": "347ad3fd1c483f868a10d9d1a2ff73b1f35df9c6b74fc4e3e5031625a3a6800a",
+      "summary_sha256": "d680cbeaeb42c7b3e953c0fd3d5ee3229edbd7b857a1c371d10c6fc88d06d606",
+      "source": {
+        "url": "https://docs.slack.dev/reference/block-kit/block-elements/user-element.md",
+        "sha256": "0ae163e86d4480d88dfce4033ec151dd3d207bb3d770814be3a20d74df563adf",
+        "kind": "documentation"
+      },
+      "sdk_presence": { "node": true },
+      "available_in_surfaces": ["Home tabs", "Messages", "Modals"],
+      "compatible_elements": [],
+      "fields": [
+        {
+          "name": "type",
+          "type": "String",
+          "required": true,
+          "requirement": "Required",
+          "allowed_literals": [],
+          "constraints": {},
+          "description_sha256": "c62f3c759b2702f0082670bc44583feb7c8c569ea38571af340b60d5886e87e0"
+        },
+        {
+          "name": "user_id",
+          "type": "String",
+          "required": true,
+          "requirement": "Required",
+          "allowed_literals": [],
+          "constraints": {},
+          "description_sha256": "acd27303adb7095f3949ca4342bd842f804de7d7195124a7587a3969340e1f60"
+        },
+        {
+          "name": "style",
+          "type": "Object",
+          "required": false,
+          "requirement": "Optional",
+          "allowed_literals": [
+            "bold",
+            "client_highlight",
+            "highlight",
+            "italic",
+            "strike",
+            "underline",
+            "unlink"
+          ],
+          "constraints": {},
+          "description_sha256": "4ef5fca36739d40de95c8cb46267b1547c07e09225ace25f80327baf15796c55"
+        },
+        {
+          "name": "from_llm",
+          "type": "Boolean",
+          "required": false,
+          "requirement": "Optional",
+          "allowed_literals": [],
+          "constraints": {},
+          "description_sha256": "de85a1aac932e8e9d3094082278af374d60dc2b49dbb178ce851209177620ad8"
+        }
+      ],
+      "compatibility": {
+        "status": "unsupported",
+        "reason": "This object has no approved Chatto surface or renderer.",
+        "target_phase": null,
+        "semantic_mapping": null
+      }
+    },
+    {
+      "name": "usergroup-element",
+      "wire_type": "usergroup",
+      "title_sha256": "b7d0f5d20c10fcec761c7b4655a39d8a63b8d442deebb1fa2af8b4bc524fc08f",
+      "summary_sha256": "603f11e4c7e759a4a5393014468d37d18fd01e6c12951265faaf60d7334cae20",
+      "source": {
+        "url": "https://docs.slack.dev/reference/block-kit/block-elements/usergroup-element.md",
+        "sha256": "f141bbd1d4642a5b60e9e57160b5e268783f983f3e3762fd49bb7c2ea41f4193",
+        "kind": "documentation"
+      },
+      "sdk_presence": { "node": true },
+      "available_in_surfaces": ["Home tabs", "Messages", "Modals"],
+      "compatible_elements": [],
+      "fields": [
+        {
+          "name": "type",
+          "type": "String",
+          "required": true,
+          "requirement": "Required",
+          "allowed_literals": [],
+          "constraints": {},
+          "description_sha256": "17403f0a3b95c8cb19fc4a13d8b6a954661a66d6b2b27aa6ec11ba44813e4bda"
+        },
+        {
+          "name": "usergroup_id",
+          "type": "String",
+          "required": true,
+          "requirement": "Required",
+          "allowed_literals": [],
+          "constraints": {},
+          "description_sha256": "064a587d632cf733b3a43eb91bceadd335871a2f63126263a1fc3b455a2f90ec"
+        },
+        {
+          "name": "style",
+          "type": "Object",
+          "required": false,
+          "requirement": "Optional",
+          "allowed_literals": [
+            "bold",
+            "client_highlight",
+            "highlight",
+            "italic",
+            "strike",
+            "underline",
+            "unlink"
+          ],
+          "constraints": {},
+          "description_sha256": "40a235211ab4ad004d1d20647405d2fd7c25b85a7137e9f3f200bc7e219c6dd1"
+        }
+      ],
+      "compatibility": {
+        "status": "unsupported",
+        "reason": "This object has no approved Chatto surface or renderer.",
+        "target_phase": null,
+        "semantic_mapping": null
+      }
+    },
+    {
+      "name": "users-select",
+      "wire_type": "users_select",
+      "title_sha256": null,
+      "summary_sha256": null,
+      "source": { "url": null, "sha256": null, "kind": "sdk_only" },
+      "sdk_presence": { "node": true },
+      "available_in_surfaces": [],
+      "compatible_elements": [],
+      "fields": [],
+      "compatibility": {
+        "status": "unsupported",
+        "reason": "Chatto does not validate or render this structured object yet.",
+        "target_phase": 4,
+        "semantic_mapping": "Chatto block validator and client renderers"
+      }
+    },
+    {
+      "name": "work-object-mention-element",
+      "wire_type": "work_object_mention",
+      "title_sha256": "db55e57d71d73e3ddd09e87fc3efccc4b6761dcaaffcec894d4cb69f4d83446e",
+      "summary_sha256": "1b609d4616aa336166ed0eeb76aafac537a7b97bb111063e37b58380d6d5fabf",
+      "source": {
+        "url": "https://docs.slack.dev/reference/block-kit/block-elements/work-object-mention-element.md",
+        "sha256": "3cf848e4aa8fbc6999e1da3186b333f9a36941058c27434ea1f7b648f6fa9ad4",
+        "kind": "documentation"
+      },
+      "sdk_presence": { "node": false },
+      "available_in_surfaces": ["Home tabs", "Messages", "Modals"],
+      "compatible_elements": [],
+      "fields": [
+        {
+          "name": "type",
+          "type": "String",
+          "required": true,
+          "requirement": "Required",
+          "allowed_literals": [],
+          "constraints": {},
+          "description_sha256": "10a906adf7aba187d817071040a06909ce8c8f3cb5cbeba9161a8e862613f82c"
+        },
+        {
+          "name": "entity_id",
+          "type": "String",
+          "required": true,
+          "requirement": "Required",
+          "allowed_literals": [],
+          "constraints": {},
+          "description_sha256": "5d73decea5f93a73f484cea874cf9652f152606a6339bf932c367e5eb0dcc248"
+        },
+        {
+          "name": "app_id",
+          "type": "String",
+          "required": true,
+          "requirement": "Required",
+          "allowed_literals": [],
+          "constraints": {},
+          "description_sha256": "851c725f6d1b046b37fe93b00f0b173a34ca75a253db0117e4b57bd40e481ddb"
+        },
+        {
+          "name": "text",
+          "type": "String",
+          "required": true,
+          "requirement": "Required",
+          "allowed_literals": [],
+          "constraints": {},
+          "description_sha256": "7305d06c875368f657ebd2307578e910bc2f8cc229690cc4bd25d728400616a8"
+        },
+        {
+          "name": "url",
+          "type": "String",
+          "required": true,
+          "requirement": "Required",
+          "allowed_literals": [],
+          "constraints": {},
+          "description_sha256": "e1e0fdbe42297cea0efec51054ad5a96753a3d0b510a052e6ffd019046308d6d"
+        },
+        {
+          "name": "icon_url",
+          "type": "String",
+          "required": false,
+          "requirement": "Optional",
+          "allowed_literals": [],
+          "constraints": {},
+          "description_sha256": "e486929289a8cd6057628836b238e282d511726bb7b00f36759c065c620b0a2c"
+        },
+        {
+          "name": "full_size_preview_enabled",
+          "type": "Boolean",
+          "required": false,
+          "requirement": "Optional",
+          "allowed_literals": [],
+          "constraints": {},
+          "description_sha256": "b5623a05cd5b64a8363c2a5d32093cdc955dcd2b6bc6748d85cd4bd3cd4a7cac"
+        },
+        {
+          "name": "product_name",
+          "type": "String",
+          "required": false,
+          "requirement": "Optional",
+          "allowed_literals": [],
+          "constraints": {},
+          "description_sha256": "47210452f677bb426a727e211da7094cffae0a4a86b793c79a69d06a62a73eff"
+        },
+        {
+          "name": "style",
+          "type": "Object",
+          "required": false,
+          "requirement": "Optional",
+          "allowed_literals": [
+            "bold",
+            "client_highlight",
+            "highlight",
+            "italic",
+            "strike",
+            "underline",
+            "unlink"
+          ],
+          "constraints": {},
+          "description_sha256": "40a235211ab4ad004d1d20647405d2fd7c25b85a7137e9f3f200bc7e219c6dd1"
+        }
+      ],
+      "compatibility": {
+        "status": "unsupported",
+        "reason": "This object has no approved Chatto surface or renderer.",
+        "target_phase": null,
+        "semantic_mapping": null
+      }
+    },
+    {
+      "name": "workflow-button-element",
+      "wire_type": "workflow_button",
+      "title_sha256": "bcc1fe217686942ad524e3e07a1b88eb842b2700064d5d1619e7bd50cc77c6fc",
+      "summary_sha256": "2a4743dc544879bb55fc6e913d2a42c863c006f42357c87ff5849224ccc9e76f",
+      "source": {
+        "url": "https://docs.slack.dev/reference/block-kit/block-elements/workflow-button-element.md",
+        "sha256": "973b6630e0eb25a4da85dbe777ab376eca076beced1b59862f2ec081fc5374f2",
+        "kind": "documentation"
+      },
+      "sdk_presence": { "node": true },
+      "available_in_surfaces": ["Messages"],
+      "compatible_elements": [],
+      "fields": [
+        {
+          "name": "type",
+          "type": "String",
+          "required": true,
+          "requirement": "Required",
+          "allowed_literals": ["workflow_button"],
+          "constraints": {},
+          "description_sha256": "1cb004d9bdb0fb55e0d895abece5f6d16cb42605c111e046d968020bab908eac"
+        },
+        {
+          "name": "text",
+          "type": "Object",
+          "required": true,
+          "requirement": "Required",
+          "allowed_literals": ["type: plain_text"],
+          "constraints": {},
+          "description_sha256": "79750cc7c9bc771731f2c11e910526d56000df25ab35fe9c934f53a7d3c16855"
+        },
+        {
+          "name": "workflow",
+          "type": "Object",
+          "required": true,
+          "requirement": "Required",
+          "allowed_literals": [],
+          "constraints": {},
+          "description_sha256": "d8e16841b9f95993947ec1f8bf4fb3793d289bf0a876b6de526f0ff9be815b8d"
+        },
+        {
+          "name": "action_id",
+          "type": "String",
+          "required": true,
+          "requirement": "Required",
+          "allowed_literals": [],
+          "constraints": { "max_length": 255 },
+          "description_sha256": "52c775812a73d3c9534279a0faefdceb5b1259e1fbb97b44b727cb30f001f750"
+        },
+        {
+          "name": "style",
+          "type": "String",
+          "required": false,
+          "requirement": "Optional",
+          "allowed_literals": ["danger", "primary"],
+          "constraints": {},
+          "description_sha256": "6127981ab8b0087e92eacfd88f95ed0b8b814a1d56a25f23cf669a2c9deb2f45"
+        },
+        {
+          "name": "accessibility_label",
+          "type": "String",
+          "required": false,
+          "requirement": "Optional",
+          "allowed_literals": ["text"],
+          "constraints": { "max_length": 75 },
+          "description_sha256": "7d9707cd524d94656bddb7bc7eac3d159375d6e17e6771ff741e486cb85b1593"
+        }
+      ],
+      "compatibility": {
+        "status": "unsupported",
+        "reason": "This object has no approved Chatto surface or renderer.",
+        "target_phase": null,
+        "semantic_mapping": null
+      }
+    },
+    {
+      "name": "workflow-mention-element",
+      "wire_type": "workflow_mention",
+      "title_sha256": "3586255bf71aa837801ef0983cd8c5a96f810b15b9f0ae481d94101ea889e4f1",
+      "summary_sha256": "fcf3cd4434c1b69baf36ab969379e9cd7cf1be68b4cc8bdc412b53461e53d761",
+      "source": {
+        "url": "https://docs.slack.dev/reference/block-kit/block-elements/workflow-mention-element.md",
+        "sha256": "fb2d85341e71af5128a2de10ae80c0f496493dd3064c8a079e621039facfcf8f",
+        "kind": "documentation"
+      },
+      "sdk_presence": { "node": false },
+      "available_in_surfaces": ["Home tabs", "Messages", "Modals"],
+      "compatible_elements": [],
+      "fields": [
+        {
+          "name": "type",
+          "type": "String",
+          "required": true,
+          "requirement": "Required",
+          "allowed_literals": [],
+          "constraints": {},
+          "description_sha256": "67a0d2d23a7e68d22f2bb2175d42bc4bd41948d4f739abf7ead38968f79be04f"
+        },
+        {
+          "name": "workflow_id",
+          "type": "String",
+          "required": true,
+          "requirement": "Required",
+          "allowed_literals": [],
+          "constraints": {},
+          "description_sha256": "11fc15dcb6c7a54dbc5d55232283a9c4f5fdf81d1598796d2e43fb4e155208a8"
+        },
+        {
+          "name": "function_trigger_id",
+          "type": "String",
+          "required": true,
+          "requirement": "Required",
+          "allowed_literals": [],
+          "constraints": {},
+          "description_sha256": "cf0c8507eb8c127377c8814a472945465b371ecafe2fae51ec119e3ca3619f7b"
+        },
+        {
+          "name": "text",
+          "type": "String",
+          "required": true,
+          "requirement": "Required",
+          "allowed_literals": [],
+          "constraints": {},
+          "description_sha256": "b3300ac843d4ddc84b55678ebb1013a83ef90fa52ecd6a436ff0f0dc2fbd6a8c"
+        },
+        {
+          "name": "url",
+          "type": "String",
+          "required": false,
+          "requirement": "Optional",
+          "allowed_literals": [],
+          "constraints": {},
+          "description_sha256": "cfc162c55478ecbeccb9c3cb92cd4ced8474524d51b2d7c1df3babf36e87eb74"
+        },
+        {
+          "name": "channel_id",
+          "type": "String",
+          "required": false,
+          "requirement": "Optional",
+          "allowed_literals": [],
+          "constraints": {},
+          "description_sha256": "5a3894681a022070e86a3802755a70eb5ff0df4e95f9242ac066a2d502dc88de"
+        },
+        {
+          "name": "ts",
+          "type": "String",
+          "required": false,
+          "requirement": "Optional",
+          "allowed_literals": [],
+          "constraints": {},
+          "description_sha256": "784e6bd12072f6a50e566bf923008d077b3e0d419b5ce8921eb21f0a139be308"
+        },
+        {
+          "name": "style",
+          "type": "Object",
+          "required": false,
+          "requirement": "Optional",
+          "allowed_literals": [
+            "bold",
+            "client_highlight",
+            "highlight",
+            "italic",
+            "strike",
+            "underline",
+            "unlink"
+          ],
+          "constraints": {},
+          "description_sha256": "40a235211ab4ad004d1d20647405d2fd7c25b85a7137e9f3f200bc7e219c6dd1"
+        }
+      ],
+      "compatibility": {
+        "status": "unsupported",
+        "reason": "This object has no approved Chatto surface or renderer.",
+        "target_phase": null,
+        "semantic_mapping": null
+      }
+    }
+  ]
+}
