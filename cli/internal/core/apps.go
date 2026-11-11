@@ -7,7 +7,6 @@ import (
 	"errors"
 	"fmt"
 	"strings"
-	"time"
 	"unicode/utf8"
 
 	"github.com/chattocorp/chatto/cli/internal/evtstream"
@@ -177,6 +176,10 @@ func (c *ChattoCore) CreateApp(ctx context.Context, actorID string, input AppDef
 		}
 	}()
 
+	confirmCreationCommitted := func(checkCtx context.Context) (bool, error) {
+		tail, checkErr := c.EventPublisher.LastSubjectSeq(checkCtx, evtstream.AppAggregate(appID).AllEventsFilter())
+		return tail > 0, checkErr
+	}
 	displayName := strings.TrimSpace(input.BotDisplayName)
 	if displayName == "" {
 		displayName = strings.TrimSpace(input.Name)
@@ -188,6 +191,7 @@ func (c *ChattoCore) CreateApp(ctx context.Context, actorID string, input AppDef
 		authorize: func() error {
 			return c.requireAppManager(ctx, actorID)
 		},
+		confirmCreationCommitted: confirmCreationCommitted,
 		additionalEntries: func(botID string, now *timestamppb.Timestamp) ([]evtstream.BatchEntry, error) {
 			created := newEvent(actorID, &evtv1.Event{Event: &evtv1.Event_AppCreated{AppCreated: &evtv1.AppCreatedEvent{
 				AppId: appID, OwnerUserId: actorID, BotUserId: botID,
@@ -220,12 +224,9 @@ func (c *ChattoCore) CreateApp(ctx context.Context, actorID string, input AppDef
 		},
 	})
 	if err != nil {
-		// An ambiguous atomic publish can commit. Retain the app key unless an
+		// An ambiguous atomic publish can commit. Retain every app key unless an
 		// authoritative EVT read confirms that the new app aggregate is empty.
-		checkCtx, cancel := context.WithTimeout(context.WithoutCancel(ctx), 5*time.Second)
-		defer cancel()
-		tail, checkErr := c.EventPublisher.LastSubjectSeq(checkCtx, evtstream.AppAggregate(appID).AllEventsFilter())
-		keepAppKey = checkErr != nil || tail > 0
+		keepAppKey = creationMayHaveCommitted(ctx, confirmCreationCommitted)
 		return AppCreateResult{}, err
 	}
 	keepAppKey = true

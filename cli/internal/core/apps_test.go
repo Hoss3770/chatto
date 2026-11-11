@@ -2,6 +2,7 @@ package core
 
 import (
 	"bytes"
+	"context"
 	"errors"
 	"slices"
 	"sync"
@@ -158,6 +159,37 @@ func TestAppReadsFollowCurrentManagedBotOwner(t *testing.T) {
 	}
 	if len(apps) != 1 || apps[0].OwnerUserID != newOwner.GetId() {
 		t.Fatalf("apps = %#v", apps)
+	}
+}
+
+func TestAppCreateAmbiguityRetainsKeysUnlessAuthoritativeStateIsEmpty(t *testing.T) {
+	t.Parallel()
+	ctx := testContext(t)
+	if creationMayHaveCommitted(ctx, nil) {
+		t.Fatal("nil confirmation retained keys")
+	}
+	if creationMayHaveCommitted(ctx, func(context.Context) (bool, error) { return false, nil }) {
+		t.Fatal("confirmed empty aggregate retained keys")
+	}
+	if !creationMayHaveCommitted(ctx, func(context.Context) (bool, error) { return true, nil }) {
+		t.Fatal("committed aggregate did not retain keys")
+	}
+	if !creationMayHaveCommitted(ctx, func(context.Context) (bool, error) { return false, errors.New("storage unavailable") }) {
+		t.Fatal("unavailable confirmation did not fail closed")
+	}
+
+	canceled, cancel := context.WithCancel(context.Background())
+	cancel()
+	if !creationMayHaveCommitted(canceled, func(checkCtx context.Context) (bool, error) {
+		if checkCtx.Err() != nil {
+			t.Fatalf("confirmation inherited caller cancellation: %v", checkCtx.Err())
+		}
+		if _, ok := checkCtx.Deadline(); !ok {
+			t.Fatal("confirmation has no cleanup deadline")
+		}
+		return true, nil
+	}) {
+		t.Fatal("canceled caller prevented committed-state retention")
 	}
 }
 

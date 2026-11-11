@@ -61,6 +61,10 @@ type userCreationOptions struct {
 	// fixed. Entries retain their own OCC expectations except that the user
 	// creation path owns the first entry's stream-wide mentionable guard.
 	additionalEntries func(string, *timestamppb.Timestamp) ([]evtstream.BatchEntry, error)
+	// confirmCreationCommitted checks an authoritative side aggregate after the
+	// creation path returns an error. User encryption keys are retained when the
+	// batch committed or the check cannot prove that it did not commit.
+	confirmCreationCommitted func(context.Context) (bool, error)
 }
 
 func (c *ChattoCore) createUserWithOptions(ctx context.Context, actorID string, login, displayName, password string, options userCreationOptions) (*readmodel.User, error) {
@@ -379,6 +383,8 @@ func (c *ChattoCore) createUserWithOptions(ctx context.Context, actorID string, 
 		if options.setup != nil && errors.Is(err, ErrSetupUnavailable) {
 			// A rejected OCC recheck is a definite non-commit for this user.
 			cleanupEncryptionKey = true
+		} else if creationMayHaveCommitted(ctx, options.confirmCreationCommitted) {
+			cleanupEncryptionKey = false
 		}
 		return nil, err
 	}
@@ -403,6 +409,19 @@ func (c *ChattoCore) createUserWithOptions(ctx context.Context, actorID string, 
 	c.logger.Info("Created user", "id", userID)
 
 	return user, nil
+}
+
+// creationMayHaveCommitted asks an authoritative aggregate whether an errored
+// atomic creation landed. An unavailable check fails closed by retaining keys;
+// deleting them could destroy data from a committed batch after a lost reply.
+func creationMayHaveCommitted(ctx context.Context, confirm func(context.Context) (bool, error)) bool {
+	if confirm == nil {
+		return false
+	}
+	checkCtx, cancel := context.WithTimeout(context.WithoutCancel(ctx), 5*time.Second)
+	defer cancel()
+	committed, err := confirm(checkCtx)
+	return err != nil || committed
 }
 
 func (c *ChattoCore) cleanupCreatedUserEncryptionKey(ctx context.Context, keyRef string) {
