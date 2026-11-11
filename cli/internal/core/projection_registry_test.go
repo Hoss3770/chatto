@@ -27,8 +27,8 @@ func TestProjectionRegistryDrivesAdminStates(t *testing.T) {
 
 	core, _ := setupTestCore(t)
 
-	if len(core.projections) != 8 {
-		t.Fatalf("registered projections = %d, want 8", len(core.projections))
+	if len(core.projections) != 10 {
+		t.Fatalf("registered projections = %d, want 10", len(core.projections))
 	}
 
 	registryNames := make(map[string]struct{}, len(core.projections))
@@ -85,6 +85,12 @@ func TestProjectionRegistryDrivesAdminStates(t *testing.T) {
 	}
 	if _, ok := registryNames["OAuth Clients"]; !ok {
 		t.Fatal("OAuth Clients projection is not registered")
+	}
+	if _, ok := registryNames["Apps"]; !ok {
+		t.Fatal("Apps projection is not registered")
+	}
+	if _, ok := registryNames["App Aliases"]; !ok {
+		t.Fatal("App Aliases projection is not registered")
 	}
 
 	if _, ok := registryNames["Bot Webhooks"]; !ok {

@@ -42,6 +42,9 @@ type coreProjections struct {
 	mentionables          events.ProjectionHandle[*MentionablesProjection]
 	invitations           events.ProjectionHandle[*InvitationProjection]
 	oauthClients          events.ProjectionHandle[*OAuthClientProjection]
+	apps                  events.ProjectionHandle[*AppProjection]
+	appAliases            events.ProjectionHandle[*AppAliasProjection]
+	appContentKeys        *appContentKeyResolver
 }
 
 type projectionSnapshotPolicy bool
@@ -298,6 +301,34 @@ func initializeCoreProjections(
 		"oauth_clients",
 		"OAuth Clients",
 		oauthClients.adminProjectionEstimate,
+		coldReplayOnly,
+	)
+	if err != nil {
+		return nil, err
+	}
+
+	appContentKeys := newAppContentKeyResolver(infra.storage.runtimeStateKV, infra.encryption.keyWrapper)
+	projections.appContentKeys = appContentKeys
+	apps := NewAppProjection(appContentKeys)
+	projections.apps, err = registerProjection(
+		registrar,
+		apps,
+		"apps",
+		"Apps",
+		apps.adminProjectionEstimate,
+		coldReplayOnly,
+	)
+	if err != nil {
+		return nil, err
+	}
+
+	appAliases := NewAppAliasProjection()
+	projections.appAliases, err = registerProjection(
+		registrar,
+		appAliases,
+		"app_aliases",
+		"App Aliases",
+		appAliases.adminProjectionEstimate,
 		coldReplayOnly,
 	)
 	if err != nil {

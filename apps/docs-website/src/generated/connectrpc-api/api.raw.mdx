@@ -2952,7 +2952,8 @@ Result of creating a bot. api_key is shown once and cannot be retrieved.
 
 ### DeleteBot
 
-Deletes a bot and invalidates all of its API keys.
+Deletes a bot and invalidates all of its API keys. Returns
+FAILED_PRECONDITION while the bot belongs to an app definition.
 
 ```http
 POST /api/connect/chatto.api.v1.BotService/DeleteBot

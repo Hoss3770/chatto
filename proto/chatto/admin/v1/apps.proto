@@ -1,0 +1,304 @@
+syntax = "proto3";
+
+package chatto.admin.v1;
+
+import "buf/validate/validate.proto";
+import "chatto/api/v1/pagination.proto";
+import "google/protobuf/timestamp.proto";
+
+// AppLifecycleState identifies whether an app can authenticate and act.
+enum AppLifecycleState {
+  // The server did not report a valid lifecycle state.
+  APP_LIFECYCLE_STATE_UNSPECIFIED = 0;
+  // The app definition exists, but no installation is active.
+  APP_LIFECYCLE_STATE_NOT_INSTALLED = 1;
+  // The managed bot installation is active.
+  APP_LIFECYCLE_STATE_INSTALLED = 2;
+  // The installation was explicitly removed and its bot is deactivated.
+  APP_LIFECYCLE_STATE_UNINSTALLED = 3;
+  // The app was permanently removed from active management.
+  APP_LIFECYCLE_STATE_DELETED = 4;
+}
+
+// ManifestIssueSeverity identifies whether a manifest issue blocks a write.
+enum ManifestIssueSeverity {
+  // The issue has no valid severity.
+  MANIFEST_ISSUE_SEVERITY_UNSPECIFIED = 0;
+  // The manifest cannot be accepted until the issue is fixed.
+  MANIFEST_ISSUE_SEVERITY_ERROR = 1;
+  // Chatto can preserve the value, but does not apply all of its behavior.
+  MANIFEST_ISSUE_SEVERITY_WARNING = 2;
+}
+
+// ManifestIssue identifies one syntax, validation, or support issue.
+message ManifestIssue {
+  // JSON Pointer for the affected value. Empty means the document itself.
+  string pointer = 1;
+  // One-based source line when the parser can identify it.
+  uint32 line = 2;
+  // Stable machine category for UI grouping.
+  string code = 3;
+  // Human-readable explanation.
+  string message = 4;
+  // Whether the issue blocks create or update.
+  ManifestIssueSeverity severity = 5;
+}
+
+// ManifestSummary is the safe review view of one parsed app manifest.
+message ManifestSummary {
+  // App display name.
+  string name = 1;
+  // Short app description.
+  string description = 2;
+  // Requested bot scopes in stable sorted order.
+  repeated string bot_scopes = 3;
+  // Requested user scopes in stable sorted order.
+  repeated string user_scopes = 4;
+  // Requested event types in stable sorted order.
+  repeated string events = 5;
+  // Slash command names in stable sorted order.
+  repeated string commands = 6;
+  // Canonical external origins that can receive user or server data.
+  repeated string external_origins = 7;
+  // Number of known manifest paths that Chatto applies completely.
+  uint32 implemented_contracts = 8;
+  // Number of known manifest paths that Chatto preserves with a behavior gap.
+  uint32 partial_contracts = 9;
+  // Number of known manifest paths that Chatto preserves but does not apply.
+  uint32 unsupported_contracts = 10;
+}
+
+// App is the administrator view of one app definition and installation.
+message App {
+  // Stable app identifier used as the OAuth client ID.
+  string app_id = 1;
+  // Human account that owns the managed bot.
+  string owner_user_id = 2;
+  // Canonical Chatto bot account for this installation.
+  string bot_user_id = 3;
+  // Display name from the current manifest.
+  string name = 4;
+  // Short description from the current manifest.
+  string description = 5;
+  // Current lifecycle state.
+  AppLifecycleState state = 6;
+  // Accepted complete manifest revision.
+  uint64 manifest_revision = 7;
+  // Current installation and token generation.
+  uint64 install_generation = 8;
+  // Requested bot scopes from the current manifest.
+  repeated string requested_bot_scopes = 9;
+  // Requested user scopes from the current manifest.
+  repeated string requested_user_scopes = 10;
+  // Bot scopes active for the current installation.
+  repeated string granted_bot_scopes = 11;
+  // User scopes active for the current installation.
+  repeated string granted_user_scopes = 12;
+  // Safe external origins extracted from the manifest.
+  repeated string external_origins = 13;
+  // When the definition was created.
+  google.protobuf.Timestamp created_at = 14;
+  // When the definition or lifecycle last changed.
+  google.protobuf.Timestamp updated_at = 15;
+  // Canonical JSON for the complete preserved manifest. List responses omit it.
+  string manifest_json = 16;
+}
+
+// AppCredentials contains raw values that are returned only by the operation
+// that creates or regenerates them. Outside short-lived encrypted OAuth
+// recovery state, Chatto does not retain recoverable access tokens or client
+// secrets.
+message AppCredentials {
+  // OAuth client identifier. It is also the app ID.
+  string client_id = 1;
+  // New OAuth client secret, when this operation created one.
+  string client_secret = 2;
+  // New request-signing secret, when this operation created one.
+  string signing_secret = 3;
+  // New bot access token, when this operation installed the app.
+  string bot_token = 4;
+  // New app-level token, when this operation installed the app.
+  string app_token = 5;
+  // Base URL for Web API SDK clients.
+  string api_url = 6;
+  // Browser authorization URL.
+  string authorize_url = 7;
+}
+
+// Reports whether app writes and compatibility routes are enabled.
+message GetAppPlatformRequest {}
+
+// App platform status and canonical public endpoints.
+message GetAppPlatformResponse {
+  // Whether administrators can create or change apps.
+  bool enabled = 1;
+  // Canonical Web API base URL when enabled.
+  string api_url = 2;
+  // Canonical browser authorization URL when enabled.
+  string authorize_url = 3;
+}
+
+// Parses and validates one JSON or YAML app manifest without storing it.
+message ValidateAppManifestRequest {
+  // Complete JSON or YAML document. Maximum: 1 MiB.
+  string manifest = 1 [(buf.validate.field).string = {min_len: 1, max_bytes: 1048576}];
+}
+
+// Normalized manifest, review summary, and all detected issues.
+message ValidateAppManifestResponse {
+  // Canonical JSON that preserves known and unknown keys.
+  string manifest_json = 1;
+  // Safe review summary.
+  ManifestSummary summary = 2;
+  // Syntax, validation, and support issues.
+  repeated ManifestIssue issues = 3;
+  // True when no error issue blocks create or update.
+  bool valid = 4;
+}
+
+// Lists app definitions in creation order.
+message ListAppsRequest {
+  // Defaults to 20 results when absent or limit is zero. Maximum: 100.
+  chatto.api.v1.PageRequest page = 1;
+}
+
+// One page of app definitions.
+message ListAppsResponse {
+  // Apps in stable creation order. Manifest JSON is omitted.
+  repeated App apps = 1;
+  // Total count and whether another page is available.
+  chatto.api.v1.PageInfo page = 2;
+}
+
+// Identifies one app by its stable ID.
+message GetAppRequest {
+  // Exact app ID.
+  string app_id = 1 [(buf.validate.field).string = {min_len: 1, max_len: 64}];
+}
+
+// Returns one app and its complete current manifest.
+message GetAppResponse {
+  // Requested app.
+  App app = 1;
+}
+
+// Creates an app definition and its managed bot from one valid manifest.
+message CreateAppRequest {
+  // Complete JSON or YAML document. Maximum: 1 MiB.
+  string manifest = 1 [(buf.validate.field).string = {min_len: 1, max_bytes: 1048576}];
+  // When true, create the definition and credentials without activating an
+  // installation. The default creates and installs in one operation.
+  bool create_only = 2;
+}
+
+// Returns the new app and show-once credentials.
+message CreateAppResponse {
+  // Created app.
+  App app = 1;
+  // Raw values created by this operation. Store them before closing the view.
+  AppCredentials credentials = 2;
+}
+
+// Replaces the complete manifest of an existing app.
+message ReplaceAppManifestRequest {
+  // Exact app ID.
+  string app_id = 1 [(buf.validate.field).string = {min_len: 1, max_len: 64}];
+  // Complete JSON or YAML document. Maximum: 1 MiB.
+  string manifest = 2 [(buf.validate.field).string = {min_len: 1, max_bytes: 1048576}];
+}
+
+// Returns the app with its accepted new manifest revision.
+message ReplaceAppManifestResponse {
+  // Updated app.
+  App app = 1;
+}
+
+// Exports the complete preserved manifest as canonical JSON.
+message ExportAppManifestRequest {
+  // Exact app ID.
+  string app_id = 1 [(buf.validate.field).string = {min_len: 1, max_len: 64}];
+}
+
+// Canonical manifest export.
+message ExportAppManifestResponse {
+  // Complete canonical JSON, including preserved unknown keys.
+  string manifest_json = 1;
+}
+
+// Activates or reactivates one app installation.
+message InstallAppRequest {
+  // Exact app ID.
+  string app_id = 1 [(buf.validate.field).string = {min_len: 1, max_len: 64}];
+}
+
+// Returns the installed app and new show-once access tokens.
+message InstallAppResponse {
+  // Installed app.
+  App app = 1;
+  // New bot and app tokens. Client and signing secrets are omitted.
+  AppCredentials credentials = 2;
+}
+
+// Deactivates an installation without deleting its bot or history.
+message UninstallAppRequest {
+  // Exact app ID.
+  string app_id = 1 [(buf.validate.field).string = {min_len: 1, max_len: 64}];
+}
+
+// Returns the uninstalled app.
+message UninstallAppResponse {
+  // Uninstalled app.
+  App app = 1;
+}
+
+// Replaces the OAuth client secret and request-signing secret.
+message RegenerateAppCredentialsRequest {
+  // Exact app ID.
+  string app_id = 1 [(buf.validate.field).string = {min_len: 1, max_len: 64}];
+}
+
+// Returns the app and the new show-once client credentials.
+message RegenerateAppCredentialsResponse {
+  // App whose credentials changed.
+  App app = 1;
+  // New client and signing secrets. Access tokens are omitted.
+  AppCredentials credentials = 2;
+}
+
+// Permanently removes an app from active management. The app must first be
+// uninstalled. Bot authorship and message history remain intact.
+message DeleteAppRequest {
+  // Exact app ID.
+  string app_id = 1 [(buf.validate.field).string = {min_len: 1, max_len: 64}];
+}
+
+// Confirms app deletion.
+message DeleteAppResponse {}
+
+// Manages app definitions and installations. Every method requires a human
+// caller with server.manage and bot.create. Write methods also require the app
+// platform to be enabled.
+service AdminAppService {
+  // Gets feature status and canonical app endpoints.
+  rpc GetAppPlatform(GetAppPlatformRequest) returns (GetAppPlatformResponse);
+  // Validates a manifest without storing it.
+  rpc ValidateAppManifest(ValidateAppManifestRequest) returns (ValidateAppManifestResponse);
+  // Lists app definitions.
+  rpc ListApps(ListAppsRequest) returns (ListAppsResponse);
+  // Gets one app or returns NOT_FOUND.
+  rpc GetApp(GetAppRequest) returns (GetAppResponse);
+  // Creates an app and managed bot.
+  rpc CreateApp(CreateAppRequest) returns (CreateAppResponse);
+  // Accepts a new complete manifest revision.
+  rpc ReplaceAppManifest(ReplaceAppManifestRequest) returns (ReplaceAppManifestResponse);
+  // Exports the current complete manifest.
+  rpc ExportAppManifest(ExportAppManifestRequest) returns (ExportAppManifestResponse);
+  // Activates or reactivates an installation.
+  rpc InstallApp(InstallAppRequest) returns (InstallAppResponse);
+  // Deactivates an installation and revokes its tokens.
+  rpc UninstallApp(UninstallAppRequest) returns (UninstallAppResponse);
+  // Creates new OAuth client and request-signing secrets.
+  rpc RegenerateAppCredentials(RegenerateAppCredentialsRequest) returns (RegenerateAppCredentialsResponse);
+  // Deletes an already-uninstalled app.
+  rpc DeleteApp(DeleteAppRequest) returns (DeleteAppResponse);
+}

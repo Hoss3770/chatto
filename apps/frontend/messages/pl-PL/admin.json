@@ -606,6 +606,34 @@
         "exhausted": "Wyczerpany",
         "revoked": "Unieważniony"
       }
+    },
+    "apps": {
+      "title": "Aplikacje",
+      "subtitle": "Zarządzaj manifestami, instalacjami i danymi dostępowymi",
+      "disabled": "Zarządzanie aplikacjami jest wyłączone na tym serwerze.",
+      "platform": "Platforma",
+      "manifest": "Manifest",
+      "manifest_help": "Wklej pełny manifest JSON lub YAML. Sprawdź go przed zapisaniem.",
+      "review": "Sprawdź",
+      "create_install": "Zainstaluj",
+      "update": "Aktualizuj",
+      "update_manifest": "Manifest",
+      "implemented": "Obsługiwane",
+      "partial": "Częściowe",
+      "unsupported": "Nieobsługiwane",
+      "list": "Aplikacje",
+      "empty": "Brak aplikacji",
+      "credentials": "Dane dostępowe",
+      "credentials_warning": "Zapisz te wartości teraz. Chatto nie pokaże ich ponownie.",
+      "close": "Zamknij",
+      "copy": "Kopiuj",
+      "export": "Eksportuj",
+      "regenerate": "Wygeneruj ponownie",
+      "install": "Zainstaluj",
+      "uninstall": "Odinstaluj",
+      "state_installed": "Zainstalowana",
+      "state_uninstalled": "Odinstalowana",
+      "state_not_installed": "Szkic"
     }
   }
 }

@@ -11,7 +11,7 @@
     "namespaceMembers": "off",
     "duplicates": "warn"
   },
-  "ignoreBinaries": ["mise", "playwright"],
+  "ignoreBinaries": ["gofmt", "mise", "playwright"],
   "ignoreDependencies": ["gemoji"],
   "workspaces": {
     ".": {

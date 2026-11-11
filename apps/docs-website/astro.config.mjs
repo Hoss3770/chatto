@@ -105,6 +105,7 @@ export default defineConfig({
           items: [
             'guides/integrations/chatto-api',
             'guides/integrations/bot-accounts',
+            'guides/integrations/app-compatibility',
             'guides/integrations/realtime-protocol',
             'guides/integrations/mcp',
             'guides/integrations/api-compatibility'
@@ -160,6 +161,7 @@ export default defineConfig({
             {
               label: 'chatto.admin.v1',
               items: [
+                'reference/connectrpc-api/admin-apps',
                 'reference/connectrpc-api/admin-invite-links',
                 'reference/connectrpc-api/admin-oauth-clients',
                 'reference/connectrpc-api/admin-diagnostics',

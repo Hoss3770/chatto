@@ -100,7 +100,8 @@ export const AdminUserService = {
     },
     /**
      * Deletes a user account as an admin action. Requires user.delete-any for
-     * other users or user.delete-self for the caller.
+     * other users or user.delete-self for the caller. Returns FAILED_PRECONDITION
+     * when the user owns a bot that still belongs to an app definition.
      *
      * @generated from rpc chatto.admin.v1.AdminUserService.DeleteUser
      */

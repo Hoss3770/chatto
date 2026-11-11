@@ -86,7 +86,8 @@ type AdminUserServiceClient interface {
 	// user.manage-accounts, including when the caller targets their own account.
 	ClearUsernameCooldown(context.Context, *connect.Request[v1.ClearUsernameCooldownRequest]) (*connect.Response[v1.ClearUsernameCooldownResponse], error)
 	// Deletes a user account as an admin action. Requires user.delete-any for
-	// other users or user.delete-self for the caller.
+	// other users or user.delete-self for the caller. Returns FAILED_PRECONDITION
+	// when the user owns a bot that still belongs to an app definition.
 	DeleteUser(context.Context, *connect.Request[v1.DeleteUserRequest]) (*connect.Response[v1.DeleteUserResponse], error)
 	// Deactivates or reactivates a human account. Requires user.manage-accounts.
 	// The caller cannot target their own account or an owner account.
@@ -246,7 +247,8 @@ type AdminUserServiceHandler interface {
 	// user.manage-accounts, including when the caller targets their own account.
 	ClearUsernameCooldown(context.Context, *connect.Request[v1.ClearUsernameCooldownRequest]) (*connect.Response[v1.ClearUsernameCooldownResponse], error)
 	// Deletes a user account as an admin action. Requires user.delete-any for
-	// other users or user.delete-self for the caller.
+	// other users or user.delete-self for the caller. Returns FAILED_PRECONDITION
+	// when the user owns a bot that still belongs to an app definition.
 	DeleteUser(context.Context, *connect.Request[v1.DeleteUserRequest]) (*connect.Response[v1.DeleteUserResponse], error)
 	// Deactivates or reactivates a human account. Requires user.manage-accounts.
 	// The caller cannot target their own account or an owner account.

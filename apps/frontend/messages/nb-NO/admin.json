@@ -584,6 +584,34 @@
         "exhausted": "Oppbrukt",
         "revoked": "Trukket tilbake"
       }
+    },
+    "apps": {
+      "title": "Apper",
+      "subtitle": "Administrer manifester, installasjoner og legitimasjon",
+      "disabled": "Appadministrasjon er deaktivert på denne serveren.",
+      "platform": "Plattform",
+      "manifest": "Manifest",
+      "manifest_help": "Lim inn et fullstendig JSON- eller YAML-manifest. Se gjennom det før du lagrer.",
+      "review": "Se gjennom",
+      "create_install": "Installer",
+      "update": "Oppdater",
+      "update_manifest": "Manifest",
+      "implemented": "Implementert",
+      "partial": "Delvis",
+      "unsupported": "Ikke støttet",
+      "list": "Apper",
+      "empty": "Ingen apper ennå",
+      "credentials": "Legitimasjon",
+      "credentials_warning": "Lagre disse verdiene nå. Chatto kan ikke vise dem igjen.",
+      "close": "Lukk",
+      "copy": "Kopier",
+      "export": "Eksporter",
+      "regenerate": "Opprett på nytt",
+      "install": "Installer",
+      "uninstall": "Avinstaller",
+      "state_installed": "Installert",
+      "state_uninstalled": "Avinstallert",
+      "state_not_installed": "Utkast"
     }
   }
 }

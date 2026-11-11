@@ -136,6 +136,7 @@ func (a *API) Handlers() []Handler {
 	adminDiagnosticsPath, adminDiagnosticsHandler := adminv1connect.NewAdminDiagnosticsServiceHandler(&adminDiagnosticsService{api: a}, options...)
 	adminEventLogPath, adminEventLogHandler := adminv1connect.NewAdminEventLogServiceHandler(&adminEventLogService{api: a}, options...)
 	adminInviteLinkPath, adminInviteLinkHandler := adminv1connect.NewAdminInviteLinkServiceHandler(&adminInviteLinkService{api: a}, options...)
+	adminAppPath, adminAppHandler := adminv1connect.NewAdminAppServiceHandler(&adminAppService{api: a}, options...)
 	adminOAuthClientPath, adminOAuthClientHandler := adminv1connect.NewAdminOAuthClientServiceHandler(&adminOAuthClientService{api: a}, options...)
 	adminMemberPath, adminMemberHandler := adminv1connect.NewAdminUserServiceHandler(&adminUserManagementService{api: a}, options...)
 	adminServerPath, adminServerHandler := adminv1connect.NewAdminServerServiceHandler(&serverService{api: a}, uploadOptions...)
@@ -182,6 +183,7 @@ func (a *API) Handlers() []Handler {
 		{ServicePath: adminDiagnosticsPath, Handler: adminDiagnosticsHandler, AuthPolicy: AuthPolicyAuthenticatedUser},
 		{ServicePath: adminEventLogPath, Handler: adminEventLogHandler, AuthPolicy: AuthPolicyAuthenticatedUser},
 		{ServicePath: adminInviteLinkPath, Handler: adminInviteLinkHandler, AuthPolicy: AuthPolicyAuthenticatedUser},
+		{ServicePath: adminAppPath, Handler: adminAppHandler, AuthPolicy: AuthPolicyAuthenticatedUser},
 		{ServicePath: adminOAuthClientPath, Handler: adminOAuthClientHandler, AuthPolicy: AuthPolicyAuthenticatedUser},
 		{ServicePath: adminServerPath, Handler: adminServerHandler, AuthPolicy: AuthPolicyAuthenticatedUser},
 		{ServicePath: adminRoomLayoutPath, Handler: adminRoomLayoutHandler, AuthPolicy: AuthPolicyAuthenticatedUser},

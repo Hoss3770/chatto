@@ -584,6 +584,34 @@
         "exhausted": "Esgotada",
         "revoked": "Revogada"
       }
+    },
+    "apps": {
+      "title": "Aplicações",
+      "subtitle": "Faça a gestão de manifestos, instalações e credenciais",
+      "disabled": "A gestão de aplicações está desativada neste servidor.",
+      "platform": "Plataforma",
+      "manifest": "Manifesto",
+      "manifest_help": "Cole um manifesto JSON ou YAML completo. Reveja-o antes de guardar.",
+      "review": "Rever",
+      "create_install": "Instalar",
+      "update": "Atualizar",
+      "update_manifest": "Manifesto",
+      "implemented": "Implementado",
+      "partial": "Parcial",
+      "unsupported": "Não suportado",
+      "list": "Aplicações",
+      "empty": "Ainda não existem aplicações",
+      "credentials": "Credenciais",
+      "credentials_warning": "Guarde estes valores agora. O Chatto não os poderá mostrar novamente.",
+      "close": "Fechar",
+      "copy": "Copiar",
+      "export": "Exportar",
+      "regenerate": "Gerar novamente",
+      "install": "Instalar",
+      "uninstall": "Desinstalar",
+      "state_installed": "Instalada",
+      "state_uninstalled": "Desinstalada",
+      "state_not_installed": "Rascunho"
     }
   }
 }

@@ -584,6 +584,34 @@
         "exhausted": "Exhausted",
         "revoked": "Revoked"
       }
+    },
+    "apps": {
+      "title": "Apps",
+      "subtitle": "Manage manifests, installations, and credentials",
+      "disabled": "App management is disabled on this server.",
+      "platform": "Platform",
+      "manifest": "Manifest",
+      "manifest_help": "Paste a complete JSON or YAML manifest. Review it before you save.",
+      "review": "Review",
+      "create_install": "Create and install",
+      "update": "Update",
+      "update_manifest": "Manifest",
+      "implemented": "Implemented",
+      "partial": "Partial",
+      "unsupported": "Unsupported",
+      "list": "Apps",
+      "empty": "No apps yet",
+      "credentials": "Credentials",
+      "credentials_warning": "Save these values now. Chatto cannot show them again.",
+      "close": "Close",
+      "copy": "Copy",
+      "export": "Export",
+      "regenerate": "Regenerate",
+      "install": "Install",
+      "uninstall": "Uninstall",
+      "state_installed": "Installed",
+      "state_uninstalled": "Uninstalled",
+      "state_not_installed": "Draft"
     }
   }
 }

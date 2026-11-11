@@ -78,6 +78,12 @@ User-facing concepts. If a user might say the word, it goes here.
 
 **Client application** — Browser, desktop, mobile app, or integration that a user authorizes to access a Chatto server; its stable identity comes from CIMD or a built-in registration. A client appears in server administration after completing at least one user-approved authorization. Administrators may label it trusted or block it, but trust never replaces user consent. See [ADR-071](adr/ADR-071-cimd-identified-open-oauth-clients.md) and [FDR-023](fdr/FDR-023-authentication-and-sessions.md).
 
+**App compatibility platform** — Experimental server feature that lets an administrator import an external app manifest and issue credentials for Chatto's additive compatibility API and OAuth edge. It does not replace Chatto's native API. See [FDR-056](fdr/FDR-056-app-compatibility-platform.md) and [ADR-122](adr/ADR-122-additive-app-compatibility-adapter.md).
+
+**App definition** — Server-owned record that preserves one imported app manifest, owner, managed bot identity, requested scopes, external origins, and credential generations. It can exist without an active installation. See [FDR-056](fdr/FDR-056-app-compatibility-platform.md).
+
+**App installation** — Active connection between one app definition and one Chatto server. It authenticates as the definition's managed bot. Uninstall revokes app credentials and deactivates the bot without deleting its identity or history. See [FDR-056](fdr/FDR-056-app-compatibility-platform.md).
+
 **MCP server** — Optional Chatto public HTTP integration that lets an agent host discover and call bounded user-scoped tools through the Model Context Protocol. It has no Operator API authority. See [FDR-043](fdr/FDR-043-model-context-protocol-integration.md) and [ADR-085](adr/ADR-085-agent-integration-through-mcp.md).
 
 **MCP scope** — OAuth grant ceiling for one class of MCP tools, such as `chatto:rooms:read` or `chatto:messages:write`. It limits delegated agent authority in addition to normal Chatto permissions and resource visibility. It is not an RBAC permission.

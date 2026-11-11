@@ -17,6 +17,7 @@ import (
 	"github.com/chattocorp/chatto/cli/internal/config"
 	"github.com/chattocorp/chatto/cli/internal/core/linkpreview"
 	"github.com/chattocorp/chatto/cli/internal/evtstream"
+	"github.com/chattocorp/chatto/pkg/events"
 )
 
 // ============================================================================
@@ -63,6 +64,9 @@ type ChattoCore struct {
 	mentionables              *MentionablesModel
 	invitationModel           *InvitationModel
 	oauthClientModel          *OAuthClientModel
+	appModel                  *AppModel
+	appAliases                events.ProjectionHandle[*AppAliasProjection]
+	appContentKeys            *appContentKeyResolver
 	myEventsModel             *MyEventsModel
 	presenceModel             *PresenceModel
 	mediaModel                *MediaModel

@@ -17,6 +17,7 @@ func ModelKeys() []string {
 		"rbac_model",
 		"mentionables_model",
 		"presence_model",
+		"app_model",
 		"my_events_model",
 		"call_model",
 		"media_model",

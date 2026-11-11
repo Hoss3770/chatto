@@ -584,6 +584,34 @@
         "exhausted": "Épuisé",
         "revoked": "Révoqué"
       }
+    },
+    "apps": {
+      "title": "Applications",
+      "subtitle": "Gérez les manifestes, les installations et les identifiants",
+      "disabled": "La gestion des applications est désactivée sur ce serveur.",
+      "platform": "Plateforme",
+      "manifest": "Manifeste",
+      "manifest_help": "Collez un manifeste JSON ou YAML complet. Vérifiez-le avant de l’enregistrer.",
+      "review": "Vérifier",
+      "create_install": "Installer",
+      "update": "Mettre à jour",
+      "update_manifest": "Manifeste",
+      "implemented": "Pris en charge",
+      "partial": "Partiel",
+      "unsupported": "Non pris en charge",
+      "list": "Applications",
+      "empty": "Aucune application",
+      "credentials": "Identifiants",
+      "credentials_warning": "Enregistrez ces valeurs maintenant. Chatto ne pourra pas les afficher de nouveau.",
+      "close": "Fermer",
+      "copy": "Copier",
+      "export": "Exporter",
+      "regenerate": "Régénérer",
+      "install": "Installer",
+      "uninstall": "Désinstaller",
+      "state_installed": "Installée",
+      "state_uninstalled": "Désinstallée",
+      "state_not_installed": "Brouillon"
     }
   }
 }

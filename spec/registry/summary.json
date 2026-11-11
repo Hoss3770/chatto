@@ -29,5 +29,5 @@
     "composition_objects": 10,
     "manifest_keys": 139
   },
-  "coverage": { "implemented": 0, "partial": 1, "unsupported": 934 }
+  "coverage": { "implemented": 4, "partial": 4, "unsupported": 927 }
 }

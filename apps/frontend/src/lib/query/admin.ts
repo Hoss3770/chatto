@@ -92,6 +92,12 @@ export const adminQueryKeys = {
   oauthClients(serverId: string, connection: AdminQueryConnection) {
     return [...adminRoot(serverId, connection), 'oauth-clients'] as const;
   },
+  appPlatform(serverId: string, connection: AdminQueryConnection) {
+    return [...adminRoot(serverId, connection), 'app-platform'] as const;
+  },
+  apps(serverId: string, connection: AdminQueryConnection) {
+    return [...adminRoot(serverId, connection), 'apps'] as const;
+  },
   serverSettings(serverId: string, connection: AdminQueryConnection) {
     return [...adminRoot(serverId, connection), 'server-settings'] as const;
   },

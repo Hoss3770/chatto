@@ -89,6 +89,13 @@ func (c WebserverConfig) ServerOrigins() []string {
 	return origins
 }
 
+// AppCompatibilityConfig controls the additive app compatibility edge. The
+// readers and projections always run so operators can use an expand-then-enable
+// rollout before the first app fact is written.
+type AppCompatibilityConfig struct {
+	Enabled bool `toml:"enabled" env:"CHATTO_APPS_ENABLED" comment:"Enable app manifest writes, OAuth installation, and the compatibility Web API edge. Upgrade every serving replica before enabling. Default: false."`
+}
+
 // MetricsConfig controls the process-local Prometheus scrape endpoint.
 type MetricsConfig struct {
 	Enabled     bool   `toml:"enabled" env:"CHATTO_METRICS_ENABLED" comment:"Expose a Prometheus-compatible metrics endpoint on a separate internal HTTP listener. Default: false."`
@@ -361,7 +368,7 @@ func validateAbsoluteHTTPURL(name, raw string) error {
 	if u.Host == "" || u.User != nil {
 		return fmt.Errorf("%s must include a host and must not include user info", name)
 	}
-	hostname, err := idna.Lookup.ToASCII(strings.ToLower(u.Hostname()))
+	hostname, err := canonicalHTTPHostname(u.Hostname())
 	if err != nil {
 		return fmt.Errorf("%s host must be a valid IDNA hostname: %w", name, err)
 	}
@@ -387,17 +394,22 @@ func validateHTTPOrigin(name, raw string) error {
 	return nil
 }
 
+func canonicalHTTPHostname(raw string) (string, error) {
+	hostname := strings.ToLower(raw)
+	if address, err := netip.ParseAddr(hostname); err == nil {
+		return address.String(), nil
+	}
+	return idna.Lookup.ToASCII(hostname)
+}
+
 func canonicalHTTPOriginAndRequestHost(raw string) (string, string, bool) {
 	u, err := url.Parse(raw)
 	if err != nil || u.Scheme == "" || u.Host == "" {
 		return "", "", false
 	}
-	hostname, err := idna.Lookup.ToASCII(strings.ToLower(u.Hostname()))
+	hostname, err := canonicalHTTPHostname(u.Hostname())
 	if err != nil {
 		return "", "", false
-	}
-	if address, err := netip.ParseAddr(hostname); err == nil {
-		hostname = address.String()
 	}
 	port := u.Port()
 	if numericPort, err := strconv.ParseUint(port, 10, 16); err == nil {
@@ -424,6 +436,26 @@ func validateAbsoluteHTTPSURL(name, raw string) error {
 		return fmt.Errorf("%s must use https", name)
 	}
 	return nil
+}
+
+func validateAppCompatibilityOrigin(name, raw string) error {
+	if err := validateAbsoluteHTTPURL(name, raw); err != nil {
+		return err
+	}
+	u, _ := url.Parse(raw)
+	if (u.Path != "" && u.Path != "/") || u.RawQuery != "" || u.ForceQuery || u.Fragment != "" {
+		return fmt.Errorf("%s must not include a path other than /, a query, or a fragment", name)
+	}
+	return nil
+}
+
+func appCompatibilityLoopbackHost(host string) bool {
+	host = strings.TrimSuffix(strings.ToLower(strings.TrimSpace(host)), ".")
+	if host == "localhost" || strings.HasSuffix(host, ".localhost") {
+		return true
+	}
+	address, err := netip.ParseAddr(host)
+	return err == nil && address.IsLoopback()
 }
 
 // hostnameEndsInNumber detects hostnames that browsers interpret using their

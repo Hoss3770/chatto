@@ -83,6 +83,11 @@ func NewInvitationID() string {
 	return newID("I")
 }
 
+// NewAppID generates a stable app and OAuth client ID with an "A" prefix.
+func NewAppID() string {
+	return newID("A")
+}
+
 // NewNeighborID generates a stable opaque Neighbor resource ID.
 func NewNeighborID() string {
 	return newID("N")

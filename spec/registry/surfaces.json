@@ -9,20 +9,20 @@
     },
     {
       "name": "web_api",
-      "status": "unsupported",
-      "reason": "No /api/{method} compatibility gateway exists.",
+      "status": "partial",
+      "reason": "The /api/{method} gateway implements the Phase 1 foundation methods and returns not_implemented for all other methods.",
       "target_phase": 1
     },
     {
       "name": "oauth_v2",
-      "status": "unsupported",
-      "reason": "Chatto OAuth is a client-session flow, not an app installation flow.",
+      "status": "partial",
+      "reason": "Chatto supports browser approval and exact bot-token exchange. User tokens, enterprise installs, and rotating-token exchange are not supported.",
       "target_phase": 1
     },
     {
       "name": "app_manifests",
       "status": "unsupported",
-      "reason": "No app manifest import, validation, storage, or export service exists.",
+      "reason": "The Server Admin service validates, preserves, stores, and exports manifests, but target apps.manifest Web API routes do not exist.",
       "target_phase": 1
     },
     {

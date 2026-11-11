@@ -28,6 +28,7 @@
     const roomGroupsBase = manageBase + '/room-groups';
     const moderationBase = serverBase + '/moderation';
     const permissionsBase = serverBase + '/permissions';
+    const appsBase = serverBase + '/apps';
     const securityBase = serverBase + '/security';
     const systemBase = serverBase + '/system';
     const eventLogBase = serverBase + '/event-log';
@@ -82,6 +83,10 @@
     }
     if (pathname.startsWith(permissionsBase)) {
       return () => permissions.canAdminManageRoles || permissions.canAssignRoles;
+    }
+
+    if (pathname.startsWith(appsBase)) {
+      return () => permissions.canManageServer && permissions.canCreateBots;
     }
 
     // Security (blocked usernames) — server.manage

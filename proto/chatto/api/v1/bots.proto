@@ -378,7 +378,8 @@ service BotService {
   rpc BatchGetBots(BatchGetBotsRequest) returns (BatchGetBotsResponse);
   // Creates a bot owned by the authenticated human caller. Requires bot.create.
   rpc CreateBot(CreateBotRequest) returns (CreateBotResponse);
-  // Deletes a bot and invalidates all of its API keys.
+  // Deletes a bot and invalidates all of its API keys. Returns
+  // FAILED_PRECONDITION while the bot belongs to an app definition.
   rpc DeleteBot(DeleteBotRequest) returns (DeleteBotResponse) {
     option idempotency_level = IDEMPOTENT;
   }

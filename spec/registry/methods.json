@@ -14869,8 +14869,8 @@
       "warnings": [],
       "deprecated": false,
       "compatibility": {
-        "status": "unsupported",
-        "reason": "The target Web API route does not exist yet.",
+        "status": "implemented",
+        "reason": "The target Web API route has request, response, authorization, and conformance coverage.",
         "target_phase": 1,
         "semantic_mapping": "Compatibility gateway health and argument echo"
       },
@@ -17189,10 +17189,10 @@
       "warnings": [],
       "deprecated": false,
       "compatibility": {
-        "status": "unsupported",
-        "reason": "The target Web API route does not exist yet.",
+        "status": "implemented",
+        "reason": "The target Web API route has request, response, authorization, and conformance coverage.",
         "target_phase": 1,
-        "semantic_mapping": "Revoke an app installation and its credentials"
+        "semantic_mapping": "Revoke installation access tokens and deactivate the managed bot"
       },
       "sdk_signatures": {
         "node": {
@@ -18099,8 +18099,8 @@
       "warnings": [],
       "deprecated": false,
       "compatibility": {
-        "status": "unsupported",
-        "reason": "The target Web API route does not exist yet.",
+        "status": "implemented",
+        "reason": "The target Web API route has request, response, authorization, and conformance coverage.",
         "target_phase": 1,
         "semantic_mapping": "Revoke one app installation token"
       },
@@ -18315,8 +18315,8 @@
       "warnings": [],
       "deprecated": false,
       "compatibility": {
-        "status": "unsupported",
-        "reason": "The target Web API route does not exist yet.",
+        "status": "implemented",
+        "reason": "The target Web API route has request, response, authorization, and conformance coverage.",
         "target_phase": 1,
         "semantic_mapping": "Resolve the installed app credential and its Chatto principal"
       },
@@ -31908,8 +31908,8 @@
       "warnings": ["slackbot_mcp_unavailable"],
       "deprecated": false,
       "compatibility": {
-        "status": "unsupported",
-        "reason": "The target Web API route does not exist yet.",
+        "status": "partial",
+        "reason": "The target OAuth exchange route supports bot installations and exact retries, but user-token and enterprise installation fields are not supported.",
         "target_phase": 1,
         "semantic_mapping": "Exchange an app authorization code for installation credentials"
       },

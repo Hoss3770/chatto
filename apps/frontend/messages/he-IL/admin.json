@@ -595,6 +595,34 @@
         "exhausted": "מוצה",
         "revoked": "תוקף בוטל"
       }
+    },
+    "apps": {
+      "title": "יישומים",
+      "subtitle": "ניהול מניפסטים, התקנות ופרטי גישה",
+      "disabled": "ניהול היישומים מושבת בשרת זה.",
+      "platform": "פלטפורמה",
+      "manifest": "מניפסט",
+      "manifest_help": "הדבק מניפסט JSON או YAML מלא. בדוק אותו לפני השמירה.",
+      "review": "בדיקה",
+      "create_install": "התקנה",
+      "update": "עדכון",
+      "update_manifest": "מניפסט",
+      "implemented": "ממומש",
+      "partial": "חלקי",
+      "unsupported": "לא נתמך",
+      "list": "יישומים",
+      "empty": "אין עדיין יישומים",
+      "credentials": "פרטי גישה",
+      "credentials_warning": "שמור את הערכים האלה עכשיו. Chatto לא יוכל להציג אותם שוב.",
+      "close": "סגירה",
+      "copy": "העתקה",
+      "export": "ייצוא",
+      "regenerate": "יצירה מחדש",
+      "install": "התקנה",
+      "uninstall": "הסרה",
+      "state_installed": "מותקן",
+      "state_uninstalled": "הוסר",
+      "state_not_installed": "טיוטה"
     }
   }
 }

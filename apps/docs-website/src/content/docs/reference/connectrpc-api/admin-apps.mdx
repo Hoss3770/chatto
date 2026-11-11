@@ -1,0 +1,378 @@
+---
+title: AdminAppService
+description: App manifest, installation, and credential administration RPCs.
+editUrl: false
+---
+
+{/* Generated from proto/chatto/{auth,discovery,api,admin,realtime}/v1/*.proto. Do not edit directly. */}
+
+Chatto exposes this service below `/api/connect`.
+
+
+
+Shared message and enum definitions are documented in [Shared Types And Enums](/reference/connectrpc-api/types/).
+
+
+
+<a id="chatto-admin-v1-AdminAppService"></a>
+
+## AdminAppService
+
+Manages app definitions and installations. Every method requires a human
+caller with server.manage and bot.create. Write methods also require the app
+platform to be enabled.
+
+<a id="chatto-admin-v1-AdminAppService-GetAppPlatform"></a>
+
+### GetAppPlatform
+
+Gets feature status and canonical app endpoints.
+
+```http
+POST /api/connect/chatto.admin.v1.AdminAppService/GetAppPlatform
+```
+
+<a id="chatto-admin-v1-GetAppPlatformRequest"></a>
+
+#### Input: GetAppPlatformRequest
+
+Reports whether app writes and compatibility routes are enabled.
+
+
+<a id="chatto-admin-v1-GetAppPlatformResponse"></a>
+
+#### Result: GetAppPlatformResponse
+
+App platform status and canonical public endpoints.
+
+| Field | Type | Description |
+| --- | --- | --- |
+| `enabled` | `bool` | Whether administrators can create or change apps. |
+| `api_url` | `string` | Canonical Web API base URL when enabled. |
+| `authorize_url` | `string` | Canonical browser authorization URL when enabled. |
+
+
+<a id="chatto-admin-v1-AdminAppService-ValidateAppManifest"></a>
+
+### ValidateAppManifest
+
+Validates a manifest without storing it.
+
+```http
+POST /api/connect/chatto.admin.v1.AdminAppService/ValidateAppManifest
+```
+
+<a id="chatto-admin-v1-ValidateAppManifestRequest"></a>
+
+#### Input: ValidateAppManifestRequest
+
+Parses and validates one JSON or YAML app manifest without storing it.
+
+| Field | Type | Description |
+| --- | --- | --- |
+| `manifest` | `string` | Complete JSON or YAML document. Maximum: 1 MiB. |
+
+
+<a id="chatto-admin-v1-ValidateAppManifestResponse"></a>
+
+#### Result: ValidateAppManifestResponse
+
+Normalized manifest, review summary, and all detected issues.
+
+| Field | Type | Description |
+| --- | --- | --- |
+| `manifest_json` | `string` | Canonical JSON that preserves known and unknown keys. |
+| `summary` | [`ManifestSummary`](/reference/connectrpc-api/types/#chatto-admin-v1-ManifestSummary) | Safe review summary. |
+| `issues` | repeated [`ManifestIssue`](/reference/connectrpc-api/types/#chatto-admin-v1-ManifestIssue) | Syntax, validation, and support issues. |
+| `valid` | `bool` | True when no error issue blocks create or update. |
+
+
+<a id="chatto-admin-v1-AdminAppService-ListApps"></a>
+
+### ListApps
+
+Lists app definitions.
+
+```http
+POST /api/connect/chatto.admin.v1.AdminAppService/ListApps
+```
+
+<a id="chatto-admin-v1-ListAppsRequest"></a>
+
+#### Input: ListAppsRequest
+
+Lists app definitions in creation order.
+
+| Field | Type | Description |
+| --- | --- | --- |
+| `page` | [`chatto.api.v1.PageRequest`](/reference/connectrpc-api/types/#chatto-api-v1-PageRequest) | Defaults to 20 results when absent or limit is zero. Maximum: 100. |
+
+
+<a id="chatto-admin-v1-ListAppsResponse"></a>
+
+#### Result: ListAppsResponse
+
+One page of app definitions.
+
+| Field | Type | Description |
+| --- | --- | --- |
+| `apps` | repeated [`App`](/reference/connectrpc-api/types/#chatto-admin-v1-App) | Apps in stable creation order. Manifest JSON is omitted. |
+| `page` | [`chatto.api.v1.PageInfo`](/reference/connectrpc-api/types/#chatto-api-v1-PageInfo) | Total count and whether another page is available. |
+
+
+<a id="chatto-admin-v1-AdminAppService-GetApp"></a>
+
+### GetApp
+
+Gets one app or returns NOT_FOUND.
+
+```http
+POST /api/connect/chatto.admin.v1.AdminAppService/GetApp
+```
+
+<a id="chatto-admin-v1-GetAppRequest"></a>
+
+#### Input: GetAppRequest
+
+Identifies one app by its stable ID.
+
+| Field | Type | Description |
+| --- | --- | --- |
+| `app_id` | `string` | Exact app ID. |
+
+
+<a id="chatto-admin-v1-GetAppResponse"></a>
+
+#### Result: GetAppResponse
+
+Returns one app and its complete current manifest.
+
+| Field | Type | Description |
+| --- | --- | --- |
+| `app` | [`App`](/reference/connectrpc-api/types/#chatto-admin-v1-App) | Requested app. |
+
+
+<a id="chatto-admin-v1-AdminAppService-CreateApp"></a>
+
+### CreateApp
+
+Creates an app and managed bot.
+
+```http
+POST /api/connect/chatto.admin.v1.AdminAppService/CreateApp
+```
+
+<a id="chatto-admin-v1-CreateAppRequest"></a>
+
+#### Input: CreateAppRequest
+
+Creates an app definition and its managed bot from one valid manifest.
+
+| Field | Type | Description |
+| --- | --- | --- |
+| `manifest` | `string` | Complete JSON or YAML document. Maximum: 1 MiB. |
+| `create_only` | `bool` | When true, create the definition and credentials without activating an installation. The default creates and installs in one operation. |
+
+
+<a id="chatto-admin-v1-CreateAppResponse"></a>
+
+#### Result: CreateAppResponse
+
+Returns the new app and show-once credentials.
+
+| Field | Type | Description |
+| --- | --- | --- |
+| `app` | [`App`](/reference/connectrpc-api/types/#chatto-admin-v1-App) | Created app. |
+| `credentials` | [`AppCredentials`](/reference/connectrpc-api/types/#chatto-admin-v1-AppCredentials) | Raw values created by this operation. Store them before closing the view. |
+
+
+<a id="chatto-admin-v1-AdminAppService-ReplaceAppManifest"></a>
+
+### ReplaceAppManifest
+
+Accepts a new complete manifest revision.
+
+```http
+POST /api/connect/chatto.admin.v1.AdminAppService/ReplaceAppManifest
+```
+
+<a id="chatto-admin-v1-ReplaceAppManifestRequest"></a>
+
+#### Input: ReplaceAppManifestRequest
+
+Replaces the complete manifest of an existing app.
+
+| Field | Type | Description |
+| --- | --- | --- |
+| `app_id` | `string` | Exact app ID. |
+| `manifest` | `string` | Complete JSON or YAML document. Maximum: 1 MiB. |
+
+
+<a id="chatto-admin-v1-ReplaceAppManifestResponse"></a>
+
+#### Result: ReplaceAppManifestResponse
+
+Returns the app with its accepted new manifest revision.
+
+| Field | Type | Description |
+| --- | --- | --- |
+| `app` | [`App`](/reference/connectrpc-api/types/#chatto-admin-v1-App) | Updated app. |
+
+
+<a id="chatto-admin-v1-AdminAppService-ExportAppManifest"></a>
+
+### ExportAppManifest
+
+Exports the current complete manifest.
+
+```http
+POST /api/connect/chatto.admin.v1.AdminAppService/ExportAppManifest
+```
+
+<a id="chatto-admin-v1-ExportAppManifestRequest"></a>
+
+#### Input: ExportAppManifestRequest
+
+Exports the complete preserved manifest as canonical JSON.
+
+| Field | Type | Description |
+| --- | --- | --- |
+| `app_id` | `string` | Exact app ID. |
+
+
+<a id="chatto-admin-v1-ExportAppManifestResponse"></a>
+
+#### Result: ExportAppManifestResponse
+
+Canonical manifest export.
+
+| Field | Type | Description |
+| --- | --- | --- |
+| `manifest_json` | `string` | Complete canonical JSON, including preserved unknown keys. |
+
+
+<a id="chatto-admin-v1-AdminAppService-InstallApp"></a>
+
+### InstallApp
+
+Activates or reactivates an installation.
+
+```http
+POST /api/connect/chatto.admin.v1.AdminAppService/InstallApp
+```
+
+<a id="chatto-admin-v1-InstallAppRequest"></a>
+
+#### Input: InstallAppRequest
+
+Activates or reactivates one app installation.
+
+| Field | Type | Description |
+| --- | --- | --- |
+| `app_id` | `string` | Exact app ID. |
+
+
+<a id="chatto-admin-v1-InstallAppResponse"></a>
+
+#### Result: InstallAppResponse
+
+Returns the installed app and new show-once access tokens.
+
+| Field | Type | Description |
+| --- | --- | --- |
+| `app` | [`App`](/reference/connectrpc-api/types/#chatto-admin-v1-App) | Installed app. |
+| `credentials` | [`AppCredentials`](/reference/connectrpc-api/types/#chatto-admin-v1-AppCredentials) | New bot and app tokens. Client and signing secrets are omitted. |
+
+
+<a id="chatto-admin-v1-AdminAppService-UninstallApp"></a>
+
+### UninstallApp
+
+Deactivates an installation and revokes its tokens.
+
+```http
+POST /api/connect/chatto.admin.v1.AdminAppService/UninstallApp
+```
+
+<a id="chatto-admin-v1-UninstallAppRequest"></a>
+
+#### Input: UninstallAppRequest
+
+Deactivates an installation without deleting its bot or history.
+
+| Field | Type | Description |
+| --- | --- | --- |
+| `app_id` | `string` | Exact app ID. |
+
+
+<a id="chatto-admin-v1-UninstallAppResponse"></a>
+
+#### Result: UninstallAppResponse
+
+Returns the uninstalled app.
+
+| Field | Type | Description |
+| --- | --- | --- |
+| `app` | [`App`](/reference/connectrpc-api/types/#chatto-admin-v1-App) | Uninstalled app. |
+
+
+<a id="chatto-admin-v1-AdminAppService-RegenerateAppCredentials"></a>
+
+### RegenerateAppCredentials
+
+Creates new OAuth client and request-signing secrets.
+
+```http
+POST /api/connect/chatto.admin.v1.AdminAppService/RegenerateAppCredentials
+```
+
+<a id="chatto-admin-v1-RegenerateAppCredentialsRequest"></a>
+
+#### Input: RegenerateAppCredentialsRequest
+
+Replaces the OAuth client secret and request-signing secret.
+
+| Field | Type | Description |
+| --- | --- | --- |
+| `app_id` | `string` | Exact app ID. |
+
+
+<a id="chatto-admin-v1-RegenerateAppCredentialsResponse"></a>
+
+#### Result: RegenerateAppCredentialsResponse
+
+Returns the app and the new show-once client credentials.
+
+| Field | Type | Description |
+| --- | --- | --- |
+| `app` | [`App`](/reference/connectrpc-api/types/#chatto-admin-v1-App) | App whose credentials changed. |
+| `credentials` | [`AppCredentials`](/reference/connectrpc-api/types/#chatto-admin-v1-AppCredentials) | New client and signing secrets. Access tokens are omitted. |
+
+
+<a id="chatto-admin-v1-AdminAppService-DeleteApp"></a>
+
+### DeleteApp
+
+Deletes an already-uninstalled app.
+
+```http
+POST /api/connect/chatto.admin.v1.AdminAppService/DeleteApp
+```
+
+<a id="chatto-admin-v1-DeleteAppRequest"></a>
+
+#### Input: DeleteAppRequest
+
+Permanently removes an app from active management. The app must first be
+uninstalled. Bot authorship and message history remain intact.
+
+| Field | Type | Description |
+| --- | --- | --- |
+| `app_id` | `string` | Exact app ID. |
+
+
+<a id="chatto-admin-v1-DeleteAppResponse"></a>
+
+#### Result: DeleteAppResponse
+
+Confirms app deletion.

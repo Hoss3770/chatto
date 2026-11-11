@@ -88,6 +88,22 @@ describe('getAdminNavItems', () => {
     expect(items.some((item) => item.label === 'Permissions')).toBe(true);
   });
 
+  it('shows Apps only to server managers who can create bots', () => {
+    const serverManager = getAdminNavItems({
+      serverSegment: 'local',
+      permissions: permissions({ canManageServer: true })
+    });
+    const appManager = getAdminNavItems({
+      serverSegment: 'local',
+      permissions: permissions({ canManageServer: true, canCreateBots: true })
+    });
+
+    expect(serverManager.some((item) => item.label === 'Apps')).toBe(false);
+    expect(appManager.find((item) => item.label === 'Apps')?.href).toBe(
+      '/chat/local/manage/server/apps'
+    );
+  });
+
   it('shows Invite links only for invitation managers', () => {
     const hidden = getAdminNavItems({
       serverSegment: 'local',

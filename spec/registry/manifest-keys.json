@@ -34,7 +34,7 @@
       "description_sha256": "244fff48f85f5f319a5a6f08d4ec6166e76e524493470912677f2aec99cf6f44",
       "compatibility": {
         "status": "unsupported",
-        "reason": "The manifest service and console do not exist yet.",
+        "reason": "Chatto preserves and validates this key in the administrative manifest service, but the target apps.manifest Web API routes do not exist.",
         "target_phase": 1,
         "semantic_mapping": "Preserve, validate, and apply through the app definition"
       }
@@ -50,7 +50,7 @@
       "description_sha256": "b2be18e922d090ba51ed1888edb7e7f3d3e2d0b413c69ccc7be3ab58b408f1c9",
       "compatibility": {
         "status": "unsupported",
-        "reason": "The manifest service and console do not exist yet.",
+        "reason": "Chatto preserves and validates this key in the administrative manifest service, but the target apps.manifest Web API routes do not exist.",
         "target_phase": 1,
         "semantic_mapping": "Preserve, validate, and apply through the app definition"
       }
@@ -66,7 +66,7 @@
       "description_sha256": "f6238f3a7b6d714d5c4dbdb11504f00ca668a801d25eb7972097ce020bbc67ff",
       "compatibility": {
         "status": "unsupported",
-        "reason": "The manifest service and console do not exist yet.",
+        "reason": "Chatto preserves and validates this key in the administrative manifest service, but the target apps.manifest Web API routes do not exist.",
         "target_phase": 1,
         "semantic_mapping": "Preserve, validate, and apply through the app definition"
       }
@@ -418,7 +418,7 @@
       "description_sha256": "e53b8f72c85a338ba0f7ea8dadb0d736fc0dac5df60ba79d7014a0cbe652ecfa",
       "compatibility": {
         "status": "unsupported",
-        "reason": "The manifest service and console do not exist yet.",
+        "reason": "Chatto preserves and validates this key in the administrative manifest service, but the target apps.manifest Web API routes do not exist.",
         "target_phase": 1,
         "semantic_mapping": "Preserve, validate, and apply through the app definition"
       }
@@ -434,7 +434,7 @@
       "description_sha256": "f69ad4dfa29fbaba53384f83a1f2937d7f1fac78e2007778237946c05b5224e0",
       "compatibility": {
         "status": "unsupported",
-        "reason": "The manifest service and console do not exist yet.",
+        "reason": "Chatto preserves and validates this key in the administrative manifest service, but the target apps.manifest Web API routes do not exist.",
         "target_phase": 1,
         "semantic_mapping": "Preserve, validate, and apply through the app definition"
       }
@@ -450,7 +450,7 @@
       "description_sha256": "4acd86308fd383f4257f154af02a8f7854f76b6f9bf85ab48b4630663ee8d18b",
       "compatibility": {
         "status": "unsupported",
-        "reason": "The manifest service and console do not exist yet.",
+        "reason": "Chatto preserves and validates this key in the administrative manifest service, but the target apps.manifest Web API routes do not exist.",
         "target_phase": 1,
         "semantic_mapping": "Preserve, validate, and apply through the app definition"
       }
@@ -466,7 +466,7 @@
       "description_sha256": "3ba36b37bb784d190975b289b96a7b2c8f352ff54264ae759890b4b196d5a955",
       "compatibility": {
         "status": "unsupported",
-        "reason": "The manifest service and console do not exist yet.",
+        "reason": "Chatto preserves and validates this key in the administrative manifest service, but the target apps.manifest Web API routes do not exist.",
         "target_phase": 1,
         "semantic_mapping": "Preserve, validate, and apply through the app definition"
       }
@@ -482,7 +482,7 @@
       "description_sha256": "0f833c7f6be34b0d5479248fd6abe7c3c3b78a5f37ca1a06348729e926202851",
       "compatibility": {
         "status": "unsupported",
-        "reason": "The manifest service and console do not exist yet.",
+        "reason": "Chatto preserves and validates this key in the administrative manifest service, but the target apps.manifest Web API routes do not exist.",
         "target_phase": 1,
         "semantic_mapping": "Preserve, validate, and apply through the app definition"
       }
@@ -866,7 +866,7 @@
       "description_sha256": "16609a25566522e79186c218090e629b8908e45979c47674911caf20bfe29aaf",
       "compatibility": {
         "status": "unsupported",
-        "reason": "The manifest service and console do not exist yet.",
+        "reason": "Chatto preserves and validates this key in the administrative manifest service, but the target apps.manifest Web API routes do not exist.",
         "target_phase": 4,
         "semantic_mapping": "Preserve, validate, and apply through the app definition"
       }
@@ -882,7 +882,7 @@
       "description_sha256": "fa3e61c83b71604b29e7d364be9391228adef710cd5a5c7bf640bda6d8edba03",
       "compatibility": {
         "status": "unsupported",
-        "reason": "The manifest service and console do not exist yet.",
+        "reason": "Chatto preserves and validates this key in the administrative manifest service, but the target apps.manifest Web API routes do not exist.",
         "target_phase": 4,
         "semantic_mapping": "Preserve, validate, and apply through the app definition"
       }
@@ -898,7 +898,7 @@
       "description_sha256": "7ee41c477df3aa0f3bb4fb66b1149a21dbebafb78721cf91f405c132f8dfb3e5",
       "compatibility": {
         "status": "unsupported",
-        "reason": "The manifest service and console do not exist yet.",
+        "reason": "Chatto preserves and validates this key in the administrative manifest service, but the target apps.manifest Web API routes do not exist.",
         "target_phase": 4,
         "semantic_mapping": "Preserve, validate, and apply through the app definition"
       }
@@ -914,7 +914,7 @@
       "description_sha256": "5705c4a44a394a4ee16236e4596552406a453c8944d8b39aa535450dd81c3c05",
       "compatibility": {
         "status": "unsupported",
-        "reason": "The manifest service and console do not exist yet.",
+        "reason": "Chatto preserves and validates this key in the administrative manifest service, but the target apps.manifest Web API routes do not exist.",
         "target_phase": 4,
         "semantic_mapping": "Preserve, validate, and apply through the app definition"
       }
@@ -994,7 +994,7 @@
       "description_sha256": "a045bb980560e9dfe4738e565a1a462ca95514251b1b0bc5abe4ece548fe8f12",
       "compatibility": {
         "status": "unsupported",
-        "reason": "The manifest service and console do not exist yet.",
+        "reason": "Chatto preserves and validates this key in the administrative manifest service, but the target apps.manifest Web API routes do not exist.",
         "target_phase": 1,
         "semantic_mapping": "Preserve, validate, and apply through the app definition"
       }
@@ -1010,7 +1010,7 @@
       "description_sha256": "362341e061870ea1c7031d91dd35935688d03e5814f20e35da059e63b0296432",
       "compatibility": {
         "status": "unsupported",
-        "reason": "The manifest service and console do not exist yet.",
+        "reason": "Chatto preserves and validates this key in the administrative manifest service, but the target apps.manifest Web API routes do not exist.",
         "target_phase": 1,
         "semantic_mapping": "Preserve, validate, and apply through the app definition"
       }
@@ -1026,7 +1026,7 @@
       "description_sha256": "b7ccb522e3d83c4cba0e0033b5b2969bea1a37e18266dd06e96c6ab526dd481d",
       "compatibility": {
         "status": "unsupported",
-        "reason": "The manifest service and console do not exist yet.",
+        "reason": "Chatto preserves and validates this key in the administrative manifest service, but the target apps.manifest Web API routes do not exist.",
         "target_phase": 1,
         "semantic_mapping": "Preserve, validate, and apply through the app definition"
       }
@@ -1266,7 +1266,7 @@
       "description_sha256": "6e2110169b46a5b4362cadfbf5008eb554ac7e89ed3a9b62fe7a8aafcc8917ab",
       "compatibility": {
         "status": "unsupported",
-        "reason": "The manifest service and console do not exist yet.",
+        "reason": "Chatto preserves and validates this key in the administrative manifest service, but the target apps.manifest Web API routes do not exist.",
         "target_phase": 4,
         "semantic_mapping": "Preserve, validate, and apply through the app definition"
       }
@@ -1346,7 +1346,7 @@
       "description_sha256": "ebe5f71bbb2b0edc8fb623fd50edd71233d0ce4894ef252f645c42a6d85f3b35",
       "compatibility": {
         "status": "unsupported",
-        "reason": "The manifest service and console do not exist yet.",
+        "reason": "Chatto preserves and validates this key in the administrative manifest service, but the target apps.manifest Web API routes do not exist.",
         "target_phase": 3,
         "semantic_mapping": "Preserve, validate, and apply through the app definition"
       }
@@ -1442,7 +1442,7 @@
       "description_sha256": "70ffe661936fbc9b7bc3d2c428ddb21e6f17c076c157b7e734ac57b0a9f3c96a",
       "compatibility": {
         "status": "unsupported",
-        "reason": "The manifest service and console do not exist yet.",
+        "reason": "Chatto preserves and validates this key in the administrative manifest service, but the target apps.manifest Web API routes do not exist.",
         "target_phase": 5,
         "semantic_mapping": "Preserve, validate, and apply through the app definition"
       }
@@ -1522,7 +1522,7 @@
       "description_sha256": "63064ae50238647e929bb6915568036240f73b7e1f494e59eb1cd330a96cae7f",
       "compatibility": {
         "status": "unsupported",
-        "reason": "The manifest service and console do not exist yet.",
+        "reason": "Chatto preserves and validates this key in the administrative manifest service, but the target apps.manifest Web API routes do not exist.",
         "target_phase": 1,
         "semantic_mapping": "Preserve, validate, and apply through the app definition"
       }
@@ -1538,7 +1538,7 @@
       "description_sha256": "9a6d43890c8e52d67e3c6882058fd3f1d0b6ac08ac1c9925794dfe466e4e9dca",
       "compatibility": {
         "status": "unsupported",
-        "reason": "The manifest service and console do not exist yet.",
+        "reason": "Chatto preserves and validates this key in the administrative manifest service, but the target apps.manifest Web API routes do not exist.",
         "target_phase": 1,
         "semantic_mapping": "Preserve, validate, and apply through the app definition"
       }
@@ -1554,7 +1554,7 @@
       "description_sha256": "1bd6e3396691214d0310f82c6018615a3ef26ae16d0ca95a5bf64b1d0ea021f1",
       "compatibility": {
         "status": "unsupported",
-        "reason": "The manifest service and console do not exist yet.",
+        "reason": "Chatto preserves and validates this key in the administrative manifest service, but the target apps.manifest Web API routes do not exist.",
         "target_phase": 1,
         "semantic_mapping": "Preserve, validate, and apply through the app definition"
       }
@@ -1570,7 +1570,7 @@
       "description_sha256": "c946650c55eb23561e52e2450782568b621b2ecbb8e8acdbf094aa5e453767e2",
       "compatibility": {
         "status": "unsupported",
-        "reason": "The manifest service and console do not exist yet.",
+        "reason": "Chatto preserves and validates this key in the administrative manifest service, but the target apps.manifest Web API routes do not exist.",
         "target_phase": 1,
         "semantic_mapping": "Preserve, validate, and apply through the app definition"
       }
@@ -1586,7 +1586,7 @@
       "description_sha256": "9386f2866112947f4fd448ced0af6832829599cc43e8901d55c4f1ea86c86a15",
       "compatibility": {
         "status": "unsupported",
-        "reason": "The manifest service and console do not exist yet.",
+        "reason": "Chatto preserves and validates this key in the administrative manifest service, but the target apps.manifest Web API routes do not exist.",
         "target_phase": 1,
         "semantic_mapping": "Preserve, validate, and apply through the app definition"
       }
@@ -1602,7 +1602,7 @@
       "description_sha256": "2e95406b196be93971f0d8de99cdc1c1b08550aa806d2c6ed030040cfacab220",
       "compatibility": {
         "status": "unsupported",
-        "reason": "The manifest service and console do not exist yet.",
+        "reason": "Chatto preserves and validates this key in the administrative manifest service, but the target apps.manifest Web API routes do not exist.",
         "target_phase": 1,
         "semantic_mapping": "Preserve, validate, and apply through the app definition"
       }
@@ -1618,7 +1618,7 @@
       "description_sha256": "c63b35c982dfb7c9cda915670d78ba2c68861d0266c7210d62d6be132ef82305",
       "compatibility": {
         "status": "unsupported",
-        "reason": "The manifest service and console do not exist yet.",
+        "reason": "Chatto preserves and validates this key in the administrative manifest service, but the target apps.manifest Web API routes do not exist.",
         "target_phase": 1,
         "semantic_mapping": "Preserve, validate, and apply through the app definition"
       }
@@ -1634,7 +1634,7 @@
       "description_sha256": "3a53e3c578a89a0377eb464f95f12191546cea0e4b6620bc4d86a138e0b874da",
       "compatibility": {
         "status": "unsupported",
-        "reason": "The manifest service and console do not exist yet.",
+        "reason": "Chatto preserves and validates this key in the administrative manifest service, but the target apps.manifest Web API routes do not exist.",
         "target_phase": 1,
         "semantic_mapping": "Preserve, validate, and apply through the app definition"
       }
@@ -1650,7 +1650,7 @@
       "description_sha256": "9e30f408b8f4584786faa6360441816df6153f71cccd72f63c8af402410739af",
       "compatibility": {
         "status": "unsupported",
-        "reason": "The manifest service and console do not exist yet.",
+        "reason": "Chatto preserves and validates this key in the administrative manifest service, but the target apps.manifest Web API routes do not exist.",
         "target_phase": 1,
         "semantic_mapping": "Preserve, validate, and apply through the app definition"
       }
@@ -1666,7 +1666,7 @@
       "description_sha256": "d81b0c3cb351ff7ff85421cf7d370f1d5b8e8d1fbf133320209aea668e1aae5e",
       "compatibility": {
         "status": "unsupported",
-        "reason": "The manifest service and console do not exist yet.",
+        "reason": "Chatto preserves and validates this key in the administrative manifest service, but the target apps.manifest Web API routes do not exist.",
         "target_phase": 1,
         "semantic_mapping": "Preserve, validate, and apply through the app definition"
       }
@@ -1714,7 +1714,7 @@
       "description_sha256": "8b693b690db3d267e41849fe28d881c5591c325e1b1a915f9a934333d1f314bc",
       "compatibility": {
         "status": "unsupported",
-        "reason": "The manifest service and console do not exist yet.",
+        "reason": "Chatto preserves and validates this key in the administrative manifest service, but the target apps.manifest Web API routes do not exist.",
         "target_phase": 3,
         "semantic_mapping": "Preserve, validate, and apply through the app definition"
       }
@@ -1746,7 +1746,7 @@
       "description_sha256": "64d2266d206d77e844399edb5544c50fe99f0a300088d614282c1fb1bff35e93",
       "compatibility": {
         "status": "unsupported",
-        "reason": "The manifest service and console do not exist yet.",
+        "reason": "Chatto preserves and validates this key in the administrative manifest service, but the target apps.manifest Web API routes do not exist.",
         "target_phase": 3,
         "semantic_mapping": "Preserve, validate, and apply through the app definition"
       }
@@ -1762,7 +1762,7 @@
       "description_sha256": "a9504259c4f614ad9102eb0f9b35d467c4ebc44ae172a9c087b57d92b7c110d9",
       "compatibility": {
         "status": "unsupported",
-        "reason": "The manifest service and console do not exist yet.",
+        "reason": "Chatto preserves and validates this key in the administrative manifest service, but the target apps.manifest Web API routes do not exist.",
         "target_phase": 3,
         "semantic_mapping": "Preserve, validate, and apply through the app definition"
       }
@@ -1778,7 +1778,7 @@
       "description_sha256": "378399bd3afaf80d2fd0d7bba788bf455b5d22177941ff33b010167bf71867e0",
       "compatibility": {
         "status": "unsupported",
-        "reason": "The manifest service and console do not exist yet.",
+        "reason": "Chatto preserves and validates this key in the administrative manifest service, but the target apps.manifest Web API routes do not exist.",
         "target_phase": 3,
         "semantic_mapping": "Preserve, validate, and apply through the app definition"
       }
@@ -1794,7 +1794,7 @@
       "description_sha256": "cd2516828e523dd7a72a0b81c2ab1e2ff6364f60ebbbe6ef7c6bb1d7b0354a8b",
       "compatibility": {
         "status": "unsupported",
-        "reason": "The manifest service and console do not exist yet.",
+        "reason": "Chatto preserves and validates this key in the administrative manifest service, but the target apps.manifest Web API routes do not exist.",
         "target_phase": 3,
         "semantic_mapping": "Preserve, validate, and apply through the app definition"
       }
@@ -1810,7 +1810,7 @@
       "description_sha256": "691552e0a153f07eac25b284441ed466b82cb7f4315e8cd2da84df777fd5c0c0",
       "compatibility": {
         "status": "unsupported",
-        "reason": "The manifest service and console do not exist yet.",
+        "reason": "Chatto preserves and validates this key in the administrative manifest service, but the target apps.manifest Web API routes do not exist.",
         "target_phase": 3,
         "semantic_mapping": "Preserve, validate, and apply through the app definition"
       }
@@ -1842,7 +1842,7 @@
       "description_sha256": "e53e0c3e3c46f8a8fd3c94edaf91c905eb0b81556edabc063e2d30279f610dda",
       "compatibility": {
         "status": "unsupported",
-        "reason": "The manifest service and console do not exist yet.",
+        "reason": "Chatto preserves and validates this key in the administrative manifest service, but the target apps.manifest Web API routes do not exist.",
         "target_phase": 2,
         "semantic_mapping": "Preserve, validate, and apply through the app definition"
       }
@@ -1858,7 +1858,7 @@
       "description_sha256": "58323271448ea70ef71d6c5399006724687d41640df6aa73d8938617e7cc5ecf",
       "compatibility": {
         "status": "unsupported",
-        "reason": "The manifest service and console do not exist yet.",
+        "reason": "Chatto preserves and validates this key in the administrative manifest service, but the target apps.manifest Web API routes do not exist.",
         "target_phase": 4,
         "semantic_mapping": "Preserve, validate, and apply through the app definition"
       }
@@ -1874,7 +1874,7 @@
       "description_sha256": "184fe82200618c18acd20558bcd97796bf803adf224e400ae0649815753162a1",
       "compatibility": {
         "status": "unsupported",
-        "reason": "The manifest service and console do not exist yet.",
+        "reason": "Chatto preserves and validates this key in the administrative manifest service, but the target apps.manifest Web API routes do not exist.",
         "target_phase": 4,
         "semantic_mapping": "Preserve, validate, and apply through the app definition"
       }
@@ -1890,7 +1890,7 @@
       "description_sha256": "e04353fadf9404c8a363258c4b626ec885526dedeaed9b45e66a264f7cb968ce",
       "compatibility": {
         "status": "unsupported",
-        "reason": "The manifest service and console do not exist yet.",
+        "reason": "Chatto preserves and validates this key in the administrative manifest service, but the target apps.manifest Web API routes do not exist.",
         "target_phase": 4,
         "semantic_mapping": "Preserve, validate, and apply through the app definition"
       }
@@ -1906,7 +1906,7 @@
       "description_sha256": "5af49fa06915616bfe2c30b5bb32b890a75f63aee40e7f7660cb78ad522356d1",
       "compatibility": {
         "status": "unsupported",
-        "reason": "The manifest service and console do not exist yet.",
+        "reason": "Chatto preserves and validates this key in the administrative manifest service, but the target apps.manifest Web API routes do not exist.",
         "target_phase": 4,
         "semantic_mapping": "Preserve, validate, and apply through the app definition"
       }
@@ -2002,7 +2002,7 @@
       "description_sha256": "56206d04d1759b830503b3de5e012b39e2172c28be3ce3a45b3e550fd9af809b",
       "compatibility": {
         "status": "unsupported",
-        "reason": "The manifest service and console do not exist yet.",
+        "reason": "Chatto preserves and validates this key in the administrative manifest service, but the target apps.manifest Web API routes do not exist.",
         "target_phase": 3,
         "semantic_mapping": "Preserve, validate, and apply through the app definition"
       }
@@ -2018,7 +2018,7 @@
       "description_sha256": "81e25b8df9add634cb9543bc2bdc2b91b45af338af6e73399a8e1a0b5fe7b311",
       "compatibility": {
         "status": "unsupported",
-        "reason": "The manifest service and console do not exist yet.",
+        "reason": "Chatto preserves and validates this key in the administrative manifest service, but the target apps.manifest Web API routes do not exist.",
         "target_phase": 5,
         "semantic_mapping": "Preserve, validate, and apply through the app definition"
       }

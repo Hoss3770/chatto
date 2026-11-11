@@ -1,7 +1,7 @@
 # FDR-038: Bot Accounts
 
 **Status:** Experimental
-**Last reviewed:** 2026-09-27
+**Last reviewed:** 2026-11-11
 
 ## Overview
 
@@ -11,6 +11,10 @@ within an explicit permission allowlist, but it cannot sign in as a person or
 exercise more authority than its human owner currently possesses.
 
 ## Behavior
+
+- An app installation creates one managed bot that is owned by the installing
+  human. Uninstall deactivates the bot and keeps its identity and authorship.
+  Reinstall uses the same bot. See [FDR-056](FDR-056-app-compatibility-platform.md).
 
 - Public `User.bot` metadata identifies a bot by its presence and contains
   `owner_user_id`. It is absent for humans and deleted-account references.
@@ -569,13 +573,13 @@ editor only when the server version is 0.5.0-beta.9 or later.
   permissions), ADR-083 (action-limited bot incoming webhooks), ADR-085
   (user-scoped MCP integration), ADR-087 (request-time authorization with
   aggregate OCC), ADR-089 (server content view), ADR-091 (semantic realtime
-  events)
+  events), ADR-122 (additive app compatibility adapter)
 - **FDRs:** FDR-001 (Roles & Permissions), FDR-002 (Replies & Threads), FDR-006
   (@Mentions), FDR-007 (Direct Messages), FDR-012 (Notifications), FDR-018
   (Account Lifecycle), FDR-022 (User Profile), FDR-023 (Authentication &
   Sessions), FDR-025 (User Search & Member Directory), FDR-039 (Message Access
   & Interactions), FDR-043 (Model Context Protocol Integration), FDR-045
-  (Realtime Event Stream)
+  (Realtime Event Stream), FDR-056 (App Compatibility Platform)
 
 ## Open Questions
 

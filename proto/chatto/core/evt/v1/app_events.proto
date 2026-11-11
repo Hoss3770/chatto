@@ -1,0 +1,132 @@
+syntax = "proto3";
+
+package chatto.core.evt.v1;
+
+option go_package = "github.com/chattocorp/chatto/cli/internal/pb/chatto/core/evt/v1;evtv1";
+
+// EncryptedAppValue stores one app-owned value encrypted with the app data
+// encryption key. The content key record stays in RUNTIME_STATE.
+message EncryptedAppValue {
+  // Authenticated ciphertext for the app-owned value.
+  bytes ciphertext = 1;
+  // Nonce that protects this ciphertext.
+  bytes nonce = 2;
+  // Immutable wrapped app content-key record in RUNTIME_STATE.
+  string content_key_ref = 3;
+}
+
+// AppCreatedEvent establishes one app definition and its managed bot.
+message AppCreatedEvent {
+  // Stable app and OAuth client identifier.
+  string app_id = 1;
+  // Human account that owned the managed bot at creation time.
+  string owner_user_id = 2;
+  // Canonical managed bot account.
+  string bot_user_id = 3;
+  // Manifest display name.
+  string name = 4;
+  // Manifest short description.
+  string description = 5;
+  // Encrypted canonical manifest JSON.
+  EncryptedAppValue manifest = 6;
+  // First accepted complete manifest revision.
+  uint64 manifest_revision = 7;
+  // Keyed verifier for the OAuth client secret.
+  bytes client_secret_verifier = 8;
+  // Encrypted recoverable request-signing secret.
+  EncryptedAppValue signing_secret = 9;
+  // Bot scopes requested by the manifest.
+  repeated string requested_bot_scopes = 10;
+  // User scopes requested by the manifest.
+  repeated string requested_user_scopes = 11;
+  // Canonical external origins extracted for operator review.
+  repeated string redirect_origins = 12;
+}
+
+// AppManifestUpdatedEvent accepts a new complete manifest revision. It does not
+// grant new scopes or reactivate an installation by itself.
+message AppManifestUpdatedEvent {
+  // App whose complete manifest changed.
+  string app_id = 1;
+  // New manifest display name.
+  string name = 2;
+  // New manifest short description.
+  string description = 3;
+  // Encrypted canonical manifest JSON.
+  EncryptedAppValue manifest = 4;
+  // Monotonic accepted manifest revision.
+  uint64 manifest_revision = 5;
+  // Bot scopes requested by this revision.
+  repeated string requested_bot_scopes = 6;
+  // User scopes requested by this revision.
+  repeated string requested_user_scopes = 7;
+  // Canonical external origins extracted for operator review.
+  repeated string redirect_origins = 8;
+}
+
+// AppInstalledEvent activates one bot installation after its Chatto permission
+// grants have committed.
+message AppInstalledEvent {
+  // App whose managed bot became active.
+  string app_id = 1;
+  // Monotonic installation and token generation.
+  uint64 install_generation = 2;
+  // Keyed verifier for the issued bot access token.
+  bytes bot_token_verifier = 3;
+  // Keyed verifier for the issued app-level access token, when present.
+  bytes app_token_verifier = 4;
+  // Bot scopes approved for this generation.
+  repeated string granted_bot_scopes = 5;
+  // User scopes approved for this generation.
+  repeated string granted_user_scopes = 6;
+}
+
+// AppBotTokenRotatedEvent replaces the active bot token after OAuth
+// reauthorization. The old token becomes invalid when this fact commits.
+message AppBotTokenRotatedEvent {
+  // App whose bot access token changed.
+  string app_id = 1;
+  // Monotonic installation and token generation.
+  uint64 install_generation = 2;
+  // Keyed verifier for the new bot access token.
+  bytes bot_token_verifier = 3;
+  // Bot scopes approved for this generation.
+  repeated string granted_bot_scopes = 4;
+  // User scopes approved for this generation.
+  repeated string granted_user_scopes = 5;
+}
+
+// AppBotTokenRevokedEvent revokes only the active bot token.
+message AppBotTokenRevokedEvent {
+  // App whose bot access token became invalid.
+  string app_id = 1;
+  // Monotonic installation and token generation.
+  uint64 install_generation = 2;
+}
+
+// AppUninstalledEvent deactivates an installation and revokes its access
+// tokens.
+message AppUninstalledEvent {
+  // App whose installation became inactive.
+  string app_id = 1;
+  // Monotonic installation and token generation.
+  uint64 install_generation = 2;
+}
+
+// AppCredentialsRegeneratedEvent replaces the OAuth client and request-signing
+// secrets. Raw secret values never enter EVT.
+message AppCredentialsRegeneratedEvent {
+  // App whose client credentials changed.
+  string app_id = 1;
+  // Keyed verifier for the new OAuth client secret.
+  bytes client_secret_verifier = 2;
+  // Encrypted recoverable request-signing secret.
+  EncryptedAppValue signing_secret = 3;
+}
+
+// AppDeletedEvent permanently removes an app from active management. Historical
+// bot authorship and encrypted app facts remain available for replay.
+message AppDeletedEvent {
+  // App removed from active management.
+  string app_id = 1;
+}

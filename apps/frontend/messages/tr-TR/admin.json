@@ -584,6 +584,34 @@
         "exhausted": "Tükendi",
         "revoked": "İptal edildi"
       }
+    },
+    "apps": {
+      "title": "Uygulamalar",
+      "subtitle": "Bildirimleri, kurulumları ve kimlik bilgilerini yönetin",
+      "disabled": "Bu sunucuda uygulama yönetimi devre dışıdır.",
+      "platform": "Platform",
+      "manifest": "Bildirim",
+      "manifest_help": "Eksiksiz bir JSON veya YAML bildirimi yapıştırın. Kaydetmeden önce inceleyin.",
+      "review": "İncele",
+      "create_install": "Kur",
+      "update": "Güncelle",
+      "update_manifest": "Bildirim",
+      "implemented": "Uygulandı",
+      "partial": "Kısmi",
+      "unsupported": "Desteklenmiyor",
+      "list": "Uygulamalar",
+      "empty": "Henüz uygulama yok",
+      "credentials": "Kimlik bilgileri",
+      "credentials_warning": "Bu değerleri şimdi kaydedin. Chatto bunları tekrar gösteremez.",
+      "close": "Kapat",
+      "copy": "Kopyala",
+      "export": "Dışa aktar",
+      "regenerate": "Yeniden oluştur",
+      "install": "Kur",
+      "uninstall": "Kaldır",
+      "state_installed": "Kurulu",
+      "state_uninstalled": "Kaldırıldı",
+      "state_not_installed": "Taslak"
     }
   }
 }

@@ -355,6 +355,14 @@ stable machine-readable keys such as `config_model`, `message_model`, and
   compact purpose-separated token derivation, and projection readiness;
   redemption commits atomically with the admitted account against a whole-EVT
   OCC guard.
+- **`AppModel`**
+  ([`apps.go`](../../cli/internal/core/apps.go),
+  [`app_projection.go`](../../cli/internal/core/app_projection.go),
+  [`app_alias_projection.go`](../../cli/internal/core/app_alias_projection.go)):
+  Sole core owner of app definitions, managed-bot installation lifecycle,
+  credential verification, OAuth installation-code exchange, shared method
+  rate limits, stable workspace aliases, and room-local message timestamps.
+  App lifecycle and bot activation use aggregate OCC and atomic EVT batches.
 - **`OAuthClientModel`**
   ([`oauth_clients.go`](../../cli/internal/core/oauth_clients.go),
   [`oauth_client_projection.go`](../../cli/internal/core/oauth_client_projection.go)):

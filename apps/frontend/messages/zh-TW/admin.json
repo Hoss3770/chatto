@@ -573,6 +573,34 @@
         "exhausted": "已用完",
         "revoked": "已撤銷"
       }
+    },
+    "apps": {
+      "title": "應用程式",
+      "subtitle": "管理資訊清單、安裝和憑證",
+      "disabled": "此伺服器已停用應用程式管理。",
+      "platform": "平台",
+      "manifest": "資訊清單",
+      "manifest_help": "貼上完整的 JSON 或 YAML 資訊清單。儲存前請先檢查。",
+      "review": "檢查",
+      "create_install": "安裝",
+      "update": "更新",
+      "update_manifest": "資訊清單",
+      "implemented": "已實作",
+      "partial": "部分支援",
+      "unsupported": "不支援",
+      "list": "應用程式",
+      "empty": "尚無應用程式",
+      "credentials": "憑證",
+      "credentials_warning": "請立即儲存這些值。Chatto 無法再次顯示。",
+      "close": "關閉",
+      "copy": "複製",
+      "export": "匯出",
+      "regenerate": "重新產生",
+      "install": "安裝",
+      "uninstall": "解除安裝",
+      "state_installed": "已安裝",
+      "state_uninstalled": "已解除安裝",
+      "state_not_installed": "草稿"
     }
   }
 }

@@ -573,6 +573,34 @@
         "exhausted": "上限到達",
         "revoked": "取り消し済み"
       }
+    },
+    "apps": {
+      "title": "アプリ",
+      "subtitle": "マニフェスト、インストール、認証情報を管理します",
+      "disabled": "このサーバーではアプリ管理が無効です。",
+      "platform": "プラットフォーム",
+      "manifest": "マニフェスト",
+      "manifest_help": "完全な JSON または YAML マニフェストを貼り付けてください。保存前に確認してください。",
+      "review": "確認",
+      "create_install": "インストール",
+      "update": "更新",
+      "update_manifest": "マニフェスト",
+      "implemented": "実装済み",
+      "partial": "一部対応",
+      "unsupported": "未対応",
+      "list": "アプリ",
+      "empty": "アプリはまだありません",
+      "credentials": "認証情報",
+      "credentials_warning": "これらの値を今すぐ保存してください。Chatto では再表示できません。",
+      "close": "閉じる",
+      "copy": "コピー",
+      "export": "エクスポート",
+      "regenerate": "再生成",
+      "install": "インストール",
+      "uninstall": "アンインストール",
+      "state_installed": "インストール済み",
+      "state_uninstalled": "アンインストール済み",
+      "state_not_installed": "下書き"
     }
   }
 }

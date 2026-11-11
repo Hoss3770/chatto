@@ -606,6 +606,34 @@
         "exhausted": "Vyčerpán",
         "revoked": "Odvolán"
       }
+    },
+    "apps": {
+      "title": "Aplikace",
+      "subtitle": "Spravujte manifesty, instalace a přihlašovací údaje",
+      "disabled": "Správa aplikací je na tomto serveru vypnutá.",
+      "platform": "Platforma",
+      "manifest": "Manifest",
+      "manifest_help": "Vložte úplný manifest JSON nebo YAML. Před uložením ho zkontrolujte.",
+      "review": "Zkontrolovat",
+      "create_install": "Nainstalovat",
+      "update": "Aktualizovat",
+      "update_manifest": "Manifest",
+      "implemented": "Implementováno",
+      "partial": "Částečně",
+      "unsupported": "Nepodporováno",
+      "list": "Aplikace",
+      "empty": "Zatím žádné aplikace",
+      "credentials": "Přihlašovací údaje",
+      "credentials_warning": "Uložte tyto hodnoty nyní. Chatto je už nebude moci zobrazit.",
+      "close": "Zavřít",
+      "copy": "Kopírovat",
+      "export": "Exportovat",
+      "regenerate": "Vygenerovat znovu",
+      "install": "Nainstalovat",
+      "uninstall": "Odinstalovat",
+      "state_installed": "Nainstalována",
+      "state_uninstalled": "Odinstalována",
+      "state_not_installed": "Koncept"
     }
   }
 }

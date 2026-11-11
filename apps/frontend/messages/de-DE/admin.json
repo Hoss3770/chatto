@@ -584,6 +584,34 @@
         "exhausted": "Aufgebraucht",
         "revoked": "Widerrufen"
       }
+    },
+    "apps": {
+      "title": "Apps",
+      "subtitle": "Manifeste, Installationen und Zugangsdaten verwalten",
+      "disabled": "Die App-Verwaltung ist auf diesem Server deaktiviert.",
+      "platform": "Plattform",
+      "manifest": "Manifest",
+      "manifest_help": "Füge ein vollständiges JSON- oder YAML-Manifest ein. Prüfe es vor dem Speichern.",
+      "review": "Prüfen",
+      "create_install": "Installieren",
+      "update": "Aktualisieren",
+      "update_manifest": "Manifest",
+      "implemented": "Umgesetzt",
+      "partial": "Teilweise",
+      "unsupported": "Nicht unterstützt",
+      "list": "Apps",
+      "empty": "Noch keine Apps",
+      "credentials": "Zugangsdaten",
+      "credentials_warning": "Speichere diese Werte jetzt. Chatto kann sie nicht erneut anzeigen.",
+      "close": "Schließen",
+      "copy": "Kopieren",
+      "export": "Exportieren",
+      "regenerate": "Neu erzeugen",
+      "install": "Installieren",
+      "uninstall": "Deinstallieren",
+      "state_installed": "Installiert",
+      "state_uninstalled": "Deinstalliert",
+      "state_not_installed": "Entwurf"
     }
   }
 }

@@ -412,6 +412,37 @@ func TestChattoConfig_Validate_MCPRequiresPublicWebserverURL(t *testing.T) {
 	}
 }
 
+func TestChattoConfig_Validate_AppsRequireSecurePublicWebserverURL(t *testing.T) {
+	tests := []struct {
+		name      string
+		url       string
+		wantError string
+	}{
+		{name: "missing", wantError: "webserver.url is required when apps are enabled"},
+		{name: "public HTTP", url: "http://chat.example", wantError: "webserver.url must use https when apps are enabled"},
+		{name: "public HTTPS", url: "https://chat.example"},
+		{name: "public HTTPS with root slash", url: "https://chat.example/"},
+		{name: "path is not an origin", url: "https://chat.example/prefix", wantError: "webserver.url must not include a path"},
+		{name: "IPv4 loopback", url: "http://127.0.0.1:8080"},
+		{name: "IPv6 loopback", url: "http://[::1]:8080"},
+		{name: "localhost", url: "http://localhost:8080"},
+	}
+	for _, test := range tests {
+		t.Run(test.name, func(t *testing.T) {
+			cfg := validTestConfig()
+			cfg.Webserver.URL = test.url
+			cfg.Apps.Enabled = true
+			err := cfg.Validate()
+			if test.wantError == "" && err != nil {
+				t.Fatalf("Validate() = %v", err)
+			}
+			if test.wantError != "" && (err == nil || !strings.Contains(err.Error(), test.wantError)) {
+				t.Fatalf("Validate() = %v, want %q", err, test.wantError)
+			}
+		})
+	}
+}
+
 func TestChattoConfig_MCPResourceURLUsesPublicOrigin(t *testing.T) {
 	cfg := validTestConfig()
 	cfg.Webserver.URL = "https://chat.example/configured-path"

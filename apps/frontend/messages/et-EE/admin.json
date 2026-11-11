@@ -584,6 +584,34 @@
         "exhausted": "Ammendatud",
         "revoked": "Tühistatud"
       }
+    },
+    "apps": {
+      "title": "Rakendused",
+      "subtitle": "Hallake manifeste, paigaldusi ja pääsuandmeid",
+      "disabled": "Rakenduste haldus on selles serveris keelatud.",
+      "platform": "Platvorm",
+      "manifest": "Manifest",
+      "manifest_help": "Kleepige täielik JSON- või YAML-manifest. Kontrollige seda enne salvestamist.",
+      "review": "Kontrolli",
+      "create_install": "Paigalda",
+      "update": "Uuenda",
+      "update_manifest": "Manifest",
+      "implemented": "Rakendatud",
+      "partial": "Osaline",
+      "unsupported": "Toetamata",
+      "list": "Rakendused",
+      "empty": "Rakendusi veel pole",
+      "credentials": "Pääsuandmed",
+      "credentials_warning": "Salvestage need väärtused kohe. Chatto ei saa neid uuesti näidata.",
+      "close": "Sulge",
+      "copy": "Kopeeri",
+      "export": "Ekspordi",
+      "regenerate": "Loo uuesti",
+      "install": "Paigalda",
+      "uninstall": "Eemalda",
+      "state_installed": "Paigaldatud",
+      "state_uninstalled": "Eemaldatud",
+      "state_not_installed": "Mustand"
     }
   }
 }

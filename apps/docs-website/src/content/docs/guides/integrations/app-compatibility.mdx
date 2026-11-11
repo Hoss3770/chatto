@@ -1,0 +1,116 @@
+---
+title: App compatibility platform
+description: Enable the experimental app manifest, OAuth installation, and compatibility API foundation.
+---
+
+import { Aside, Steps } from '@astrojs/starlight/components';
+
+The experimental app compatibility platform lets you import an external app
+manifest and issue credentials for a managed Chatto bot. It keeps Chatto's
+normal permissions, room membership, and privacy rules.
+
+<Aside type="caution" title="Limited Phase 1 support">
+  Phase 1 supports manifest administration, bot installation OAuth, `api.test`,
+  `auth.test`, `auth.revoke`, and `apps.uninstall`. Bot-only `oauth.v2.access`
+  is partial. Event delivery, Socket Mode, commands, interactions, structured
+  app views, and most Web API methods are not supported.
+</Aside>
+
+## Enable the platform
+
+Set an HTTPS canonical origin and enable apps:
+
+```toml
+[webserver]
+url = 'https://chat.example.com'
+
+[apps]
+enabled = true
+```
+
+You can also set `CHATTO_APPS_ENABLED=true`.
+
+HTTP is accepted only for loopback development hosts, such as `localhost`, a
+`.localhost` name, `127.0.0.1`, or `::1`.
+
+<Aside type="danger" title="Complete the replica rollout first">
+  Deploy the new version to every serving replica before you enable app writes.
+  After you create the first app, do not roll back to a version that does not
+  understand app facts. You can disable the app edge while you keep a
+  schema-capable version in service.
+</Aside>
+
+## Create an app
+
+<Steps>
+
+1. Open **Server Admin**, then **Apps**.
+2. Paste the complete JSON or YAML manifest.
+3. Select **Review manifest**.
+4. Fix every error. Review the external origins and compatibility warnings.
+5. Create and install the app.
+6. Copy the show-once credentials to the app's secret store.
+7. Configure the API base and OAuth authorize URL in the app.
+
+</Steps>
+
+Chatto preserves unknown manifest keys for export. It does not claim that it
+applies those keys. The maximum manifest size is 1 MiB. Duplicate JSON and YAML
+keys and YAML aliases are rejected. Phase 1 also rejects user scopes.
+
+## Configure app origins
+
+Use the canonical `webserver.url` value:
+
+```text
+API base:       https://chat.example.com/api/
+OAuth authorize: https://chat.example.com/oauth/v2/authorize
+```
+
+Keep the trailing slash on the API base.
+
+Official SDKs use different settings. Common options include:
+
+| SDK | API setting | OAuth authorize setting |
+| --- | --- | --- |
+| Node Web API | `slackApiUrl` | Not applicable |
+| Node Bolt | `clientOptions.slackApiUrl` | `installerOptions.authorizationUrl` |
+| Node OAuth | `clientOptions.slackApiUrl` | `authorizationUrl` |
+| Python Web API | `base_url` | Not applicable |
+| Python Bolt | `WebClient(base_url=...)` | `OAuthSettings(authorization_url=...)` |
+| Java API client | `SlackConfig.methodsEndpointUrlPrefix` | Not applicable |
+
+The inspected Java Bolt release does not provide a first-class browser
+authorization URL setting. Use a custom installation route or change the app
+source. A server-side proxy does not change the URL that a user's browser opens.
+
+## Credential behavior
+
+Chatto shows raw client secrets, signing secrets, bot tokens, and app tokens
+only when it creates them. Store them before you close the credential view.
+Replace the relevant credential if you lose it.
+
+Uninstall revokes access tokens and deactivates the managed bot. It keeps the
+client and signing secrets, bot identity, and message history. Reinstall uses
+the same bot and creates new access tokens. Delete requires an inactive
+installation. Chatto does not let the Bots page delete the managed bot while
+the app definition exists. Reassign the bot or delete the app before you delete
+the bot owner's account.
+
+App administration and browser approval require a human with `server.manage`
+and `bot.create`. An app scope never grants
+a Chatto permission or room access by itself.
+
+## Privacy and security
+
+Review every external origin before installation. An OAuth redirect reveals the
+user's IP address to the callback host. Preserved Request URLs, interaction URLs,
+and media hosts do not receive data until Chatto implements and enables the
+related feature.
+
+Do not put credentials in source control, logs, shell history, issue text, or
+screenshots. Configure proxies so they do not record authorization headers,
+form bodies, or complete query strings.
+
+The existing bot incoming webhook is a separate partial compatibility surface.
+App installation does not create an incoming webhook URL in Phase 1.

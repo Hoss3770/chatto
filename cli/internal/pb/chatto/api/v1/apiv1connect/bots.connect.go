@@ -105,7 +105,8 @@ type BotServiceClient interface {
 	BatchGetBots(context.Context, *connect.Request[v1.BatchGetBotsRequest]) (*connect.Response[v1.BatchGetBotsResponse], error)
 	// Creates a bot owned by the authenticated human caller. Requires bot.create.
 	CreateBot(context.Context, *connect.Request[v1.CreateBotRequest]) (*connect.Response[v1.CreateBotResponse], error)
-	// Deletes a bot and invalidates all of its API keys.
+	// Deletes a bot and invalidates all of its API keys. Returns
+	// FAILED_PRECONDITION while the bot belongs to an app definition.
 	DeleteBot(context.Context, *connect.Request[v1.DeleteBotRequest]) (*connect.Response[v1.DeleteBotResponse], error)
 	// Creates one named API key. A bot can have at most 20 active API keys.
 	CreateBotApiKey(context.Context, *connect.Request[v1.CreateBotApiKeyRequest]) (*connect.Response[v1.CreateBotApiKeyResponse], error)
@@ -364,7 +365,8 @@ type BotServiceHandler interface {
 	BatchGetBots(context.Context, *connect.Request[v1.BatchGetBotsRequest]) (*connect.Response[v1.BatchGetBotsResponse], error)
 	// Creates a bot owned by the authenticated human caller. Requires bot.create.
 	CreateBot(context.Context, *connect.Request[v1.CreateBotRequest]) (*connect.Response[v1.CreateBotResponse], error)
-	// Deletes a bot and invalidates all of its API keys.
+	// Deletes a bot and invalidates all of its API keys. Returns
+	// FAILED_PRECONDITION while the bot belongs to an app definition.
 	DeleteBot(context.Context, *connect.Request[v1.DeleteBotRequest]) (*connect.Response[v1.DeleteBotResponse], error)
 	// Creates one named API key. A bot can have at most 20 active API keys.
 	CreateBotApiKey(context.Context, *connect.Request[v1.CreateBotApiKeyRequest]) (*connect.Response[v1.CreateBotApiKeyResponse], error)

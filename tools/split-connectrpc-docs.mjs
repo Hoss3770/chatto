@@ -184,6 +184,12 @@ const categories = [
     title: 'chatto.admin.v1',
     services: [
       {
+        name: 'AdminAppService',
+        slug: 'admin-apps',
+        title: 'Admin Apps',
+        description: 'App manifest, installation, and credential administration RPCs.'
+      },
+      {
         name: 'AdminInviteLinkService',
         slug: 'admin-invite-links',
         title: 'Admin Invite Links',

@@ -584,6 +584,34 @@
         "exhausted": "Opgebruikt",
         "revoked": "Ingetrokken"
       }
+    },
+    "apps": {
+      "title": "Apps",
+      "subtitle": "Beheer manifesten, installaties en toegangsgegevens",
+      "disabled": "Appbeheer is uitgeschakeld op deze server.",
+      "platform": "Platform",
+      "manifest": "Manifest",
+      "manifest_help": "Plak een volledig JSON- of YAML-manifest. Controleer het voordat je opslaat.",
+      "review": "Controleren",
+      "create_install": "Installeren",
+      "update": "Bijwerken",
+      "update_manifest": "Manifest",
+      "implemented": "Geïmplementeerd",
+      "partial": "Gedeeltelijk",
+      "unsupported": "Niet ondersteund",
+      "list": "Apps",
+      "empty": "Nog geen apps",
+      "credentials": "Toegangsgegevens",
+      "credentials_warning": "Sla deze waarden nu op. Chatto kan ze niet opnieuw tonen.",
+      "close": "Sluiten",
+      "copy": "Kopiëren",
+      "export": "Exporteren",
+      "regenerate": "Opnieuw maken",
+      "install": "Installeren",
+      "uninstall": "Verwijderen",
+      "state_installed": "Geïnstalleerd",
+      "state_uninstalled": "Verwijderd",
+      "state_not_installed": "Concept"
     }
   }
 }

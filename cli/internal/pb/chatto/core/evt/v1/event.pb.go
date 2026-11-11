@@ -205,6 +205,14 @@ type Event struct {
 	//	*Event_BotOutboundWebhookConfigured
 	//	*Event_BotOutboundWebhookUpdated
 	//	*Event_BotOutboundWebhookRevoked
+	//	*Event_AppCreated
+	//	*Event_AppManifestUpdated
+	//	*Event_AppInstalled
+	//	*Event_AppBotTokenRotated
+	//	*Event_AppBotTokenRevoked
+	//	*Event_AppUninstalled
+	//	*Event_AppCredentialsRegenerated
+	//	*Event_AppDeleted
 	//	*Event_ReactionAdded
 	//	*Event_ReactionRemoved
 	Event         isEvent_Event `protobuf_oneof:"event"`
@@ -1606,6 +1614,78 @@ func (x *Event) GetBotOutboundWebhookRevoked() *BotOutboundWebhookRevokedEvent {
 	return nil
 }
 
+func (x *Event) GetAppCreated() *AppCreatedEvent {
+	if x != nil {
+		if x, ok := x.Event.(*Event_AppCreated); ok {
+			return x.AppCreated
+		}
+	}
+	return nil
+}
+
+func (x *Event) GetAppManifestUpdated() *AppManifestUpdatedEvent {
+	if x != nil {
+		if x, ok := x.Event.(*Event_AppManifestUpdated); ok {
+			return x.AppManifestUpdated
+		}
+	}
+	return nil
+}
+
+func (x *Event) GetAppInstalled() *AppInstalledEvent {
+	if x != nil {
+		if x, ok := x.Event.(*Event_AppInstalled); ok {
+			return x.AppInstalled
+		}
+	}
+	return nil
+}
+
+func (x *Event) GetAppBotTokenRotated() *AppBotTokenRotatedEvent {
+	if x != nil {
+		if x, ok := x.Event.(*Event_AppBotTokenRotated); ok {
+			return x.AppBotTokenRotated
+		}
+	}
+	return nil
+}
+
+func (x *Event) GetAppBotTokenRevoked() *AppBotTokenRevokedEvent {
+	if x != nil {
+		if x, ok := x.Event.(*Event_AppBotTokenRevoked); ok {
+			return x.AppBotTokenRevoked
+		}
+	}
+	return nil
+}
+
+func (x *Event) GetAppUninstalled() *AppUninstalledEvent {
+	if x != nil {
+		if x, ok := x.Event.(*Event_AppUninstalled); ok {
+			return x.AppUninstalled
+		}
+	}
+	return nil
+}
+
+func (x *Event) GetAppCredentialsRegenerated() *AppCredentialsRegeneratedEvent {
+	if x != nil {
+		if x, ok := x.Event.(*Event_AppCredentialsRegenerated); ok {
+			return x.AppCredentialsRegenerated
+		}
+	}
+	return nil
+}
+
+func (x *Event) GetAppDeleted() *AppDeletedEvent {
+	if x != nil {
+		if x, ok := x.Event.(*Event_AppDeleted); ok {
+			return x.AppDeleted
+		}
+	}
+	return nil
+}
+
 func (x *Event) GetReactionAdded() *ReactionAddedEvent {
 	if x != nil {
 		if x, ok := x.Event.(*Event_ReactionAdded); ok {
@@ -2266,6 +2346,39 @@ type Event_BotOutboundWebhookRevoked struct {
 	BotOutboundWebhookRevoked *BotOutboundWebhookRevokedEvent `protobuf:"bytes,944,opt,name=bot_outbound_webhook_revoked,json=botOutboundWebhookRevoked,proto3,oneof"`
 }
 
+type Event_AppCreated struct {
+	// ----- App platform (960-979, durable, evt.app.{appId}) -----
+	AppCreated *AppCreatedEvent `protobuf:"bytes,960,opt,name=app_created,json=appCreated,proto3,oneof"`
+}
+
+type Event_AppManifestUpdated struct {
+	AppManifestUpdated *AppManifestUpdatedEvent `protobuf:"bytes,961,opt,name=app_manifest_updated,json=appManifestUpdated,proto3,oneof"`
+}
+
+type Event_AppInstalled struct {
+	AppInstalled *AppInstalledEvent `protobuf:"bytes,962,opt,name=app_installed,json=appInstalled,proto3,oneof"`
+}
+
+type Event_AppBotTokenRotated struct {
+	AppBotTokenRotated *AppBotTokenRotatedEvent `protobuf:"bytes,963,opt,name=app_bot_token_rotated,json=appBotTokenRotated,proto3,oneof"`
+}
+
+type Event_AppBotTokenRevoked struct {
+	AppBotTokenRevoked *AppBotTokenRevokedEvent `protobuf:"bytes,964,opt,name=app_bot_token_revoked,json=appBotTokenRevoked,proto3,oneof"`
+}
+
+type Event_AppUninstalled struct {
+	AppUninstalled *AppUninstalledEvent `protobuf:"bytes,965,opt,name=app_uninstalled,json=appUninstalled,proto3,oneof"`
+}
+
+type Event_AppCredentialsRegenerated struct {
+	AppCredentialsRegenerated *AppCredentialsRegeneratedEvent `protobuf:"bytes,966,opt,name=app_credentials_regenerated,json=appCredentialsRegenerated,proto3,oneof"`
+}
+
+type Event_AppDeleted struct {
+	AppDeleted *AppDeletedEvent `protobuf:"bytes,967,opt,name=app_deleted,json=appDeleted,proto3,oneof"`
+}
+
 type Event_ReactionAdded struct {
 	// ----- Reactions (1050-1059) — durable legacy-tag exception -----
 	// Reaction events are stored on EVT today. They kept the legacy
@@ -2572,6 +2685,22 @@ func (*Event_BotOutboundWebhookUpdated) isEvent_Event() {}
 
 func (*Event_BotOutboundWebhookRevoked) isEvent_Event() {}
 
+func (*Event_AppCreated) isEvent_Event() {}
+
+func (*Event_AppManifestUpdated) isEvent_Event() {}
+
+func (*Event_AppInstalled) isEvent_Event() {}
+
+func (*Event_AppBotTokenRotated) isEvent_Event() {}
+
+func (*Event_AppBotTokenRevoked) isEvent_Event() {}
+
+func (*Event_AppUninstalled) isEvent_Event() {}
+
+func (*Event_AppCredentialsRegenerated) isEvent_Event() {}
+
+func (*Event_AppDeleted) isEvent_Event() {}
+
 func (*Event_ReactionAdded) isEvent_Event() {}
 
 func (*Event_ReactionRemoved) isEvent_Event() {}
@@ -2580,7 +2709,7 @@ var File_chatto_core_evt_v1_event_proto protoreflect.FileDescriptor
 
 const file_chatto_core_evt_v1_event_proto_rawDesc = "" +
 	"\n" +
-	"\x1echatto/core/evt/v1/event.proto\x12\x12chatto.core.evt.v1\x1a\x1fgoogle/protobuf/timestamp.proto\x1a$chatto/core/evt/v1/auth_events.proto\x1a%chatto/core/evt/v1/setup_events.proto\x1a&chatto/core/evt/v1/import_events.proto\x1a-chatto/core/evt/v1/authorization_events.proto\x1a%chatto/core/evt/v1/asset_events.proto\x1a'chatto/core/evt/v1/message_events.proto\x1a*chatto/core/evt/v1/moderation_events.proto\x1a$chatto/core/evt/v1/rbac_events.proto\x1a(chatto/core/evt/v1/reaction_events.proto\x1a$chatto/core/evt/v1/room_events.proto\x1a*chatto/core/evt/v1/room_group_events.proto\x1a&chatto/core/evt/v1/config_events.proto\x1a&chatto/core/evt/v1/thread_events.proto\x1a$chatto/core/evt/v1/user_events.proto\x1a*chatto/core/evt/v1/invitation_events.proto\x1a,chatto/core/evt/v1/oauth_client_events.proto\x1a+chatto/core/evt/v1/bot_webhook_events.proto\"\xb4\x81\x01\n" +
+	"\x1echatto/core/evt/v1/event.proto\x12\x12chatto.core.evt.v1\x1a\x1fgoogle/protobuf/timestamp.proto\x1a$chatto/core/evt/v1/auth_events.proto\x1a%chatto/core/evt/v1/setup_events.proto\x1a&chatto/core/evt/v1/import_events.proto\x1a-chatto/core/evt/v1/authorization_events.proto\x1a%chatto/core/evt/v1/asset_events.proto\x1a'chatto/core/evt/v1/message_events.proto\x1a*chatto/core/evt/v1/moderation_events.proto\x1a$chatto/core/evt/v1/rbac_events.proto\x1a(chatto/core/evt/v1/reaction_events.proto\x1a$chatto/core/evt/v1/room_events.proto\x1a*chatto/core/evt/v1/room_group_events.proto\x1a&chatto/core/evt/v1/config_events.proto\x1a&chatto/core/evt/v1/thread_events.proto\x1a$chatto/core/evt/v1/user_events.proto\x1a*chatto/core/evt/v1/invitation_events.proto\x1a,chatto/core/evt/v1/oauth_client_events.proto\x1a+chatto/core/evt/v1/bot_webhook_events.proto\x1a#chatto/core/evt/v1/app_events.proto\"\x89\x87\x01\n" +
 	"\x05Event\x12\x0e\n" +
 	"\x02id\x18\x01 \x01(\tR\x02id\x129\n" +
 	"\n" +
@@ -2733,7 +2862,17 @@ const file_chatto_core_evt_v1_event_proto_rawDesc = "" +
 	"\x12invitation_revoked\x18\xa4\a \x01(\v2*.chatto.core.evt.v1.InvitationRevokedEventH\x00R\x11invitationRevoked\x12\x7f\n" +
 	"\x1fbot_outbound_webhook_configured\x18\xac\a \x01(\v25.chatto.core.evt.v1.BotOutboundWebhookConfiguredEventH\x00R\x1cbotOutboundWebhookConfigured\x12v\n" +
 	"\x1cbot_outbound_webhook_updated\x18\xaf\a \x01(\v22.chatto.core.evt.v1.BotOutboundWebhookUpdatedEventH\x00R\x19botOutboundWebhookUpdated\x12v\n" +
-	"\x1cbot_outbound_webhook_revoked\x18\xb0\a \x01(\v22.chatto.core.evt.v1.BotOutboundWebhookRevokedEventH\x00R\x19botOutboundWebhookRevoked\x12P\n" +
+	"\x1cbot_outbound_webhook_revoked\x18\xb0\a \x01(\v22.chatto.core.evt.v1.BotOutboundWebhookRevokedEventH\x00R\x19botOutboundWebhookRevoked\x12G\n" +
+	"\vapp_created\x18\xc0\a \x01(\v2#.chatto.core.evt.v1.AppCreatedEventH\x00R\n" +
+	"appCreated\x12`\n" +
+	"\x14app_manifest_updated\x18\xc1\a \x01(\v2+.chatto.core.evt.v1.AppManifestUpdatedEventH\x00R\x12appManifestUpdated\x12M\n" +
+	"\rapp_installed\x18\xc2\a \x01(\v2%.chatto.core.evt.v1.AppInstalledEventH\x00R\fappInstalled\x12a\n" +
+	"\x15app_bot_token_rotated\x18\xc3\a \x01(\v2+.chatto.core.evt.v1.AppBotTokenRotatedEventH\x00R\x12appBotTokenRotated\x12a\n" +
+	"\x15app_bot_token_revoked\x18\xc4\a \x01(\v2+.chatto.core.evt.v1.AppBotTokenRevokedEventH\x00R\x12appBotTokenRevoked\x12S\n" +
+	"\x0fapp_uninstalled\x18\xc5\a \x01(\v2'.chatto.core.evt.v1.AppUninstalledEventH\x00R\x0eappUninstalled\x12u\n" +
+	"\x1bapp_credentials_regenerated\x18\xc6\a \x01(\v22.chatto.core.evt.v1.AppCredentialsRegeneratedEventH\x00R\x19appCredentialsRegenerated\x12G\n" +
+	"\vapp_deleted\x18\xc7\a \x01(\v2#.chatto.core.evt.v1.AppDeletedEventH\x00R\n" +
+	"appDeleted\x12P\n" +
 	"\x0ereaction_added\x18\x9a\b \x01(\v2&.chatto.core.evt.v1.ReactionAddedEventH\x00R\rreactionAdded\x12V\n" +
 	"\x10reaction_removed\x18\x9b\b \x01(\v2(.chatto.core.evt.v1.ReactionRemovedEventH\x00R\x0freactionRemovedB\a\n" +
 	"\x05eventJ\x06\b\xf4\x03\x10\xf5\x03J\x06\b\xe8\a\x10\xe9\aJ\x06\b\xf2\a\x10\xf8\aJ\x06\b\x86\b\x10\x89\bJ\x06\b\x90\b\x10\x92\bJ\x06\b\xa4\b\x10\xa5\bJ\x06\b\xae\b\x10\xaf\bJ\x06\b\xb8\b\x10\xb9\bJ\x06\b\xc2\b\x10\xc4\bJ\x06\b\xcc\b\x10\xce\bJ\x06\b\xd6\b\x10\xd8\bJ\x06\b\xe1\b\x10\xe3\bJ\x06\b\xea\b\x10\xeb\bJ\x06\b\xf4\b\x10\xf5\bJ\x06\b\xb0\t\x10\xb1\tJ\x06\b\xa9F\x10\xaaFR\x15server_config_changedR\x0econfig_updatedR\fuser_createdR\fuser_deletedR\x14user_profile_updatedR\x1fserver_user_preferences_updatedR\x1anotification_level_changedR\x15thread_follow_changedR\x0eserver_createdR\x0eserver_updatedR\x0eserver_deletedR\x0fmessage_updatedR\x0fmessage_deletedR\vuser_typingR\x1avideo_processing_completedR\x10presence_changedR\x14mention_notificationR\x1fnew_direct_message_notificationR\x17call_participant_joinedR\x15call_participant_leftR\x14notification_createdR\x16notification_dismissedR\x13room_marked_as_readR\x16mention_status_clearedR\x13room_groups_updatedR\x12session_terminatedR\theartbeatR\vsequence_idB\xd6\x01\n" +
@@ -2904,8 +3043,16 @@ var file_chatto_core_evt_v1_event_proto_goTypes = []any{
 	(*BotOutboundWebhookConfiguredEvent)(nil),           // 147: chatto.core.evt.v1.BotOutboundWebhookConfiguredEvent
 	(*BotOutboundWebhookUpdatedEvent)(nil),              // 148: chatto.core.evt.v1.BotOutboundWebhookUpdatedEvent
 	(*BotOutboundWebhookRevokedEvent)(nil),              // 149: chatto.core.evt.v1.BotOutboundWebhookRevokedEvent
-	(*ReactionAddedEvent)(nil),                          // 150: chatto.core.evt.v1.ReactionAddedEvent
-	(*ReactionRemovedEvent)(nil),                        // 151: chatto.core.evt.v1.ReactionRemovedEvent
+	(*AppCreatedEvent)(nil),                             // 150: chatto.core.evt.v1.AppCreatedEvent
+	(*AppManifestUpdatedEvent)(nil),                     // 151: chatto.core.evt.v1.AppManifestUpdatedEvent
+	(*AppInstalledEvent)(nil),                           // 152: chatto.core.evt.v1.AppInstalledEvent
+	(*AppBotTokenRotatedEvent)(nil),                     // 153: chatto.core.evt.v1.AppBotTokenRotatedEvent
+	(*AppBotTokenRevokedEvent)(nil),                     // 154: chatto.core.evt.v1.AppBotTokenRevokedEvent
+	(*AppUninstalledEvent)(nil),                         // 155: chatto.core.evt.v1.AppUninstalledEvent
+	(*AppCredentialsRegeneratedEvent)(nil),              // 156: chatto.core.evt.v1.AppCredentialsRegeneratedEvent
+	(*AppDeletedEvent)(nil),                             // 157: chatto.core.evt.v1.AppDeletedEvent
+	(*ReactionAddedEvent)(nil),                          // 158: chatto.core.evt.v1.ReactionAddedEvent
+	(*ReactionRemovedEvent)(nil),                        // 159: chatto.core.evt.v1.ReactionRemovedEvent
 }
 var file_chatto_core_evt_v1_event_proto_depIdxs = []int32{
 	1,   // 0: chatto.core.evt.v1.Event.created_at:type_name -> google.protobuf.Timestamp
@@ -3057,13 +3204,21 @@ var file_chatto_core_evt_v1_event_proto_depIdxs = []int32{
 	147, // 146: chatto.core.evt.v1.Event.bot_outbound_webhook_configured:type_name -> chatto.core.evt.v1.BotOutboundWebhookConfiguredEvent
 	148, // 147: chatto.core.evt.v1.Event.bot_outbound_webhook_updated:type_name -> chatto.core.evt.v1.BotOutboundWebhookUpdatedEvent
 	149, // 148: chatto.core.evt.v1.Event.bot_outbound_webhook_revoked:type_name -> chatto.core.evt.v1.BotOutboundWebhookRevokedEvent
-	150, // 149: chatto.core.evt.v1.Event.reaction_added:type_name -> chatto.core.evt.v1.ReactionAddedEvent
-	151, // 150: chatto.core.evt.v1.Event.reaction_removed:type_name -> chatto.core.evt.v1.ReactionRemovedEvent
-	151, // [151:151] is the sub-list for method output_type
-	151, // [151:151] is the sub-list for method input_type
-	151, // [151:151] is the sub-list for extension type_name
-	151, // [151:151] is the sub-list for extension extendee
-	0,   // [0:151] is the sub-list for field type_name
+	150, // 149: chatto.core.evt.v1.Event.app_created:type_name -> chatto.core.evt.v1.AppCreatedEvent
+	151, // 150: chatto.core.evt.v1.Event.app_manifest_updated:type_name -> chatto.core.evt.v1.AppManifestUpdatedEvent
+	152, // 151: chatto.core.evt.v1.Event.app_installed:type_name -> chatto.core.evt.v1.AppInstalledEvent
+	153, // 152: chatto.core.evt.v1.Event.app_bot_token_rotated:type_name -> chatto.core.evt.v1.AppBotTokenRotatedEvent
+	154, // 153: chatto.core.evt.v1.Event.app_bot_token_revoked:type_name -> chatto.core.evt.v1.AppBotTokenRevokedEvent
+	155, // 154: chatto.core.evt.v1.Event.app_uninstalled:type_name -> chatto.core.evt.v1.AppUninstalledEvent
+	156, // 155: chatto.core.evt.v1.Event.app_credentials_regenerated:type_name -> chatto.core.evt.v1.AppCredentialsRegeneratedEvent
+	157, // 156: chatto.core.evt.v1.Event.app_deleted:type_name -> chatto.core.evt.v1.AppDeletedEvent
+	158, // 157: chatto.core.evt.v1.Event.reaction_added:type_name -> chatto.core.evt.v1.ReactionAddedEvent
+	159, // 158: chatto.core.evt.v1.Event.reaction_removed:type_name -> chatto.core.evt.v1.ReactionRemovedEvent
+	159, // [159:159] is the sub-list for method output_type
+	159, // [159:159] is the sub-list for method input_type
+	159, // [159:159] is the sub-list for extension type_name
+	159, // [159:159] is the sub-list for extension extendee
+	0,   // [0:159] is the sub-list for field type_name
 }
 
 func init() { file_chatto_core_evt_v1_event_proto_init() }
@@ -3088,6 +3243,7 @@ func file_chatto_core_evt_v1_event_proto_init() {
 	file_chatto_core_evt_v1_invitation_events_proto_init()
 	file_chatto_core_evt_v1_oauth_client_events_proto_init()
 	file_chatto_core_evt_v1_bot_webhook_events_proto_init()
+	file_chatto_core_evt_v1_app_events_proto_init()
 	file_chatto_core_evt_v1_event_proto_msgTypes[0].OneofWrappers = []any{
 		(*Event_ServerSetupOffered)(nil),
 		(*Event_ServerInitialized)(nil),
@@ -3236,6 +3392,14 @@ func file_chatto_core_evt_v1_event_proto_init() {
 		(*Event_BotOutboundWebhookConfigured)(nil),
 		(*Event_BotOutboundWebhookUpdated)(nil),
 		(*Event_BotOutboundWebhookRevoked)(nil),
+		(*Event_AppCreated)(nil),
+		(*Event_AppManifestUpdated)(nil),
+		(*Event_AppInstalled)(nil),
+		(*Event_AppBotTokenRotated)(nil),
+		(*Event_AppBotTokenRevoked)(nil),
+		(*Event_AppUninstalled)(nil),
+		(*Event_AppCredentialsRegenerated)(nil),
+		(*Event_AppDeleted)(nil),
 		(*Event_ReactionAdded)(nil),
 		(*Event_ReactionRemoved)(nil),
 	}

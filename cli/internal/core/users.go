@@ -56,6 +56,11 @@ type userCreationOptions struct {
 	// importEmails are operator-trusted email claims, committed with the new
 	// account and its receipt. They use the normal encrypted email ownership index.
 	importEmails []string
+	// additionalEntries lets another aggregate establish a resource atomically
+	// with this account. The callback runs after the bot ID and creation time are
+	// fixed. Entries retain their own OCC expectations except that the user
+	// creation path owns the first entry's stream-wide mentionable guard.
+	additionalEntries func(string, *timestamppb.Timestamp) ([]evtstream.BatchEntry, error)
 }
 
 func (c *ChattoCore) createUserWithOptions(ctx context.Context, actorID string, login, displayName, password string, options userCreationOptions) (*readmodel.User, error) {
@@ -226,6 +231,13 @@ func (c *ChattoCore) createUserWithOptions(ctx context.Context, actorID string, 
 			Subject: agg.Subject(evtstream.EventBotAPIKeyCreated),
 			Event:   keyCreated,
 		})
+	}
+	if options.additionalEntries != nil {
+		additional, err := options.additionalEntries(userID, now)
+		if err != nil {
+			return nil, err
+		}
+		entries = append(entries, additional...)
 	}
 	if password != "" {
 		hashedPassword, err := bcrypt.GenerateFromPassword([]byte(password), passwordHashCost)

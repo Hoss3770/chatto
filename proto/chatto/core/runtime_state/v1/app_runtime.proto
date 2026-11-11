@@ -1,0 +1,82 @@
+syntax = "proto3";
+
+package chatto.core.runtime_state.v1;
+
+import "google/protobuf/timestamp.proto";
+
+option go_package = "github.com/chattocorp/chatto/cli/internal/pb/chatto/core/runtime_state/v1;runtimestatev1";
+
+// AppDataEncryptionKey stores one immutable wrapped app content key. The
+// wrapping key stays in ENCRYPTION_KEYS.
+message AppDataEncryptionKey {
+  // Content key ciphertext from the configured KMS wrapper.
+  bytes encrypted_content_key = 1;
+  // Nonce that protects the wrapped content key.
+  bytes content_key_nonce = 2;
+  // Stable reference to the KMS wrapping key.
+  string wrapping_key_ref = 3;
+  // KMS wrapping algorithm identifier.
+  string wrapping_algorithm = 4;
+  // Opaque metadata that the KMS needs to unwrap the key.
+  bytes wrapping_metadata = 5;
+  // Time when Chatto created this immutable record.
+  google.protobuf.Timestamp created_at = 6;
+}
+
+// AppOAuthAuthorizationCodeState identifies the revision-checked lifecycle of
+// one app installation authorization code.
+enum AppOauthAuthorizationCodeState {
+  // The record has no valid lifecycle state.
+  APP_OAUTH_AUTHORIZATION_CODE_STATE_UNSPECIFIED = 0;
+  // No exchange request has claimed the code.
+  APP_OAUTH_AUTHORIZATION_CODE_STATE_PENDING = 1;
+  // One exact exchange request owns the recoverable proposed token.
+  APP_OAUTH_AUTHORIZATION_CODE_STATE_CLAIMED = 2;
+  // The exact exchange response is recoverable for retries.
+  APP_OAUTH_AUTHORIZATION_CODE_STATE_COMPLETED = 3;
+}
+
+// AppOAuthAuthorizationCode is the mutable, expiring state for one browser app
+// installation grant. Proposed and completed tokens are encrypted with the app
+// content key so an exact exchange retry can recover after a process failure.
+message AppOAuthAuthorizationCode {
+  // App that can exchange the code.
+  string app_id = 1;
+  // Human administrator who approved the installation.
+  string user_id = 2;
+  // Exact registered callback URI bound to the code.
+  string redirect_uri = 3;
+  // Approved bot scopes in stable order.
+  repeated string bot_scopes = 4;
+  // Approved user scopes. Phase 1 keeps this empty.
+  repeated string user_scopes = 5;
+  // Time when Chatto created the code.
+  google.protobuf.Timestamp created_at = 6;
+  // Absolute time after which the code and recovery state are invalid.
+  google.protobuf.Timestamp expires_at = 7;
+  // Current revision-checked exchange state.
+  AppOauthAuthorizationCodeState state = 8;
+  // HMAC that binds exact retries to the same client and redirect URI.
+  bytes request_fingerprint = 9;
+  // Proposed bot token ciphertext for crash recovery.
+  bytes encrypted_bot_token = 10;
+  // Nonce that protects the proposed bot token.
+  bytes bot_token_nonce = 11;
+  // Keyed verifier used to detect the already-committed token.
+  bytes bot_token_verifier = 12;
+  // Exact completed exchange response ciphertext.
+  bytes encrypted_response = 13;
+  // Nonce that protects the completed exchange response.
+  bytes response_nonce = 14;
+}
+
+// AppRateLimitBucket is one shared fixed-window method counter. The record's
+// absolute expiry also controls its physical RUNTIME_STATE retention.
+message AppRateLimitBucket {
+  // UTC start of the fixed one-minute window.
+  google.protobuf.Timestamp window_started_at = 1;
+  // Absolute logical and physical record expiry.
+  google.protobuf.Timestamp expires_at = 2;
+  // Shared number of accepted requests in this window.
+  uint32 count = 3;
+}

@@ -9,6 +9,8 @@ and coverage matrix current in every pull request. Do not change a row to
 
 ## Phase 0 — Discovery
 
+**Status:** Complete and approved on 2026-11-11.
+
 ### Scope
 
 - Inspect Chatto's stack, domain model, APIs, authorization, storage, realtime,
@@ -35,6 +37,9 @@ The registry check passes. No feature implementation exists. A maintainer gives
 explicit design sign-off.
 
 ## Phase 1 — Foundation
+
+**Status:** Implemented behind the disabled-by-default app setting. The coverage
+matrix lists the current method and surface limits.
 
 ### Scope
 

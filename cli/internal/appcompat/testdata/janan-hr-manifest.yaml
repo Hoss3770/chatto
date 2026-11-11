@@ -1,0 +1,34 @@
+display_information:
+  name: Janan HR
+  description: Internal leave requests and HR reminders
+features:
+  bot_user:
+    display_name: Janan HR
+    always_online: false
+  slash_commands:
+    - command: /leave
+      description: Start a leave request
+      should_escape: false
+      url: https://hr.example.test/commands/leave
+oauth_config:
+  redirect_urls:
+    - https://hr.example.test/oauth/callback
+  scopes:
+    bot:
+      - app_mentions:read
+      - chat:write
+      - commands
+settings:
+  event_subscriptions:
+    bot_events:
+      - app_mention
+    request_url: https://hr.example.test/events
+  interactivity:
+    is_enabled: true
+    request_url: https://hr.example.test/interactions
+  org_deploy_enabled: false
+  socket_mode_enabled: false
+  token_rotation_enabled: false
+x-janan:
+  leave_policy:
+    approval_steps: 2

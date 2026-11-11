@@ -156,6 +156,12 @@ The exporter exposes deployment-wide Chatto metrics. Run it as `chatto exporter`
   Expose the experimental MCP routes on the public Chatto HTTP server. The endpoints use the `webserver.url` origin and each exact non-wildcard `webserver.allowed_origins` entry with the `/mcp` path.
 </EnvVar>
 
+## App compatibility platform
+
+<EnvVar name="CHATTO_APPS_ENABLED" toml="apps.enabled" default="false">
+  Enable the experimental app manifest service, app installation OAuth routes, and compatibility Web API edge. Set `webserver.url` to an HTTPS origin before you enable this option. Loopback development hosts can use HTTP. Deploy a version that understands app facts to every replica before you create the first app.
+</EnvVar>
+
 ## Shields
 
 <EnvVar name="CHATTO_WEBSERVER_SHIELDS_ENABLED" toml="webserver.shields.enabled" default="false">

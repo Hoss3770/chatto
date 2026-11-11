@@ -296,6 +296,7 @@ func (s *HTTPServer) setupRoutes() error {
 	s.setupOIDCRoutes()
 	s.setupAuthRoutes()
 	s.setupOAuthRoutes()
+	s.setupAppCompatibilityRoutes()
 	s.setupAssetRoutes()
 	s.setupShieldRoutes()
 

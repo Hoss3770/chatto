@@ -584,6 +584,34 @@
         "exhausted": "Elĉerpita",
         "revoked": "Revokita"
       }
+    },
+    "apps": {
+      "title": "Aplikaĵoj",
+      "subtitle": "Administru dosierojn, instaladojn kaj legitimaĵojn",
+      "disabled": "Administrado de aplikaĵoj estas malŝaltita en ĉi tiu servilo.",
+      "platform": "Platformo",
+      "manifest": "Dosiero",
+      "manifest_help": "Algluu kompletan JSON- aŭ YAML-dosieron. Kontrolu ĝin antaŭ ol konservi.",
+      "review": "Kontroli",
+      "create_install": "Instali",
+      "update": "Ĝisdatigi",
+      "update_manifest": "Dosiero",
+      "implemented": "Realigita",
+      "partial": "Parta",
+      "unsupported": "Nesubtenata",
+      "list": "Aplikaĵoj",
+      "empty": "Ankoraŭ neniu aplikaĵo",
+      "credentials": "Legitimaĵoj",
+      "credentials_warning": "Konservu ĉi tiujn valorojn nun. Chatto ne povas montri ilin denove.",
+      "close": "Fermi",
+      "copy": "Kopii",
+      "export": "Eksporti",
+      "regenerate": "Regeneri",
+      "install": "Instali",
+      "uninstall": "Malinstali",
+      "state_installed": "Instalita",
+      "state_uninstalled": "Malinstalita",
+      "state_not_installed": "Malneto"
     }
   }
 }

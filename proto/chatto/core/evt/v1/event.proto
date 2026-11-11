@@ -20,6 +20,7 @@ import "chatto/core/evt/v1/user_events.proto";
 import "chatto/core/evt/v1/invitation_events.proto";
 import "chatto/core/evt/v1/oauth_client_events.proto";
 import "chatto/core/evt/v1/bot_webhook_events.proto";
+import "chatto/core/evt/v1/app_events.proto";
 
 option go_package = "github.com/chattocorp/chatto/cli/internal/pb/chatto/core/evt/v1;evtv1";
 
@@ -278,6 +279,16 @@ message Event {
     BotOutboundWebhookConfiguredEvent bot_outbound_webhook_configured = 940;
     BotOutboundWebhookUpdatedEvent bot_outbound_webhook_updated = 943;
     BotOutboundWebhookRevokedEvent bot_outbound_webhook_revoked = 944;
+
+    // ----- App platform (960-979, durable, evt.app.{appId}) -----
+    AppCreatedEvent app_created = 960;
+    AppManifestUpdatedEvent app_manifest_updated = 961;
+    AppInstalledEvent app_installed = 962;
+    AppBotTokenRotatedEvent app_bot_token_rotated = 963;
+    AppBotTokenRevokedEvent app_bot_token_revoked = 964;
+    AppUninstalledEvent app_uninstalled = 965;
+    AppCredentialsRegeneratedEvent app_credentials_regenerated = 966;
+    AppDeletedEvent app_deleted = 967;
 
     // ----- Reactions (1050-1059) — durable legacy-tag exception -----
     // Reaction events are stored on EVT today. They kept the legacy

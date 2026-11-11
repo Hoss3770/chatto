@@ -1,7 +1,7 @@
 # App Compatibility Platform
 
-This directory contains the Phase 0 design package for Chatto's proposed app
-compatibility platform.
+This directory contains the contract registry, design, implementation plan, and
+operator guidance for Chatto's experimental app compatibility platform.
 
 - [Discovery report](discovery-report.md) — repository, documentation, SDK,
   fixture, and event-inventory evidence.
@@ -15,8 +15,9 @@ compatibility platform.
   multi-replica invariants and tests.
 - [Phased implementation brief](phased-implementation.md) — implementation,
   rollout, verification, and rollback plan.
-- [Operator guide](operator-guide.md) — planned compatibility levels and real
-  SDK configuration surfaces.
+- [Operator guide](operator-guide.md) — current Phase 1 behavior,
+  compatibility levels, rollout rules, and real SDK configuration surfaces.
 
-The feature is not implemented. Phase 1 is blocked until a maintainer gives
-explicit design sign-off.
+The Phase 1 foundation is implemented behind a disabled-by-default setting. The
+generated coverage matrix is the authority for support. Later phases remain
+plans and must not be presented as current behavior.

@@ -584,6 +584,34 @@
         "exhausted": "Förbrukad",
         "revoked": "Återkallad"
       }
+    },
+    "apps": {
+      "title": "Appar",
+      "subtitle": "Hantera manifest, installationer och inloggningsuppgifter",
+      "disabled": "Apphantering är inaktiverad på den här servern.",
+      "platform": "Plattform",
+      "manifest": "Manifest",
+      "manifest_help": "Klistra in ett fullständigt JSON- eller YAML-manifest. Granska det innan du sparar.",
+      "review": "Granska",
+      "create_install": "Installera",
+      "update": "Uppdatera",
+      "update_manifest": "Manifest",
+      "implemented": "Implementerat",
+      "partial": "Delvis",
+      "unsupported": "Stöds inte",
+      "list": "Appar",
+      "empty": "Inga appar ännu",
+      "credentials": "Inloggningsuppgifter",
+      "credentials_warning": "Spara dessa värden nu. Chatto kan inte visa dem igen.",
+      "close": "Stäng",
+      "copy": "Kopiera",
+      "export": "Exportera",
+      "regenerate": "Skapa nya",
+      "install": "Installera",
+      "uninstall": "Avinstallera",
+      "state_installed": "Installerad",
+      "state_uninstalled": "Avinstallerad",
+      "state_not_installed": "Utkast"
     }
   }
 }

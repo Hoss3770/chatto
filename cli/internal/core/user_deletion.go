@@ -123,10 +123,16 @@ func (c *ChattoCore) DeleteUser(ctx context.Context, actorID, userID string) err
 	if err != nil {
 		return fmt.Errorf("user not found: %w", err)
 	}
-	if !user.GetIsBot() {
-		if err := c.deleteOwnedBots(ctx, actorID, userID); err != nil {
+	if user.GetIsBot() {
+		managed, err := c.appBotIsManaged(ctx, userID)
+		if err != nil {
 			return err
 		}
+		if managed {
+			return ErrAppManagedBot
+		}
+	} else if err := c.deleteOwnedBots(ctx, actorID, userID); err != nil {
+		return err
 	}
 
 	// Post-ADR-030 there are two implicit scopes — channel and DM — and

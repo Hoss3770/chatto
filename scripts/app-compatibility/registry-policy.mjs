@@ -5,6 +5,15 @@
  * contract inventory. It does not claim that a mapped contract is implemented.
  */
 
+const implementedFoundationMethods = new Set([
+  'api.test',
+  'auth.test',
+  'auth.revoke',
+  'apps.uninstall'
+]);
+
+const partialFoundationMethods = new Set(['oauth.v2.access']);
+
 const methodMappings = new Map([
   ['api.test', ['Compatibility gateway health and argument echo', 1]],
   ['auth.test', ['Resolve the installed app credential and its Chatto principal', 1]],
@@ -19,7 +28,7 @@ const methodMappings = new Map([
   ['apps.manifest.export', ['Export the preserved app manifest', 1]],
   ['apps.manifest.update', ['Validate and update an app definition', 1]],
   ['apps.manifest.validate', ['Validate a manifest without changing state', 1]],
-  ['apps.uninstall', ['Revoke an app installation and its credentials', 1]],
+  ['apps.uninstall', ['Revoke installation access tokens and deactivate the managed bot', 1]],
   ['oauth.v2.access', ['Exchange an app authorization code for installation credentials', 1]],
   ['oauth.v2.exchange', ['Convert an installation to rotating credentials', 5]],
   ['oauth.v2.user.access', ['Exchange a user-only authorization code', 5]],
@@ -131,6 +140,24 @@ const methodFamilyPlans = [
 export function methodPolicy(name, { documented, deprecated }) {
   const mapped = methodMappings.get(name);
   if (mapped) {
+    if (implementedFoundationMethods.has(name)) {
+      return {
+        status: 'implemented',
+        reason:
+          'The target Web API route has request, response, authorization, and conformance coverage.',
+        target_phase: mapped[1],
+        semantic_mapping: mapped[0]
+      };
+    }
+    if (partialFoundationMethods.has(name)) {
+      return {
+        status: 'partial',
+        reason:
+          'The target OAuth exchange route supports bot installations and exact retries, but user-token and enterprise installation fields are not supported.',
+        target_phase: mapped[1],
+        semantic_mapping: mapped[0]
+      };
+    }
     return {
       status: 'unsupported',
       reason: 'The target Web API route does not exist yet.',
@@ -327,7 +354,8 @@ export function scopePolicy(name, compatibleMethods = []) {
   if (permissions) {
     return {
       status: 'unsupported',
-      reason: 'The app OAuth scope grant model does not exist yet.',
+      reason:
+        'Chatto stores this bot scope, but its complete target method behavior and permission gate are not implemented.',
       target_phase:
         scopeTargetPhases.get(name) ??
         Math.min(
@@ -341,7 +369,7 @@ export function scopePolicy(name, compatibleMethods = []) {
       semantic_mapping:
         permissions.length === 0
           ? 'This scope has no direct Chatto RBAC equivalent; current resource authorization remains mandatory.'
-          : 'The app scope permits a method; Chatto membership, policy, and effective RBAC remain mandatory.'
+          : 'Planned mapping only: a scope never grants Chatto authority without current membership, policy, and effective RBAC.'
     };
   }
 
@@ -447,7 +475,7 @@ export function manifestPolicy(path) {
   return {
     status: 'unsupported',
     reason: plannedPrefix
-      ? 'The manifest service and console do not exist yet.'
+      ? 'Chatto preserves and validates this key in the administrative manifest service, but the target apps.manifest Web API routes do not exist.'
       : 'Chatto has no equivalent hosted or enterprise feature for this key.',
     target_phase: plannedPrefix ? phaseByPrefix.get(plannedPrefix) : null,
     semantic_mapping: plannedPrefix
@@ -467,20 +495,23 @@ export const surfacePolicies = [
   },
   {
     name: 'web_api',
-    status: 'unsupported',
-    reason: 'No /api/{method} compatibility gateway exists.',
+    status: 'partial',
+    reason:
+      'The /api/{method} gateway implements the Phase 1 foundation methods and returns not_implemented for all other methods.',
     target_phase: 1
   },
   {
     name: 'oauth_v2',
-    status: 'unsupported',
-    reason: 'Chatto OAuth is a client-session flow, not an app installation flow.',
+    status: 'partial',
+    reason:
+      'Chatto supports browser approval and exact bot-token exchange. User tokens, enterprise installs, and rotating-token exchange are not supported.',
     target_phase: 1
   },
   {
     name: 'app_manifests',
     status: 'unsupported',
-    reason: 'No app manifest import, validation, storage, or export service exists.',
+    reason:
+      'The Server Admin service validates, preserves, stores, and exports manifests, but target apps.manifest Web API routes do not exist.',
     target_phase: 1
   },
   {

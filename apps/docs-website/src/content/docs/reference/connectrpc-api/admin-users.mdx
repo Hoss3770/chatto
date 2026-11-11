@@ -271,7 +271,8 @@ Result of clearing a user's username-change cooldown.
 ### DeleteUser
 
 Deletes a user account as an admin action. Requires user.delete-any for
-other users or user.delete-self for the caller.
+other users or user.delete-self for the caller. Returns FAILED_PRECONDITION
+when the user owns a bot that still belongs to an app definition.
 
 ```http
 POST /api/connect/chatto.admin.v1.AdminUserService/DeleteUser

@@ -1457,6 +1457,83 @@ User currently participating in a room call.
 | `joined_at` | `google.protobuf.Timestamp` | When the user joined this call. |
 | `call_id` | `string` | Active call session ID. |
 
+<a id="chatto-admin-v1-App"></a>
+
+### App
+
+App is the administrator view of one app definition and installation.
+
+| Field | Type | Description |
+| --- | --- | --- |
+| `app_id` | `string` | Stable app identifier used as the OAuth client ID. |
+| `owner_user_id` | `string` | Human account that owns the managed bot. |
+| `bot_user_id` | `string` | Canonical Chatto bot account for this installation. |
+| `name` | `string` | Display name from the current manifest. |
+| `description` | `string` | Short description from the current manifest. |
+| `state` | [`AppLifecycleState`](#chatto-admin-v1-AppLifecycleState) | Current lifecycle state. |
+| `manifest_revision` | `uint64` | Accepted complete manifest revision. |
+| `install_generation` | `uint64` | Current installation and token generation. |
+| `requested_bot_scopes` | `repeated string` | Requested bot scopes from the current manifest. |
+| `requested_user_scopes` | `repeated string` | Requested user scopes from the current manifest. |
+| `granted_bot_scopes` | `repeated string` | Bot scopes active for the current installation. |
+| `granted_user_scopes` | `repeated string` | User scopes active for the current installation. |
+| `external_origins` | `repeated string` | Safe external origins extracted from the manifest. |
+| `created_at` | `google.protobuf.Timestamp` | When the definition was created. |
+| `updated_at` | `google.protobuf.Timestamp` | When the definition or lifecycle last changed. |
+| `manifest_json` | `string` | Canonical JSON for the complete preserved manifest. List responses omit it. |
+
+<a id="chatto-admin-v1-AppCredentials"></a>
+
+### AppCredentials
+
+AppCredentials contains raw values that are returned only by the operation
+that creates or regenerates them. Outside short-lived encrypted OAuth
+recovery state, Chatto does not retain recoverable access tokens or client
+secrets.
+
+| Field | Type | Description |
+| --- | --- | --- |
+| `client_id` | `string` | OAuth client identifier. It is also the app ID. |
+| `client_secret` | `string` | New OAuth client secret, when this operation created one. |
+| `signing_secret` | `string` | New request-signing secret, when this operation created one. |
+| `bot_token` | `string` | New bot access token, when this operation installed the app. |
+| `app_token` | `string` | New app-level token, when this operation installed the app. |
+| `api_url` | `string` | Base URL for Web API SDK clients. |
+| `authorize_url` | `string` | Browser authorization URL. |
+
+<a id="chatto-admin-v1-ManifestIssue"></a>
+
+### ManifestIssue
+
+ManifestIssue identifies one syntax, validation, or support issue.
+
+| Field | Type | Description |
+| --- | --- | --- |
+| `pointer` | `string` | JSON Pointer for the affected value. Empty means the document itself. |
+| `line` | `uint32` | One-based source line when the parser can identify it. |
+| `code` | `string` | Stable machine category for UI grouping. |
+| `message` | `string` | Human-readable explanation. |
+| `severity` | [`ManifestIssueSeverity`](#chatto-admin-v1-ManifestIssueSeverity) | Whether the issue blocks create or update. |
+
+<a id="chatto-admin-v1-ManifestSummary"></a>
+
+### ManifestSummary
+
+ManifestSummary is the safe review view of one parsed app manifest.
+
+| Field | Type | Description |
+| --- | --- | --- |
+| `name` | `string` | App display name. |
+| `description` | `string` | Short app description. |
+| `bot_scopes` | `repeated string` | Requested bot scopes in stable sorted order. |
+| `user_scopes` | `repeated string` | Requested user scopes in stable sorted order. |
+| `events` | `repeated string` | Requested event types in stable sorted order. |
+| `commands` | `repeated string` | Slash command names in stable sorted order. |
+| `external_origins` | `repeated string` | Canonical external origins that can receive user or server data. |
+| `implemented_contracts` | `uint32` | Number of known manifest paths that Chatto applies completely. |
+| `partial_contracts` | `uint32` | Number of known manifest paths that Chatto preserves with a behavior gap. |
+| `unsupported_contracts` | `uint32` | Number of known manifest paths that Chatto preserves but does not apply. |
+
 <a id="chatto-admin-v1-AdminAccountInfo"></a>
 
 ### AdminAccountInfo
@@ -2369,6 +2446,32 @@ Native companion publisher kind.
 | --- | --- | --- |
 | `CALL_MEDIA_PUBLISHER_KIND_UNSPECIFIED` | `0` | The publisher kind was not specified. |
 | `CALL_MEDIA_PUBLISHER_KIND_GAME_SHARE` | `1` | Native game-window video and application audio. |
+
+<a id="chatto-admin-v1-AppLifecycleState"></a>
+
+### AppLifecycleState
+
+AppLifecycleState identifies whether an app can authenticate and act.
+
+| Name | Number | Description |
+| --- | --- | --- |
+| `APP_LIFECYCLE_STATE_UNSPECIFIED` | `0` | The server did not report a valid lifecycle state. |
+| `APP_LIFECYCLE_STATE_NOT_INSTALLED` | `1` | The app definition exists, but no installation is active. |
+| `APP_LIFECYCLE_STATE_INSTALLED` | `2` | The managed bot installation is active. |
+| `APP_LIFECYCLE_STATE_UNINSTALLED` | `3` | The installation was explicitly removed and its bot is deactivated. |
+| `APP_LIFECYCLE_STATE_DELETED` | `4` | The app was permanently removed from active management. |
+
+<a id="chatto-admin-v1-ManifestIssueSeverity"></a>
+
+### ManifestIssueSeverity
+
+ManifestIssueSeverity identifies whether a manifest issue blocks a write.
+
+| Name | Number | Description |
+| --- | --- | --- |
+| `MANIFEST_ISSUE_SEVERITY_UNSPECIFIED` | `0` | The issue has no valid severity. |
+| `MANIFEST_ISSUE_SEVERITY_ERROR` | `1` | The manifest cannot be accepted until the issue is fixed. |
+| `MANIFEST_ISSUE_SEVERITY_WARNING` | `2` | Chatto can preserve the value, but does not apply all of its behavior. |
 
 <a id="chatto-admin-v1-AdminAssetCleanupHealth"></a>
 

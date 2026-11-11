@@ -628,6 +628,34 @@
         "exhausted": "مستنفد",
         "revoked": "مُبطَل"
       }
+    },
+    "apps": {
+      "title": "التطبيقات",
+      "subtitle": "إدارة ملفات التعريف وعمليات التثبيت وبيانات الاعتماد",
+      "disabled": "إدارة التطبيقات معطلة على هذا الخادم.",
+      "platform": "المنصة",
+      "manifest": "ملف التعريف",
+      "manifest_help": "ألصق ملف تعريف JSON أو YAML كاملًا. راجعه قبل الحفظ.",
+      "review": "مراجعة",
+      "create_install": "تثبيت",
+      "update": "تحديث",
+      "update_manifest": "ملف التعريف",
+      "implemented": "منفذ",
+      "partial": "جزئي",
+      "unsupported": "غير مدعوم",
+      "list": "التطبيقات",
+      "empty": "لا توجد تطبيقات بعد",
+      "credentials": "بيانات الاعتماد",
+      "credentials_warning": "احفظ هذه القيم الآن. لا يمكن لـ Chatto عرضها مرة أخرى.",
+      "close": "إغلاق",
+      "copy": "نسخ",
+      "export": "تصدير",
+      "regenerate": "إعادة إنشاء",
+      "install": "تثبيت",
+      "uninstall": "إلغاء التثبيت",
+      "state_installed": "مثبت",
+      "state_uninstalled": "أُلغي تثبيته",
+      "state_not_installed": "مسودة"
     }
   }
 }

@@ -28,7 +28,7 @@ var connectErrorCodes = []struct {
 	code connect.Code
 	errs []error
 }{
-	{connect.CodeFailedPrecondition, []error{core.ErrSetupUnavailable, core.ErrSetupRequired}},
+	{connect.CodeFailedPrecondition, []error{core.ErrSetupUnavailable, core.ErrSetupRequired, core.ErrAppPlatformDisabled}},
 	{connect.CodeCanceled, []error{context.Canceled}},
 	{connect.CodeDeadlineExceeded, []error{context.DeadlineExceeded}},
 	{connect.CodeAborted, []error{events.ErrConflict, core.ErrNeighborRevisionChanged}},
@@ -43,6 +43,9 @@ var connectErrorCodes = []struct {
 		core.ErrPrivilegedModeUnavailable,
 		core.ErrBotOwnerPermissionCeiling,
 		core.ErrNeighborMatchesServerOrigin,
+		core.ErrAppAlreadyInstalled,
+		core.ErrAppManagedBot,
+		core.ErrAppNotInstalled,
 	}},
 	{connect.CodeAlreadyExists, []error{
 		core.ErrMessageIdempotencyConflict,

@@ -1,16 +1,18 @@
 # App Compatibility Platform Design
 
-- **Status:** Proposed for design sign-off
-- **Phase:** 0 — discovery only
+- **Status:** Approved; Phase 1 foundation implemented
+- **Phase:** 1 — foundation
 - **Date:** 2026-11-11
 
-## Sign-off gate
+## Sign-off and support gate
 
-This document is a proposal. It does not describe an implemented Chatto feature.
-Do not start Phase 1 until the maintainer approves this design.
+A maintainer approved this design and authorized Phase 1 on 2026-11-11. The
+Phase 1 foundation now implements app definitions, manifest administration,
+bot installation OAuth, shared rate limits, and the foundation Web API methods.
+Later sections remain the approved target design for later phases.
 
-The current coverage matrix reports the wire contract that works now. It does
-not count a related Chatto domain feature as compatible. See the generated
+The coverage matrix reports the wire contract that works now. It does not count
+a related Chatto domain feature as compatible. See the generated
 [coverage matrix](coverage-matrix.md) and the [gap report](gap-report.md).
 
 ## Purpose

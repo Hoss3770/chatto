@@ -35,6 +35,7 @@ const (
 	AggregateAuth          = "auth"
 	AggregateInvitation    = "invitation"
 	AggregateOAuthClient   = "oauth_client"
+	AggregateApp           = "app"
 )
 
 // ConfigSingletonID is the sentinel aggregate ID for server-wide config
@@ -244,6 +245,16 @@ const (
 	EventInvitationCreated  = "created"
 	EventInvitationRedeemed = "redeemed"
 	EventInvitationRevoked  = "revoked"
+
+	// App definitions and installations.
+	EventAppCreated                = "created"
+	EventAppManifestUpdated        = "manifest_updated"
+	EventAppInstalled              = "installed"
+	EventAppBotTokenRotated        = "bot_token_rotated"
+	EventAppBotTokenRevoked        = "bot_token_revoked"
+	EventAppUninstalled            = "uninstalled"
+	EventAppCredentialsRegenerated = "credentials_regenerated"
+	EventAppDeleted                = "deleted"
 )
 
 // EventTypeOf returns the canonical NATS subject token for an event's
@@ -560,6 +571,22 @@ func EventTypeOf(e *evtv1.Event) string {
 		return EventInvitationRedeemed
 	case *evtv1.Event_InvitationRevoked:
 		return EventInvitationRevoked
+	case *evtv1.Event_AppCreated:
+		return EventAppCreated
+	case *evtv1.Event_AppManifestUpdated:
+		return EventAppManifestUpdated
+	case *evtv1.Event_AppInstalled:
+		return EventAppInstalled
+	case *evtv1.Event_AppBotTokenRotated:
+		return EventAppBotTokenRotated
+	case *evtv1.Event_AppBotTokenRevoked:
+		return EventAppBotTokenRevoked
+	case *evtv1.Event_AppUninstalled:
+		return EventAppUninstalled
+	case *evtv1.Event_AppCredentialsRegenerated:
+		return EventAppCredentialsRegenerated
+	case *evtv1.Event_AppDeleted:
+		return EventAppDeleted
 	}
 	return ""
 }
@@ -702,6 +729,11 @@ func OAuthClientAggregate(clientID string) Aggregate {
 	return Aggregate{Type: AggregateOAuthClient, ID: hex.EncodeToString(digest[:])}
 }
 
+// AppAggregate owns one app definition and installation lifecycle.
+func AppAggregate(appID string) Aggregate {
+	return Aggregate{Type: AggregateApp, ID: appID}
+}
+
 // EventSubjectFilter returns the wildcard filter matching every event in the
 // EVT stream. Use sparingly: most invariants should OCC against a narrower
 // aggregate namespace, but cross-aggregate invariants may need the stream-wide
@@ -738,6 +770,9 @@ func UserSubjectFilter() string { return SubjectRoot + AggregateUser + ".>" }
 // aggregate event.
 // Pattern: evt.asset.>
 func AssetSubjectFilter() string { return SubjectRoot + AggregateAsset + ".>" }
+
+// AppSubjectFilter returns every app definition and installation fact.
+func AppSubjectFilter() string { return SubjectRoot + AggregateApp + ".>" }
 
 // RBACSubjectFilter returns the wildcard filter matching every RBAC aggregate
 // event.

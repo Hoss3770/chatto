@@ -132,7 +132,8 @@ export const BotService = {
       kind: MethodKind.Unary,
     },
     /**
-     * Deletes a bot and invalidates all of its API keys.
+     * Deletes a bot and invalidates all of its API keys. Returns
+     * FAILED_PRECONDITION while the bot belongs to an app definition.
      *
      * @generated from rpc chatto.api.v1.BotService.DeleteBot
      */

@@ -7,6 +7,7 @@ export type AdminNavPermissions = Pick<
   ServerPermissions,
   | 'loaded'
   | 'canManageServer'
+  | 'canCreateBots'
   | 'canManageNeighbors'
   | 'canAdminViewUsers'
   | 'canManageInvites'
@@ -97,6 +98,14 @@ export function getAdminNavItems({
       href: resolve('/chat/[serverId]/manage/server/permissions', { serverId: serverSegment }),
       label: m('chat.management_nav.permissions'),
       icon: 'iconify icon-[uil--shield-check]'
+    });
+  }
+
+  if (permissions.canManageServer && permissions.canCreateBots) {
+    items.push({
+      href: resolve('/chat/[serverId]/manage/server/apps', { serverId: serverSegment }),
+      label: m('chat.management_nav.apps'),
+      icon: 'iconify icon-[uil--puzzle-piece]'
     });
   }
 

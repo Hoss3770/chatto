@@ -595,6 +595,34 @@
         "exhausted": "Izlietota",
         "revoked": "Atsaukta"
       }
+    },
+    "apps": {
+      "title": "Lietotnes",
+      "subtitle": "Pārvaldiet manifestus, instalācijas un akreditācijas datus",
+      "disabled": "Lietotņu pārvaldība šajā serverī ir atspējota.",
+      "platform": "Platforma",
+      "manifest": "Manifests",
+      "manifest_help": "Ielīmējiet pilnu JSON vai YAML manifestu. Pārbaudiet to pirms saglabāšanas.",
+      "review": "Pārbaudīt",
+      "create_install": "Instalēt",
+      "update": "Atjaunināt",
+      "update_manifest": "Manifests",
+      "implemented": "Ieviests",
+      "partial": "Daļējs",
+      "unsupported": "Neatbalstīts",
+      "list": "Lietotnes",
+      "empty": "Lietotņu vēl nav",
+      "credentials": "Akreditācijas dati",
+      "credentials_warning": "Saglabājiet šīs vērtības tagad. Chatto tās vairs nevarēs parādīt.",
+      "close": "Aizvērt",
+      "copy": "Kopēt",
+      "export": "Eksportēt",
+      "regenerate": "Ģenerēt no jauna",
+      "install": "Instalēt",
+      "uninstall": "Atinstalēt",
+      "state_installed": "Instalēta",
+      "state_uninstalled": "Atinstalēta",
+      "state_not_installed": "Melnraksts"
     }
   }
 }
